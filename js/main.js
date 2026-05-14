@@ -718,7 +718,7 @@
       try {
         const data = new FormData(form);
         const encoded = new URLSearchParams(data).toString();
-        const res = await fetch('/', {
+        const res = await fetch(window.location.pathname, {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body: encoded,
