@@ -785,7 +785,26 @@
   }
 
   /* ---------- Init ---------- */
+  /* ---------- Active nav aria-current ---------- */
+  function setupActiveNav() {
+    const path = window.location.pathname.replace(/\/$/, '') || '/';
+    document.querySelectorAll('a[data-link]').forEach((a) => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      // Normalize: strip leading slash and trailing slash
+      const aPath = '/' + href.replace(/^\//, '').replace(/\/$/, '');
+      // Match exact page or index at root
+      const isActive = path === aPath ||
+        (path === '/' && (href === 'index.html' || href === '/')) ||
+        (path.endsWith('/' + href));
+      if (isActive) {
+        a.setAttribute('aria-current', 'page');
+      }
+    });
+  }
+
   function init() {
+    setupActiveNav();
     setupTheme();
     setupLang();
     setupPageTransitions();
