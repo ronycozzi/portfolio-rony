@@ -1274,6 +1274,7 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 .works__viewport {
   flex: 1;
@@ -1285,16 +1286,12 @@ body {
   width: 100%;
   min-width: 0;
 }
-.works__sticky { min-width: 0; }
-.works__track {
-  /* min-width:0 cascades to ensure parent doesn't grow with track width */
-  min-width: 0;
-  flex-shrink: 0;
-}
 .works__track {
   display: flex;
   gap: 28px;
   padding: 0 var(--pad-x);
+  min-width: 0;
+  flex-shrink: 0;
   will-change: transform;
 }
 .works__hud {
