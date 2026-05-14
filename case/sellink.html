@@ -22,7 +22,7 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" as="style" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/styles.css?v=7" />
-  <link rel="stylesheet" href="../css/case.css?v=2" />
+  <link rel="stylesheet" href="../css/case.css?v=3" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -174,32 +174,32 @@
         <div class="case-tech-grid">
           <div class="case-tech-item" data-reveal>
             <span class="case-tech-item__icon" aria-hidden="true">⬡</span>
-            <h4>Design tokens CSS</h4>
+            <h3>Design tokens CSS</h3>
             <p>Sistema de custom properties por capa: color semántico, tipografía, espaciado, radios. Swap dark/light sin JS — solo <code>data-theme</code> attribute en <code>html</code>. Fácil de mantener y extender.</p>
           </div>
           <div class="case-tech-item" data-reveal>
             <span class="case-tech-item__icon" aria-hidden="true">⬡</span>
-            <h4>Layout modular</h4>
+            <h3>Layout modular</h3>
             <p>Cada sección es independiente: <code>.services</code>, <code>.cases</code>, <code>.team</code>, <code>.contact</code>. Sin dependencias entre módulos. Nuevo servicio = copiar un <code>&lt;article&gt;</code>. Sin tocar CSS global.</p>
           </div>
           <div class="case-tech-item" data-reveal>
             <span class="case-tech-item__icon" aria-hidden="true">⬡</span>
-            <h4>Formulario semántico</h4>
+            <h3>Formulario semántico</h3>
             <p><code>aria-required</code>, <code>aria-invalid</code>, <code>aria-describedby</code> en cada campo. Mensajes de error con <code>role="alert"</code>. <code>inputmode</code> correcto por tipo de campo. Funciona con teclado, screen reader y autocomplete del browser.</p>
           </div>
           <div class="case-tech-item" data-reveal>
             <span class="case-tech-item__icon" aria-hidden="true">⬡</span>
-            <h4>Typography scale</h4>
+            <h3>Typography scale</h3>
             <p>Type scale fluida con <code>clamp()</code> entre 4 breakpoints. Display en Space Grotesk 700, body en Inter 400/500. Tracking en uppercase calculado por tamaño (más grande = más tracking). Sin jarring jumps en resize.</p>
           </div>
           <div class="case-tech-item" data-reveal>
             <span class="case-tech-item__icon" aria-hidden="true">⬡</span>
-            <h4>Print stylesheet</h4>
+            <h3>Print stylesheet</h3>
             <p>Hoja de estilos <code>@media print</code> que oculta nav, cursor, animaciones y background. Imprime en blanco con tipografía legible. Útil cuando clientes imprimen propuestas con el sitio como referencia.</p>
           </div>
           <div class="case-tech-item" data-reveal>
             <span class="case-tech-item__icon" aria-hidden="true">⬡</span>
-            <h4>Contraste WCAG AAA</h4>
+            <h3>Contraste WCAG AAA</h3>
             <p>Rojo <code>#FF3300</code> sobre negro <code>#070707</code> pasa AAA (ratio 5.4:1). Texto muted en <code>#B0B0B0</code> sobre fondo = 7.1:1. Verificado con Colour Contrast Analyser y automatizado en CI.</p>
           </div>
         </div>

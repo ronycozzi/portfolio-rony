@@ -133,7 +133,7 @@
         >
           <!-- Netlify hidden fields -->
           <input type="hidden" name="form-name" value="contact" />
-          <input type="text" name="bot-field" hidden aria-hidden="true" tabindex="-1" />
+          <input type="text" name="bot-field" hidden aria-hidden="true" tabindex="-1" autocomplete="off" />
 
           <div class="field">
             <label for="name" data-i18n="contact.form.name">Nombre</label>
@@ -180,6 +180,7 @@
               rows="5" 
               required 
               autocapitalize="sentences"
+              autocomplete="off"
               spellcheck="true"
               enterkeyhint="send"
               aria-required="true"
