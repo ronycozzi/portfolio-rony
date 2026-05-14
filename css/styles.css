@@ -240,6 +240,15 @@ body {
   background: var(--fg);
   position: relative;
   padding: 3px;
+  /* WCAG 2.5.5: extend clickable area to min 44x44 without changing visual */
+  outline-offset: 11px;
+}
+.theme-toggle::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 44px; min-height: 44px;
 }
 .theme-toggle__dot {
   position: absolute;
