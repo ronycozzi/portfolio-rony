@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0A0A0A"/>
+  <defs>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M 80 0 L 0 0 0 80" fill="none" stroke="#1F1F1D" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)" opacity="0.6"/>
+  <text x="80" y="120" font-family="Space Grotesk, Inter, sans-serif" font-size="20" font-weight="500" letter-spacing="2" fill="#8A8780">RONY COZZI — FULL-STACK DEVELOPER</text>
+  <text x="80" y="290" font-family="Space Grotesk, Inter, sans-serif" font-size="96" font-weight="500" letter-spacing="-4" fill="#F2EFE9">Construyendo</text>
+  <text x="80" y="400" font-family="Times New Roman, serif" font-size="96" font-style="italic" font-weight="400" letter-spacing="-4" fill="#F2EFE9">sitios rápidos<tspan fill="#C6FF3D">.</tspan></text>
+  <text x="80" y="510" font-family="Space Grotesk, Inter, sans-serif" font-size="96" font-weight="500" letter-spacing="-4" fill="#F2EFE9">para marcas modernas.</text>
+  <g transform="translate(80, 560)">
+    <circle cx="6" cy="6" r="6" fill="#2DD16A"/>
+    <text x="22" y="11" font-family="Space Grotesk, Inter, sans-serif" font-size="16" font-weight="500" letter-spacing="1" fill="#8A8780">Disponible · 2026 · Remoto · Argentina</text>
+  </g>
+  <text x="1120" y="600" text-anchor="end" font-family="Space Grotesk, Inter, sans-serif" font-size="14" letter-spacing="1" fill="#8A8780">rony-cozzi.netlify.app</text>
+</svg>

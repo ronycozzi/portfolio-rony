@@ -641,10 +641,28 @@
     const btn = document.querySelector('[data-menu-toggle]');
     const menu = document.querySelector('[data-mobile-menu]');
     if (!btn || !menu) return;
-    btn.addEventListener('click', () => {
-      const open = menu.classList.toggle('is-open');
+
+    function setOpen(open) {
+      menu.classList.toggle('is-open', open);
       btn.classList.toggle('is-open', open);
       btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      btn.setAttribute('aria-expanded', String(open));
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    btn.addEventListener('click', () => setOpen(!menu.classList.contains('is-open')));
+
+    // Close on link click (so the next page loads with menu closed)
+    menu.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setOpen(false)));
+
+    // Close on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && menu.classList.contains('is-open')) setOpen(false);
+    });
+
+    // Close on resize to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 860 && menu.classList.contains('is-open')) setOpen(false);
     });
   }
 

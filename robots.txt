@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rony-cozzi.netlify.app/sitemap.xml

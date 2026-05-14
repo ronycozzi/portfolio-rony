@@ -279,11 +279,18 @@ body {
   font-weight: 500;
   letter-spacing: -0.03em;
   line-height: 1;
-  transform: translateY(-100%);
+  /* translate3d ensures GPU-accelerated transition and avoids quirks with translateY(-100%) */
+  transform: translate3d(0, -101%, 0);
   transition: transform var(--t-base) var(--ease);
   pointer-events: none;
+  visibility: hidden;
+  will-change: transform;
 }
-.mobile-menu.is-open { transform: translateY(0); pointer-events: auto; }
+.mobile-menu.is-open {
+  transform: translate3d(0, 0, 0);
+  pointer-events: auto;
+  visibility: visible;
+}
 .mobile-menu a { padding: 16px 0; border-bottom: 1px solid var(--line); }
 
 @media (max-width: 860px) {
