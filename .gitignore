@@ -1,0 +1,26 @@
+# Editor / OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Claude Code internals
+.claude/
+
+# Logs / temp
+*.log
+*.tmp
+
+# Local previews / build artifacts
+node_modules/
+dist/
+build/
+.cache/
+
+# Local env / secrets
+.env
+.env.local
+
+# Backups
+*.bak
+*.swp

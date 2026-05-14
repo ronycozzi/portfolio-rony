@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <meta name="description" content="Rony Cozzi — Full Stack Developer. Performance-driven, accessible websites for brands, studios and startups." />
+  <meta name="color-scheme" content="dark light" />
+
+  <meta property="og:title" content="Rony Cozzi — Full Stack Developer" />
+  <meta property="og:description" content="Performance-driven, accessible websites." />
+  <meta property="og:type" content="website" />
+
+  <title>Rony Cozzi — Full Stack Developer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css?v=4" />
+</head>
+<body data-page="home">
+  <!-- Page transition overlay -->
+  <div class="page-transition" aria-hidden="true">
+    <div class="page-transition__panel"></div>
+    <div class="page-transition__label">
+      <span class="page-transition__num">00</span>
+      <span class="page-transition__name">Loading</span>
+    </div>
+  </div>
+
+  <!-- Cursor -->
+  <div class="cursor" aria-hidden="true"><span class="cursor__label"></span></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <a href="index.html" class="header__logo" data-magnetic data-link>
+      <span class="header__logo-mark">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M8 8h5a3 3 0 0 1 0 6H8m0 0v4m0-4 6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+        </svg>
+      </span>
+      <span class="header__logo-text">Rony Cozzi<sup>©</sup></span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="work.html" data-magnetic data-link><span>Work</span></a>
+      <a href="about.html" data-magnetic data-link><span data-i18n="nav.about">Sobre mí</span></a>
+      <a href="contact.html" data-magnetic data-link><span data-i18n="nav.contact">Contacto</span></a>
+    </nav>
+
+    <div class="header__actions">
+      <button class="lang-toggle" data-lang-toggle aria-label="Toggle language">
+        <span data-lang="es" class="is-active">ES</span>
+        <span class="lang-sep">/</span>
+        <span data-lang="en">EN</span>
+      </button>
+      <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme">
+        <span class="theme-toggle__dot"></span>
+      </button>
+      <button class="menu-toggle" data-menu-toggle aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" data-mobile-menu>
+    <a href="work.html" data-link>Work</a>
+    <a href="about.html" data-link><span data-i18n="nav.about">Sobre mí</span></a>
+    <a href="contact.html" data-link><span data-i18n="nav.contact">Contacto</span></a>
+  </div>
+
+  <main class="page page--home">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__top">
+        <span class="tag"><span class="tag__dot"></span><span data-i18n="hero.tag">Disponible · 2026</span></span>
+        <span class="loc-pin"><span class="loc-pin__dot"></span><span>Argentina</span></span>
+        <span class="tag tag--ghost" data-clock>--:--:-- GMT-3</span>
+      </div>
+
+      <div class="hero__main">
+        <div class="hero__lede">
+          <span class="hero__role" data-i18n="hero.role">Rony Cozzi — Full-Stack Developer</span>
+          <h1 class="hero__title" aria-label="Building fast, accessible websites">
+            <span class="line"><span class="reveal" data-i18n="hero.title1">Construyendo</span></span>
+            <span class="line"><span class="reveal"><em data-i18n="hero.title2">sitios rápidos</em><span class="accent">.</span></span></span>
+            <span class="line"><span class="reveal" data-i18n="hero.title3">para marcas modernas.</span></span>
+          </h1>
+          <p class="hero__intro" data-reveal data-i18n="hero.intro">
+            Diseño y desarrollo enfocados en performance, accesibilidad y código mantenible. Trabajo con marcas, estudios y startups.
+          </p>
+          <div class="hero__actions">
+            <a href="work.html" class="hero__cta" data-magnetic data-link>
+              <span class="hero__cta-text" data-i18n="hero.cta">Ver proyectos</span>
+              <span class="hero__cta-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="1.5"/></svg>
+              </span>
+            </a>
+            <a href="contact.html" class="hero__cta hero__cta--ghost" data-magnetic data-link>
+              <span data-i18n="hero.cta2">Contacto</span>
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero__facts" aria-label="Quick facts">
+          <div class="hero__fact">
+            <span class="hero__fact-label" data-i18n="hero.fact.services">Servicios</span>
+            <strong data-i18n="hero.fact.services_val">Web nueva · Landing pages</strong>
+          </div>
+          <div class="hero__fact">
+            <span class="hero__fact-label" data-i18n="hero.fact.response">Respuesta</span>
+            <strong data-i18n="hero.fact.response_val">&lt; 24h</strong>
+          </div>
+          <div class="hero__fact">
+            <span class="hero__fact-label" data-i18n="hero.fact.langs">Idiomas</span>
+            <strong>ES · EN</strong>
+          </div>
+          <div class="hero__fact">
+            <span class="hero__fact-label" data-i18n="hero.fact.modality">Modalidad</span>
+            <strong data-i18n="hero.fact.modality_val">Remoto · GMT-3</strong>
+          </div>
+        </aside>
+      </div>
+
+      <!-- HUD corners -->
+      <div class="hero__hud hero__hud--bl">© <span class="year"></span> — Rony Cozzi</div>
+      <div class="hero__hud hero__hud--br">
+        <span data-i18n="hero.scroll">Scroll</span>
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14m0 0-6-6m6 6 6-6" stroke="currentColor" stroke-width="1.5"/></svg>
+      </div>
+
+      <!-- floating grid bg -->
+      <div class="hero__grid" aria-hidden="true"></div>
+    </section>
+
+    <!-- HORIZONTAL TICKER -->
+    <section class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span>Frontend Development</span><span class="ticker__sep">✦</span>
+        <span>Web Performance</span><span class="ticker__sep">✦</span>
+        <span>Accessibility</span><span class="ticker__sep">✦</span>
+        <span>UI Engineering</span><span class="ticker__sep">✦</span>
+        <span>SEO Technical</span><span class="ticker__sep">✦</span>
+        <span>Progressive Web Apps</span><span class="ticker__sep">✦</span>
+        <span>Frontend Development</span><span class="ticker__sep">✦</span>
+        <span>Web Performance</span><span class="ticker__sep">✦</span>
+        <span>Accessibility</span><span class="ticker__sep">✦</span>
+        <span>UI Engineering</span><span class="ticker__sep">✦</span>
+        <span>SEO Technical</span><span class="ticker__sep">✦</span>
+        <span>Progressive Web Apps</span><span class="ticker__sep">✦</span>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECT (sticky parallax preview) -->
+    <section class="featured">
+      <div class="featured__sticky">
+        <span class="featured__eyebrow">[ Featured · 2026 ]</span>
+        <h2 class="featured__title">
+          <span class="featured__title-line"><span class="reveal-fade">Selected</span></span>
+          <span class="featured__title-line"><span class="reveal-fade"><em>work.</em></span></span>
+        </h2>
+        <p class="featured__copy" data-reveal data-i18n="featured.copy">
+          Una selección de proyectos en producción. Sitios pensados desde la performance, el contenido y la marca.
+        </p>
+        <a href="work.html" class="featured__link" data-magnetic data-link>
+          <span data-i18n="featured.cta">Explorar trabajos</span>
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17 17 7m0 0H9m8 0v8" stroke="currentColor" stroke-width="1.5"/></svg>
+        </a>
+      </div>
+
+      <div class="featured__deck" data-parallax-deck>
+        <a class="card card--cucu" data-tilt data-magnetic href="https://cucu-studios.netlify.app" target="_blank" rel="noopener noreferrer" style="--card-bg:#FAFAF7;--card-fg:#1A1A1A;--card-accent:#C9956E;">
+          <div class="card__head">
+            <span class="card__index">001</span>
+            <span class="card__year">2025</span>
+          </div>
+          <div class="card__preview">
+            <span class="card__brand"><em>Cucú</em> Studio<span class="card__dot" style="background:#C9956E"></span></span>
+            <span class="card__sub">Creative studio · Tattoo &amp; design</span>
+          </div>
+          <div class="card__foot">
+            <span class="card__type">Estudio creativo</span>
+            <span class="card__visit" aria-hidden="true">Visit ↗</span>
+          </div>
+        </a>
+
+        <a class="card card--luco" data-tilt data-magnetic href="https://luco-gourmet-demo.netlify.app" target="_blank" rel="noopener noreferrer" style="--card-bg:#F5F1ED;--card-fg:#2C2420;--card-accent:#4A5D3A;">
+          <div class="card__head">
+            <span class="card__index">002</span>
+            <span class="card__year">2025</span>
+          </div>
+          <div class="card__preview">
+            <span class="card__brand">Luco <em>Gourmet</em></span>
+            <span class="card__sub">Comedor &amp; Mercado · Nueva Córdoba</span>
+            <span class="card__shape card__shape--leaf"></span>
+          </div>
+          <div class="card__foot">
+            <span class="card__type">Gastronomía</span>
+            <span class="card__visit" aria-hidden="true">Visit ↗</span>
+          </div>
+        </a>
+
+        <a class="card card--sellink" data-tilt data-magnetic href="https://sellink-group.netlify.app" target="_blank" rel="noopener noreferrer" style="--card-bg:#070707;--card-fg:#EDEDED;--card-accent:#FF3300;">
+          <div class="card__head">
+            <span class="card__index">003</span>
+            <span class="card__year">2026</span>
+          </div>
+          <div class="card__preview">
+            <span class="card__brand card__brand--upper">SELLINK<br/>GROUP</span>
+            <span class="card__sub">★ Agencia creativa ★</span>
+            <span class="card__shape card__shape--block" style="background:#FF3300"></span>
+          </div>
+          <div class="card__foot">
+            <span class="card__type">Agency · Corporate</span>
+            <span class="card__visit" aria-hidden="true">Visit ↗</span>
+          </div>
+        </a>
+
+        <a class="card card--cognition" data-tilt data-magnetic href="https://cognition.com.ar" target="_blank" rel="noopener noreferrer" style="--card-bg:#0B0D10;--card-fg:#F2F1ED;--card-accent:#00D4FF;">
+          <div class="card__head">
+            <span class="card__index">004</span>
+            <span class="card__year">2026</span>
+          </div>
+          <div class="card__preview">
+            <span class="card__brand">Cognition<sup style="color:#00D4FF">●</sup></span>
+            <span class="card__sub">Transformación digital · IA aplicada</span>
+            <span class="card__shape card__shape--node" style="background:#00D4FF;box-shadow:0 0 30px #00D4FF"></span>
+            <span class="card__shape card__shape--node-2" style="background:#635BFF;box-shadow:0 0 30px #635BFF"></span>
+          </div>
+          <div class="card__foot">
+            <span class="card__type">AI · Platform</span>
+            <span class="card__visit" aria-hidden="true">Visit ↗</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services">
+      <div class="services__head">
+        <span class="services__num">[ 02 — Services ]</span>
+        <h2 class="services__title" data-reveal data-i18n="services.title">Servicios</h2>
+        <p class="services__copy" data-reveal data-i18n="services.copy">
+          Dos modalidades de trabajo. Cada proyecto se entrega listo para producción: optimizado, accesible y mantenible.
+        </p>
+      </div>
+
+      <div class="services__list">
+        <article class="service" data-reveal>
+          <div class="service__row">
+            <span class="service__num">01</span>
+            <h3 class="service__name" data-i18n="services.s1.title">Web nueva desde cero</h3>
+            <span class="service__tag" data-i18n="services.s1.tag">Full project</span>
+          </div>
+          <p class="service__desc" data-i18n="services.s1.desc">
+            Diseño y desarrollo completo. HTML, CSS y JavaScript modernos. Estructura semántica, performance, SEO técnico y deploy listo para producción.
+          </p>
+          <ul class="service__includes">
+            <li data-i18n="services.s1.i1">Diseño + desarrollo</li>
+            <li data-i18n="services.s1.i2">Responsive · Mobile-first</li>
+            <li data-i18n="services.s1.i3">SEO técnico + Schema.org</li>
+            <li data-i18n="services.s1.i4">Deploy en Netlify / Vercel</li>
+          </ul>
+        </article>
+
+        <article class="service" data-reveal>
+          <div class="service__row">
+            <span class="service__num">02</span>
+            <h3 class="service__name" data-i18n="services.s2.title">Landing page</h3>
+            <span class="service__tag" data-i18n="services.s2.tag">Single page</span>
+          </div>
+          <p class="service__desc" data-i18n="services.s2.desc">
+            Página única orientada a conversión. Para lanzamientos, campañas o productos específicos. Foco en velocidad de carga, copy claro y CTA visible.
+          </p>
+          <ul class="service__includes">
+            <li data-i18n="services.s2.i1">Diseño + desarrollo</li>
+            <li data-i18n="services.s2.i2">Formulario / integración</li>
+            <li data-i18n="services.s2.i3">Analytics + tracking</li>
+            <li data-i18n="services.s2.i4">A/B test ready</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT CARD -->
+    <section class="contact-card" id="contacto">
+      <div class="contact-card__inner">
+        <div class="contact-card__left">
+          <span class="contact-card__eyebrow" data-i18n="contactCard.eyebrow">[ Contacto directo ]</span>
+          <h2 class="contact-card__title" data-i18n="contactCard.title">Escribime por mail<br/>o WhatsApp.</h2>
+          <div class="contact-card__channels">
+            <a href="mailto:ronycozzi5@gmail.com" class="contact-card__channel" data-magnetic>
+              <span class="contact-card__channel-label">Email</span>
+              <span class="contact-card__channel-val">ronycozzi5@gmail.com <span aria-hidden="true">→</span></span>
+            </a>
+            <a href="https://wa.me/5493515073210" target="_blank" rel="noopener" class="contact-card__channel" data-magnetic>
+              <span class="contact-card__channel-label">WhatsApp</span>
+              <span class="contact-card__channel-val">+54 351 507 3210 <span aria-hidden="true">↗</span></span>
+            </a>
+          </div>
+        </div>
+        <div class="contact-card__right">
+          <div class="contact-card__fact">
+            <span class="contact-card__label" data-i18n="contactCard.response">Respuesta</span>
+            <strong data-i18n="contactCard.response_val">&lt; 24h</strong>
+          </div>
+          <div class="contact-card__fact">
+            <span class="contact-card__label" data-i18n="contactCard.langs">Idiomas</span>
+            <strong>ES · EN</strong>
+          </div>
+          <div class="contact-card__fact">
+            <span class="contact-card__label" data-i18n="contactCard.modality">Modalidad</span>
+            <strong data-i18n="contactCard.modality_val">Remoto · GMT-3</strong>
+          </div>
+          <div class="contact-card__fact">
+            <span class="contact-card__label" data-i18n="contactCard.based">Base</span>
+            <strong>Córdoba, AR</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__status">
+      <span class="footer__badge"><span class="footer__badge-dot"></span> <span data-i18n="footer.status">Disponible · 2026</span></span>
+      <span class="loc-pin"><span class="loc-pin__dot"></span><span>Argentina</span></span>
+      <span class="footer__based"><span data-i18n="footer.based">Remoto</span> · GMT-3</span>
+    </div>
+
+    <div class="footer__top">
+      <div class="footer__col">
+        <span class="footer__label" data-i18n="footer.contact">Contacto</span>
+        <a href="mailto:ronycozzi5@gmail.com" data-magnetic>ronycozzi5@gmail.com</a>
+        <a href="https://wa.me/5493515073210" target="_blank" rel="noopener" data-magnetic>+54 351 507 3210</a>
+      </div>
+      <div class="footer__col">
+        <span class="footer__label" data-i18n="footer.social">Social</span>
+        <a href="https://github.com/ronycozzi" target="_blank" rel="noopener" data-magnetic>GitHub ↗</a>
+        <a href="https://linkedin.com/in/rony-cozzi-677111251" target="_blank" rel="noopener" data-magnetic>LinkedIn ↗</a>
+        <a href="https://wa.me/5493515073210" target="_blank" rel="noopener" data-magnetic>WhatsApp ↗</a>
+      </div>
+      <div class="footer__col">
+        <span class="footer__label" data-i18n="footer.nav">Navegación</span>
+        <a href="work.html" data-link>Work</a>
+        <a href="about.html" data-link><span data-i18n="nav.about">Sobre mí</span></a>
+        <a href="contact.html" data-link><span data-i18n="nav.contact">Contacto</span></a>
+      </div>
+      <div class="footer__col">
+        <span class="footer__label" data-i18n="footer.services">Servicios</span>
+        <span data-i18n="footer.s1">Web desde cero</span>
+        <span data-i18n="footer.s2">Landing pages</span>
+        <a href="#" data-magnetic data-i18n="footer.cv">CV (PDF) ↓</a>
+      </div>
+    </div>
+
+    <div class="footer__meta">
+      <span>© <span class="year"></span> — Rony Cozzi</span>
+      <span data-clock>--:--:-- GMT-3</span>
+      <a href="#top" data-magnetic data-i18n="footer.top">↑ <span data-i18n="footer.topLabel">Subir</span></a>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=4" defer></script>
+</body>
+</html>

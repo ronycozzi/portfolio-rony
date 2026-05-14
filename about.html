@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <meta name="description" content="About — Rony Cozzi. Full Stack Developer." />
+  <title>About — Rony Cozzi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css?v=4" />
+</head>
+<body data-page="about">
+  <div class="page-transition" aria-hidden="true">
+    <div class="page-transition__panel"></div>
+    <div class="page-transition__label">
+      <span class="page-transition__num">03</span>
+      <span class="page-transition__name">About</span>
+    </div>
+  </div>
+
+  <div class="cursor" aria-hidden="true"><span class="cursor__label"></span></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <header class="header">
+    <a href="index.html" class="header__logo" data-magnetic data-link>
+      <span class="header__logo-mark">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M8 8h5a3 3 0 0 1 0 6H8m0 0v4m0-4 6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+        </svg>
+      </span>
+      <span class="header__logo-text">Rony Cozzi<sup>©</sup></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="work.html" data-magnetic data-link><span>Work</span></a>
+      <a href="about.html" class="is-current" data-magnetic data-link><span data-i18n="nav.about">Sobre mí</span></a>
+      <a href="contact.html" data-magnetic data-link><span data-i18n="nav.contact">Contacto</span></a>
+    </nav>
+    <div class="header__actions">
+      <button class="lang-toggle" data-lang-toggle aria-label="Toggle language">
+        <span data-lang="es" class="is-active">ES</span>
+        <span class="lang-sep">/</span>
+        <span data-lang="en">EN</span>
+      </button>
+      <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme">
+        <span class="theme-toggle__dot"></span>
+      </button>
+      <button class="menu-toggle" data-menu-toggle aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" data-mobile-menu>
+    <a href="work.html" data-link>Work</a>
+    <a href="about.html" data-link><span data-i18n="nav.about">Sobre mí</span></a>
+    <a href="contact.html" data-link><span data-i18n="nav.contact">Contacto</span></a>
+  </div>
+
+  <main class="page page--about">
+    <!-- Intro -->
+    <section class="about-hero">
+      <span class="about-hero__eyebrow">[ Index · 03 about ]</span>
+      <h1 class="about-hero__title">
+        <span class="line"><span class="reveal">Full Stack</span></span>
+        <span class="line"><span class="reveal"><em>Developer.</em></span></span>
+      </h1>
+      <p class="about-hero__lead" data-reveal data-i18n="about.lead">
+        Diseño y desarrollo de sitios web con foco en performance, accesibilidad y código mantenible. Trabajo con marcas, estudios y startups que necesitan una presencia digital que funcione.
+      </p>
+    </section>
+
+    <!-- Photo + bio split -->
+    <section class="bio">
+      <figure class="bio__photo" data-parallax-img>
+        <img src="assets/img/rony.jpg" alt="Rony Cozzi" loading="lazy" />
+        <figcaption>Rony Cozzi · 2026</figcaption>
+      </figure>
+
+      <div class="bio__text">
+        <span class="bio__num">[ 01 ]</span>
+        <h2 class="bio__heading" data-i18n="about.bio.heading">Bio</h2>
+        <p data-reveal data-i18n="about.bio.p1">
+          Full Stack Developer enfocado en frontend. Construyo sitios accesibles, rápidos y mantenibles con HTML, CSS y JavaScript modernos, sin depender de frameworks innecesarios.
+        </p>
+        <p data-reveal data-i18n="about.bio.p2">
+          Trabajo de forma independiente con marcas y estudios que valoran código limpio, tiempos cortos y comunicación directa. Cada proyecto se entrega listo para producción: optimizado, indexable y mantenible.
+        </p>
+        <p data-reveal data-i18n="about.bio.p3">
+          Disponible para colaboraciones remotas, proyectos puntuales y posiciones in-house.
+        </p>
+
+        <ul class="bio__facts">
+          <li><span data-i18n="about.facts.role">Rol</span><strong>Full Stack Developer</strong></li>
+          <li><span data-i18n="about.facts.modality">Modalidad</span><strong>Remoto · GMT-3</strong></li>
+          <li><span data-i18n="about.facts.langs">Idiomas</span><strong>ES · EN</strong></li>
+          <li><span data-i18n="about.facts.status">Estado</span><strong data-i18n="about.facts.status_val">Aceptando proyectos</strong></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Stack grid -->
+    <section class="stack-grid">
+      <div class="stack-grid__head">
+        <span class="stack-grid__num">[ 02 ]</span>
+        <h2 class="stack-grid__title">Stack</h2>
+      </div>
+      <div class="stack-grid__cols">
+        <div class="stack-col" data-reveal>
+          <span class="stack-col__label" data-i18n="stack.languages">Lenguajes</span>
+          <ul>
+            <li>HTML5</li><li>CSS3</li><li>JavaScript (ES6+)</li><li>TypeScript</li>
+          </ul>
+        </div>
+        <div class="stack-col" data-reveal>
+          <span class="stack-col__label" data-i18n="stack.frameworks">Frameworks</span>
+          <ul>
+            <li>React</li><li>Vite</li><li>Node.js</li><li>Tailwind</li>
+          </ul>
+        </div>
+        <div class="stack-col" data-reveal>
+          <span class="stack-col__label" data-i18n="stack.tools">Herramientas</span>
+          <ul>
+            <li>Git · GitHub</li><li>Netlify · Vercel</li><li>Figma</li><li>VS Code</li>
+          </ul>
+        </div>
+        <div class="stack-col" data-reveal>
+          <span class="stack-col__label" data-i18n="stack.practices">Prácticas</span>
+          <ul>
+            <li>Performance</li><li>WCAG 2.1</li><li>SEO técnico</li><li>PWA</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Principles -->
+    <section class="principles">
+      <div class="principles__head">
+        <span class="principles__num">[ 03 ]</span>
+        <h2 class="principles__title" data-i18n="principles.title">Principios</h2>
+      </div>
+      <ol class="principles__list">
+        <li data-reveal>
+          <span class="principles__item-num">01</span>
+          <h3 data-i18n="principles.1.title">Performance primero</h3>
+          <p data-i18n="principles.1.desc">Cada milisegundo cuenta. Sitios optimizados desde el primer commit.</p>
+        </li>
+        <li data-reveal>
+          <span class="principles__item-num">02</span>
+          <h3 data-i18n="principles.2.title">Accesibilidad por default</h3>
+          <p data-i18n="principles.2.desc">WCAG 2.1, contraste, navegación por teclado. Sin compromisos.</p>
+        </li>
+        <li data-reveal>
+          <span class="principles__item-num">03</span>
+          <h3 data-i18n="principles.3.title">Código mantenible</h3>
+          <p data-i18n="principles.3.desc">Sin frameworks por moda. Cada decisión técnica se sostiene en el tiempo.</p>
+        </li>
+        <li data-reveal>
+          <span class="principles__item-num">04</span>
+          <h3 data-i18n="principles.4.title">Comunicación clara</h3>
+          <p data-i18n="principles.4.desc">Updates frecuentes, deadlines reales y entregas sin sorpresas.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- CONTACT CARD -->
+    <section class="contact-card">
+      <div class="contact-card__inner">
+        <div class="contact-card__left">
+          <span class="contact-card__eyebrow" data-i18n="contactCard.eyebrow">[ Contacto directo ]</span>
+          <h2 class="contact-card__title" data-i18n="contactCard.title">Escribime por mail<br/>o WhatsApp.</h2>
+          <div class="contact-card__channels">
+            <a href="mailto:ronycozzi5@gmail.com" class="contact-card__channel" data-magnetic>
+              <span class="contact-card__channel-label">Email</span>
+              <span class="contact-card__channel-val">ronycozzi5@gmail.com <span aria-hidden="true">→</span></span>
+            </a>
+            <a href="https://wa.me/5493515073210" target="_blank" rel="noopener" class="contact-card__channel" data-magnetic>
+              <span class="contact-card__channel-label">WhatsApp</span>
+              <span class="contact-card__channel-val">+54 351 507 3210 <span aria-hidden="true">↗</span></span>
+            </a>
+          </div>
+        </div>
+        <div class="contact-card__right">
+          <div class="contact-card__fact">
+            <span class="contact-card__label" data-i18n="contactCard.response">Respuesta</span>
+            <strong data-i18n="contactCard.response_val">&lt; 24h</strong>
+          </div>
+          <div class="contact-card__fact">
+            <span class="contact-card__label" data-i18n="contactCard.langs">Idiomas</span>
+            <strong>ES · EN</strong>
+          </div>
+          <div class="contact-card__fact">
+            <span class="contact-card__label" data-i18n="contactCard.modality">Modalidad</span>
+            <strong data-i18n="contactCard.modality_val">Remoto · GMT-3</strong>
+          </div>
+          <div class="contact-card__fact">
+            <span class="contact-card__label" data-i18n="contactCard.based">Base</span>
+            <strong>Córdoba, AR</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__status">
+      <span class="footer__badge"><span class="footer__badge-dot"></span> <span data-i18n="footer.status">Disponible · 2026</span></span>
+      <span class="loc-pin"><span class="loc-pin__dot"></span><span>Argentina</span></span>
+      <span class="footer__based"><span data-i18n="footer.based">Remoto</span> · GMT-3</span>
+    </div>
+    <div class="footer__top">
+      <div class="footer__col">
+        <span class="footer__label" data-i18n="footer.contact">Contacto</span>
+        <a href="mailto:ronycozzi5@gmail.com" data-magnetic>ronycozzi5@gmail.com</a>
+        <a href="https://wa.me/5493515073210" target="_blank" rel="noopener" data-magnetic>+54 351 507 3210</a>
+      </div>
+      <div class="footer__col">
+        <span class="footer__label" data-i18n="footer.social">Social</span>
+        <a href="https://github.com/ronycozzi" target="_blank" rel="noopener" data-magnetic>GitHub ↗</a>
+        <a href="https://linkedin.com/in/rony-cozzi-677111251" target="_blank" rel="noopener" data-magnetic>LinkedIn ↗</a>
+        <a href="https://wa.me/5493515073210" target="_blank" rel="noopener" data-magnetic>WhatsApp ↗</a>
+      </div>
+      <div class="footer__col">
+        <span class="footer__label" data-i18n="footer.nav">Navegación</span>
+        <a href="work.html" data-link>Work</a>
+        <a href="about.html" data-link><span data-i18n="nav.about">Sobre mí</span></a>
+        <a href="contact.html" data-link><span data-i18n="nav.contact">Contacto</span></a>
+      </div>
+      <div class="footer__col">
+        <span class="footer__label" data-i18n="footer.services">Servicios</span>
+        <span data-i18n="footer.s1">Web desde cero</span>
+        <span data-i18n="footer.s2">Landing pages</span>
+        <a href="#" data-magnetic data-i18n="footer.cv">CV (PDF) ↓</a>
+      </div>
+    </div>
+    <div class="footer__meta">
+      <span>© <span class="year"></span> — Rony Cozzi</span>
+      <span data-clock>--:--:-- GMT-3</span>
+      <a href="#top" data-magnetic data-i18n="footer.top">↑ <span data-i18n="footer.topLabel">Subir</span></a>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=4" defer></script>
+</body>
+</html>
