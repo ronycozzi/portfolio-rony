@@ -10,12 +10,12 @@
   <meta property="og:image" content="https://rony-cozzi.netlify.app/og-image.svg" />
   <link rel="canonical" href="https://rony-cozzi.netlify.app/faq.html" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <link rel="apple-touch-icon" href="favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png" />
   <title>FAQ — Rony Cozzi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=5" />
+  <link rel="stylesheet" href="css/styles.css?v=6" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -146,7 +146,7 @@
   <div class="cursor" aria-hidden="true"><span class="cursor__label"></span></div>
   <div class="cursor-dot" aria-hidden="true"></div>
 
-  <a href="#main" class="skip-link" style="position:absolute;top:-100%;left:16px;z-index:10000;background:var(--accent);color:var(--accent-ink);font-family:var(--font-display);font-size:13px;font-weight:600;padding:8px 16px;border-radius:4px;transition:top .2s">Skip to content</a>
+  <a href="#main" class="skip-link">Skip to content</a>
 
   <header class="header">
     <a href="index.html" class="header__logo" data-magnetic data-link>
@@ -309,16 +309,11 @@
     <div class="footer__meta">
       <span>© <span class="year"></span> — Rony Cozzi</span>
       <span data-clock>--:--:-- GMT-3</span>
-      <a href="#top" data-magnetic>↑ Subir</a>
+      <a href="#" data-magnetic>↑ Subir</a>
     </div>
   </footer>
 
-  <script src="js/main.js?v=5" defer></script>
-  <script>
-    // Restore skip-link focus behavior inline
-    const skip = document.querySelector('.skip-link');
-    if(skip) skip.addEventListener('focus', () => skip.style.top = '16px');
-    if(skip) skip.addEventListener('blur', () => skip.style.top = '-100%');
-  </script>
+  <script src="js/main.js?v=6" defer></script>
+
 </body>
 </html>
