@@ -110,12 +110,12 @@
 
         <div class="field">
           <label for="name"><span data-i18n="contact.form.name">Nombre</span> <em>*</em></label>
-          <input type="text" id="name" name="name" required autocomplete="name" />
+          <input type="text" id="name" name="name" required autocomplete="name" enterkeyhint="next" autocapitalize="words" />
         </div>
 
         <div class="field">
           <label for="email">Email <em>*</em></label>
-          <input type="email" id="email" name="email" required autocomplete="email" />
+          <input type="email" id="email" name="email" required autocomplete="email" inputmode="email" enterkeyhint="next" autocapitalize="off" spellcheck="false" />
         </div>
 
         <div class="field">
@@ -130,7 +130,7 @@
 
         <div class="field">
           <label for="message"><span data-i18n="contact.form.message">Mensaje</span> <em>*</em></label>
-          <textarea id="message" name="message" rows="5" required></textarea>
+          <textarea id="message" name="message" rows="5" required enterkeyhint="send" autocapitalize="sentences"></textarea>
         </div>
 
         <button type="submit" class="btn-submit" data-magnetic>

@@ -11,6 +11,11 @@ body { line-height: 1.5; -webkit-font-smoothing: antialiased; text-rendering: op
 img, picture, svg, video { display: block; max-width: 100%; }
 button { font: inherit; background: none; border: 0; cursor: pointer; color: inherit; }
 a { color: inherit; text-decoration: none; }
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
 ul, ol { list-style: none; }
 input, textarea, select { font: inherit; color: inherit; }
 ::selection { background: var(--accent); color: var(--bg); }
@@ -584,14 +589,14 @@ body {
 .featured {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(280px, 1fr) 1.4fr;
+  grid-template-columns: minmax(260px, 0.85fr) 1.6fr;
   gap: 60px;
-  padding: 140px var(--pad-x);
+  padding: 100px var(--pad-x);
   align-items: start;
 }
 .featured__sticky {
   position: sticky;
-  top: 120px;
+  top: 100px;
   align-self: start;
 }
 .featured__eyebrow {
@@ -634,26 +639,30 @@ body {
 .featured__link:hover svg { transform: rotate(45deg); }
 
 .featured__deck {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 .card {
   position: relative;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 5 / 4;
   border-radius: 10px;
   background: var(--card-bg);
   color: var(--card-fg);
-  padding: 28px;
+  padding: 24px;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  gap: 18px;
+  gap: 14px;
   overflow: hidden;
   transform-style: preserve-3d;
   transition: transform var(--t-base) var(--ease), box-shadow var(--t-base) var(--ease);
   will-change: transform;
   border: 1px solid color-mix(in srgb, var(--card-fg) 10%, transparent);
   text-decoration: none;
+}
+@media (max-width: 700px) {
+  .featured__deck { grid-template-columns: 1fr; }
+  .card { aspect-ratio: 4 / 3; }
 }
 .card::after {
   content: "";
@@ -780,11 +789,10 @@ body {
 }
 .services__head {
   max-width: 1100px;
-  margin: 0 auto 40px;
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 40px;
-  align-items: start;
+  margin: 0 auto 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 .services__num {
   font-family: var(--font-display);
@@ -799,18 +807,13 @@ body {
   font-weight: 500;
   letter-spacing: -0.035em;
   line-height: 0.95;
-  grid-column: 1;
-  grid-row: 2;
-  margin-top: 12px;
 }
 .services__copy {
-  grid-column: 2;
-  grid-row: 1 / span 2;
   color: var(--fg-muted);
   font-size: 16px;
   line-height: 1.55;
-  max-width: 500px;
-  align-self: end;
+  max-width: 620px;
+  margin-top: 12px;
 }
 .services__list {
   max-width: 1100px;
@@ -879,12 +882,12 @@ body {
   border-radius: 999px;
 }
 @media (max-width: 760px) {
-  .services__head { grid-template-columns: 1fr; gap: 16px; }
-  .services__title { grid-column: 1; grid-row: auto; margin-top: 0; }
-  .services__copy { grid-column: 1; grid-row: auto; }
   .service__row { grid-template-columns: 40px 1fr; }
   .service__tag { grid-column: 2; justify-self: start; margin-top: 6px; }
   .service__desc, .service__includes { padding-left: 56px; }
+}
+@media (max-width: 500px) {
+  .service__desc, .service__includes { padding-left: 0; }
 }
 
 /* ---------- CONTACT CARD (replaces big CTA) ---------- */
@@ -1130,11 +1133,15 @@ body {
 }
 .footer__col a {
   display: inline-block;
+  padding: 4px 0;
   transition: color var(--t-fast) var(--ease);
 }
 .footer__col a:hover { color: var(--accent); }
+.footer__meta a { padding: 8px 12px; margin: -8px -12px; }
 @media (max-width: 760px) {
   .footer__top { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+  .footer__meta { gap: 12px; }
+  .footer__meta a { padding: 12px 0; min-height: 44px; display: inline-flex; align-items: center; }
 }
 
 /* Footer headline block */
@@ -1264,8 +1271,8 @@ body {
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding-top: 70px;
-  padding-bottom: 40px;
+  padding-top: 60px;
+  padding-bottom: 30px;
   width: 100%;
   min-width: 0;
 }
@@ -1296,15 +1303,15 @@ body {
 .works__count-sep { color: var(--fg-muted); margin: 0 4px; }
 
 .work-item {
-  flex: 0 0 min(540px, 78vw);
-  height: clamp(420px, 60vh, 540px);
+  flex: 0 0 min(520px, 78vw);
+  min-height: clamp(460px, 70vh, 620px);
   background: var(--w-bg);
   color: var(--w-fg);
   border-radius: 12px;
-  padding: 26px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 16px;
   position: relative;
   overflow: hidden;
   border: 1px solid color-mix(in srgb, var(--w-fg) 12%, transparent);
@@ -1329,11 +1336,12 @@ body {
   opacity: 0.6;
 }
 .work-item__visual {
-  flex: 1;
+  flex: 1 1 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 280px;
+  min-height: 200px;
+  max-height: 280px;
 }
 .work-item__device {
   width: 100%;
@@ -1936,9 +1944,16 @@ body {
   background: var(--bg-elev);
   border: 1px solid var(--line-strong);
   border-radius: 6px;
-  font-size: 15px;
+  font-size: 16px; /* prevents iOS zoom on focus when < 16px */
   outline: none;
   transition: border-color var(--t-fast) var(--ease);
+  width: 100%;
+}
+.field input:focus-visible,
+.field textarea:focus-visible,
+.field select:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 .field input:focus, .field textarea:focus, .field select:focus {
   border-color: var(--accent);
