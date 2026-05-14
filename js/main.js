@@ -703,7 +703,7 @@
     if (!form) return;
     const note = form.querySelector('[data-form-note]');
     const btn = form.querySelector('[type="submit"]');
-    const btnText = btn?.querySelector('.form-submit__text');
+    const btnText = btn?.querySelector('.btn-submit__text');
     const lang = () => localStorage.getItem('rc-lang') || 'es';
 
     form.addEventListener('submit', async (e) => {
