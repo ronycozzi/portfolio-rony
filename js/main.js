@@ -315,11 +315,7 @@
 
         overlay.classList.add('is-active', 'is-in');
 
-        // Cache-bust: append timestamp so Chrome doesn't serve a stale copy
-        // Preserve any existing hash; strip prior ?v= if present
-        const url = new URL(href, window.location.origin);
-        url.searchParams.set('v', Date.now());
-        setTimeout(() => { window.location.href = url.pathname + url.search + url.hash; }, 700);
+        setTimeout(() => { window.location.href = href; }, 700);
       });
     });
   }
@@ -539,13 +535,6 @@
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
 
-    // Re-render on lang change: observe the data-i18n target
-    const mo = new MutationObserver(() => {
-      const newText = span.dataset._origin || span.textContent;
-      // not used; lang toggle re-renders innerText of [data-i18n] children, which removes our spans.
-      // We re-split on each lang change handler via setupLang trigger; here as a safety net.
-    });
-    mo.observe(span, { childList: true });
   }
 
   /* ---------- Horizontal pinning: vertical scroll → horizontal translate ---------- */
@@ -680,12 +669,15 @@
   function setupClock() {
     const els = document.querySelectorAll('[data-clock]');
     if (!els.length) return;
+    const fmt = new Intl.DateTimeFormat('en-GB', {
+      timeZone: 'America/Argentina/Cordoba',
+      hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false,
+    });
     function tick() {
-      const now = new Date();
-      const hh = String(now.getHours()).padStart(2, '0');
-      const mm = String(now.getMinutes()).padStart(2, '0');
-      const ss = String(now.getSeconds()).padStart(2, '0');
-      els.forEach((el) => { el.textContent = `${hh}:${mm}:${ss} GMT-3`; });
+      const parts = fmt.formatToParts(new Date());
+      const get = (t) => parts.find(p => p.type === t)?.value ?? '00';
+      const time = `${get('hour')}:${get('minute')}:${get('second')} GMT-3`;
+      els.forEach((el) => { el.textContent = time; });
     }
     tick();
     setInterval(tick, 1000);
@@ -751,7 +743,8 @@
         const text = btn.dataset.copy;
         navigator.clipboard?.writeText(text).then(() => {
           const original = btn.textContent;
-          btn.textContent = '✓ Copiado';
+          const lang = localStorage.getItem('rc-lang') || 'es';
+          btn.textContent = lang === 'en' ? '✓ Copied' : '✓ Copiado';
           setTimeout(() => { btn.textContent = original; }, 2000);
         }).catch(() => {
           // silently fail on old browsers
