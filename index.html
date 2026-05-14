@@ -13,25 +13,56 @@
   <meta property="og:title" content="Rony Cozzi — Full Stack Developer" />
   <meta property="og:description" content="Performance-driven, accessible websites." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://rony-cozzi.netlify.app/og-image.svg" />
+  <meta property="og:image" content="https://rony-cozzi.netlify.app/og-image.png" />
   <meta property="og:url" content="https://rony-cozzi.netlify.app/" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Rony Cozzi — Full Stack Developer" />
   <meta name="twitter:description" content="Performance-driven, accessible websites." />
-  <meta name="twitter:image" content="https://rony-cozzi.netlify.app/og-image.svg" />
+  <meta name="twitter:image" content="https://rony-cozzi.netlify.app/og-image.png" />
 
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="apple-touch-icon" href="favicon.svg" />
+  <link rel="manifest" href="/manifest.json" />
 
+  <link rel="canonical" href="https://rony-cozzi.netlify.app/" />
   <title>Rony Cozzi — Full Stack Developer</title>
 
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/styles.css?v=4" />
+  <link rel="stylesheet" href="css/styles.css?v=5" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Rony Cozzi",
+    "jobTitle": "Full Stack Developer",
+    "url": "https://rony-cozzi.netlify.app",
+    "email": "mailto:ronycozzi5@gmail.com",
+    "telephone": "+54-351-507-3210",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Córdoba",
+      "addressCountry": "AR"
+    },
+    "sameAs": [
+      "https://github.com/ronycozzi",
+      "https://linkedin.com/in/rony-cozzi-677111251"
+    ],
+    "knowsAbout": ["HTML5", "CSS3", "JavaScript", "Progressive Web Apps", "SEO", "Web Performance"],
+    "offers": {
+      "@type": "Offer",
+      "description": "Desarrollo web frontend y full stack — sitios nuevos y landing pages",
+      "areaServed": "América Latina"
+    }
+  }
+  </script>
 </head>
 <body data-page="home">
+  <a href="#main" class="skip-link" style="position:absolute;top:-100%;left:16px;z-index:10000;background:var(--accent);color:var(--accent-ink);font-family:var(--font-display);font-size:13px;font-weight:600;padding:8px 16px;border-radius:4px;transition:top .2s">Skip to content</a>
+
   <!-- Page transition overlay -->
   <div class="page-transition" aria-hidden="true">
     <div class="page-transition__panel"></div>
@@ -47,7 +78,7 @@
 
   <!-- Header -->
   <header class="header">
-    <a href="index.html" class="header__logo" data-magnetic data-link>
+    <a href="index.html" class="header__logo" aria-current="page" data-magnetic data-link>
       <span class="header__logo-mark">
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
@@ -85,7 +116,7 @@
     <a href="contact.html" data-link><span data-i18n="nav.contact">Contacto</span></a>
   </div>
 
-  <main class="page page--home">
+  <main class="page page--home" id="main">
     <!-- HERO -->
     <section class="hero">
       <div class="hero__top">
@@ -362,6 +393,8 @@
         <a href="work.html" data-link>Work</a>
         <a href="about.html" data-link><span data-i18n="nav.about">Sobre mí</span></a>
         <a href="contact.html" data-link><span data-i18n="nav.contact">Contacto</span></a>
+        <a href="process.html" data-link>Proceso</a>
+        <a href="faq.html" data-link>FAQ</a>
       </div>
       <div class="footer__col">
         <span class="footer__label" data-i18n="footer.services">Servicios</span>
@@ -375,9 +408,10 @@
       <span>© <span class="year"></span> — Rony Cozzi</span>
       <span data-clock>--:--:-- GMT-3</span>
       <a href="#top" data-magnetic data-i18n="footer.top">↑ <span data-i18n="footer.topLabel">Subir</span></a>
+      <a href="privacy.html" style="font-size:11px;color:var(--fg-muted)">Privacidad</a>
     </div>
   </footer>
 
-  <script src="js/main.js?v=4" defer></script>
+  <script src="js/main.js?v=5" defer></script>
 </body>
 </html>

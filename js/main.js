@@ -697,20 +697,98 @@
     document.querySelectorAll('.year').forEach((el) => { el.textContent = y; });
   }
 
-  /* ---------- Contact form ---------- */
+  /* ---------- Contact form (Netlify Forms) ---------- */
   function setupContactForm() {
     const form = document.querySelector('[data-contact-form]');
     if (!form) return;
     const note = form.querySelector('[data-form-note]');
-    form.addEventListener('submit', (e) => {
+    const btn = form.querySelector('[type="submit"]');
+    const btnText = btn?.querySelector('.form-submit__text');
+    const lang = () => localStorage.getItem('rc-lang') || 'es';
+
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const data = new FormData(form);
-      const subject = encodeURIComponent(`[Portfolio] ${data.get('subject') || 'Contacto'} — ${data.get('name')}`);
-      const body = encodeURIComponent(`${data.get('message')}\n\n— ${data.get('name')} (${data.get('email')})`);
-      window.location.href = `mailto:ronycozzi5@gmail.com?subject=${subject}&body=${body}`;
-      const lang = localStorage.getItem('rc-lang') || 'es';
-      if (note) note.textContent = lang === 'en' ? 'Opening your email client…' : 'Abriendo tu cliente de email…';
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+
+      // Loading state
+      if (btn) { btn.disabled = true; btn.setAttribute('aria-busy', 'true'); }
+      if (btnText) btnText.textContent = lang() === 'en' ? 'Sending…' : 'Enviando…';
+      if (note) note.textContent = '';
+
+      try {
+        const data = new FormData(form);
+        const encoded = new URLSearchParams(data).toString();
+        const res = await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: encoded,
+        });
+
+        if (res.ok) {
+          if (note) note.textContent = lang() === 'en' ? '✓ Message sent — I will reply within 24h.' : '✓ Mensaje enviado — respondo en menos de 24h.';
+          form.reset();
+        } else {
+          throw new Error('Server error ' + res.status);
+        }
+      } catch (err) {
+        // Graceful fallback to mailto
+        const d = new FormData(form);
+        const subject = encodeURIComponent('[Portfolio] ' + (d.get('subject') || 'Contacto') + ' — ' + d.get('name'));
+        const body = encodeURIComponent(d.get('message') + '\n\n— ' + d.get('name') + ' (' + d.get('email') + ')');
+        window.location.href = 'mailto:ronycozzi5@gmail.com?subject=' + subject + '&body=' + body;
+      } finally {
+        if (btn) { btn.disabled = false; btn.removeAttribute('aria-busy'); }
+        if (btnText) btnText.textContent = lang() === 'en' ? 'Send message' : 'Enviar mensaje';
+      }
     });
+  }
+
+
+  /* ---------- Copy to clipboard ---------- */
+  function setupCopyButtons() {
+    document.querySelectorAll('[data-copy]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const text = btn.dataset.copy;
+        navigator.clipboard?.writeText(text).then(() => {
+          const original = btn.textContent;
+          btn.textContent = '✓ Copiado';
+          setTimeout(() => { btn.textContent = original; }, 2000);
+        }).catch(() => {
+          // silently fail on old browsers
+        });
+      });
+    });
+  }
+
+  /* ---------- Skip link a11y ---------- */
+  function setupSkipLink() {
+    const link = document.querySelector('.skip-link');
+    if (!link) return;
+    link.addEventListener('focus', () => link.style.top = '16px');
+    link.addEventListener('blur', () => link.style.top = '-100%');
+  }
+
+  /* ---------- Console easter egg ---------- */
+  function consoleEasterEgg() {
+    const accent = '#C6FF3D';
+    const dark = '#0A0A0A';
+    const muted = '#8A8780';
+    try {
+      console.log(
+        '%c Rony Cozzi %c Full Stack Developer %c',
+        `background:${accent};color:${dark};font-family:monospace;font-size:14px;font-weight:bold;padding:6px 12px;border-radius:4px 0 0 4px`,
+        `background:${dark};color:${accent};font-family:monospace;font-size:14px;padding:6px 12px;border:1px solid ${accent};border-left:none;border-radius:0 4px 4px 0`,
+        'background:transparent'
+      );
+      console.log(
+        '%c ronycozzi5@gmail.com · rony-cozzi.netlify.app',
+        `color:${muted};font-family:monospace;font-size:12px`
+      );
+      console.log(
+        '%c Built with vanilla HTML/CSS/JS — no frameworks harmed.',
+        `color:${muted};font-family:monospace;font-size:11px;font-style:italic`
+      );
+    } catch (e) {}
   }
 
   /* ---------- Init ---------- */
@@ -732,6 +810,9 @@
     setupClock();
     setupYear();
     setupContactForm();
+    setupCopyButtons();
+    setupSkipLink();
+    consoleEasterEgg();
   }
 
   if (document.readyState === 'loading') {

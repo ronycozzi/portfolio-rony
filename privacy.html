@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <meta name="description" content="Política de privacidad — Rony Cozzi. Qué datos se recopilan, cómo se usan y tus derechos como visitante." />
+  <meta name="robots" content="noindex" />
+  <link rel="canonical" href="https://rony-cozzi.netlify.app/privacy.html" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <title>Privacidad — Rony Cozzi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css?v=5" />
+  <style>
+    .legal-hero {
+      padding: calc(var(--header-h, 72px) + 48px) var(--pad-x) 40px;
+      border-bottom: 1px solid var(--line);
+    }
+    .legal-hero__eyebrow {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      color: var(--fg-muted);
+      margin-bottom: 16px;
+    }
+    .legal-hero__title {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 4vw, 52px);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+    .legal-hero__date {
+      margin-top: 12px;
+      font-size: 13px;
+      color: var(--fg-muted);
+    }
+    .legal-body {
+      padding: 60px var(--pad-x) 100px;
+      max-width: calc(720px + var(--pad-x) * 2);
+    }
+    .legal-body h2 {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 40px;
+      margin-bottom: 12px;
+    }
+    .legal-body p, .legal-body li {
+      color: var(--fg-muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .legal-body ul { list-style: disc; padding-left: 20px; margin-bottom: 16px; }
+    .legal-body a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+  </style>
+</head>
+<body data-page="privacy">
+  <div class="cursor" aria-hidden="true"><span class="cursor__label"></span></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <header class="header">
+    <a href="index.html" class="header__logo" data-magnetic data-link>
+      <span class="header__logo-mark">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M8 8h5a3 3 0 0 1 0 6H8m0 0v4m0-4 6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+        </svg>
+      </span>
+      <span class="header__logo-text">Rony Cozzi<sup>©</sup></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="work.html" data-magnetic data-link><span>Work</span></a>
+      <a href="about.html" data-magnetic data-link><span data-i18n="nav.about">Sobre mí</span></a>
+      <a href="contact.html" data-magnetic data-link><span data-i18n="nav.contact">Contacto</span></a>
+    </nav>
+    <div class="header__actions">
+      <button class="lang-toggle" data-lang-toggle aria-label="Toggle language">
+        <span data-lang="es" class="is-active">ES</span>
+        <span class="lang-sep">/</span>
+        <span data-lang="en">EN</span>
+      </button>
+      <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme">
+        <span class="theme-toggle__dot"></span>
+      </button>
+      <button class="menu-toggle" data-menu-toggle aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" data-mobile-menu>
+    <a href="work.html" data-link>Work</a>
+    <a href="about.html" data-link><span data-i18n="nav.about">Sobre mí</span></a>
+    <a href="contact.html" data-link><span data-i18n="nav.contact">Contacto</span></a>
+  </div>
+
+  <main class="page" id="main">
+    <div class="legal-hero">
+      <span class="legal-hero__eyebrow">[ Legal ]</span>
+      <h1 class="legal-hero__title">Política de Privacidad</h1>
+      <p class="legal-hero__date">Última actualización: mayo de 2026</p>
+    </div>
+
+    <div class="legal-body">
+      <p>Este sitio web (<strong>rony-cozzi.netlify.app</strong>) es operado por Rony Cozzi, desarrollador web independiente con base en Córdoba, Argentina. Esta política describe qué datos se recopilan, cómo se usan y cuáles son tus derechos, en cumplimiento con la <strong>Ley 25.326 de Protección de Datos Personales</strong> (Argentina) y principios del GDPR.</p>
+
+      <h2>1. Datos que recopilamos</h2>
+      <p>Este sitio web recopila datos en dos situaciones:</p>
+      <ul>
+        <li><strong>Formulario de contacto:</strong> cuando enviás un mensaje, se recopila tu nombre, dirección de email y el texto del mensaje. Estos datos se almacenan en Netlify Forms y se reenvían a <a href="mailto:ronycozzi5@gmail.com">ronycozzi5@gmail.com</a>.</li>
+        <li><strong>Analytics de privacidad:</strong> este sitio puede usar Plausible Analytics (sin cookies, sin fingerprinting, sin datos personales). Los datos son anónimos y agregados.</li>
+      </ul>
+      <p>Este sitio <strong>no usa</strong> cookies de seguimiento, Google Analytics, Facebook Pixel ni ninguna forma de rastreo individual de usuarios.</p>
+
+      <h2>2. Cómo usamos los datos</h2>
+      <ul>
+        <li>Los datos del formulario de contacto se usan exclusivamente para responder a tu consulta.</li>
+        <li>No se comparten con terceros salvo los proveedores de servicio (Netlify, Gmail) necesarios para procesar tu mensaje.</li>
+        <li>No se usan para marketing ni se venden bajo ninguna circunstancia.</li>
+      </ul>
+
+      <h2>3. Retención de datos</h2>
+      <p>Los mensajes del formulario se retienen mientras sean relevantes para la comunicación activa, y se eliminan a pedido. No existe base de datos propia — los datos residen en la infraestructura de Netlify y Google Gmail, ambos con sus propias políticas de retención.</p>
+
+      <h2>4. Tus derechos</h2>
+      <p>Bajo la Ley 25.326 y el GDPR tenés derecho a:</p>
+      <ul>
+        <li>Acceder a los datos personales que hayás proporcionado</li>
+        <li>Solicitar la corrección de datos incorrectos</li>
+        <li>Solicitar la eliminación de tus datos</li>
+        <li>Oponerte al tratamiento de tus datos</li>
+      </ul>
+      <p>Para ejercer cualquiera de estos derechos, escribí a <a href="mailto:ronycozzi5@gmail.com">ronycozzi5@gmail.com</a>. Respondo en menos de 72 horas hábiles.</p>
+
+      <h2>5. Seguridad</h2>
+      <p>El sitio está alojado en Netlify con HTTPS (TLS 1.3), headers de seguridad (CSP, X-Frame-Options, HSTS) y sin bases de datos propias accesibles externamente. No podemos garantizar seguridad absoluta — ningún sistema en internet puede — pero aplicamos las prácticas estándar de la industria.</p>
+
+      <h2>6. Cambios a esta política</h2>
+      <p>Si esta política cambia de forma significativa, se actualizará la fecha en el encabezado. Para cambios menores no se enviarán notificaciones.</p>
+
+      <h2>7. Contacto</h2>
+      <p>Rony Cozzi · <a href="mailto:ronycozzi5@gmail.com">ronycozzi5@gmail.com</a> · +54 351 507 3210 · Córdoba, Argentina</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__meta" style="padding: 24px var(--pad-x);">
+      <span>© <span class="year"></span> — Rony Cozzi</span>
+      <a href="index.html" data-magnetic>← Inicio</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=5" defer></script>
+</body>
+</html>

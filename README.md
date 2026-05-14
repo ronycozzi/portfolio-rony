@@ -1,75 +1,109 @@
-# Rony Cozzi — Portfolio personal
+# Rony Cozzi — Portfolio v2
 
-Sitio personal y portfolio de **Rony Cozzi**, Full-Stack Developer.
-HTML + CSS + JavaScript vanilla. Sin frameworks, sin build step.
-
-## Live
-
-Próximamente en Netlify.
+Portfolio personal en producción: **[rony-cozzi.netlify.app](https://rony-cozzi.netlify.app)**
 
 ## Stack
 
-- **HTML5** semántico
-- **CSS3** con variables, grid, clamp, container queries, `position: sticky`, `overflow: clip`
-- **JavaScript** ES6+ vanilla — `IntersectionObserver`, `requestAnimationFrame`, sin dependencias
-- **Google Fonts:** Space Grotesk + Inter
-- **Mobile-first** desde 375px hasta ultra-wide
-
-## Features
-
-- **Dark / light theme** con persistencia en `localStorage` (default: dark)
-- **i18n ES / EN** con toggle funcional (todos los strings traducidos)
-- **Page transitions** custom con overlay verde lima
-- **Cursor custom** magnético con `mix-blend-mode: difference`
-- **Magnetic links** y botones con `rAF` smoothing
-- **3D tilt cards** en el deck de proyectos del home
-- **Scroll horizontal pinneado** en `work.html` (vertical scroll → horizontal translate + tail dwell)
-- **Word rotator** en el hero
-- **Reveals** por línea con `IntersectionObserver`
-- **Parallax** sutil en cards y foto del about
-- **Accesibilidad:** `prefers-reduced-motion` respetado, focus visible, ARIA en navegación, keyboard nav
-- **Cache control:** meta tags + versioning para evitar staleness en deploy
+- **HTML5 + CSS3 + JavaScript ES6+** — sin frameworks, sin build step, sin npm
+- **Netlify** — deploy, forms, headers, CDN
+- **Google Fonts** — Space Grotesk (display) + Inter (body)
 
 ## Estructura
 
 ```
-.
-├── index.html         Home: hero, featured deck (4 proyectos), services, contact card
-├── work.html          Proyectos: scroll horizontal pinneado, capabilities
-├── about.html         Sobre mí: bio, stack, principios
-├── contact.html       Contacto: email/WhatsApp + formulario que abre mailto
+portfolio-rony/
+├── index.html              Home — hero, featured deck, services, contact card
+├── work.html               Pin horizontal con 4 proyectos + capabilities
+├── about.html              Bio, stack, principios
+├── contact.html            Form (Netlify Forms) + email/WhatsApp
+├── faq.html                10 preguntas frecuentes con FAQPage schema
+├── process.html            Proceso de trabajo paso a paso
+├── privacy.html            Política de privacidad (Ley 25.326 + GDPR)
+├── terms.html              Términos y condiciones
+├── 404.html                Página 404 custom con terminal easter egg
+├── manifest.json           PWA manifest
+├── netlify.toml            Security headers + redirects
+├── sitemap.xml             10 URLs indexadas
+├── robots.txt              Allow all
+├── favicon.svg             Logo RC
+├── og-image.svg            OG preview 1200×630
 ├── css/
-│   └── styles.css     Sistema de diseño completo (tokens, dark/light, responsive)
+│   ├── styles.css          ~2100 líneas — tokens, componentes, responsive
+│   └── case.css            Estilos para case studies
 ├── js/
-│   └── main.js        Theme, lang, transitions, cursor, magnetic, tilt, scroll horizontal, etc.
-└── assets/
-    └── img/           Foto + thumbnails (CSS-generated)
+│   └── main.js             ~820 líneas — i18n, theme, transitions, etc.
+├── assets/
+│   ├── Rony_Cozzi_CV.pdf   CV descargable
+│   ├── img/rony.jpg        Foto bio (B&N vía CSS)
+│   ├── icons/              PWA icons 192/512
+│   └── work/               Screenshots WebP de proyectos
+└── case/
+    ├── cucu.html           Case study — Cucú Studio
+    ├── luco.html           Case study — Luco Gourmet
+    ├── sellink.html        Case study — Sellink Group
+    └── cognition.html      Case study — Cognition
 ```
 
-## Proyectos destacados
-
-1. **Cucú Studio** — Estudio creativo · [cucu-studios.netlify.app](https://cucu-studios.netlify.app)
-2. **Luco Gourmet** — Gastronomía · [luco-gourmet-demo.netlify.app](https://luco-gourmet-demo.netlify.app)
-3. **Sellink Group** — Agencia · [sellink-group.netlify.app](https://sellink-group.netlify.app)
-4. **Cognition** — Transformación digital + IA · [cognition.com.ar](https://cognition.com.ar)
-
-## Preview local
+## Correr local
 
 ```bash
-# desde la raíz del proyecto:
-python -m http.server 5505
-# abrir http://localhost:5505
+# Opción 1: Python (cualquier OS)
+python -m http.server 3000
+
+# Opción 2: Node
+npx serve .
+
+# Opción 3: VS Code Live Server
+# Instalar extensión "Live Server" → click derecho en index.html → Open with Live Server
 ```
 
-O usar Live Server en VS Code.
+## Deploy
 
-## Contacto
+Auto-deploy desde `main` → [Netlify](https://app.netlify.com/projects/rony-cozzi). Push a `main` = deploy en ~30 segundos.
 
-- **Email:** ronycozzi5@gmail.com
-- **WhatsApp:** +54 351 507 3210
-- **GitHub:** [github.com/ronycozzi](https://github.com/ronycozzi)
-- **LinkedIn:** [linkedin.com/in/rony-cozzi-677111251](https://linkedin.com/in/rony-cozzi-677111251)
+```bash
+git add .
+git commit -m "feat: descripción del cambio"
+git push origin main
+```
 
----
+## Agregar un proyecto nuevo al carrusel
 
-© 2026 — Rony Cozzi
+1. En `index.html`, copiar un bloque `<a class="card card--XXX">` en la sección `.featured__deck`
+2. Setear `--card-bg`, `--card-fg`, `--card-accent` en el atributo `style`
+3. Agregar la paleta correspondiente en `styles.css` (buscar `.card--cucu` como referencia)
+4. En `work.html`, copiar un bloque `.work-item` en el track horizontal
+5. Crear `case/nombre.html` copiando una página de case study existente
+6. Actualizar `sitemap.xml` con la nueva URL
+
+## Agregar un case study
+
+1. Copiar `case/cucu.html` → `case/nuevo.html`
+2. Cambiar: title, meta description, canonical, og:image, h1, tags, stats, textos, stack
+3. Agregar screenshot a `assets/work/nuevo.webp`
+4. Linkear desde `index.html` y `work.html`
+5. Actualizar `sitemap.xml`
+
+## Cambiar la paleta
+
+Los tokens están en `css/styles.css` bajo `/* ---------- Tokens ---------- */`:
+
+```css
+:root {
+  --accent: #C6FF3D; /* verde lima — dark mode */
+}
+[data-theme="light"] {
+  --accent: #2E5BFF; /* azul eléctrico — light mode */
+}
+```
+
+## Decisiones técnicas
+
+- `overflow-x: clip` en html/body (no `hidden`) — preserva `position: sticky` en descendientes
+- IntersectionObserver en `.line` (no en `.reveal` clipped) — el threshold funciona correctamente
+- Cache busting con `?v=Date.now()` en navegación interna — evita HTML stale
+- `data-netlify="true"` en el form + fetch + fallback mailto — sin backend
+
+## Licencia
+
+MIT — podés ver e inspirarte en el código, pero no copiarlo como portfolio propio.

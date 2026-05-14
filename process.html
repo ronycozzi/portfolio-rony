@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta name="description" content="Cómo trabajo — Proceso paso a paso de Rony Cozzi: briefing, diseño, desarrollo, QA y entrega." />
+  <meta property="og:title" content="Proceso — Rony Cozzi" />
+  <meta property="og:image" content="https://rony-cozzi.netlify.app/og-image.svg" />
+  <link rel="canonical" href="https://rony-cozzi.netlify.app/process.html" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="apple-touch-icon" href="favicon.svg" />
+  <title>Proceso — Rony Cozzi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css?v=5" />
+  <style>
+    .proc-hero {
+      padding: calc(var(--header-h, 72px) + 60px) var(--pad-x) 60px;
+      border-bottom: 1px solid var(--line);
+    }
+    .proc-hero__eyebrow {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      color: var(--fg-muted);
+      margin-bottom: 24px;
+    }
+    .proc-hero__title {
+      font-family: var(--font-display);
+      font-size: clamp(40px, 7vw, 96px);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      line-height: 0.95;
+      margin-bottom: 32px;
+    }
+    .proc-hero__title em {
+      font-style: italic;
+      font-family: var(--serif);
+      font-weight: 400;
+      color: var(--accent);
+    }
+    .proc-hero__lead {
+      color: var(--fg-muted);
+      font-size: clamp(15px, 1.5vw, 18px);
+      line-height: 1.75;
+      max-width: 640px;
+    }
+
+    .proc-steps {
+      padding: 80px var(--pad-x) 100px;
+      max-width: calc(var(--max) + var(--pad-x) * 2);
+    }
+
+    .proc-step {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 0 48px;
+      padding: 48px 0;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+    }
+    .proc-step:last-child { border-bottom: 0; }
+
+    .proc-step__num {
+      font-family: var(--font-display);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      padding-top: 6px;
+      font-weight: 600;
+    }
+
+    .proc-step__content { display: flex; flex-direction: column; gap: 16px; }
+
+    .proc-step__header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .proc-step__title {
+      font-family: var(--font-display);
+      font-size: clamp(20px, 2.5vw, 30px);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+    }
+
+    .proc-step__duration {
+      font-family: var(--font-display);
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      color: var(--fg-muted);
+      background: var(--bg-elev);
+      border: 1px solid var(--line);
+      padding: 4px 12px;
+      border-radius: 100px;
+      white-space: nowrap;
+    }
+
+    .proc-step__desc {
+      color: var(--fg-muted);
+      font-size: 15px;
+      line-height: 1.75;
+      max-width: 640px;
+    }
+
+    .proc-step__deliverables {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .proc-step__del {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-display);
+      font-size: 12px;
+      color: var(--fg-muted);
+      padding: 5px 12px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+    }
+    .proc-step__del::before {
+      content: '→';
+      color: var(--accent);
+      font-size: 11px;
+    }
+
+    .proc-cta {
+      margin-top: 64px;
+      padding: 48px;
+      background: var(--bg-elev);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .proc-cta__text { max-width: 480px; }
+    .proc-cta__title {
+      font-family: var(--font-display);
+      font-size: clamp(20px, 2.5vw, 28px);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      margin-bottom: 10px;
+    }
+    .proc-cta__copy { color: var(--fg-muted); font-size: 15px; line-height: 1.6; }
+    .proc-cta__btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      background: var(--accent);
+      color: var(--accent-ink);
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 6px;
+      white-space: nowrap;
+      transition: opacity var(--t-fast) var(--ease), gap var(--t-fast) var(--ease);
+    }
+    .proc-cta__btn:hover { opacity: 0.85; gap: 14px; }
+
+    @media (max-width: 700px) {
+      .proc-step { grid-template-columns: 1fr; gap: 12px; }
+      .proc-cta { flex-direction: column; align-items: flex-start; padding: 28px; }
+    }
+  </style>
+</head>
+<body data-page="process">
+  <div class="page-transition" aria-hidden="true">
+    <div class="page-transition__panel"></div>
+    <div class="page-transition__label">
+      <span class="page-transition__num">—</span>
+      <span class="page-transition__name">Proceso</span>
+    </div>
+  </div>
+  <div class="cursor" aria-hidden="true"><span class="cursor__label"></span></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <header class="header">
+    <a href="index.html" class="header__logo" data-magnetic data-link>
+      <span class="header__logo-mark">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M8 8h5a3 3 0 0 1 0 6H8m0 0v4m0-4 6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+        </svg>
+      </span>
+      <span class="header__logo-text">Rony Cozzi<sup>©</sup></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="work.html" data-magnetic data-link><span>Work</span></a>
+      <a href="about.html" data-magnetic data-link><span data-i18n="nav.about">Sobre mí</span></a>
+      <a href="contact.html" data-magnetic data-link><span data-i18n="nav.contact">Contacto</span></a>
+    </nav>
+    <div class="header__actions">
+      <button class="lang-toggle" data-lang-toggle aria-label="Toggle language">
+        <span data-lang="es" class="is-active">ES</span>
+        <span class="lang-sep">/</span>
+        <span data-lang="en">EN</span>
+      </button>
+      <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme">
+        <span class="theme-toggle__dot"></span>
+      </button>
+      <button class="menu-toggle" data-menu-toggle aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" data-mobile-menu>
+    <a href="work.html" data-link>Work</a>
+    <a href="about.html" data-link><span data-i18n="nav.about">Sobre mí</span></a>
+    <a href="contact.html" data-link><span data-i18n="nav.contact">Contacto</span></a>
+  </div>
+
+  <main class="page" id="main">
+    <div class="proc-hero">
+      <span class="proc-hero__eyebrow">[ Proceso de trabajo ]</span>
+      <h1 class="proc-hero__title">
+        <span class="line"><span class="reveal">Cómo</span></span>
+        <span class="line"><span class="reveal"><em>trabajo.</em></span></span>
+      </h1>
+      <p class="proc-hero__lead" data-reveal>
+        De la primera llamada al deploy en producción. Sin sorpresas, sin scope creep, sin "terminó pero no funciona".
+      </p>
+    </div>
+
+    <div class="proc-steps">
+      <div class="proc-step" data-reveal>
+        <span class="proc-step__num">01</span>
+        <div class="proc-step__content">
+          <div class="proc-step__header">
+            <h2 class="proc-step__title">Briefing &amp; scope</h2>
+            <span class="proc-step__duration">1–2 días</span>
+          </div>
+          <p class="proc-step__desc">
+            Una llamada de 30–60 minutos para entender qué necesitás, quién es tu audiencia y qué querés lograr con el sitio. Yo tomo notas, hago preguntas incómodas y al final del proceso tenés un documento con el scope definido: qué incluye el proyecto, qué no incluye y cuánto cuesta.
+          </p>
+          <div class="proc-step__deliverables">
+            <span class="proc-step__del">Documento de scope</span>
+            <span class="proc-step__del">Presupuesto cerrado</span>
+            <span class="proc-step__del">Timeline acordado</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="proc-step" data-reveal>
+        <span class="proc-step__num">02</span>
+        <div class="proc-step__content">
+          <div class="proc-step__header">
+            <h2 class="proc-step__title">Wireframe &amp; arquitectura</h2>
+            <span class="proc-step__duration">2–3 días</span>
+          </div>
+          <p class="proc-step__desc">
+            Antes de una línea de código o un pixel de diseño: estructura. Qué páginas existen, qué jerarquía de contenido tiene cada una, qué hace el usuario en cada paso. Uso wireframes en baja fidelidad para que no quede nada ambiguo. Esto evita el 80% de los cambios tardíos.
+          </p>
+          <div class="proc-step__deliverables">
+            <span class="proc-step__del">Wireframes (Figma o papel)</span>
+            <span class="proc-step__del">Mapa de navegación</span>
+            <span class="proc-step__del">Lista de componentes</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="proc-step" data-reveal>
+        <span class="proc-step__num">03</span>
+        <div class="proc-step__content">
+          <div class="proc-step__header">
+            <h2 class="proc-step__title">Diseño</h2>
+            <span class="proc-step__duration">3–5 días</span>
+          </div>
+          <p class="proc-step__desc">
+            Diseño en Figma con tu paleta, tipografía y brand. Desktop y mobile en paralelo — el diseño responsive no es "después". Compartimos el Figma en vivo: podés ver el avance y dejar comentarios en tiempo real. Una vuelta de revisión estructural incluida.
+          </p>
+          <div class="proc-step__deliverables">
+            <span class="proc-step__del">Diseño desktop + mobile</span>
+            <span class="proc-step__del">Figma compartido</span>
+            <span class="proc-step__del">Tokens de diseño documentados</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="proc-step" data-reveal>
+        <span class="proc-step__num">04</span>
+        <div class="proc-step__content">
+          <div class="proc-step__header">
+            <h2 class="proc-step__title">Desarrollo</h2>
+            <span class="proc-step__duration">5–10 días</span>
+          </div>
+          <p class="proc-step__desc">
+            HTML, CSS y JavaScript modernos. Sin frameworks innecesarios. Código semántico, accesible y con comentarios donde no sea obvio. Deploy continuo en Netlify desde el día 1 — tenés una URL de preview para ver el avance en tiempo real desde cualquier dispositivo.
+          </p>
+          <div class="proc-step__deliverables">
+            <span class="proc-step__del">Preview URL en Netlify</span>
+            <span class="proc-step__del">Repo Git con historial</span>
+            <span class="proc-step__del">Updates diarios</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="proc-step" data-reveal>
+        <span class="proc-step__num">05</span>
+        <div class="proc-step__content">
+          <div class="proc-step__header">
+            <h2 class="proc-step__title">QA &amp; revisión</h2>
+            <span class="proc-step__duration">2–3 días</span>
+          </div>
+          <p class="proc-step__desc">
+            Antes de llamarlo "listo" pasa por un checklist de más de 60 puntos: Lighthouse en las 4 páginas, navegación por teclado, mobile real (iOS Safari + Android Chrome), formularios, links rotos, print stylesheet. Comparto el reporte con los scores reales.
+          </p>
+          <div class="proc-step__deliverables">
+            <span class="proc-step__del">Reporte Lighthouse</span>
+            <span class="proc-step__del">Test en 5+ viewports</span>
+            <span class="proc-step__del">Test en 4+ browsers</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="proc-step" data-reveal>
+        <span class="proc-step__num">06</span>
+        <div class="proc-step__content">
+          <div class="proc-step__header">
+            <h2 class="proc-step__title">Deploy &amp; handover</h2>
+            <span class="proc-step__duration">1 día</span>
+          </div>
+          <p class="proc-step__desc">
+            Deploy en producción con tu dominio, DNS configurado y HTTPS activo. Te entrego: acceso al repo en GitHub, acceso al Netlify, el PDF de documentación técnica y una grabación de Loom explicando cómo actualizar contenido básico por tu cuenta. Soporte de 30 días incluido.
+          </p>
+          <div class="proc-step__deliverables">
+            <span class="proc-step__del">Dominio configurado + SSL</span>
+            <span class="proc-step__del">Accesos a todos los servicios</span>
+            <span class="proc-step__del">Documentación técnica</span>
+            <span class="proc-step__del">30 días de soporte</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="proc-cta" data-reveal>
+        <div class="proc-cta__text">
+          <p class="proc-cta__title">¿Empezamos?</p>
+          <p class="proc-cta__copy">Contame en qué estás trabajando. Sin compromiso — el briefing es gratis.</p>
+        </div>
+        <a href="contact.html" class="proc-cta__btn" data-magnetic data-link>
+          Escribime <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__status">
+      <span class="footer__badge"><span class="footer__badge-dot"></span> <span data-i18n="footer.status">Disponible · 2026</span></span>
+      <span class="loc-pin"><span class="loc-pin__dot"></span><span>Argentina</span></span>
+    </div>
+    <div class="footer__top">
+      <div class="footer__col">
+        <span class="footer__label">Contacto</span>
+        <a href="mailto:ronycozzi5@gmail.com" data-magnetic>ronycozzi5@gmail.com</a>
+        <a href="https://wa.me/5493515073210" target="_blank" rel="noopener" data-magnetic>+54 351 507 3210</a>
+      </div>
+      <div class="footer__col">
+        <span class="footer__label">Social</span>
+        <a href="https://github.com/ronycozzi" target="_blank" rel="noopener" data-magnetic>GitHub ↗</a>
+        <a href="https://linkedin.com/in/rony-cozzi-677111251" target="_blank" rel="noopener" data-magnetic>LinkedIn ↗</a>
+      </div>
+      <div class="footer__col">
+        <span class="footer__label">Nav</span>
+        <a href="work.html" data-link>Work</a>
+        <a href="about.html" data-link>Sobre mí</a>
+        <a href="contact.html" data-link>Contacto</a>
+      </div>
+      <div class="footer__col">
+        <span class="footer__label">Assets</span>
+        <a href="assets/Rony_Cozzi_CV.pdf" download="Rony_Cozzi_CV.pdf" data-magnetic>CV (PDF) ↓</a>
+      </div>
+    </div>
+    <div class="footer__meta">
+      <span>© <span class="year"></span> — Rony Cozzi</span>
+      <span data-clock>--:--:-- GMT-3</span>
+      <a href="#top" data-magnetic>↑ Subir</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=5" defer></script>
+</body>
+</html>

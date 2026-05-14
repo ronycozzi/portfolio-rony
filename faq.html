@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta name="description" content="Preguntas frecuentes — Rony Cozzi, Full Stack Developer. Proceso, precios, tiempos y qué esperar de un proyecto web." />
+  <meta property="og:title" content="FAQ — Rony Cozzi" />
+  <meta property="og:image" content="https://rony-cozzi.netlify.app/og-image.svg" />
+  <link rel="canonical" href="https://rony-cozzi.netlify.app/faq.html" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="apple-touch-icon" href="favicon.svg" />
+  <title>FAQ — Rony Cozzi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css?v=5" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "¿Cuánto tarda un proyecto web?", "acceptedAnswer": { "@type": "Answer", "text": "Una web nueva desde cero tarda entre 2 y 4 semanas según complejidad. Una landing page bien definida puede estar lista en 5–7 días hábiles." } },
+      { "@type": "Question", "name": "¿Cómo cobro y cuándo?", "acceptedAnswer": { "@type": "Answer", "text": "50% de anticipo al inicio del proyecto, 50% restante al entregar el sitio funcionando. El anticipo cubre el diseño y desarrollo hasta la primera revisión mayor." } },
+      { "@type": "Question", "name": "¿Hacés mantenimiento después de entregar?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Tengo planes de mantenimiento mensual (actualizaciones, backups, cambios menores de contenido). También puedo hacer fixes puntuales por hora." } },
+      { "@type": "Question", "name": "¿Trabajás con clientes fuera de Argentina?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Trabajo 100% remoto. Mi timezone es GMT-3 (Córdoba, Argentina), con disponibilidad para reuniones en horario LATAM y tarde/noche UTC." } },
+      { "@type": "Question", "name": "¿Hacés ecommerce?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, pero depende del caso. Para catálogos simples con checkout integrado (Mercado Pago, Stripe): adelante. Para tiendas grandes con cientos de SKUs y gestión de inventario: recomiendo evaluar si conviene una plataforma dedicada." } }
+    ]
+  }
+  </script>
+  <style>
+    .faq-hero {
+      padding: calc(var(--header-h, 72px) + 60px) var(--pad-x) 60px;
+      border-bottom: 1px solid var(--line);
+      max-width: calc(var(--max) + var(--pad-x) * 2);
+    }
+    .faq-hero__eyebrow {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      color: var(--fg-muted);
+      margin-bottom: 24px;
+    }
+    .faq-hero__title {
+      font-family: var(--font-display);
+      font-size: clamp(40px, 7vw, 96px);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      line-height: 0.95;
+    }
+    .faq-hero__title em {
+      font-style: italic;
+      font-family: var(--serif);
+      font-weight: 400;
+      color: var(--accent);
+    }
+
+    .faq-body {
+      padding: 60px var(--pad-x) 100px;
+      max-width: calc(860px + var(--pad-x) * 2);
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 28px 0;
+      font-family: var(--font-display);
+      font-size: clamp(16px, 1.5vw, 20px);
+      font-weight: 600;
+      cursor: pointer;
+      list-style: none;
+      transition: color var(--t-fast) var(--ease);
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+';
+      font-size: 24px;
+      font-weight: 300;
+      color: var(--accent);
+      transition: transform var(--t-fast) var(--ease);
+      flex-shrink: 0;
+    }
+    .faq-item[open] summary::after { transform: rotate(45deg); }
+    .faq-item summary:hover { color: var(--accent); }
+
+    .faq-item__body {
+      padding-bottom: 28px;
+      color: var(--fg-muted);
+      line-height: 1.75;
+      font-size: 15px;
+      max-width: 680px;
+    }
+    .faq-item__body strong { color: var(--fg); font-weight: 600; }
+
+    .faq-cta {
+      margin-top: 64px;
+      padding: 48px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--bg-elev);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .faq-cta__title {
+      font-family: var(--font-display);
+      font-size: clamp(22px, 3vw, 32px);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+    }
+    .faq-cta__copy { color: var(--fg-muted); font-size: 15px; line-height: 1.6; }
+    .faq-cta__btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      background: var(--accent);
+      color: var(--accent-ink);
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: opacity var(--t-fast) var(--ease), gap var(--t-fast) var(--ease);
+    }
+    .faq-cta__btn:hover { opacity: 0.85; gap: 14px; }
+    @media (max-width: 600px) { .faq-cta { padding: 28px; } }
+  </style>
+</head>
+<body data-page="faq">
+  <div class="page-transition" aria-hidden="true">
+    <div class="page-transition__panel"></div>
+    <div class="page-transition__label">
+      <span class="page-transition__num">—</span>
+      <span class="page-transition__name">FAQ</span>
+    </div>
+  </div>
+  <div class="cursor" aria-hidden="true"><span class="cursor__label"></span></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <a href="#main" class="skip-link" style="position:absolute;top:-100%;left:16px;z-index:10000;background:var(--accent);color:var(--accent-ink);font-family:var(--font-display);font-size:13px;font-weight:600;padding:8px 16px;border-radius:4px;transition:top .2s">Skip to content</a>
+
+  <header class="header">
+    <a href="index.html" class="header__logo" data-magnetic data-link>
+      <span class="header__logo-mark">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M8 8h5a3 3 0 0 1 0 6H8m0 0v4m0-4 6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+        </svg>
+      </span>
+      <span class="header__logo-text">Rony Cozzi<sup>©</sup></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="work.html" data-magnetic data-link><span>Work</span></a>
+      <a href="about.html" data-magnetic data-link><span data-i18n="nav.about">Sobre mí</span></a>
+      <a href="contact.html" data-magnetic data-link><span data-i18n="nav.contact">Contacto</span></a>
+    </nav>
+    <div class="header__actions">
+      <button class="lang-toggle" data-lang-toggle aria-label="Toggle language">
+        <span data-lang="es" class="is-active">ES</span>
+        <span class="lang-sep">/</span>
+        <span data-lang="en">EN</span>
+      </button>
+      <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme">
+        <span class="theme-toggle__dot"></span>
+      </button>
+      <button class="menu-toggle" data-menu-toggle aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" data-mobile-menu>
+    <a href="work.html" data-link>Work</a>
+    <a href="about.html" data-link><span data-i18n="nav.about">Sobre mí</span></a>
+    <a href="contact.html" data-link><span data-i18n="nav.contact">Contacto</span></a>
+  </div>
+
+  <main class="page" id="main">
+    <div class="faq-hero">
+      <span class="faq-hero__eyebrow">[ FAQ — Preguntas frecuentes ]</span>
+      <h1 class="faq-hero__title">
+        <span class="line"><span class="reveal">Todo lo que</span></span>
+        <span class="line"><span class="reveal">querés <em>saber.</em></span></span>
+      </h1>
+    </div>
+
+    <div class="faq-body">
+      <details class="faq-item" open>
+        <summary>¿Cuánto tarda un proyecto web?</summary>
+        <div class="faq-item__body">
+          Una <strong>web nueva desde cero</strong> tarda entre 2 y 4 semanas según la complejidad: cantidad de páginas, integraciones, contenido a preparar. Una <strong>landing page</strong> bien definida puede estar lista en 5–7 días hábiles. Los tiempos dependen también de qué tan rápido llegue el material (textos, fotos, logo).
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>¿Qué incluye un proyecto y cómo cobrás?</summary>
+        <div class="faq-item__body">
+          Todo proyecto incluye diseño + desarrollo + deploy + 1 ronda de revisiones + 30 días de soporte post-entrega. Cobro <strong>50% de anticipo al arrancar</strong> y el 50% restante al entregar el sitio funcionando. Acepto transferencia bancaria, PayPal y cripto (USDT/USDC).
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>¿Hacés mantenimiento después de entregar?</summary>
+        <div class="faq-item__body">
+          Sí. Tengo <strong>planes de mantenimiento mensual</strong> que incluyen actualizaciones de contenido, backups, monitoreo de uptime y correcciones menores. También hago fixes puntuales por hora si no querés un plan fijo.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>¿Trabajás con marcas fuera de Argentina?</summary>
+        <div class="faq-item__body">
+          Sí. Trabajo <strong>100% remoto</strong>. Mi timezone es GMT-3 (Córdoba, Argentina), con disponibilidad para reuniones en horario LATAM y tarde/noche UTC para clientes europeos o norteamericanos. Cobro en USD para proyectos internacionales.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>¿Hacés ecommerce?</summary>
+        <div class="faq-item__body">
+          Sí, pero depende del caso. Para <strong>catálogos con checkout integrado</strong> (Mercado Pago, Stripe, PayPal): adelante, lo construyo. Para tiendas con cientos de productos, gestión de inventario y lógica de descuentos compleja: te recomiendo evaluar si una plataforma como WooCommerce o Shopify no te conviene más. Soy honesto con eso.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>¿Qué pasa si no me gusta el resultado?</summary>
+        <div class="faq-item__body">
+          El proceso incluye una <strong>revisión mayor</strong> antes de la entrega final donde podés pedir cambios estructurales. Cambios menores (copy, colores, imágenes) se pueden hacer en cualquier momento durante el desarrollo. Si el proyecto no va en la dirección correcta, lo discutimos antes de que sea un problema.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>¿Aceptás cripto?</summary>
+        <div class="faq-item__body">
+          Sí. Acepto <strong>USDT y USDC</strong> en redes Polygon, Arbitrum o Base. También acepto Bitcoin (BTC) para montos mayores. Si querés pagar en cripto, avisame al inicio del proyecto.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>¿En qué se diferencia tu trabajo del de una agencia?</summary>
+        <div class="faq-item__body">
+          En una agencia, tu proyecto pasa por 4–6 personas (account, diseñador, desarrollador, PM, QA). Conmigo, <strong>yo hago todo</strong> y respondés directo al que lo construye. Eso significa comunicación más rápida, menos teléfono roto y más control sobre las decisiones técnicas. La contra: no escalo a 10 proyectos en paralelo.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>¿Cuándo no soy buen fit para tu proyecto?</summary>
+        <div class="faq-item__body">
+          Soy honesto con esto. Probablemente no sea el mejor fit si necesitás:<br/><br/>
+          — Un portal con autenticación compleja de usuarios<br/>
+          — Una app mobile nativa (iOS/Android)<br/>
+          — Un backend propio con base de datos propia y lógica de negocio compleja<br/>
+          — Un equipo dedicado in-house de 40h/semana exclusivas<br/><br/>
+          Para esos casos, te lo digo al principio y si puedo te recomiendo a alguien.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>¿Necesito saber de tecnología para trabajar con vos?</summary>
+        <div class="faq-item__body">
+          No. Mi trabajo es <strong>traducir tu objetivo de negocio a decisiones técnicas</strong>. Vos me contás qué necesitás lograr, yo decido cómo implementarlo y te lo explico en lenguaje humano. No hace falta saber qué es un Service Worker para tener un sitio que carga en 1 segundo.
+        </div>
+      </details>
+
+      <div class="faq-cta" data-reveal>
+        <p class="faq-cta__title">¿Tenés otra pregunta?</p>
+        <p class="faq-cta__copy">Escribime directo — respondo en menos de 24h.</p>
+        <a href="contact.html" class="faq-cta__btn" data-magnetic data-link>
+          Ir a contacto <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__status">
+      <span class="footer__badge"><span class="footer__badge-dot"></span> <span data-i18n="footer.status">Disponible · 2026</span></span>
+      <span class="loc-pin"><span class="loc-pin__dot"></span><span>Argentina</span></span>
+    </div>
+    <div class="footer__top">
+      <div class="footer__col">
+        <span class="footer__label">Contacto</span>
+        <a href="mailto:ronycozzi5@gmail.com" data-magnetic>ronycozzi5@gmail.com</a>
+        <a href="https://wa.me/5493515073210" target="_blank" rel="noopener" data-magnetic>+54 351 507 3210</a>
+      </div>
+      <div class="footer__col">
+        <span class="footer__label">Social</span>
+        <a href="https://github.com/ronycozzi" target="_blank" rel="noopener" data-magnetic>GitHub ↗</a>
+        <a href="https://linkedin.com/in/rony-cozzi-677111251" target="_blank" rel="noopener" data-magnetic>LinkedIn ↗</a>
+      </div>
+      <div class="footer__col">
+        <span class="footer__label">Nav</span>
+        <a href="work.html" data-link>Work</a>
+        <a href="about.html" data-link>Sobre mí</a>
+        <a href="contact.html" data-link>Contacto</a>
+      </div>
+      <div class="footer__col">
+        <span class="footer__label">Assets</span>
+        <a href="assets/Rony_Cozzi_CV.pdf" download="Rony_Cozzi_CV.pdf" data-magnetic>CV (PDF) ↓</a>
+      </div>
+    </div>
+    <div class="footer__meta">
+      <span>© <span class="year"></span> — Rony Cozzi</span>
+      <span data-clock>--:--:-- GMT-3</span>
+      <a href="#top" data-magnetic>↑ Subir</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=5" defer></script>
+  <script>
+    // Restore skip-link focus behavior inline
+    const skip = document.querySelector('.skip-link');
+    if(skip) skip.addEventListener('focus', () => skip.style.top = '16px');
+    if(skip) skip.addEventListener('blur', () => skip.style.top = '-100%');
+  </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+{
+  "name": "Rony Cozzi — Full Stack Developer",
+  "short_name": "Rony Cozzi",
+  "description": "Portfolio de Rony Cozzi, Full Stack Developer. Sitios rápidos, accesibles y mantenibles.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0A0A0A",
+  "theme_color": "#0A0A0A",
+  "lang": "es-AR",
+  "categories": ["portfolio", "developer"],
+  "icons": [
+    {
+      "src": "/assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/assets/work/cucu.webp",
+      "sizes": "1440x900",
+      "type": "image/webp",
+      "label": "Portfolio — Cucú Studio project"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Work",
+      "url": "/work.html",
+      "description": "Ver proyectos"
+    },
+    {
+      "name": "Contacto",
+      "url": "/contact.html",
+      "description": "Escribir un mensaje"
+    }
+  ]
+}

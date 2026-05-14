@@ -9,18 +9,31 @@
   <meta http-equiv="Expires" content="0" />
   <meta name="description" content="About — Rony Cozzi. Full Stack Developer." />
   <meta property="og:title" content="About — Rony Cozzi" />
-  <meta property="og:image" content="https://rony-cozzi.netlify.app/og-image.svg" />
+  <meta property="og:image" content="https://rony-cozzi.netlify.app/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://rony-cozzi.netlify.app/og-image.svg" />
+  <meta name="twitter:image" content="https://rony-cozzi.netlify.app/og-image.png" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="manifest" href="/manifest.json" />
   <link rel="apple-touch-icon" href="favicon.svg" />
+  <link rel="canonical" href="https://rony-cozzi.netlify.app/about.html" />
   <title>About — Rony Cozzi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=4" />
+  <link rel="stylesheet" href="css/styles.css?v=5" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About — Rony Cozzi",
+    "url": "https://rony-cozzi.netlify.app/about.html",
+    "about": {"@type":"Person","name":"Rony Cozzi","jobTitle":"Full Stack Developer"}
+  }
+  </script>
 </head>
 <body data-page="about">
+  <a href="#main" class="skip-link" style="position:absolute;top:-100%;left:16px;z-index:10000;background:var(--accent);color:var(--accent-ink);font-family:var(--font-display);font-size:13px;font-weight:600;padding:8px 16px;border-radius:4px;transition:top .2s">Skip to content</a>
+
   <div class="page-transition" aria-hidden="true">
     <div class="page-transition__panel"></div>
     <div class="page-transition__label">
@@ -68,7 +81,7 @@
     <a href="contact.html" data-link><span data-i18n="nav.contact">Contacto</span></a>
   </div>
 
-  <main class="page page--about">
+  <main class="page page--about" id="main">
     <!-- Intro -->
     <section class="about-hero">
       <span class="about-hero__eyebrow">[ Index · 03 about ]</span>
@@ -236,6 +249,8 @@
         <a href="work.html" data-link>Work</a>
         <a href="about.html" data-link><span data-i18n="nav.about">Sobre mí</span></a>
         <a href="contact.html" data-link><span data-i18n="nav.contact">Contacto</span></a>
+        <a href="process.html" data-link>Proceso</a>
+        <a href="faq.html" data-link>FAQ</a>
       </div>
       <div class="footer__col">
         <span class="footer__label" data-i18n="footer.services">Servicios</span>
@@ -248,9 +263,10 @@
       <span>© <span class="year"></span> — Rony Cozzi</span>
       <span data-clock>--:--:-- GMT-3</span>
       <a href="#top" data-magnetic data-i18n="footer.top">↑ <span data-i18n="footer.topLabel">Subir</span></a>
+      <a href="privacy.html" style="font-size:11px;color:var(--fg-muted)">Privacidad</a>
     </div>
   </footer>
 
-  <script src="js/main.js?v=4" defer></script>
+  <script src="js/main.js?v=5" defer></script>
 </body>
 </html>
