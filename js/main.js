@@ -296,7 +296,7 @@
     const page = document.querySelector('.page');
 
     // Entrance
-    requestAnimationFrame(() => {
+    _raf(() => {
       page?.classList.add('is-ready');
     });
 
@@ -382,6 +382,14 @@
   }
 
   /* ---------- Cursor ---------- */
+  let _rafIds = [];
+  function _raf(fn) { const id = requestAnimationFrame(fn); _rafIds.push(id); return id; }
+  function _cancelAllRAF() { _rafIds.forEach(cancelAnimationFrame); _rafIds = []; }
+
+  function _debounce(fn, delay) {
+    let t;
+    return function(...args) { clearTimeout(t); t = setTimeout(() => fn.apply(this, args), delay); };
+  }
   function setupCursor() {
     if (isTouch) return;
     const cursor = document.querySelector('.cursor');
@@ -400,9 +408,9 @@
       dy += (my - dy) * 0.4;
       cursor.style.transform = `translate(${cx}px, ${cy}px) translate(-50%, -50%)`;
       dot.style.transform = `translate(${dx}px, ${dy}px) translate(-50%, -50%)`;
-      requestAnimationFrame(loop);
+      _raf(loop);
     }
-    requestAnimationFrame(loop);
+    _raf(loop);
 
     const hoverables = document.querySelectorAll('a, button, [data-magnetic], [data-tilt]');
     hoverables.forEach((el) => {
@@ -430,18 +438,18 @@
         cx += (tx - cx) * 0.18;
         cy += (ty - cy) * 0.18;
         el.style.transform = `translate(${cx}px, ${cy}px)`;
-        if (Math.abs(tx - cx) > 0.1 || Math.abs(ty - cy) > 0.1) raf = requestAnimationFrame(update);
+        if (Math.abs(tx - cx) > 0.1 || Math.abs(ty - cy) > 0.1) raf = _raf(update);
         else raf = null;
       }
       el.addEventListener('mousemove', (e) => {
         const r = el.getBoundingClientRect();
         tx = (e.clientX - (r.left + r.width / 2)) * strength;
         ty = (e.clientY - (r.top + r.height / 2)) * strength;
-        if (!raf) raf = requestAnimationFrame(update);
+        if (!raf) raf = _raf(update);
       });
       el.addEventListener('mouseleave', () => {
         tx = 0; ty = 0;
-        if (!raf) raf = requestAnimationFrame(update);
+        if (!raf) raf = _raf(update);
       });
     });
   }
@@ -458,7 +466,7 @@
         cx += (tx - cx) * 0.12;
         cy += (ty - cy) * 0.12;
         card.style.transform = `perspective(900px) rotateX(${cy}deg) rotateY(${cx}deg) translateZ(0)`;
-        if (Math.abs(tx - cx) > 0.05 || Math.abs(ty - cy) > 0.05) raf = requestAnimationFrame(update);
+        if (Math.abs(tx - cx) > 0.05 || Math.abs(ty - cy) > 0.05) raf = _raf(update);
         else raf = null;
       }
       card.addEventListener('mousemove', (e) => {
@@ -467,11 +475,11 @@
         const py = (e.clientY - r.top) / r.height;
         tx = (px - 0.5) * 14;
         ty = -(py - 0.5) * 10;
-        if (!raf) raf = requestAnimationFrame(update);
+        if (!raf) raf = _raf(update);
       });
       card.addEventListener('mouseleave', () => {
         tx = 0; ty = 0;
-        if (!raf) raf = requestAnimationFrame(update);
+        if (!raf) raf = _raf(update);
       });
     });
   }
@@ -589,7 +597,7 @@
     setup();
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', () => { setup(); onScroll(); }, { passive: true });
+    window.addEventListener('resize', _debounce(() => { setup(); onScroll(); }, 150), { passive: true });
     // Re-measure once images/fonts settle
     setTimeout(() => { setup(); onScroll(); }, 400);
     if (document.fonts && document.fonts.ready) {
@@ -766,7 +774,8 @@
     const accent = '#C6FF3D';
     const dark = '#0A0A0A';
     const muted = '#8A8780';
-    try {
+    const isDev = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+    if (!isDev) try {
       console.log(
         '%c Rony Cozzi %c Full Stack Developer %c',
         `background:${accent};color:${dark};font-family:monospace;font-size:14px;font-weight:bold;padding:6px 12px;border-radius:4px 0 0 4px`,
@@ -803,6 +812,8 @@
     });
   }
 
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+
   function init() {
     setupActiveNav();
     setupTheme();
@@ -828,7 +839,30 @@
   }
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
+  
+  // Handle orientation change (mobile)
+  window.addEventListener('orientationchange', () => {
+    setTimeout(() => { setup(); onScroll(); }, 300);
+  });
+
+  // Global error handlers
+  window.addEventListener('unhandledrejection', (e) => {
+    if (location.hostname === 'localhost') console.warn('[unhandledrejection]', e.reason);
+  });
+  window.onerror = (msg, src, line, col, err) => {
+    if (location.hostname === 'localhost') console.warn('[onerror]', msg, src, line);
+    return false;
+  };
+
+
+  // Service Worker registration
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js').catch(() => {});
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', init);
   } else {
     init();
   }

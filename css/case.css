@@ -8,7 +8,7 @@
   position: absolute;
   top: -100%;
   left: 16px;
-  z-index: 10000;
+  z-index: 9998;
   background: var(--accent);
   color: var(--accent-ink);
   font-family: var(--font-display);
@@ -35,6 +35,7 @@
   content: '';
   position: absolute;
   top: 0; right: -20%; width: 60%; height: 100%;
+  background: transparent; /* fallback: color-mix */
   background: radial-gradient(ellipse at 70% 40%, color-mix(in srgb, var(--case-accent, var(--accent)) 8%, transparent), transparent 70%);
   pointer-events: none;
 }
@@ -133,9 +134,9 @@
   border-radius: 50%;
   background: var(--line-strong);
 }
-.case-cover__dot:nth-child(1) { background: #FF5F56; }
-.case-cover__dot:nth-child(2) { background: #FFBD2E; }
-.case-cover__dot:nth-child(3) { background: #27C93F; }
+.case-cover__dot:nth-child(1) { background: #FF5F56; /* intentional: macOS traffic light */ }
+.case-cover__dot:nth-child(2) { background: #FFBD2E; /* intentional: macOS traffic light */ }
+.case-cover__dot:nth-child(3) { background: #27C93F; /* intentional: macOS traffic light */ }
 
 .case-cover__url {
   font-family: var(--font-body);
@@ -363,6 +364,7 @@
 
 .case-next__link:hover {
   border-color: var(--accent);
+  background: transparent; /* fallback: color-mix */
   background: color-mix(in srgb, var(--accent) 4%, var(--bg-elev));
 }
 
@@ -411,7 +413,7 @@
 /* ---- Print ---- */
 @media print {
   .case-cover__bar { display: none; }
-  .case-cover__frame { box-shadow: none; border: 1px solid #ccc; }
+  .case-cover__frame { box-shadow: none; border: 1px solid rgb(204 204 204 / 1); /* #ccc equivalent */ }
   .case-hero::before { display: none; }
   .case-tech-item { break-inside: avoid; }
 }

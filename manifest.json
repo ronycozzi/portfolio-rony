@@ -1,17 +1,18 @@
 {
   "name": "Rony Cozzi — Full Stack Developer",
   "short_name": "Rony Cozzi",
-  "description": "Portfolio de Rony Cozzi, Full Stack Developer. Sitios rápidos, accesibles y mantenibles.",
+  "description": "Portfolio de Rony Cozzi — Diseñador UX/UI y desarrollador front-end",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait-primary",
   "background_color": "#0A0A0A",
   "theme_color": "#0A0A0A",
-  "lang": "es-AR",
+  "lang": "es",
   "categories": [
     "portfolio",
-    "developer"
+    "design",
+    "productivity"
   ],
   "icons": [
     {
@@ -37,34 +38,48 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
+    },
+    {
+      "src": "/assets/icons/icon-180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
     }
   ],
   "screenshots": [
     {
-      "src": "/assets/work/cucu.webp",
-      "sizes": "1440x900",
-      "type": "image/webp",
-      "label": "Portfolio — Cucú Studio project",
-      "form_factor": "wide"
-    },
-    {
-      "src": "/assets/work/luco.webp",
-      "sizes": "390x844",
-      "type": "image/webp",
-      "form_factor": "narrow",
-      "label": "Portfolio — Luco Gourmet project"
+      "src": "/og-image.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "label": "Rony Cozzi Portfolio"
     }
   ],
   "shortcuts": [
     {
-      "name": "Work",
+      "name": "Proyectos",
+      "short_name": "Work",
+      "description": "Ver proyectos",
       "url": "/work.html",
-      "description": "Ver proyectos"
+      "icons": [
+        {
+          "src": "/assets/icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
     },
     {
       "name": "Contacto",
+      "short_name": "Contact",
+      "description": "Contactar",
       "url": "/contact.html",
-      "description": "Escribir un mensaje"
+      "icons": [
+        {
+          "src": "/assets/icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
     }
-  ]
+  ],
+  "id": "/",
+  "dir": "ltr"
 }
