@@ -1,5 +1,4 @@
-// Service Worker — Rony Cozzi Portfolio
-const CACHE = 'rony-portfolio-v1';
+const CACHE = 'rony-portfolio-v2';
 const SHELL = [
   '/',
   '/index.html',
@@ -9,7 +8,14 @@ const SHELL = [
   '/process.html',
   '/faq.html',
   '/404.html',
+  '/privacy.html',
+  '/terms.html',
+  '/case/cucu.html',
+  '/case/luco.html',
+  '/case/sellink.html',
+  '/case/cognition.html',
   '/css/styles.css',
+  '/css/case.css',
   '/js/main.js',
   '/manifest.json',
   '/favicon.svg',
