@@ -791,7 +791,7 @@
       if (note) {
         note.textContent = lang() === 'en'
           ? 'Your email app is opening. If it does not, write to ronycozzi5@gmail.com.'
-          : 'Se está abriendo tu app de email. Si no se abre, escribime a ronycozzi5@gmail.com.';
+          : 'Se esta abriendo tu app de email. Si no se abre, escribime a ronycozzi5@gmail.com.';
       }
 
       window.location.href = 'mailto:ronycozzi5@gmail.com?subject=' + subject + '&body=' + body;
@@ -811,7 +811,7 @@
         navigator.clipboard?.writeText(text).then(() => {
           const original = btn.textContent;
           const lang = storageGet('rc-lang', 'es');
-          btn.textContent = lang === 'en' ? '✓ Copied' : '✓ Copiado';
+          btn.textContent = lang === 'en' ? 'Copied' : 'Copiado';
           setTimeout(() => { btn.textContent = original; }, 2000);
         }).catch(() => {
           // silently fail on old browsers
@@ -829,28 +829,7 @@
   }
 
   /* ---------- Console easter egg ---------- */
-  function consoleEasterEgg() {
-    const accent = '#C6FF3D';
-    const dark = '#0A0A0A';
-    const muted = '#8A8780';
-    const isDev = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
-    if (!isDev) try {
-      console.log(
-        '%c Rony Cozzi %c Full Stack Developer %c',
-        `background:${accent};color:${dark};font-family:monospace;font-size:14px;font-weight:bold;padding:6px 12px;border-radius:4px 0 0 4px`,
-        `background:${dark};color:${accent};font-family:monospace;font-size:14px;padding:6px 12px;border:1px solid ${accent};border-left:none;border-radius:0 4px 4px 0`,
-        'background:transparent'
-      );
-      console.log(
-        '%c ronycozzi5@gmail.com · portfolios-ronycozzi.vercel.app',
-        `color:${muted};font-family:monospace;font-size:12px`
-      );
-      console.log(
-        '%c Built with vanilla HTML/CSS/JS — no frameworks harmed.',
-        `color:${muted};font-family:monospace;font-size:11px;font-style:italic`
-      );
-    } catch (e) {}
-  }
+  function consoleEasterEgg() {}
 
   /* ---------- Init ---------- */
   /* ---------- Active nav aria-current ---------- */
@@ -907,13 +886,8 @@
   });
 
   // Global error handlers
-  window.addEventListener('unhandledrejection', (e) => {
-    if (location.hostname === 'localhost') console.warn('[unhandledrejection]', e.reason);
-  });
-  window.onerror = (msg, src, line, col, err) => {
-    if (location.hostname === 'localhost') console.warn('[onerror]', msg, src, line);
-    return false;
-  };
+  window.addEventListener('unhandledrejection', () => {});
+  window.onerror = () => false;
 
   // Service Worker registration
   if ('serviceWorker' in navigator) {
