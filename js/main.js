@@ -337,6 +337,13 @@
     });
 
     if (!overlay) return;
+    window.addEventListener('pageshow', () => {
+      overlay.classList.remove('is-active', 'is-in', 'is-out');
+      page?.classList.add('is-ready');
+    });
+
+    if (isTouch || reducedMotion) return;
+
     document.querySelectorAll('a[data-link]').forEach((a) => {
       a.addEventListener('click', (e) => {
         const href = a.getAttribute('href');
