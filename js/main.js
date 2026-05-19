@@ -14,7 +14,7 @@
       'nav.about': 'Sobre mí',
       'nav.contact': 'Contacto',
       'hero.tag': 'Disponible · 2026',
-      'hero.role': 'Rony Cozzi — Full-Stack Developer',
+      'hero.role': 'Rony Cozzi — Full Stack Developer',
       'hero.title1': 'Construyendo',
       'hero.title2': 'sitios rápidos',
       'hero.title3': 'para marcas modernas.',
@@ -131,7 +131,7 @@
       'nav.about': 'About',
       'nav.contact': 'Contact',
       'hero.tag': 'Available · 2026',
-      'hero.role': 'Rony Cozzi — Full-Stack Developer',
+      'hero.role': 'Rony Cozzi — Full Stack Developer',
       'hero.title1': 'Building',
       'hero.title2': 'fast websites',
       'hero.title3': 'for modern brands.',
@@ -197,7 +197,7 @@
       'work.sellink.desc': 'Corporate site. Modular structure, services presentation and accessible forms.',
       'work.cognition.desc': 'AI platform for enterprises. 11 pages, ROI calculator, intent-based chat and PWA.',
       'cap.title': 'Capabilities',
-      'cap.fe.title': 'Frontend Development',
+      'cap.fe.title': 'Full Stack Development',
       'cap.fe': 'Semantic HTML, modern CSS, ES6+ JavaScript. Accessible and fast websites.',
       'cap.perf.title': 'Performance Engineering',
       'cap.perf': 'Asset optimization, lazy loading, Core Web Vitals. 90+ Lighthouse score.',
@@ -783,7 +783,7 @@
         'background:transparent'
       );
       console.log(
-        '%c ronycozzi5@gmail.com · rony-cozzi.netlify.app',
+        '%c ronycozzi5@gmail.com · portfolios-ronycozzi.vercel.app',
         `color:${muted};font-family:monospace;font-size:12px`
       );
       console.log(

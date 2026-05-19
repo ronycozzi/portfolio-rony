@@ -1,6 +1,6 @@
 # Rony Cozzi — Portfolio v2
 
-Portfolio personal en producción: **[rony-cozzi.netlify.app](https://rony-cozzi.netlify.app)**
+Portfolio personal en producción: **[portfolios-ronycozzi.vercel.app](https://portfolios-ronycozzi.vercel.app)**
 
 ## Stack
 

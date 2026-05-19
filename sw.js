@@ -1,4 +1,4 @@
-const CACHE = 'rony-portfolio-v4';
+const CACHE = 'rony-portfolio-v5';
 const SHELL = [
   '/',
   '/index.html',
