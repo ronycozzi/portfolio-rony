@@ -58,7 +58,7 @@ input, textarea, select { font: inherit; color: inherit; }
   --line-strong: #C3BEB1;
   --accent: #2E5BFF;
   --accent-ink: #FFFFFF;
-  --color-netlify: #2DD16A;
+  --color-live: #2DD16A;
   --color-stripe: #635BFF;
   --color-luco: #4A5D3A;
 }
@@ -442,7 +442,7 @@ body {
 .loc-pin__dot {
   width: 7px; height: 7px;
   border-radius: 50%;
-  background: var(--color-netlify);
+  background: var(--color-live);
   box-shadow: 0 0 0 3px rgba(45, 209, 106, 0.22);
   animation: pulse 2.4s ease-in-out infinite;
   flex: 0 0 auto;

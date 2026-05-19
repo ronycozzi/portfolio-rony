@@ -39,7 +39,7 @@
       'services.s1.i1': 'Diseño + desarrollo',
       'services.s1.i2': 'Responsive · Mobile-first',
       'services.s1.i3': 'SEO técnico + Schema.org',
-      'services.s1.i4': 'Deploy en Netlify / Vercel',
+      'services.s1.i4': 'Deploy en Vercel',
       'services.s2.title': 'Landing page',
       'services.s2.tag': 'Single page',
       'services.s2.desc': 'Página única orientada a conversión. Para lanzamientos, campañas o productos específicos. Foco en velocidad de carga, copy claro y CTA visible.',
@@ -156,7 +156,7 @@
       'services.s1.i1': 'Design + development',
       'services.s1.i2': 'Responsive · Mobile-first',
       'services.s1.i3': 'Technical SEO + Schema.org',
-      'services.s1.i4': 'Deploy on Netlify / Vercel',
+      'services.s1.i4': 'Deploy on Vercel',
       'services.s2.title': 'Landing page',
       'services.s2.tag': 'Single page',
       'services.s2.desc': 'Single page focused on conversion. For launches, campaigns or specific products. Built around load speed, clear copy and a visible CTA.',
@@ -729,7 +729,8 @@
       const data = new FormData(form);
       const name = String(data.get('name') || '').trim();
       const email = String(data.get('email') || '').trim();
-      const subjectType = String(data.get('subject') || 'Contacto');
+      const subjectField = form.querySelector('[name="subject"]');
+      const subjectType = subjectField?.selectedOptions?.[0]?.textContent?.trim() || String(data.get('subject') || 'Contacto');
       const message = String(data.get('message') || '').trim();
       const subject = encodeURIComponent('[Portfolio] ' + subjectType + ' - ' + name);
       const body = encodeURIComponent(message + '\n\n--\n' + name + '\n' + email);
@@ -739,7 +740,7 @@
       if (note) {
         note.textContent = lang() === 'en'
           ? 'Your email app is opening. If it does not, write to ronycozzi5@gmail.com.'
-          : 'Se esta abriendo tu app de email. Si no se abre, escribime a ronycozzi5@gmail.com.';
+          : 'Se está abriendo tu app de email. Si no se abre, escribime a ronycozzi5@gmail.com.';
       }
 
       window.location.href = 'mailto:ronycozzi5@gmail.com?subject=' + subject + '&body=' + body;
