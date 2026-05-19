@@ -1,4 +1,4 @@
-const CACHE = 'rony-portfolio-v16';
+const CACHE = 'rony-portfolio-v17';
 const SHELL = [
   '/',
   '/index.html',
@@ -15,10 +15,10 @@ const SHELL = [
   '/case/sellink.html',
   '/case/cognition.html',
   '/css/styles.css',
-  '/css/styles.css?v=13',
+  '/css/styles.css?v=14',
   '/css/case.css',
   '/js/main.js',
-  '/js/main.js?v=11',
+  '/js/main.js?v=12',
   '/manifest.json',
   '/favicon.svg',
   '/og-image.png',
