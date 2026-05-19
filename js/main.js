@@ -327,6 +327,24 @@
   }
 
   /* ---------- Page transitions ---------- */
+  function setupExternalProjectLinks() {
+    if (!isTouch) return;
+
+    const projectHosts = [
+      'cucu-studio-demo.vercel.app',
+      'luco-gourmet-demo.vercel.app',
+      'sellink-group-demo.vercel.app',
+      'cognition-demo-cyan.vercel.app',
+    ];
+
+    document.querySelectorAll('a[target="_blank"]').forEach((link) => {
+      const href = link.getAttribute('href') || '';
+      if (!projectHosts.some((host) => href.includes(host))) return;
+      link.removeAttribute('target');
+      link.setAttribute('data-mobile-same-tab', 'true');
+    });
+  }
+
   function setupPageTransitions() {
     const overlay = document.querySelector('.page-transition');
     const page = document.querySelector('.page');
@@ -860,6 +878,7 @@
     setupTheme();
     setupLang();
     setupPageTransitions();
+    setupExternalProjectLinks();
     setupReveals();
     setupCursor();
     setupMagnetic();
