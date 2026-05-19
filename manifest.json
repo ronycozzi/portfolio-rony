@@ -1,7 +1,7 @@
 {
   "name": "Rony Cozzi — Full Stack Developer",
   "short_name": "Rony Cozzi",
-  "description": "Portfolio de Rony Cozzi — Diseñador UX/UI y desarrollador front-end",
+  "description": "Portfolio de Rony Cozzi - Full Stack Developer: sitios web, landing pages, PWAs e integraciones listas para produccion",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -10,6 +10,7 @@
   "theme_color": "#0A0A0A",
   "lang": "es",
   "categories": [
+    "developer",
     "portfolio",
     "design",
     "productivity"
