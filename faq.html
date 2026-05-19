@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" as="style" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=11" />
+  <link rel="stylesheet" href="css/styles.css?v=12" />
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -76,6 +76,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Sí, pero depende del caso. Para catálogos simples con checkout integrado (Mercado Pago, Stripe): adelante. Para tiendas grandes con cientos de SKUs y gestión de inventario: recomiendo evaluar si conviene una plataforma dedicada."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Hacés backend e integraciones?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Hago backend ligero, APIs REST, serverless functions, formularios conectados, autenticación simple, dashboards internos e integraciones con servicios como Supabase, Firebase, Airtable, email, analytics o webhooks."
       }
     }
   ]
@@ -287,6 +295,13 @@
       </details>
 
       <details class="faq-item">
+        <summary>¿Hacés backend e integraciones?</summary>
+        <div class="faq-item__body">
+          Sí. Hago <strong>backend ligero e integraciones web</strong>: APIs REST, serverless functions, formularios conectados, autenticación simple, dashboards internos, Supabase/Firebase, Airtable, email transaccional, analytics y webhooks. Si el proyecto necesita una plataforma grande con roles complejos, pagos recurrentes, inventario o lógica pesada, lo dimensionamos bien antes de prometer.
+        </div>
+      </details>
+
+      <details class="faq-item">
         <summary>¿Qué pasa si no me gusta el resultado?</summary>
         <div class="faq-item__body">
           El proceso incluye una <strong>revisión mayor</strong> antes de la entrega final donde podés pedir cambios estructurales. Cambios menores (copy, colores, imágenes) se pueden hacer en cualquier momento durante el desarrollo. Si el proyecto no va en la dirección correcta, lo discutimos antes de que sea un problema.
@@ -311,9 +326,9 @@
         <summary>¿Cuándo no soy buen fit para tu proyecto?</summary>
         <div class="faq-item__body">
           Soy honesto con esto. Probablemente no sea el mejor fit si necesitás:<br/><br/>
-          — Un portal con autenticación compleja de usuarios<br/>
+          — Un portal con autenticación compleja de usuarios y muchos roles<br/>
           — Una app mobile nativa (iOS/Android)<br/>
-          — Un backend propio con base de datos propia y lógica de negocio compleja<br/>
+          — Un backend enterprise con lógica de negocio pesada, permisos avanzados o alta concurrencia<br/>
           — Un equipo dedicado in-house de 40h/semana exclusivas<br/><br/>
           Para esos casos, te lo digo al principio y si puedo te recomiendo a alguien.
         </div>
@@ -372,7 +387,7 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=6" defer></script>
+  <script src="js/main.js?v=7" defer></script>
 
 </body>
 </html>
