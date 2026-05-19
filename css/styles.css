@@ -2116,6 +2116,152 @@ body {
 }
 @media (max-width: 760px) { .contact-meta { grid-template-columns: 1fr; } }
 
+/* ---------- Interaction polish ---------- */
+:where(input, textarea, select, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+:where(.hero__title, .featured__title, .services__title, .work-hero__title, .about-hero__title, .contact-hero__title, .contact-card__title) {
+  text-wrap: balance;
+}
+
+:where(.hero__intro, .services__copy, .work-item__desc, .service__desc, .bio__text p) {
+  text-wrap: pretty;
+}
+
+.header.is-scrolled {
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+.header__logo-mark,
+.theme-toggle,
+.menu-toggle,
+.hero__cta,
+.featured__link,
+.work-item__link,
+.btn-submit,
+.case-hero__live {
+  min-height: 44px;
+}
+
+.card,
+.work-item,
+.service,
+.capabilities__list li,
+.principles__list li,
+.stack-col,
+.contact-card__inner {
+  backface-visibility: hidden;
+}
+
+.card {
+  transition:
+    transform var(--t-base) var(--ease),
+    box-shadow var(--t-base) var(--ease),
+    border-color var(--t-base) var(--ease);
+}
+
+.card:focus-visible,
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card__visit,
+.work-item__link svg,
+.btn-submit svg,
+.case-hero__live svg {
+  transition: transform var(--t-base) var(--ease);
+}
+
+.work-item:hover {
+  transform: translateY(-6px);
+}
+
+.work-item:hover .work-item__device {
+  transform: translateY(-4px);
+}
+
+.work-item__device {
+  transition: transform var(--t-base) var(--ease);
+}
+
+.work-item__link:hover svg,
+.btn-submit:hover svg,
+.case-hero__live:hover svg {
+  transform: translateX(3px);
+}
+
+.service:hover .service__tag,
+.service:focus-within .service__tag,
+.capabilities__list li:hover h3,
+.principles__list li:hover h3 {
+  color: var(--accent);
+}
+
+.service__includes li,
+.work-item__tags li {
+  background: color-mix(in srgb, currentColor 4%, transparent);
+}
+
+.contact-card__inner {
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.16);
+}
+
+.field input,
+.field textarea,
+.field select {
+  transition:
+    border-color var(--t-fast) var(--ease),
+    background var(--t-fast) var(--ease),
+    box-shadow var(--t-fast) var(--ease);
+}
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 16%, transparent);
+}
+
+.btn-submit:disabled {
+  cursor: wait;
+  filter: saturate(0.7);
+  opacity: 0.8;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .card:hover,
+  .work-item:hover {
+    transform: none;
+  }
+  .work-item:hover .work-item__device {
+    transform: none;
+  }
+  .service:hover,
+  .capabilities__list li:hover,
+  .principles__list li:hover {
+    padding-left: 0;
+    padding-right: 0;
+    background: transparent;
+  }
+  .contact-card__channel:hover {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero__cta,
+  .featured__link,
+  .work-item__link,
+  .btn-submit {
+    width: 100%;
+    justify-content: center;
+  }
+  .contact-card {
+    padding-block: 56px;
+  }
+}
+
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
