@@ -264,13 +264,13 @@
   }
 
   function setupLang() {
-    const stored = localStorage.getItem('rc-lang') || 'es';
+    const stored = storageGet('rc-lang', 'es');
     applyLang(stored);
     document.querySelectorAll('[data-lang-toggle]').forEach((btn) => {
       btn.addEventListener('click', () => {
-        const current = localStorage.getItem('rc-lang') || 'es';
+        const current = storageGet('rc-lang', 'es');
         const next = current === 'es' ? 'en' : 'es';
-        localStorage.setItem('rc-lang', next);
+        storageSet('rc-lang', next);
         applyLang(next);
       });
     });
@@ -278,14 +278,14 @@
 
   /* ---------- Theme ---------- */
   function setupTheme() {
-    const stored = localStorage.getItem('rc-theme') || 'dark';
+    const stored = storageGet('rc-theme', 'dark');
     document.documentElement.setAttribute('data-theme', stored);
     document.querySelectorAll('[data-theme-toggle]').forEach((btn) => {
       btn.addEventListener('click', () => {
         const current = document.documentElement.getAttribute('data-theme');
         const next = current === 'dark' ? 'light' : 'dark';
         document.documentElement.setAttribute('data-theme', next);
-        localStorage.setItem('rc-theme', next);
+        storageSet('rc-theme', next);
       });
     });
   }
@@ -327,7 +327,7 @@
     return '01';
   }
   function getPageNameFromHref(href) {
-    const lang = localStorage.getItem('rc-lang') || 'es';
+    const lang = storageGet('rc-lang', 'es');
     if (href.includes('work')) return 'Work';
     if (href.includes('about')) return lang === 'en' ? 'About' : 'Sobre mí';
     if (href.includes('contact')) return lang === 'en' ? 'Contact' : 'Contacto';
@@ -704,7 +704,7 @@
     const note = form.querySelector('[data-form-note]');
     const btn = form.querySelector('[type="submit"]');
     const btnText = btn?.querySelector('.btn-submit__text');
-    const lang = () => localStorage.getItem('rc-lang') || 'es';
+    const lang = () => storageGet('rc-lang', 'es');
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -751,7 +751,7 @@
         const text = btn.dataset.copy;
         navigator.clipboard?.writeText(text).then(() => {
           const original = btn.textContent;
-          const lang = localStorage.getItem('rc-lang') || 'es';
+          const lang = storageGet('rc-lang', 'es');
           btn.textContent = lang === 'en' ? '✓ Copied' : '✓ Copiado';
           setTimeout(() => { btn.textContent = original; }, 2000);
         }).catch(() => {

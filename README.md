@@ -101,7 +101,7 @@ Los tokens están en `css/styles.css` bajo `/* ---------- Tokens ---------- */`:
 
 - `overflow-x: clip` en html/body (no `hidden`) — preserva `position: sticky` en descendientes
 - IntersectionObserver en `.line` (no en `.reveal` clipped) — el threshold funciona correctamente
-- Cache busting con `?v=Date.now()` en navegación interna — evita HTML stale
+- Versionado de assets con query strings (`?v=...`) y service worker sin `ignoreSearch` para evitar CSS/JS stale
 - `data-netlify="true"` en el form + fetch + fallback mailto — sin backend
 
 ## Licencia
