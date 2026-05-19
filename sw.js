@@ -1,4 +1,4 @@
-const CACHE = 'rony-portfolio-v8';
+const CACHE = 'rony-portfolio-v9';
 const SHELL = [
   '/',
   '/index.html',
@@ -42,6 +42,18 @@ self.addEventListener('fetch', (e) => {
   if (e.request.method !== 'GET') return;
   const url = new URL(e.request.url);
   if (url.origin !== self.location.origin) return;
+
+  if (e.request.destination === 'document') {
+    e.respondWith(
+      fetch(e.request).then((res) => {
+        if (!res || res.status !== 200 || res.type !== 'basic') return res;
+        const clone = res.clone();
+        caches.open(CACHE).then((cache) => cache.put(e.request, clone));
+        return res;
+      }).catch(() => caches.match(e.request).then((cached) => cached || caches.match('/404.html')))
+    );
+    return;
+  }
 
   e.respondWith(
     caches.match(e.request).then((cached) => {
