@@ -246,6 +246,16 @@
     },
   };
 
+  function storageGet(key, fallback) {
+    try { return localStorage.getItem(key) || fallback; }
+    catch (err) { return fallback; }
+  }
+
+  function storageSet(key, value) {
+    try { localStorage.setItem(key, value); }
+    catch (err) {}
+  }
+
   function applyLang(lang) {
     document.documentElement.lang = lang;
     document.querySelectorAll('[data-i18n]').forEach((el) => {
@@ -649,10 +659,16 @@
     const menu = document.querySelector('[data-mobile-menu]');
     if (!btn || !menu) return;
 
+    const menuLabel = (open) => {
+      const currentLang = storageGet('rc-lang', 'es');
+      if (currentLang === 'en') return open ? 'Close menu' : 'Open menu';
+      return open ? 'Cerrar menú' : 'Abrir menú';
+    };
+
     function setOpen(open) {
       menu.classList.toggle('is-open', open);
       btn.classList.toggle('is-open', open);
-      btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      btn.setAttribute('aria-label', menuLabel(open));
       btn.setAttribute('aria-expanded', String(open));
       document.body.style.overflow = open ? 'hidden' : '';
     }
@@ -697,7 +713,7 @@
     document.querySelectorAll('.year').forEach((el) => { el.textContent = y; });
   }
 
-  /* ---------- Contact form (Netlify Forms) ---------- */
+  /* ---------- Contact form (mailto fallback) ---------- */
   function setupContactForm() {
     const form = document.querySelector('[data-contact-form]');
     if (!form) return;
@@ -706,43 +722,34 @@
     const btnText = btn?.querySelector('.btn-submit__text');
     const lang = () => storageGet('rc-lang', 'es');
 
-    form.addEventListener('submit', async (e) => {
+    form.addEventListener('submit', (e) => {
       e.preventDefault();
       if (!form.checkValidity()) { form.reportValidity(); return; }
 
-      // Loading state
+      const data = new FormData(form);
+      const name = String(data.get('name') || '').trim();
+      const email = String(data.get('email') || '').trim();
+      const subjectType = String(data.get('subject') || 'Contacto');
+      const message = String(data.get('message') || '').trim();
+      const subject = encodeURIComponent('[Portfolio] ' + subjectType + ' - ' + name);
+      const body = encodeURIComponent(message + '\n\n--\n' + name + '\n' + email);
+
       if (btn) { btn.disabled = true; btn.setAttribute('aria-busy', 'true'); }
-      if (btnText) btnText.textContent = lang() === 'en' ? 'Sending…' : 'Enviando…';
-      if (note) note.textContent = '';
+      if (btnText) btnText.textContent = lang() === 'en' ? 'Opening email...' : 'Abriendo email...';
+      if (note) {
+        note.textContent = lang() === 'en'
+          ? 'Your email app is opening. If it does not, write to ronycozzi5@gmail.com.'
+          : 'Se esta abriendo tu app de email. Si no se abre, escribime a ronycozzi5@gmail.com.';
+      }
 
-      try {
-        const data = new FormData(form);
-        const encoded = new URLSearchParams(data).toString();
-        const res = await fetch(window.location.pathname, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: encoded,
-        });
+      window.location.href = 'mailto:ronycozzi5@gmail.com?subject=' + subject + '&body=' + body;
 
-        if (res.ok) {
-          if (note) note.textContent = lang() === 'en' ? '✓ Message sent — I will reply within 24h.' : '✓ Mensaje enviado — respondo en menos de 24h.';
-          form.reset();
-        } else {
-          throw new Error('Server error ' + res.status);
-        }
-      } catch (err) {
-        // Graceful fallback to mailto
-        const d = new FormData(form);
-        const subject = encodeURIComponent('[Portfolio] ' + (d.get('subject') || 'Contacto') + ' — ' + d.get('name'));
-        const body = encodeURIComponent(d.get('message') + '\n\n— ' + d.get('name') + ' (' + d.get('email') + ')');
-        window.location.href = 'mailto:ronycozzi5@gmail.com?subject=' + subject + '&body=' + body;
-      } finally {
+      setTimeout(() => {
         if (btn) { btn.disabled = false; btn.removeAttribute('aria-busy'); }
         if (btnText) btnText.textContent = lang() === 'en' ? 'Send message' : 'Enviar mensaje';
-      }
+      }, 900);
     });
   }
-
 
   /* ---------- Copy to clipboard ---------- */
   function setupCopyButtons() {
@@ -838,11 +845,12 @@
     consoleEasterEgg();
   }
 
-  if (document.readyState === 'loading') {
-  
   // Handle orientation change (mobile)
   window.addEventListener('orientationchange', () => {
-    setTimeout(() => { setup(); onScroll(); }, 300);
+    setTimeout(() => {
+      window.dispatchEvent(new Event('resize'));
+      window.dispatchEvent(new Event('scroll'));
+    }, 300);
   });
 
   // Global error handlers
@@ -854,7 +862,6 @@
     return false;
   };
 
-
   // Service Worker registration
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
@@ -862,7 +869,8 @@
     });
   }
 
-  document.addEventListener('DOMContentLoaded', init);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
   } else {
     init();
   }

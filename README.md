@@ -5,7 +5,7 @@ Portfolio personal en producción: **[portfolios-ronycozzi.vercel.app](https://p
 ## Stack
 
 - **HTML5 + CSS3 + JavaScript ES6+** — sin frameworks, sin build step, sin npm
-- **Netlify** — deploy, forms, headers, CDN
+- **Vercel** — deploy, headers, CDN
 - **Google Fonts** — Space Grotesk (display) + Inter (body)
 
 ## Estructura
@@ -15,14 +15,14 @@ portfolio-rony/
 ├── index.html              Home — hero, featured deck, services, contact card
 ├── work.html               Pin horizontal con 4 proyectos + capabilities
 ├── about.html              Bio, stack, principios
-├── contact.html            Form (Netlify Forms) + email/WhatsApp
+├── contact.html            Form mailto + email/WhatsApp
 ├── faq.html                10 preguntas frecuentes con FAQPage schema
 ├── process.html            Proceso de trabajo paso a paso
 ├── privacy.html            Política de privacidad (Ley 25.326 + GDPR)
 ├── terms.html              Términos y condiciones
 ├── 404.html                Página 404 custom con terminal easter egg
 ├── manifest.json           PWA manifest
-├── netlify.toml            Security headers + redirects
+├── vercel.json            Security headers + cache rules
 ├── sitemap.xml             10 URLs indexadas
 ├── robots.txt              Allow all
 ├── favicon.svg             Logo RC
@@ -59,7 +59,7 @@ npx serve .
 
 ## Deploy
 
-Auto-deploy desde `main` → [Netlify](https://app.netlify.com/projects/rony-cozzi). Push a `main` = deploy en ~30 segundos.
+Auto-deploy desde `main` en Vercel. Push a `main` = deploy automático.
 
 ```bash
 git add .
@@ -102,7 +102,7 @@ Los tokens están en `css/styles.css` bajo `/* ---------- Tokens ---------- */`:
 - `overflow-x: clip` en html/body (no `hidden`) — preserva `position: sticky` en descendientes
 - IntersectionObserver en `.line` (no en `.reveal` clipped) — el threshold funciona correctamente
 - Versionado de assets con query strings (`?v=...`) y service worker sin `ignoreSearch` para evitar CSS/JS stale
-- `data-netlify="true"` en el form + fetch + fallback mailto — sin backend
+- Formulario sin backend: prepara un `mailto:` con los datos ingresados y mantiene canales directos de email/WhatsApp
 
 ## Licencia
 
