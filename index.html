@@ -38,7 +38,7 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" as="style" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/styles.css?v=14" />
+  <link rel="stylesheet" href="css/styles.css?v=16" />
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -147,7 +147,12 @@
 
   <main class="page page--home" id="main">
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero" data-hero-scene>
+      <div class="hero__backdrop" aria-hidden="true">
+        <span class="hero__noise"></span>
+        <span class="hero__beam hero__beam--one"></span>
+        <span class="hero__beam hero__beam--two"></span>
+      </div>
       <div class="hero__top">
         <span class="tag"><span class="tag__dot"></span><span data-i18n="hero.tag">Disponible · 2026</span></span>
         <span class="loc-pin"><span class="loc-pin__dot"></span><span>Argentina</span></span>
@@ -158,12 +163,12 @@
         <div class="hero__lede">
           <span class="hero__role" data-i18n="hero.role">Rony Cozzi — Full Stack Developer</span>
           <h1 class="hero__title">
-            <span class="line"><span class="reveal" data-i18n="hero.title1">Construyendo</span></span>
-            <span class="line"><span class="reveal"><em data-i18n="hero.title2">sitios rápidos</em><span class="accent">.</span></span></span>
-            <span class="line"><span class="reveal" data-i18n="hero.title3">para marcas modernas.</span></span>
+            <span class="line"><span class="reveal" data-i18n="hero.title1">Webs con oficio,</span></span>
+            <span class="line"><span class="reveal"><em data-i18n="hero.title2">rápidas por dentro</em><span class="accent">.</span></span></span>
+            <span class="line"><span class="reveal" data-i18n="hero.title3">distintas por fuera.</span></span>
           </h1>
           <p class="hero__intro" data-reveal data-i18n="hero.intro">
-            Diseño y desarrollo enfocados en performance, accesibilidad y código mantenible. Trabajo con marcas, estudios y startups.
+            Desarrollo experiencias web con criterio visual, performance real y código que se puede mantener. Sitios, landings, integraciones y piezas digitales con identidad propia.
           </p>
           <div class="hero__actions">
             <a href="work.html" class="hero__cta" data-magnetic data-link>
@@ -178,24 +183,44 @@
           </div>
         </div>
 
-        <aside class="hero__facts" aria-label="Quick facts">
-          <div class="hero__fact">
-            <span class="hero__fact-label" data-i18n="hero.fact.services">Servicios</span>
-            <strong data-i18n="hero.fact.services_val">Sitios · APIs · Landing pages</strong>
+        <div class="hero__side">
+          <div class="hero__media" aria-hidden="true">
+            <div class="hero__browser hero__browser--main">
+              <span class="hero__browser-bar"><i></i><i></i><i></i><b>live-preview</b></span>
+              <img src="assets/work/cognition.webp" alt="" loading="eager" decoding="async" />
+            </div>
+            <div class="hero__browser hero__browser--float hero__browser--cucu">
+              <img src="assets/work/cucu-thumb.webp" alt="" loading="eager" decoding="async" />
+            </div>
+            <div class="hero__browser hero__browser--float hero__browser--luco">
+              <img src="assets/work/luco-thumb.webp" alt="" loading="eager" decoding="async" />
+            </div>
+            <div class="hero__code">
+              <span>performance: 96</span>
+              <span>seo: indexed</span>
+              <span>motion: reduced-safe</span>
+            </div>
           </div>
-          <div class="hero__fact">
-            <span class="hero__fact-label" data-i18n="hero.fact.response">Respuesta</span>
-            <strong data-i18n="hero.fact.response_val">&lt; 24h</strong>
-          </div>
-          <div class="hero__fact">
-            <span class="hero__fact-label" data-i18n="hero.fact.langs">Idiomas</span>
-            <strong>ES · EN</strong>
-          </div>
-          <div class="hero__fact">
-            <span class="hero__fact-label" data-i18n="hero.fact.modality">Modalidad</span>
-            <strong data-i18n="hero.fact.modality_val">Remoto · GMT-3</strong>
-          </div>
-        </aside>
+
+          <aside class="hero__facts" aria-label="Quick facts">
+            <div class="hero__fact">
+              <span class="hero__fact-label" data-i18n="hero.fact.services">Servicios</span>
+              <strong data-i18n="hero.fact.services_val">Sitios · APIs · Landing pages</strong>
+            </div>
+            <div class="hero__fact">
+              <span class="hero__fact-label" data-i18n="hero.fact.response">Respuesta</span>
+              <strong data-i18n="hero.fact.response_val">&lt; 24h</strong>
+            </div>
+            <div class="hero__fact">
+              <span class="hero__fact-label" data-i18n="hero.fact.langs">Idiomas</span>
+              <strong>ES · EN</strong>
+            </div>
+            <div class="hero__fact">
+              <span class="hero__fact-label" data-i18n="hero.fact.modality">Modalidad</span>
+              <strong data-i18n="hero.fact.modality_val">Remoto · GMT-3</strong>
+            </div>
+          </aside>
+        </div>
       </div>
 
       <!-- HUD corners -->
@@ -251,6 +276,7 @@
             <span class="card__year">2025</span>
           </div>
           <div class="card__preview">
+            <img class="card__shot" src="assets/work/cucu.webp" alt="" loading="lazy" decoding="async" />
             <span class="card__brand"><em>Cucú</em> Studio<span class="card__dot" style="background:#C9956E"></span></span>
             <span class="card__sub">Creative studio · Tattoo &amp; design</span>
           </div>
@@ -266,6 +292,7 @@
             <span class="card__year">2025</span>
           </div>
           <div class="card__preview">
+            <img class="card__shot" src="assets/work/luco.webp" alt="" loading="lazy" decoding="async" />
             <span class="card__brand">Luco <em>Gourmet</em></span>
             <span class="card__sub">Comedor &amp; Mercado · Nueva Córdoba</span>
             <span class="card__shape card__shape--leaf"></span>
@@ -282,6 +309,7 @@
             <span class="card__year">2026</span>
           </div>
           <div class="card__preview">
+            <img class="card__shot" src="assets/work/sellink.webp" alt="" loading="lazy" decoding="async" />
             <span class="card__brand card__brand--upper">SELLINK<br/>GROUP</span>
             <span class="card__sub">★ Agencia creativa ★</span>
             <span class="card__shape card__shape--block" style="background:#FF3300"></span>
@@ -298,6 +326,7 @@
             <span class="card__year">2026</span>
           </div>
           <div class="card__preview">
+            <img class="card__shot" src="assets/work/cognition.webp" alt="" loading="lazy" decoding="async" />
             <span class="card__brand">Cognition<sup style="color:#00D4FF">●</sup></span>
             <span class="card__sub">Transformación digital · IA aplicada</span>
             <span class="card__shape card__shape--node" style="background:#00D4FF;box-shadow:0 0 30px #00D4FF"></span>
@@ -311,10 +340,52 @@
       </div>
     </section>
 
+    <!-- WORKFLOW SIGNAL -->
+    <section class="signal" data-signal>
+      <div class="signal__intro">
+        <span class="signal__eyebrow">[ 02 — Criterio de construcción ]</span>
+        <h2 class="signal__title" data-reveal>Un sitio no tiene que gritar para sentirse vivo.</h2>
+        <p class="signal__copy" data-reveal>
+          Trabajo el movimiento como una capa de intención: guía la mirada, diferencia cada marca y mantiene la web liviana.
+        </p>
+      </div>
+      <div class="signal__rail" aria-hidden="true">
+        <span>brief claro</span>
+        <span>prototipo rápido</span>
+        <span>copy útil</span>
+        <span>UI con carácter</span>
+        <span>performance medida</span>
+        <span>deploy limpio</span>
+        <span>brief claro</span>
+        <span>prototipo rápido</span>
+        <span>copy útil</span>
+        <span>UI con carácter</span>
+        <span>performance medida</span>
+        <span>deploy limpio</span>
+      </div>
+      <div class="signal__grid">
+        <article class="signal-card signal-card--one" data-reveal>
+          <span>01</span>
+          <h3>Identidad antes que plantilla</h3>
+          <p>Cada proyecto arranca con tono, ritmo visual y objetivos concretos. No reutilizo la misma fachada para todos.</p>
+        </article>
+        <article class="signal-card signal-card--two" data-reveal>
+          <span>02</span>
+          <h3>Movimiento con propósito</h3>
+          <p>Animaciones cortas, transform y opacity. Nada que bloquee lectura, scroll o carga inicial.</p>
+        </article>
+        <article class="signal-card signal-card--three" data-reveal>
+          <span>03</span>
+          <h3>Entrega lista para producción</h3>
+          <p>SEO, responsive, accesibilidad, cache, headers y deploy revisados antes de publicar.</p>
+        </article>
+      </div>
+    </section>
+
     <!-- SERVICES -->
     <section class="services">
       <div class="services__head">
-        <span class="services__num">[ 02 — Services ]</span>
+        <span class="services__num">[ 03 — Services ]</span>
         <h2 class="services__title" data-reveal data-i18n="services.title">Servicios</h2>
         <p class="services__copy" data-reveal data-i18n="services.copy">
           Desarrollo sitios completos, landings e integraciones web listas para producción: rápidas, accesibles, medibles y mantenibles.
@@ -460,6 +531,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=12" defer></script>
+  <script src="js/main.js?v=14" defer></script>
 </body>
 </html>

@@ -15,10 +15,10 @@
       'nav.contact': 'Contacto',
       'hero.tag': 'Disponible · 2026',
       'hero.role': 'Rony Cozzi — Full Stack Developer',
-      'hero.title1': 'Construyendo',
-      'hero.title2': 'sitios rápidos',
-      'hero.title3': 'para marcas modernas.',
-      'hero.intro': 'Diseño y desarrollo enfocados en performance, accesibilidad y código mantenible. Trabajo con marcas, estudios y startups.',
+      'hero.title1': 'Webs con oficio,',
+      'hero.title2': 'rápidas por dentro',
+      'hero.title3': 'distintas por fuera.',
+      'hero.intro': 'Desarrollo experiencias web con criterio visual, performance real y código que se puede mantener. Sitios, landings, integraciones y piezas digitales con identidad propia.',
       'hero.cta': 'Ver proyectos',
       'hero.cta2': 'Contacto',
       'hero.scroll': 'Scroll',
@@ -146,10 +146,10 @@
       'nav.contact': 'Contact',
       'hero.tag': 'Available · 2026',
       'hero.role': 'Rony Cozzi — Full Stack Developer',
-      'hero.title1': 'Building',
-      'hero.title2': 'fast websites',
-      'hero.title3': 'for modern brands.',
-      'hero.intro': 'Design and development focused on performance, accessibility and maintainable code. Working with brands, studios and startups.',
+      'hero.title1': 'Websites with craft,',
+      'hero.title2': 'fast underneath',
+      'hero.title3': 'distinct on screen.',
+      'hero.intro': 'I build web experiences with visual judgment, real performance and maintainable code. Sites, landing pages, integrations and digital pieces with their own identity.',
       'hero.cta': 'View work',
       'hero.cta2': 'Contact',
       'hero.scroll': 'Scroll',
@@ -688,6 +688,47 @@
     window.addEventListener('scroll', onScroll, { passive: true });
   }
 
+  /* ---------- Hero scene motion ---------- */
+  function setupHeroScene() {
+    const hero = document.querySelector('[data-hero-scene]');
+    if (!hero) return;
+
+    function setScroll() {
+      const rect = hero.getBoundingClientRect();
+      const progress = Math.max(0, Math.min(1, -rect.top / Math.max(1, rect.height)));
+      hero.style.setProperty('--hero-scroll', progress.toFixed(3));
+    }
+
+    setScroll();
+    window.addEventListener('scroll', setScroll, { passive: true });
+
+    if (isTouch || reducedMotion) return;
+
+    let raf = null;
+    let tx = 0, ty = 0, cx = 0, cy = 0;
+    function draw() {
+      cx += (tx - cx) * 0.12;
+      cy += (ty - cy) * 0.12;
+      hero.style.setProperty('--hero-x', `${cx.toFixed(2)}px`);
+      hero.style.setProperty('--hero-y', `${cy.toFixed(2)}px`);
+      if (Math.abs(tx - cx) > 0.08 || Math.abs(ty - cy) > 0.08) raf = _raf(draw);
+      else raf = null;
+    }
+
+    hero.addEventListener('mousemove', (e) => {
+      const r = hero.getBoundingClientRect();
+      tx = ((e.clientX - r.left) / r.width - 0.5) * 26;
+      ty = ((e.clientY - r.top) / r.height - 0.5) * 22;
+      if (!raf) raf = _raf(draw);
+    }, { passive: true });
+
+    hero.addEventListener('mouseleave', () => {
+      tx = 0;
+      ty = 0;
+      if (!raf) raf = _raf(draw);
+    }, { passive: true });
+  }
+
   /* ---------- Parallax image (about) ---------- */
   function setupParallaxImg() {
     if (reducedMotion) return;
@@ -793,7 +834,7 @@
       if (note) {
         note.textContent = lang() === 'en'
           ? 'Your email app is opening. If it does not, write to ronycozzi5@gmail.com.'
-          : 'Se esta abriendo tu app de email. Si no se abre, escribime a ronycozzi5@gmail.com.';
+          : 'Se está abriendo tu app de email. Si no se abre, escribime a ronycozzi5@gmail.com.';
       }
 
       window.location.href = 'mailto:ronycozzi5@gmail.com?subject=' + subject + '&body=' + body;
@@ -869,6 +910,7 @@
     setupManifesto();
     setupHorizontal();
     setupParallaxDeck();
+    setupHeroScene();
     setupParallaxImg();
     setupMobileMenu();
     setupClock();
