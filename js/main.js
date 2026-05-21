@@ -11,14 +11,16 @@
   /* ---------- i18n strings ---------- */
   const i18n = {
     es: {
+      'nav.home': 'Inicio',
+      'nav.work': 'Trabajos',
       'nav.about': 'Sobre mí',
       'nav.contact': 'Contacto',
       'hero.tag': 'Disponible · 2026',
       'hero.role': 'Rony Cozzi — Full Stack Developer',
-      'hero.title1': 'Webs con oficio,',
-      'hero.title2': 'rápidas por dentro',
-      'hero.title3': 'distintas por fuera.',
-      'hero.intro': 'Desarrollo experiencias web con criterio visual, performance real y código que se puede mantener. Sitios, landings, integraciones y piezas digitales con identidad propia.',
+      'hero.title1': 'Diseño webs',
+      'hero.title2': 'con carácter',
+      'hero.title3': 'Las dejo listas para vender.',
+      'hero.intro': 'Diseño y desarrollo sitios que se sienten propios, cargan rápido y convierten visitas en conversaciones reales. Estrategia visual, código limpio, SEO y deploy listos para producción.',
       'hero.cta': 'Ver proyectos',
       'hero.cta2': 'Contacto',
       'hero.scroll': 'Scroll',
@@ -142,14 +144,16 @@
       'contact.response_val': 'Menos de 24h',
     },
     en: {
+      'nav.home': 'Home',
+      'nav.work': 'Work',
       'nav.about': 'About',
       'nav.contact': 'Contact',
       'hero.tag': 'Available · 2026',
       'hero.role': 'Rony Cozzi — Full Stack Developer',
-      'hero.title1': 'Websites with craft,',
-      'hero.title2': 'fast underneath',
-      'hero.title3': 'distinct on screen.',
-      'hero.intro': 'I build web experiences with visual judgment, real performance and maintainable code. Sites, landing pages, integrations and digital pieces with their own identity.',
+      'hero.title1': 'I design websites',
+      'hero.title2': 'with character',
+      'hero.title3': 'and ship them to sell.',
+      'hero.intro': 'I design and build websites that feel ownable, load fast and turn visits into real conversations. Visual strategy, clean code, SEO and production deploy included.',
       'hero.cta': 'View work',
       'hero.cta2': 'Contact',
       'hero.scroll': 'Scroll',
@@ -391,7 +395,7 @@
   }
   function getPageNameFromHref(href) {
     const lang = storageGet('rc-lang', 'es');
-    if (href.includes('work')) return 'Work';
+    if (href.includes('work')) return lang === 'en' ? 'Work' : 'Trabajos';
     if (href.includes('about')) return lang === 'en' ? 'About' : 'Sobre mí';
     if (href.includes('contact')) return lang === 'en' ? 'Contact' : 'Contacto';
     return 'Home';
@@ -729,6 +733,22 @@
     }, { passive: true });
   }
 
+  /* ---------- Local spotlight motion ---------- */
+  function setupSpotlights() {
+    if (isTouch || reducedMotion) return;
+    const targets = document.querySelectorAll('.service, .capabilities__list li, .principles__list li, .stack-col, .contact-card__inner');
+    targets.forEach((el) => {
+      el.classList.add('has-spotlight');
+      el.addEventListener('mousemove', (e) => {
+        const r = el.getBoundingClientRect();
+        const x = ((e.clientX - r.left) / r.width) * 100;
+        const y = ((e.clientY - r.top) / r.height) * 100;
+        el.style.setProperty('--mx', `${x.toFixed(1)}%`);
+        el.style.setProperty('--my', `${y.toFixed(1)}%`);
+      }, { passive: true });
+    });
+  }
+
   /* ---------- Parallax image (about) ---------- */
   function setupParallaxImg() {
     if (reducedMotion) return;
@@ -911,6 +931,7 @@
     setupHorizontal();
     setupParallaxDeck();
     setupHeroScene();
+    setupSpotlights();
     setupParallaxImg();
     setupMobileMenu();
     setupClock();

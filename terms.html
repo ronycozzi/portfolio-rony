@@ -30,7 +30,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" as="style" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=16" />
+  <link rel="stylesheet" href="css/styles.css?v=17" />
   <style>
     .legal-hero { padding: calc(var(--header-h, 72px) + 48px) var(--pad-x) 40px; border-bottom: 1px solid var(--line); }
     .legal-hero__eyebrow { display: block; font-family: var(--font-display); font-size: 11px; letter-spacing: 0.08em; color: var(--fg-muted); margin-bottom: 16px; }
@@ -85,7 +85,8 @@
       <span class="header__logo-text">Rony Cozzi<sup>©</sup></span>
     </a>
     <nav class="nav" aria-label="Navegación principal">
-      <a href="work.html" data-magnetic data-link><span>Work</span></a>
+      <a href="index.html" data-magnetic data-link><span data-i18n="nav.home">Inicio</span></a>
+      <a href="work.html" data-magnetic data-link><span data-i18n="nav.work">Trabajos</span></a>
       <a href="about.html" data-magnetic data-link><span data-i18n="nav.about">Sobre mí</span></a>
       <a href="contact.html" data-magnetic data-link><span data-i18n="nav.contact">Contacto</span></a>
     </nav>
@@ -105,7 +106,8 @@
   </header>
 
   <div class="mobile-menu" data-mobile-menu>
-    <a href="work.html" data-link>Work</a>
+    <a href="index.html" data-link><span data-i18n="nav.home">Inicio</span></a>
+    <a href="work.html" data-link><span data-i18n="nav.work">Trabajos</span></a>
     <a href="about.html" data-link><span data-i18n="nav.about">Sobre mí</span></a>
     <a href="contact.html" data-link><span data-i18n="nav.contact">Contacto</span></a>
   </div>
@@ -151,6 +153,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=14" defer></script>
+  <script src="js/main.js?v=15" defer></script>
 </body>
 </html>

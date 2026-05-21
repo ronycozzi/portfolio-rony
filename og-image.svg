@@ -7,9 +7,9 @@
   </defs>
   <rect width="1200" height="630" fill="url(#grid)" opacity="0.6"/>
   <text x="80" y="120" font-family="Space Grotesk, Inter, sans-serif" font-size="20" font-weight="500" letter-spacing="2" fill="#8A8780">RONY COZZI — FULL-STACK DEVELOPER</text>
-  <text x="80" y="290" font-family="Space Grotesk, Inter, sans-serif" font-size="96" font-weight="500" letter-spacing="-4" fill="#F2EFE9">Webs con oficio,</text>
-  <text x="80" y="400" font-family="Times New Roman, serif" font-size="96" font-style="italic" font-weight="400" letter-spacing="-4" fill="#F2EFE9">rápidas por dentro<tspan fill="#C6FF3D">.</tspan></text>
-  <text x="80" y="510" font-family="Space Grotesk, Inter, sans-serif" font-size="96" font-weight="500" letter-spacing="-4" fill="#F2EFE9">distintas por fuera.</text>
+  <text x="80" y="290" font-family="Space Grotesk, Inter, sans-serif" font-size="96" font-weight="500" letter-spacing="-4" fill="#F2EFE9">Diseño webs</text>
+  <text x="80" y="400" font-family="Times New Roman, serif" font-size="96" font-style="italic" font-weight="400" letter-spacing="-4" fill="#F2EFE9">con carácter<tspan fill="#C6FF3D">.</tspan></text>
+  <text x="80" y="510" font-family="Space Grotesk, Inter, sans-serif" font-size="88" font-weight="500" letter-spacing="-4" fill="#F2EFE9">Listas para vender.</text>
   <g transform="translate(80, 560)">
     <circle cx="6" cy="6" r="6" fill="#2DD16A"/>
     <text x="22" y="11" font-family="Space Grotesk, Inter, sans-serif" font-size="16" font-weight="500" letter-spacing="1" fill="#8A8780">Disponible · 2026 · Remoto · Argentina</text>
