@@ -116,6 +116,46 @@
   <div class="cursor" aria-hidden="true"><span class="cursor__label"></span></div>
   <div class="cursor-dot" aria-hidden="true"></div>
 
+  <header class="header">
+    <a href="index.html" class="header__logo" data-magnetic data-link>
+      <span class="header__logo-mark">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M8 8h5a3 3 0 0 1 0 6H8m0 0v4m0-4 6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+        </svg>
+      </span>
+      <span class="header__logo-text">Rony Cozzi<sup>©</sup></span>
+    </a>
+
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="index.html" data-magnetic data-link><span data-i18n="nav.home">Inicio</span></a>
+      <a href="work.html" data-magnetic data-link><span data-i18n="nav.work">Trabajos</span></a>
+      <a href="about.html" data-magnetic data-link><span data-i18n="nav.about">Sobre mí</span></a>
+      <a href="contact.html" data-magnetic data-link><span data-i18n="nav.contact">Contacto</span></a>
+    </nav>
+
+    <div class="header__actions">
+      <button type="button" class="lang-toggle" data-lang-toggle aria-label="Cambiar idioma">
+        <span data-lang="es" class="is-active">ES</span>
+        <span class="lang-sep">/</span>
+        <span data-lang="en">EN</span>
+      </button>
+      <button type="button" class="theme-toggle" data-theme-toggle aria-label="Cambiar tema">
+        <span class="theme-toggle__dot"></span>
+      </button>
+      <button type="button" class="menu-toggle" data-menu-toggle aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" data-mobile-menu>
+    <a href="index.html" data-link><span data-i18n="nav.home">Inicio</span></a>
+    <a href="work.html" data-link><span data-i18n="nav.work">Trabajos</span></a>
+    <a href="about.html" data-link><span data-i18n="nav.about">Sobre mí</span></a>
+    <a href="contact.html" data-link><span data-i18n="nav.contact">Contacto</span></a>
+  </div>
+
   <main class="err-page" id="main">
     <div class="err-inner">
       <span class="err-num" aria-hidden="true">404</span>
@@ -137,7 +177,7 @@
     </div>
   </main>
 
-  <script src="js/main.js?v=16" defer></script>
+  <script src="js/main.js?v=17" defer></script>
   <script>
     // Easter egg: path in terminal shows actual URL
     try {
