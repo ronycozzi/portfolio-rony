@@ -1,5 +1,5 @@
 /* Service Worker — Rony Cozzi Portfolio */
-const VERSION = 'v23';
+const VERSION = 'v25';
 const CACHE = `rony-portfolio-${VERSION}`;
 const MAX_RUNTIME_ENTRIES = 60;
 
@@ -19,8 +19,11 @@ const SHELL = [
   '/case/sellink.html',
   '/case/cognition.html',
   '/css/styles.css',
+  '/css/styles.css?v=19',
   '/css/case.css',
+  '/css/case.css?v=3',
   '/js/main.js',
+  '/js/main.js?v=18',
   '/manifest.json',
   '/favicon.svg',
   '/og-image.png',
@@ -67,7 +70,7 @@ self.addEventListener('fetch', (e) => {
   if (url.origin !== self.location.origin) return;
 
   // Network-first for HTML documents (always show fresh content)
-  if (e.request.destination === 'document') {
+  if (e.request.mode === 'navigate' || e.request.destination === 'document') {
     e.respondWith(
       fetch(e.request).then((res) => {
         if (!res || res.status !== 200 || res.type !== 'basic') return res;

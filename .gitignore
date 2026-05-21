@@ -24,3 +24,6 @@ build/
 # Backups
 *.bak
 *.swp
+
+# Codex automation artifacts
+codex-changes-*.patch

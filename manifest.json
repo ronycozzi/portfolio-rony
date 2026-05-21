@@ -48,7 +48,7 @@
   "shortcuts": [
     {
       "name": "Proyectos",
-      "short_name": "Work",
+      "short_name": "Proyectos",
       "description": "Ver proyectos",
       "url": "/work.html",
       "icons": [
@@ -57,7 +57,7 @@
     },
     {
       "name": "Contacto",
-      "short_name": "Contact",
+      "short_name": "Contacto",
       "description": "Contactar",
       "url": "/contact.html",
       "icons": [
