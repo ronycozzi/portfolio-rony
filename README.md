@@ -7,6 +7,7 @@ Portfolio personal en producción: **[portfolios-ronycozzi.vercel.app](https://p
 - **HTML5 + CSS3 + JavaScript ES6+** — sin frameworks, sin build step, sin npm
 - **Vercel** — deploy, headers, CDN
 - **Google Fonts** — Space Grotesk (display) + Inter (body)
+- **PWA** — Service Worker, manifest instalable, offline-first
 
 ## Estructura
 
@@ -16,26 +17,28 @@ portfolio-rony/
 ├── work.html               Pin horizontal con 4 proyectos + capabilities
 ├── about.html              Bio, stack, principios
 ├── contact.html            Form mailto + email/WhatsApp
-├── faq.html                10 preguntas frecuentes con FAQPage schema
+├── faq.html                Preguntas frecuentes con FAQPage schema
 ├── process.html            Proceso de trabajo paso a paso
 ├── privacy.html            Política de privacidad (Ley 25.326 + GDPR)
 ├── terms.html              Términos y condiciones
 ├── 404.html                Página 404 custom con terminal easter egg
 ├── manifest.json           PWA manifest
-├── vercel.json            Security headers + cache rules
-├── sitemap.xml             10 URLs indexadas
+├── vercel.json             Security headers + cache rules
+├── sitemap.xml             URLs indexadas
 ├── robots.txt              Allow all
+├── sw.js                   Service worker (network-first docs, SWR assets)
 ├── favicon.svg             Logo RC
-├── og-image.svg            OG preview 1200×630
+├── og-image.png            OG preview 1200×630
+├── LICENSE                 MIT
 ├── css/
-│   ├── styles.css          ~2100 líneas — tokens, componentes, responsive
+│   ├── styles.css          Tokens, componentes, responsive
 │   └── case.css            Estilos para case studies
 ├── js/
-│   └── main.js             ~820 líneas — i18n, theme, transitions, etc.
+│   └── main.js             i18n, theme, transitions, etc.
 ├── assets/
 │   ├── Rony_Cozzi_CV.pdf   CV descargable
 │   ├── img/rony.jpg        Foto bio (B&N vía CSS)
-│   ├── icons/              PWA icons 192/512
+│   ├── icons/              PWA icons 180/192/512
 │   └── work/               Screenshots WebP de proyectos
 └── case/
     ├── cucu.html           Case study — Cucú Studio
@@ -100,10 +103,12 @@ Los tokens están en `css/styles.css` bajo `/* ---------- Tokens ---------- */`:
 ## Decisiones técnicas
 
 - `overflow-x: clip` en html/body (no `hidden`) — preserva `position: sticky` en descendientes
-- IntersectionObserver en `.line` (no en `.reveal` clipped) — el threshold funciona correctamente
-- Versionado de assets con query strings (`?v=...`) y service worker sin `ignoreSearch` para evitar CSS/JS stale
+- IntersectionObserver en `.line` para reveals — el threshold funciona correctamente
+- Versionado de assets vía hash de Service Worker (cache name) en lugar de query strings
 - Formulario sin backend: prepara un `mailto:` con los datos ingresados y mantiene canales directos de email/WhatsApp
+- Tema respeta `prefers-color-scheme` por defecto, override por toggle persiste en `localStorage`
+- i18n ES/EN con `data-i18n`, ARIA labels y skip-link traducidos dinámicamente
 
 ## Licencia
 
-MIT — podés ver e inspirarte en el código, pero no copiarlo como portfolio propio.
+MIT — ver [LICENSE](./LICENSE). Podés ver e inspirarte en el código, pero no replicarlo como portfolio propio.

@@ -1,103 +1,124 @@
 <!DOCTYPE html>
 <html lang="es" data-theme="dark">
 <head>
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Rony Cozzi — Full Stack Developer</title>
+  <meta name="description" content="Rony Cozzi — Full Stack Developer. Sitios web rápidos, landing pages, APIs ligeras e integraciones para marcas, estudios y startups." />
+
+  <meta name="theme-color" content="#0A0A0A" />
+  <meta name="color-scheme" content="dark light" />
+  <meta name="robots" content="index, follow" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="format-detection" content="telephone=no, email=no, address=no" />
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   <meta name="apple-mobile-web-app-title" content="Rony Cozzi" />
   <meta name="msapplication-TileColor" content="#0A0A0A" />
-  <meta name="referrer" content="no-referrer-when-downgrade" />
-  <meta charset="UTF-8" />
-  <meta name="robots" content="index, follow" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#0A0A0A" />
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Expires" content="0" />
-  <meta name="description" content="Rony Cozzi - Full Stack Developer. Sitios web rapidos, landing pages, APIs ligeras e integraciones para marcas, estudios y startups." />
-  <meta name="color-scheme" content="dark light" />
-
-  <meta property="og:title" content="Rony Cozzi — Full Stack Developer" />
-  <meta property="og:description" content="Sitios web rapidos, accesibles e integraciones full stack listas para produccion." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://portfolios-ronycozzi.vercel.app/og-image.png" />
-  <meta property="og:url" content="https://portfolios-ronycozzi.vercel.app/" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Rony Cozzi — Full Stack Developer" />
-  <meta name="twitter:description" content="Sitios web rapidos, accesibles e integraciones full stack listas para produccion." />
-  <meta name="twitter:image" content="https://portfolios-ronycozzi.vercel.app/og-image.png" />
-
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <link rel="apple-touch-icon" href="assets/icons/icon-192.png" />
-  <link rel="manifest" href="/manifest.json" />
 
   <link rel="canonical" href="https://portfolios-ronycozzi.vercel.app/" />
-  <title>Rony Cozzi — Full Stack Developer</title>
+  <link rel="alternate" hreflang="es" href="https://portfolios-ronycozzi.vercel.app/" />
+  <link rel="alternate" hreflang="en" href="https://portfolios-ronycozzi.vercel.app/" />
+  <link rel="alternate" hreflang="x-default" href="https://portfolios-ronycozzi.vercel.app/" />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/icon-180.png" />
+  <link rel="manifest" href="/manifest.json" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Rony Cozzi" />
+  <meta property="og:locale" content="es_AR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:url" content="https://portfolios-ronycozzi.vercel.app/" />
+  <meta property="og:title" content="Rony Cozzi — Full Stack Developer" />
+  <meta property="og:description" content="Sitios web rápidos, accesibles e integraciones full stack listas para producción." />
+  <meta property="og:image" content="https://portfolios-ronycozzi.vercel.app/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Rony Cozzi — Full Stack Developer" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:creator" content="@ronycozzi" />
+  <meta name="twitter:title" content="Rony Cozzi — Full Stack Developer" />
+  <meta name="twitter:description" content="Sitios web rápidos, accesibles e integraciones full stack listas para producción." />
+  <meta name="twitter:image" content="https://portfolios-ronycozzi.vercel.app/og-image.png" />
+  <meta name="twitter:image:alt" content="Rony Cozzi — Full Stack Developer" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" as="style" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" as="style" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="assets/work/cognition-v2.webp" fetchpriority="high" />
+  <link rel="stylesheet" href="css/styles.css?v=19" />
+  <link rel="prefetch" href="work.html" />
+  <link rel="prefetch" href="contact.html" />
 
-  <link rel="stylesheet" href="css/styles.css?v=18" />
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "@id": "https://portfolios-ronycozzi.vercel.app/",
-  "name": "Rony Cozzi",
-  "jobTitle": "Full Stack Developer",
-  "url": "https://portfolios-ronycozzi.vercel.app",
-  "email": "mailto:ronycozzi5@gmail.com",
-  "telephone": "+54-351-507-3210",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Córdoba",
-    "addressCountry": "AR"
-  },
-  "sameAs": [
-    "https://github.com/ronycozzi",
-    "https://linkedin.com/in/rony-cozzi-677111251"
-  ],
-  "knowsAbout": [
-    "HTML5",
-    "CSS3",
-    "JavaScript",
-    "TypeScript",
-    "React",
-    "Node.js",
-    "APIs REST",
-    "SQL",
-    "Python scripts",
-    "Supabase",
-    "Firebase",
-    "Serverless Functions",
-    "Webhooks",
-    "Progressive Web Apps",
-    "SEO",
-    "Web Performance"
-  ],
-  "offers": {
-    "@type": "Offer",
-    "description": "Desarrollo web full stack - sitios, landing pages, APIs ligeras e integraciones",
-    "areaServed": "América Latina"
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://portfolios-ronycozzi.vercel.app/#website",
+        "url": "https://portfolios-ronycozzi.vercel.app/",
+        "name": "Rony Cozzi — Portfolio",
+        "inLanguage": "es-AR",
+        "publisher": { "@id": "https://portfolios-ronycozzi.vercel.app/#person" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://portfolios-ronycozzi.vercel.app/#person",
+        "name": "Rony Cozzi",
+        "givenName": "Rony",
+        "familyName": "Cozzi",
+        "jobTitle": "Full Stack Developer",
+        "url": "https://portfolios-ronycozzi.vercel.app/",
+        "image": "https://portfolios-ronycozzi.vercel.app/assets/img/rony.jpg",
+        "email": "ronycozzi5@gmail.com",
+        "telephone": "+543515073210",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Córdoba",
+          "addressRegion": "Córdoba",
+          "addressCountry": "AR"
+        },
+        "sameAs": [
+          "https://github.com/ronycozzi",
+          "https://linkedin.com/in/rony-cozzi-677111251"
+        ],
+        "knowsAbout": [
+          "HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Node.js",
+          "APIs REST", "SQL", "Supabase", "Firebase", "Serverless Functions",
+          "Webhooks", "Progressive Web Apps", "SEO", "Web Performance"
+        ]
+      }
+    ]
   }
-}
-</script>
-  <meta property="og:site_name" content="Rony Cozzi" />
-  <meta property="og:locale" content="es_AR" />
-  <meta name="twitter:creator" content="@ronycozzi" />
-  <link rel="alternate" hreflang="es" href="https://portfolios-ronycozzi.vercel.app/" />
-  <link rel="alternate" hreflang="x-default" href="https://portfolios-ronycozzi.vercel.app/" />
+  </script>
 </head>
 <body id="top" data-page="home">
-  <a href="#main" class="skip-link">Saltar al contenido</a>
+  <a href="#main" class="skip-link" data-i18n="a11y.skip">Saltar al contenido</a>
+
+  <noscript>
+    <style>
+      .reveal, .reveal-fade, [data-reveal] { opacity: 1 !important; transform: none !important; }
+      .page { opacity: 1 !important; }
+      .page-transition { display: none !important; }
+      .cursor, .cursor-dot { display: none !important; }
+    </style>
+  </noscript>
 
   <!-- Page transition overlay -->
   <div class="page-transition" aria-hidden="true">
     <div class="page-transition__panel"></div>
     <div class="page-transition__label">
-      <span class="page-transition__num">00</span>
-      <span class="page-transition__name">Loading</span>
+      <span class="page-transition__num">01</span>
+      <span class="page-transition__name">Inicio</span>
     </div>
   </div>
 
@@ -107,18 +128,18 @@
 
   <!-- Header -->
   <header class="header">
-    <a href="index.html" class="header__logo" aria-current="page" data-magnetic data-link>
+    <a href="index.html" class="header__logo" data-magnetic data-link>
       <span class="header__logo-mark">
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
           <path d="M8 8h5a3 3 0 0 1 0 6H8m0 0v4m0-4 6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
         </svg>
       </span>
-      <span class="header__logo-text">Rony Cozzi<sup>©</sup></span>
+      <span class="header__logo-text">Rony Cozzi</span>
     </a>
 
     <nav class="nav" aria-label="Navegación principal">
-      <a href="index.html" class="is-current" data-magnetic data-link><span data-i18n="nav.home">Inicio</span></a>
+      <a href="index.html" data-magnetic data-link><span data-i18n="nav.home">Inicio</span></a>
       <a href="work.html" data-magnetic data-link><span data-i18n="nav.work">Trabajos</span></a>
       <a href="about.html" data-magnetic data-link><span data-i18n="nav.about">Sobre mí</span></a>
       <a href="contact.html" data-magnetic data-link><span data-i18n="nav.contact">Contacto</span></a>
@@ -127,20 +148,19 @@
     <div class="header__actions">
       <button type="button" class="lang-toggle" data-lang-toggle aria-label="Cambiar idioma">
         <span data-lang="es" class="is-active">ES</span>
-        <span class="lang-sep">/</span>
+        <span class="lang-sep" aria-hidden="true">/</span>
         <span data-lang="en">EN</span>
       </button>
-      <button type="button" class="theme-toggle" data-theme-toggle aria-label="Cambiar tema">
+      <button type="button" class="theme-toggle" data-theme-toggle aria-label="Cambiar tema" aria-pressed="true">
         <span class="theme-toggle__dot"></span>
       </button>
-      <button type="button" class="menu-toggle" data-menu-toggle aria-label="Abrir menú" aria-expanded="false">
+      <button type="button" class="menu-toggle" data-menu-toggle aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
         <span></span><span></span>
       </button>
     </div>
   </header>
 
-  <!-- Mobile menu -->
-  <div class="mobile-menu" data-mobile-menu>
+  <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
     <a href="index.html" data-link><span data-i18n="nav.home">Inicio</span></a>
     <a href="work.html" data-link><span data-i18n="nav.work">Trabajos</span></a>
     <a href="about.html" data-link><span data-i18n="nav.about">Sobre mí</span></a>
@@ -176,7 +196,7 @@
             <a href="work.html" class="hero__cta" data-magnetic data-link>
               <span class="hero__cta-text" data-i18n="hero.cta">Ver proyectos</span>
               <span class="hero__cta-arrow" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="1.5"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="1.5"/></svg>
               </span>
             </a>
             <a href="contact.html" class="hero__cta hero__cta--ghost" data-magnetic data-link>
@@ -189,7 +209,7 @@
           <div class="hero__media" aria-hidden="true">
             <div class="hero__browser hero__browser--main">
               <span class="hero__browser-bar"><i></i><i></i><i></i><b>live-preview</b></span>
-              <img src="assets/work/cognition-v2.webp" alt="" loading="eager" decoding="async" width="1440" height="900" />
+              <img src="assets/work/cognition-v2.webp" alt="" loading="eager" fetchpriority="high" decoding="async" width="1440" height="900" />
             </div>
             <div class="hero__browser hero__browser--float hero__browser--cucu">
               <img src="assets/work/cucu-thumb.webp" alt="" loading="eager" decoding="async" width="600" height="375" />
@@ -204,7 +224,7 @@
             </div>
           </div>
 
-          <aside class="hero__facts" aria-label="Quick facts">
+          <aside class="hero__facts" aria-label="Quick facts" data-i18n-attr="aria-label:hero.facts.quick">
             <div class="hero__fact">
               <span class="hero__fact-label" data-i18n="hero.fact.services">Servicios</span>
               <strong data-i18n="hero.fact.services_val">Sitios · APIs · Landing pages</strong>
@@ -232,7 +252,6 @@
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14m0 0-6-6m6 6 6-6" stroke="currentColor" stroke-width="1.5"/></svg>
       </div>
 
-      <!-- floating grid bg -->
       <div class="hero__grid" aria-hidden="true"></div>
     </section>
 
@@ -255,12 +274,12 @@
     </section>
 
     <!-- FEATURED PROJECT (sticky parallax preview) -->
-    <section class="featured">
+    <section class="featured" aria-labelledby="featured-title">
       <div class="featured__sticky">
         <span class="featured__eyebrow">[ Featured · 2026 ]</span>
-        <h2 class="featured__title">
-          <span class="featured__title-line"><span class="reveal-fade">Selected</span></span>
-          <span class="featured__title-line"><span class="reveal-fade"><em>work.</em></span></span>
+        <h2 class="featured__title" id="featured-title">
+          <span class="line"><span class="reveal" data-i18n="featured.heading1">Selected</span></span>
+          <span class="line"><span class="reveal"><em data-i18n="featured.heading2">work.</em></span></span>
         </h2>
         <p class="featured__copy" data-reveal data-i18n="featured.copy">
           Una selección de proyectos en producción. Sitios pensados desde la performance, el contenido y la marca.
@@ -272,15 +291,15 @@
       </div>
 
       <div class="featured__deck" data-parallax-deck>
-        <a class="card card--cucu" data-tilt data-magnetic href="https://cucu-studio-demo.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Abrir demo de Cucu Studio" style="--card-bg:#FAFAF7;--card-fg:#1A1A1A;--card-accent:#C9956E;">
+        <a class="card card--cucu" data-tilt data-magnetic href="https://cucu-studio-demo.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Abrir demo de Cucú Studio" data-i18n-attr="aria-label:a11y.demo" style="--card-bg:#FAFAF7;--card-fg:#1A1A1A;--card-accent:var(--color-cucu);">
           <div class="card__head">
             <span class="card__index">001</span>
             <span class="card__year">2025</span>
           </div>
           <div class="card__preview">
-            <img class="card__shot" src="assets/work/cucu.webp" alt="" loading="lazy" decoding="async" width="1440" height="900" />
-            <span class="card__brand"><em>Cucú</em> Studio<span class="card__dot" style="background:#C9956E"></span></span>
-            <span class="card__sub">Creative studio · Tattoo &amp; design</span>
+            <img class="card__shot" src="assets/work/cucu.webp" alt="Sitio de Cucú Studio — layout editorial sobre fondo claro con acento copper" loading="lazy" decoding="async" width="1440" height="900" />
+            <span class="card__brand"><em>Cucú</em> Studio<span class="card__dot"></span></span>
+            <span class="card__sub">Creative studio · Tattoo &amp; Design</span>
           </div>
           <div class="card__foot">
             <span class="card__type">Estudio creativo</span>
@@ -288,13 +307,13 @@
           </div>
         </a>
 
-        <a class="card card--luco" data-tilt data-magnetic href="https://luco-gourmet-demo.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Abrir demo de Luco Gourmet" style="--card-bg:#F5F1ED;--card-fg:#2C2420;--card-accent:#4A5D3A;">
+        <a class="card card--luco" data-tilt data-magnetic href="https://luco-gourmet-demo.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Abrir demo de Luco Gourmet" data-i18n-attr="aria-label:a11y.demo" style="--card-bg:#F5F1ED;--card-fg:#2C2420;--card-accent:var(--color-luco);">
           <div class="card__head">
             <span class="card__index">002</span>
             <span class="card__year">2025</span>
           </div>
           <div class="card__preview">
-            <img class="card__shot" src="assets/work/luco.webp" alt="" loading="lazy" decoding="async" width="1440" height="900" />
+            <img class="card__shot" src="assets/work/luco.webp" alt="Sitio de Luco Gourmet — paleta cálida con tarjetas de menú" loading="lazy" decoding="async" width="1440" height="900" />
             <span class="card__brand">Luco <em>Gourmet</em></span>
             <span class="card__sub">Comedor &amp; Mercado · Nueva Córdoba</span>
             <span class="card__shape card__shape--leaf"></span>
@@ -305,16 +324,16 @@
           </div>
         </a>
 
-        <a class="card card--sellink" data-tilt data-magnetic href="https://sellink-group-demo.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Abrir demo de Sellink Group" style="--card-bg:#070707;--card-fg:#EDEDED;--card-accent:#FF3300;">
+        <a class="card card--sellink" data-tilt data-magnetic href="https://sellink-group-demo.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Abrir demo de Sellink Group" data-i18n-attr="aria-label:a11y.demo" style="--card-bg:#070707;--card-fg:#EDEDED;--card-accent:var(--color-sellink);">
           <div class="card__head">
             <span class="card__index">003</span>
             <span class="card__year">2026</span>
           </div>
           <div class="card__preview">
-            <img class="card__shot" src="assets/work/sellink.webp" alt="" loading="lazy" decoding="async" width="1440" height="900" />
+            <img class="card__shot" src="assets/work/sellink.webp" alt="Sitio de Sellink Group — fondo oscuro con acento rojo audaz" loading="lazy" decoding="async" width="1440" height="900" />
             <span class="card__brand card__brand--upper">SELLINK<br/>GROUP</span>
             <span class="card__sub">★ Agencia creativa ★</span>
-            <span class="card__shape card__shape--block" style="background:#FF3300"></span>
+            <span class="card__shape card__shape--block"></span>
           </div>
           <div class="card__foot">
             <span class="card__type">Agency · Corporate</span>
@@ -322,17 +341,17 @@
           </div>
         </a>
 
-        <a class="card card--cognition" data-tilt data-magnetic href="https://cognition-demo-cyan.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Abrir demo de Cognition" style="--card-bg:#0B0D10;--card-fg:#F2F1ED;--card-accent:#00D4FF;">
+        <a class="card card--cognition" data-tilt data-magnetic href="https://cognition-demo-cyan.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Abrir demo de Cognition" data-i18n-attr="aria-label:a11y.demo" style="--card-bg:#0B0D10;--card-fg:#F2F1ED;--card-accent:var(--color-cognition);">
           <div class="card__head">
             <span class="card__index">004</span>
             <span class="card__year">2026</span>
           </div>
           <div class="card__preview">
-            <img class="card__shot" src="assets/work/cognition-v2.webp" alt="" loading="lazy" decoding="async" width="1440" height="900" />
-            <span class="card__brand">Cognition<sup style="color:#00D4FF">●</sup></span>
+            <img class="card__shot" src="assets/work/cognition-v2.webp" alt="Sitio de Cognition — hero con interfaz tipo terminal y acento cyan" loading="lazy" decoding="async" width="1440" height="900" />
+            <span class="card__brand">Cognition<sup>●</sup></span>
             <span class="card__sub">Transformación digital · IA aplicada</span>
-            <span class="card__shape card__shape--node" style="background:#00D4FF;box-shadow:0 0 30px #00D4FF"></span>
-            <span class="card__shape card__shape--node-2" style="background:#635BFF;box-shadow:0 0 30px #635BFF"></span>
+            <span class="card__shape card__shape--node"></span>
+            <span class="card__shape card__shape--node-2"></span>
           </div>
           <div class="card__foot">
             <span class="card__type">AI · Platform</span>
@@ -343,20 +362,20 @@
     </section>
 
     <!-- WORKFLOW SIGNAL -->
-    <section class="signal" data-signal>
+    <section class="signal" data-signal aria-labelledby="signal-title">
       <div class="signal__stage">
         <div class="signal__intro">
           <div class="signal__kicker">
-            <span class="signal__eyebrow">[ Enfoque ]</span>
+            <span class="signal__eyebrow" data-i18n="signal.eyebrow">[ Enfoque ]</span>
             <span class="signal__line"></span>
             <span class="signal__index">01</span>
           </div>
-          <h2 class="signal__title" data-reveal>
-            <span>Diseño.</span>
-            <em>Código.</em>
-            <span>Estrategia.</span>
+          <h2 class="signal__title" id="signal-title" data-reveal>
+            <span data-i18n="signal.title1">Diseño.</span>
+            <em data-i18n="signal.title2">Código.</em>
+            <span data-i18n="signal.title3">Estrategia.</span>
           </h2>
-          <p class="signal__copy" data-reveal>
+          <p class="signal__copy" data-reveal data-i18n="signal.copy">
             Construyo interfaces limpias, funcionales y medibles. Cada decisión visual tiene que sostener el contenido, la velocidad y el objetivo del proyecto.
           </p>
         </div>
@@ -387,27 +406,27 @@
       <div class="signal__grid">
         <article class="signal-card signal-card--one" data-reveal>
           <span>01</span>
-          <h3>Estrategia</h3>
-          <p>Entiendo el objetivo, la audiencia y el contexto antes de decidir estructura, tono y recorrido.</p>
+          <h3 data-i18n="signal.1.title">Estrategia</h3>
+          <p data-i18n="signal.1.desc">Entiendo el objetivo, la audiencia y el contexto antes de decidir estructura, tono y recorrido.</p>
         </article>
         <article class="signal-card signal-card--two" data-reveal>
           <span>02</span>
-          <h3>Diseño</h3>
-          <p>Creo interfaces sobrias, funcionales y con identidad propia. Sin ornamento que tape el mensaje.</p>
+          <h3 data-i18n="signal.2.title">Diseño</h3>
+          <p data-i18n="signal.2.desc">Creo interfaces sobrias, funcionales y con identidad propia. Sin ornamento que tape el mensaje.</p>
         </article>
         <article class="signal-card signal-card--three" data-reveal>
           <span>03</span>
-          <h3>Desarrollo</h3>
-          <p>Implemento con foco en performance, accesibilidad, escalabilidad y buenas prácticas.</p>
+          <h3 data-i18n="signal.3.title">Desarrollo</h3>
+          <p data-i18n="signal.3.desc">Implemento con foco en performance, accesibilidad, escalabilidad y buenas prácticas.</p>
         </article>
       </div>
     </section>
 
     <!-- SERVICES -->
-    <section class="services">
+    <section class="services" aria-labelledby="services-title">
       <div class="services__head">
-        <span class="services__num">[ 03 — Services ]</span>
-        <h2 class="services__title" data-reveal data-i18n="services.title">Servicios</h2>
+        <span class="services__num">[ 02 — <span data-i18n="services.title">Servicios</span> ]</span>
+        <h2 class="services__title" id="services-title" data-reveal data-i18n="services.title">Servicios</h2>
         <p class="services__copy" data-reveal data-i18n="services.copy">
           Desarrollo sitios completos, landings e integraciones web listas para producción: rápidas, accesibles, medibles y mantenibles.
         </p>
@@ -468,11 +487,11 @@
     </section>
 
     <!-- CONTACT CARD -->
-    <section class="contact-card" id="contacto">
+    <section class="contact-card" id="contacto" aria-labelledby="contact-card-title">
       <div class="contact-card__inner">
         <div class="contact-card__left">
           <span class="contact-card__eyebrow" data-i18n="contactCard.eyebrow">[ Contacto directo ]</span>
-          <h2 class="contact-card__title" data-i18n="contactCard.title">Escribime por mail<br/>o WhatsApp.</h2>
+          <h2 class="contact-card__title" id="contact-card-title" data-i18n="contactCard.title">Escribime por mail<br/>o WhatsApp.</h2>
           <div class="contact-card__channels">
             <a href="mailto:ronycozzi5@gmail.com" class="contact-card__channel" data-magnetic>
               <span class="contact-card__channel-label">Email</span>
@@ -531,7 +550,7 @@
         <a href="work.html" data-link><span data-i18n="nav.work">Trabajos</span></a>
         <a href="about.html" data-link><span data-i18n="nav.about">Sobre mí</span></a>
         <a href="contact.html" data-link><span data-i18n="nav.contact">Contacto</span></a>
-        <a href="process.html" data-link>Proceso</a>
+        <a href="process.html" data-link><span data-i18n="footer.proceso">Proceso</span></a>
         <a href="faq.html" data-link>FAQ</a>
       </div>
       <div class="footer__col">
@@ -539,7 +558,7 @@
         <span data-i18n="footer.s1">Sitios full stack</span>
         <span data-i18n="footer.s2">Landing pages</span>
         <span data-i18n="footer.s3">Integraciones web</span>
-        <a href="assets/Rony_Cozzi_CV.pdf" download="Rony_Cozzi_CV.pdf" data-magnetic data-i18n="footer.cv">CV (PDF) ↓</a>
+        <a href="assets/Rony_Cozzi_CV.pdf" download="Rony_Cozzi_CV.pdf" type="application/pdf" data-magnetic data-i18n="footer.cv">CV (PDF) ↓</a>
       </div>
     </div>
 
@@ -547,11 +566,11 @@
       <span>© <span class="year"></span> — Rony Cozzi</span>
       <span data-clock>--:--:-- GMT-3</span>
       <a href="#top" data-magnetic>↑ <span data-i18n="footer.topLabel">Subir</span></a>
-      <a href="privacy.html" style="font-size:11px;color:var(--fg-muted)">Privacidad</a>
-      <a href="terms.html" style="font-size:11px;color:var(--fg-muted)">Términos</a>
+      <a href="privacy.html" class="footer__legal" data-link><span data-i18n="footer.privacy">Privacidad</span></a>
+      <a href="terms.html" class="footer__legal" data-link><span data-i18n="footer.terms">Términos</span></a>
     </div>
   </footer>
 
-  <script src="js/main.js?v=17" defer></script>
+  <script src="js/main.js?v=18" defer></script>
 </body>
 </html>

@@ -1,14 +1,16 @@
 {
   "name": "Rony Cozzi — Full Stack Developer",
   "short_name": "Rony Cozzi",
-  "description": "Portfolio de Rony Cozzi - Full Stack Developer: sitios web, landing pages, PWAs e integraciones listas para produccion",
+  "description": "Portfolio de Rony Cozzi — Full Stack Developer: sitios web, landing pages, PWAs e integraciones listas para producción",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "orientation": "portrait-primary",
+  "orientation": "any",
   "background_color": "#0A0A0A",
   "theme_color": "#0A0A0A",
   "lang": "es",
+  "dir": "ltr",
+  "id": "/",
   "categories": [
     "developer",
     "portfolio",
@@ -17,34 +19,22 @@
   ],
   "icons": [
     {
-      "src": "/assets/icons/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/assets/icons/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
-      "src": "/assets/icons/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/assets/icons/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
       "src": "/assets/icons/icon-180.png",
       "sizes": "180x180",
       "type": "image/png",
       "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ],
   "screenshots": [
@@ -62,10 +52,7 @@
       "description": "Ver proyectos",
       "url": "/work.html",
       "icons": [
-        {
-          "src": "/assets/icons/icon-192.png",
-          "sizes": "192x192"
-        }
+        { "src": "/assets/icons/icon-192.png", "sizes": "192x192" }
       ]
     },
     {
@@ -74,13 +61,8 @@
       "description": "Contactar",
       "url": "/contact.html",
       "icons": [
-        {
-          "src": "/assets/icons/icon-192.png",
-          "sizes": "192x192"
-        }
+        { "src": "/assets/icons/icon-192.png", "sizes": "192x192" }
       ]
     }
-  ],
-  "id": "/",
-  "dir": "ltr"
+  ]
 }

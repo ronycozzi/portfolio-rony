@@ -1,111 +1,64 @@
 <!DOCTYPE html>
 <html lang="es" data-theme="dark">
 <head>
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>404 — Rony Cozzi</title>
+  <meta name="description" content="Página no encontrada. Volvé al portfolio de Rony Cozzi — Full Stack Developer." />
+
+  <meta name="theme-color" content="#0A0A0A" />
+  <meta name="color-scheme" content="dark light" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="format-detection" content="telephone=no, email=no, address=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   <meta name="apple-mobile-web-app-title" content="Rony Cozzi" />
   <meta name="msapplication-TileColor" content="#0A0A0A" />
-  <meta name="referrer" content="no-referrer-when-downgrade" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#0A0A0A" />
-  <meta name="description" content="Página no encontrada. Volvé al portfolio de Rony Cozzi — diseñador UX/UI y desarrollador web full stack." />
-  <meta property="og:image" content="https://portfolios-ronycozzi.vercel.app/og-image.png" />
-  <meta property="og:url" content="https://portfolios-ronycozzi.vercel.app/404.html" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary" />
-  <meta property="og:title" content="404 — Página no encontrada · Rony Cozzi" />
-  <meta property="og:description" content="Esta página no existe. Volvé al portfolio de Rony Cozzi, desarrollador web full stack." />
-  <meta name="twitter:title" content="404 — Página no encontrada · Rony Cozzi" />
-  <meta name="twitter:description" content="Esta página no existe. Volvé al portfolio de Rony Cozzi." />
-  <meta name="twitter:image" content="https://portfolios-ronycozzi.vercel.app/og-image.png" />
-  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="canonical" href="https://portfolios-ronycozzi.vercel.app/404.html" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <link rel="apple-touch-icon" href="assets/icons/icon-192.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/icon-180.png" />
   <link rel="manifest" href="/manifest.json" />
-  <meta name="color-scheme" content="dark light" />
-  <title>404 — Rony Cozzi</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" as="style" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=18" />
-  <style>
-    .err-page {
-      min-height: 100svh;
-      display: grid;
-      place-items: center;
-      padding: var(--pad-x);
-      text-align: center;
-    }
-    .err-inner { max-width: 520px; }
-    .err-num {
-      font-family: var(--font-display);
-      font-size: clamp(100px, 20vw, 200px);
-      font-weight: 700;
-      line-height: 1;
-      letter-spacing: -0.05em;
-      color: var(--accent);
-      display: block;
-      margin-bottom: 16px;
-    }
-    .err-title {
-      font-family: var(--font-display);
-      font-size: clamp(20px, 3vw, 32px);
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      margin-bottom: 16px;
-    }
-    .err-copy {
-      color: var(--fg-muted);
-      line-height: 1.7;
-      margin-bottom: 40px;
-    }
-    .err-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 14px 28px;
-      background: var(--accent);
-      color: var(--accent-ink);
-      font-family: var(--font-display);
-      font-size: 14px;
-      font-weight: 600;
-      border-radius: 6px;
-      transition: opacity var(--t-fast) var(--ease), gap var(--t-fast) var(--ease);
-    }
-    .err-cta:hover { opacity: 0.85; gap: 14px; }
-    .err-terminal {
-      margin-top: 48px;
-      padding: 20px 24px;
-      background: var(--bg-elev);
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      font-family: 'Fira Code', 'Consolas', monospace;
-      font-size: 13px;
-      text-align: left;
-      line-height: 1.8;
-      color: var(--fg-muted);
-    }
-    .err-terminal .t-prompt { color: var(--accent); }
-    .err-terminal .t-error { color: #FF5757; }
-    .err-terminal .t-ok { color: #27C93F; }
-    .err-cursor {
-      display: inline-block;
-      width: 8px; height: 14px;
-      background: var(--accent);
-      vertical-align: middle;
-      animation: blink 1s step-end infinite;
-    }
-    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
-  </style>
+
+  <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Rony Cozzi" />
   <meta property="og:locale" content="es_AR" />
+  <meta property="og:url" content="https://portfolios-ronycozzi.vercel.app/404.html" />
+  <meta property="og:title" content="404 — Página no encontrada · Rony Cozzi" />
+  <meta property="og:description" content="Esta página no existe. Volvé al portfolio de Rony Cozzi, Full Stack Developer." />
+  <meta property="og:image" content="https://portfolios-ronycozzi.vercel.app/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="404 — Rony Cozzi" />
+
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" content="@ronycozzi" />
-  <link rel="canonical" href="https://portfolios-ronycozzi.vercel.app/404.html" />
+  <meta name="twitter:title" content="404 — Página no encontrada · Rony Cozzi" />
+  <meta name="twitter:description" content="Esta página no existe. Volvé al portfolio de Rony Cozzi, Full Stack Developer." />
+  <meta name="twitter:image" content="https://portfolios-ronycozzi.vercel.app/og-image.png" />
+  <meta name="twitter:image:alt" content="404 — Rony Cozzi" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" as="style" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css?v=19" />
 </head>
 <body id="top" data-page="404">
-  <a href="#main" class="skip-link">Saltar al contenido</a>
+  <a href="#main" class="skip-link" data-i18n="a11y.skip">Saltar al contenido</a>
+
+  <noscript>
+    <style>
+      .reveal, .reveal-fade, [data-reveal] { opacity: 1 !important; transform: none !important; }
+      .page { opacity: 1 !important; }
+      .page-transition { display: none !important; }
+      .cursor, .cursor-dot { display: none !important; }
+    </style>
+  </noscript>
+
   <div class="page-transition" aria-hidden="true">
     <div class="page-transition__panel"></div>
     <div class="page-transition__label">
@@ -113,6 +66,7 @@
       <span class="page-transition__name">404</span>
     </div>
   </div>
+
   <div class="cursor" aria-hidden="true"><span class="cursor__label"></span></div>
   <div class="cursor-dot" aria-hidden="true"></div>
 
@@ -124,32 +78,30 @@
           <path d="M8 8h5a3 3 0 0 1 0 6H8m0 0v4m0-4 6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
         </svg>
       </span>
-      <span class="header__logo-text">Rony Cozzi<sup>©</sup></span>
+      <span class="header__logo-text">Rony Cozzi</span>
     </a>
-
     <nav class="nav" aria-label="Navegación principal">
       <a href="index.html" data-magnetic data-link><span data-i18n="nav.home">Inicio</span></a>
       <a href="work.html" data-magnetic data-link><span data-i18n="nav.work">Trabajos</span></a>
       <a href="about.html" data-magnetic data-link><span data-i18n="nav.about">Sobre mí</span></a>
       <a href="contact.html" data-magnetic data-link><span data-i18n="nav.contact">Contacto</span></a>
     </nav>
-
     <div class="header__actions">
       <button type="button" class="lang-toggle" data-lang-toggle aria-label="Cambiar idioma">
         <span data-lang="es" class="is-active">ES</span>
-        <span class="lang-sep">/</span>
+        <span class="lang-sep" aria-hidden="true">/</span>
         <span data-lang="en">EN</span>
       </button>
-      <button type="button" class="theme-toggle" data-theme-toggle aria-label="Cambiar tema">
+      <button type="button" class="theme-toggle" data-theme-toggle aria-label="Cambiar tema" aria-pressed="true">
         <span class="theme-toggle__dot"></span>
       </button>
-      <button type="button" class="menu-toggle" data-menu-toggle aria-label="Abrir menú" aria-expanded="false">
+      <button type="button" class="menu-toggle" data-menu-toggle aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
         <span></span><span></span>
       </button>
     </div>
   </header>
 
-  <div class="mobile-menu" data-mobile-menu>
+  <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
     <a href="index.html" data-link><span data-i18n="nav.home">Inicio</span></a>
     <a href="work.html" data-link><span data-i18n="nav.work">Trabajos</span></a>
     <a href="about.html" data-link><span data-i18n="nav.about">Sobre mí</span></a>
@@ -161,15 +113,15 @@
       <span class="err-num" aria-hidden="true">404</span>
       <h1 class="err-title">Esta página no existe.</h1>
       <p class="err-copy">
-        O nunca existió, o la movimos, o el link estaba mal desde el principio.<br/>
+        O nunca existió, o la moví, o el link estaba mal desde el principio.<br/>
         No te preocupes — el home sigue ahí.
       </p>
-      <a href="index.html" class="err-cta">
+      <a href="index.html" class="err-cta" data-link data-magnetic>
         Ir al inicio <span aria-hidden="true">→</span>
       </a>
 
-      <div class="err-terminal" role="log" aria-label="Terminal output">
-        <div><span class="t-prompt">$ </span>curl -I portfolios-ronycozzi.vercel.app<strong id="typed-path">/esta-pagina</strong></div>
+      <div class="err-terminal" aria-label="Terminal output" role="presentation">
+        <div><span class="t-prompt">$ </span>curl -I portfolios-ronycozzi.vercel.app<strong>/esta-pagina</strong></div>
         <div><span class="t-error">HTTP/2 404</span></div>
         <div class="t-ok">content-type: text/html; charset=utf-8</div>
         <div><span class="t-prompt">$ </span>cd ~<span class="err-cursor"></span></div>
@@ -177,13 +129,14 @@
     </div>
   </main>
 
-  <script src="js/main.js?v=17" defer></script>
-  <script>
-    // Easter egg: path in terminal shows actual URL
-    try {
-      const el = document.getElementById('typed-path');
-      if (el) el.textContent = window.location.pathname || '/404';
-    } catch(e) {}
-  </script>
+  <footer class="footer">
+    <div class="footer__meta">
+      <span>© <span class="year"></span> — Rony Cozzi</span>
+      <a href="index.html" data-link data-magnetic>← <span data-i18n="nav.home">Inicio</span></a>
+      <a href="contact.html" data-link data-magnetic><span data-i18n="nav.contact">Contacto</span></a>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=18" defer></script>
 </body>
 </html>

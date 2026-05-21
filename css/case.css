@@ -3,23 +3,6 @@
    Complementa styles.css. No modifica tokens globales.
    ========================================================= */
 
-/* Skip link */
-.skip-link {
-  position: absolute;
-  top: -100%;
-  left: 16px;
-  z-index: 9998;
-  background: var(--accent);
-  color: var(--accent-ink);
-  font-family: var(--font-display);
-  font-size: 13px;
-  font-weight: 600;
-  padding: 8px 16px;
-  border-radius: 4px;
-  transition: top 0.2s;
-}
-.skip-link:focus { top: 16px; outline: 2px solid var(--accent-ink); outline-offset: 2px; }
-
 /* ---- Case Hero ---- */
 .case-hero {
   padding: calc(var(--header-h, 72px) + 60px) var(--pad-x) 60px;

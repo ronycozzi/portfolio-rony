@@ -1,229 +1,89 @@
 <!DOCTYPE html>
 <html lang="es" data-theme="dark">
 <head>
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Proceso — Rony Cozzi</title>
+  <meta name="description" content="Cómo trabajo — proceso full stack de Rony Cozzi: briefing, arquitectura, diseño, frontend, integraciones, QA y deploy." />
+
+  <meta name="theme-color" content="#0A0A0A" />
+  <meta name="color-scheme" content="dark light" />
+  <meta name="robots" content="index, follow" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="format-detection" content="telephone=no, email=no, address=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   <meta name="apple-mobile-web-app-title" content="Rony Cozzi" />
   <meta name="msapplication-TileColor" content="#0A0A0A" />
-  <meta name="referrer" content="no-referrer-when-downgrade" />
-  <meta charset="UTF-8" />
-  <meta name="robots" content="index, follow" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#0A0A0A" />
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <meta name="description" content="Cómo trabajo — Proceso full stack de Rony Cozzi: briefing, arquitectura, diseño, frontend, integraciones, QA y deploy." />
-  <meta property="og:title" content="Proceso — Rony Cozzi" />
-  <meta property="og:url" content="https://portfolios-ronycozzi.vercel.app/process.html" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta property="og:description" content="Mi proceso de trabajo: discovery, arquitectura, diseño, desarrollo full stack y entrega. Transparencia total en cada proyecto." />
-  <meta name="twitter:title" content="Mi Proceso — Rony Cozzi" />
-  <meta name="twitter:description" content="Mi proceso de trabajo: discovery, arquitectura, diseño, desarrollo full stack y entrega." />
-  <meta name="twitter:image" content="https://portfolios-ronycozzi.vercel.app/og-image.png" />
-  <meta property="og:image" content="https://portfolios-ronycozzi.vercel.app/og-image.png" />
+
   <link rel="canonical" href="https://portfolios-ronycozzi.vercel.app/process.html" />
+  <link rel="alternate" hreflang="es" href="https://portfolios-ronycozzi.vercel.app/process.html" />
+  <link rel="alternate" hreflang="en" href="https://portfolios-ronycozzi.vercel.app/process.html" />
+  <link rel="alternate" hreflang="x-default" href="https://portfolios-ronycozzi.vercel.app/process.html" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <link rel="apple-touch-icon" href="assets/icons/icon-192.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/icon-180.png" />
   <link rel="manifest" href="/manifest.json" />
-  <meta name="color-scheme" content="dark light" />
-  <title>Proceso — Rony Cozzi</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" as="style" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=18" />
-  <style>
-    .proc-hero {
-      padding: calc(var(--header-h, 72px) + 60px) var(--pad-x) 60px;
-      border-bottom: 1px solid var(--line);
-    }
-    .proc-hero__eyebrow {
-      display: block;
-      font-family: var(--font-display);
-      font-size: 11px;
-      letter-spacing: 0.1em;
-      color: var(--fg-muted);
-      margin-bottom: 24px;
-    }
-    .proc-hero__title {
-      font-family: var(--font-display);
-      font-size: clamp(40px, 7vw, 96px);
-      font-weight: 700;
-      letter-spacing: -0.04em;
-      line-height: 0.95;
-      margin-bottom: 32px;
-    }
-    .proc-hero__title em {
-      font-style: italic;
-      font-family: var(--serif);
-      font-weight: 400;
-      color: var(--accent);
-    }
-    .proc-hero__lead {
-      color: var(--fg-muted);
-      font-size: clamp(15px, 1.5vw, 18px);
-      line-height: 1.75;
-      max-width: 640px;
-    }
 
-    .proc-steps {
-      padding: 80px var(--pad-x) 100px;
-      max-width: calc(var(--max) + var(--pad-x) * 2);
-    }
-
-    .proc-step {
-      display: grid;
-      grid-template-columns: 80px 1fr;
-      gap: 0 48px;
-      padding: 48px 0;
-      border-bottom: 1px solid var(--line);
-      position: relative;
-    }
-    .proc-step:last-child { border-bottom: 0; }
-
-    .proc-step__num {
-      font-family: var(--font-display);
-      font-size: 11px;
-      letter-spacing: 0.08em;
-      color: var(--accent);
-      padding-top: 6px;
-      font-weight: 600;
-    }
-
-    .proc-step__content { display: flex; flex-direction: column; gap: 16px; }
-
-    .proc-step__header {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
-
-    .proc-step__title {
-      font-family: var(--font-display);
-      font-size: clamp(20px, 2.5vw, 30px);
-      font-weight: 700;
-      letter-spacing: -0.025em;
-    }
-
-    .proc-step__duration {
-      font-family: var(--font-display);
-      font-size: 12px;
-      letter-spacing: 0.04em;
-      color: var(--fg-muted);
-      background: var(--bg-elev);
-      border: 1px solid var(--line);
-      padding: 4px 12px;
-      border-radius: 100px;
-      white-space: nowrap;
-    }
-
-    .proc-step__desc {
-      color: var(--fg-muted);
-      font-size: 15px;
-      line-height: 1.75;
-      max-width: 640px;
-    }
-
-    .proc-step__deliverables {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 8px;
-    }
-
-    .proc-step__del {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-family: var(--font-display);
-      font-size: 12px;
-      color: var(--fg-muted);
-      padding: 5px 12px;
-      border: 1px solid var(--line);
-      border-radius: 6px;
-    }
-    .proc-step__del::before {
-      content: '→';
-      color: var(--accent);
-      font-size: 11px;
-    }
-
-    .proc-cta {
-      margin-top: 64px;
-      padding: 48px;
-      background: var(--bg-elev);
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 32px;
-      flex-wrap: wrap;
-    }
-    .proc-cta__text { max-width: 480px; }
-    .proc-cta__title {
-      font-family: var(--font-display);
-      font-size: clamp(20px, 2.5vw, 28px);
-      font-weight: 700;
-      letter-spacing: -0.025em;
-      margin-bottom: 10px;
-    }
-    .proc-cta__copy { color: var(--fg-muted); font-size: 15px; line-height: 1.6; }
-    .proc-cta__btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 14px 28px;
-      background: var(--accent);
-      color: var(--accent-ink);
-      font-family: var(--font-display);
-      font-size: 14px;
-      font-weight: 600;
-      border-radius: 6px;
-      white-space: nowrap;
-      transition: opacity var(--t-fast) var(--ease), gap var(--t-fast) var(--ease);
-    }
-    .proc-cta__btn:hover { opacity: 0.85; gap: 14px; }
-
-    @media (max-width: 700px) {
-      .proc-step { grid-template-columns: 1fr; gap: 12px; }
-      .proc-cta { flex-direction: column; align-items: flex-start; padding: 28px; }
-    }
-  </style>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "@id": "https://portfolios-ronycozzi.vercel.app/process.html",
-  "name": "Proceso — Rony Cozzi",
-  "description": "Cómo trabajo: proceso full stack de Rony Cozzi — briefing, arquitectura, diseño, desarrollo, integraciones y entrega.",
-  "url": "https://portfolios-ronycozzi.vercel.app/process.html",
-  "inLanguage": "es",
-  "author": {
-    "@type": "Person",
-    "name": "Rony Cozzi",
-    "url": "https://portfolios-ronycozzi.vercel.app"
-  }
-}
-</script>
+  <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Rony Cozzi" />
   <meta property="og:locale" content="es_AR" />
+  <meta property="og:url" content="https://portfolios-ronycozzi.vercel.app/process.html" />
+  <meta property="og:title" content="Proceso — Rony Cozzi" />
+  <meta property="og:description" content="Mi proceso de trabajo: discovery, arquitectura, diseño, desarrollo full stack y entrega. Transparencia total en cada proyecto." />
+  <meta property="og:image" content="https://portfolios-ronycozzi.vercel.app/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Proceso — Rony Cozzi" />
+
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" content="@ronycozzi" />
-  <link rel="alternate" hreflang="es" href="https://portfolios-ronycozzi.vercel.app/process.html" />
-  <link rel="alternate" hreflang="x-default" href="https://portfolios-ronycozzi.vercel.app/process.html" />
+  <meta name="twitter:title" content="Proceso — Rony Cozzi" />
+  <meta name="twitter:description" content="Mi proceso de trabajo: discovery, arquitectura, diseño, desarrollo full stack y entrega. Transparencia total en cada proyecto." />
+  <meta name="twitter:image" content="https://portfolios-ronycozzi.vercel.app/og-image.png" />
+  <meta name="twitter:image:alt" content="Proceso — Rony Cozzi" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" as="style" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css?v=19" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://portfolios-ronycozzi.vercel.app/process.html",
+    "name": "Proceso — Rony Cozzi",
+    "url": "https://portfolios-ronycozzi.vercel.app/process.html",
+    "description": "Proceso full stack de Rony Cozzi — briefing, arquitectura, diseño, desarrollo, integraciones y entrega.",
+    "inLanguage": "es-AR",
+    "isPartOf": { "@id": "https://portfolios-ronycozzi.vercel.app/#website" },
+    "author": { "@id": "https://portfolios-ronycozzi.vercel.app/#person" }
+  }
+  </script>
 </head>
 <body id="top" data-page="process">
-  <a href="#main" class="skip-link">Saltar al contenido</a>
+  <a href="#main" class="skip-link" data-i18n="a11y.skip">Saltar al contenido</a>
+
+  <noscript>
+    <style>
+      .reveal, .reveal-fade, [data-reveal] { opacity: 1 !important; transform: none !important; }
+      .page { opacity: 1 !important; }
+      .page-transition { display: none !important; }
+      .cursor, .cursor-dot { display: none !important; }
+    </style>
+  </noscript>
 
   <div class="page-transition" aria-hidden="true">
     <div class="page-transition__panel"></div>
     <div class="page-transition__label">
-      <span class="page-transition__num">—</span>
+      <span class="page-transition__num">05</span>
       <span class="page-transition__name">Proceso</span>
     </div>
   </div>
+
   <div class="cursor" aria-hidden="true"><span class="cursor__label"></span></div>
   <div class="cursor-dot" aria-hidden="true"></div>
 
@@ -235,7 +95,7 @@
           <path d="M8 8h5a3 3 0 0 1 0 6H8m0 0v4m0-4 6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
         </svg>
       </span>
-      <span class="header__logo-text">Rony Cozzi<sup>©</sup></span>
+      <span class="header__logo-text">Rony Cozzi</span>
     </a>
     <nav class="nav" aria-label="Navegación principal">
       <a href="index.html" data-magnetic data-link><span data-i18n="nav.home">Inicio</span></a>
@@ -246,27 +106,27 @@
     <div class="header__actions">
       <button type="button" class="lang-toggle" data-lang-toggle aria-label="Cambiar idioma">
         <span data-lang="es" class="is-active">ES</span>
-        <span class="lang-sep">/</span>
+        <span class="lang-sep" aria-hidden="true">/</span>
         <span data-lang="en">EN</span>
       </button>
-      <button type="button" class="theme-toggle" data-theme-toggle aria-label="Cambiar tema">
+      <button type="button" class="theme-toggle" data-theme-toggle aria-label="Cambiar tema" aria-pressed="true">
         <span class="theme-toggle__dot"></span>
       </button>
-      <button type="button" class="menu-toggle" data-menu-toggle aria-label="Abrir menú" aria-expanded="false">
+      <button type="button" class="menu-toggle" data-menu-toggle aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
         <span></span><span></span>
       </button>
     </div>
   </header>
 
-  <div class="mobile-menu" data-mobile-menu>
+  <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
     <a href="index.html" data-link><span data-i18n="nav.home">Inicio</span></a>
     <a href="work.html" data-link><span data-i18n="nav.work">Trabajos</span></a>
     <a href="about.html" data-link><span data-i18n="nav.about">Sobre mí</span></a>
     <a href="contact.html" data-link><span data-i18n="nav.contact">Contacto</span></a>
   </div>
 
-  <main class="page" id="main">
-    <div class="proc-hero">
+  <main class="page page--process" id="main">
+    <section class="proc-hero">
       <span class="proc-hero__eyebrow">[ Proceso de trabajo ]</span>
       <h1 class="proc-hero__title">
         <span class="line"><span class="reveal">Cómo</span></span>
@@ -275,7 +135,7 @@
       <p class="proc-hero__lead" data-reveal>
         De la primera llamada al deploy en producción. Sin sorpresas, sin scope creep, sin "terminó pero no funciona".
       </p>
-    </div>
+    </section>
 
     <div class="proc-steps">
       <div class="proc-step" data-reveal>
@@ -286,7 +146,7 @@
             <span class="proc-step__duration">1–2 días</span>
           </div>
           <p class="proc-step__desc">
-            Una llamada de 30–60 minutos para entender qué necesitás, quién es tu audiencia y qué querés lograr con el sitio. Yo tomo notas, hago preguntas incómodas y al final del proceso tenés un documento con el scope definido: qué incluye el proyecto, qué no incluye y cuánto cuesta.
+            Una llamada de 30–60 minutos para entender qué necesitás, quién es tu audiencia y qué querés lograr con el sitio. Tomo notas, hago preguntas incómodas y al final del proceso tenés un documento con el scope definido: qué incluye el proyecto, qué no incluye y cuánto cuesta.
           </p>
           <div class="proc-step__deliverables">
             <span class="proc-step__del">Documento de scope</span>
@@ -301,15 +161,15 @@
         <div class="proc-step__content">
           <div class="proc-step__header">
             <h2 class="proc-step__title">Wireframe &amp; arquitectura</h2>
-            <span class="proc-step__duration">2–3 días</span>
+            <span class="proc-step__duration">2–4 días</span>
           </div>
           <p class="proc-step__desc">
-            Antes de una línea de código o un pixel de diseño: estructura. Qué páginas existen, qué jerarquía de contenido tiene cada una, qué hace el usuario en cada paso. Uso wireframes en baja fidelidad para que no quede nada ambiguo. Esto evita el 80% de los cambios tardíos.
+            Defino la arquitectura de información, el flujo de páginas y los wireframes de baja fidelidad. Te muestro la estructura antes de tocar diseño visual para validar que tenemos la información correcta en el lugar correcto.
           </p>
           <div class="proc-step__deliverables">
-            <span class="proc-step__del">Wireframes (Figma o papel)</span>
-            <span class="proc-step__del">Mapa de navegación</span>
-            <span class="proc-step__del">Lista de componentes</span>
+            <span class="proc-step__del">Sitemap</span>
+            <span class="proc-step__del">Wireframes low-fi</span>
+            <span class="proc-step__del">User flows</span>
           </div>
         </div>
       </div>
@@ -319,15 +179,15 @@
         <div class="proc-step__content">
           <div class="proc-step__header">
             <h2 class="proc-step__title">Diseño</h2>
-            <span class="proc-step__duration">3–5 días</span>
+            <span class="proc-step__duration">3–7 días</span>
           </div>
           <p class="proc-step__desc">
-            Diseño en Figma con tu paleta, tipografía y brand. Desktop y mobile en paralelo — el diseño responsive no es "después". Compartimos el Figma en vivo: podés ver el avance y dejar comentarios en tiempo real. Una vuelta de revisión estructural incluida.
+            Diseño visual de las pantallas principales en Figma. Sistema de tokens, tipografía, espaciado, color. Iteración hasta que el look refleje la marca y resuelva el contenido.
           </p>
           <div class="proc-step__deliverables">
-            <span class="proc-step__del">Diseño desktop + mobile</span>
-            <span class="proc-step__del">Figma compartido</span>
-            <span class="proc-step__del">Tokens de diseño documentados</span>
+            <span class="proc-step__del">Diseño final en Figma</span>
+            <span class="proc-step__del">Design tokens</span>
+            <span class="proc-step__del">1 ronda de revisión</span>
           </div>
         </div>
       </div>
@@ -337,16 +197,15 @@
         <div class="proc-step__content">
           <div class="proc-step__header">
             <h2 class="proc-step__title">Desarrollo</h2>
-            <span class="proc-step__duration">5–10 días</span>
+            <span class="proc-step__duration">5–14 días</span>
           </div>
           <p class="proc-step__desc">
-            HTML, CSS, JavaScript y TypeScript cuando aporta valor, React para interfaces, Node.js/serverless para backend ligero y SQL/servicios externos cuando el proyecto lo necesita. Código semántico, accesible y con comentarios donde no sea obvio. Deploy continuo en Vercel desde el día 1 — tenés una URL de preview para ver el avance en tiempo real desde cualquier dispositivo.
+            Construcción del sitio con HTML, CSS y JavaScript modernos. Foco en performance, accesibilidad y SEO técnico desde el primer commit. Branch previews en Vercel para que veas el progreso.
           </p>
           <div class="proc-step__deliverables">
-            <span class="proc-step__del">Preview URL en Vercel</span>
-            <span class="proc-step__del">Repo Git con historial</span>
+            <span class="proc-step__del">Repo en GitHub</span>
+            <span class="proc-step__del">Preview en Vercel</span>
             <span class="proc-step__del">APIs / integraciones si hacen falta</span>
-            <span class="proc-step__del">Updates diarios</span>
           </div>
         </div>
       </div>
@@ -356,15 +215,15 @@
         <div class="proc-step__content">
           <div class="proc-step__header">
             <h2 class="proc-step__title">QA &amp; revisión</h2>
-            <span class="proc-step__duration">2–3 días</span>
+            <span class="proc-step__duration">1–2 días</span>
           </div>
           <p class="proc-step__desc">
             Antes de llamarlo "listo" pasa por un checklist de más de 60 puntos: Lighthouse, navegación por teclado, mobile real (iOS Safari + Android Chrome), formularios, links rotos, integraciones, estados de error y print stylesheet. Comparto el reporte con los scores reales.
           </p>
           <div class="proc-step__deliverables">
-            <span class="proc-step__del">Reporte Lighthouse</span>
-            <span class="proc-step__del">Test en 5+ viewports</span>
-            <span class="proc-step__del">Test en 4+ browsers</span>
+            <span class="proc-step__del">Reporte QA</span>
+            <span class="proc-step__del">Lighthouse audit</span>
+            <span class="proc-step__del">Ajustes finales</span>
           </div>
         </div>
       </div>
@@ -404,38 +263,45 @@
     <div class="footer__status">
       <span class="footer__badge"><span class="footer__badge-dot"></span> <span data-i18n="footer.status">Disponible · 2026</span></span>
       <span class="loc-pin"><span class="loc-pin__dot"></span><span>Argentina</span></span>
+      <span class="footer__based"><span data-i18n="footer.based">Remoto</span> · GMT-3</span>
     </div>
     <div class="footer__top">
       <div class="footer__col">
-        <span class="footer__label">Contacto</span>
+        <span class="footer__label" data-i18n="footer.contact">Contacto</span>
         <a href="mailto:ronycozzi5@gmail.com" data-magnetic>ronycozzi5@gmail.com</a>
         <a href="https://wa.me/5493515073210" target="_blank" rel="noopener noreferrer" data-magnetic>+54 351 507 3210</a>
       </div>
       <div class="footer__col">
-        <span class="footer__label">Social</span>
+        <span class="footer__label" data-i18n="footer.social">Social</span>
         <a href="https://github.com/ronycozzi" target="_blank" rel="noopener noreferrer" data-magnetic>GitHub ↗</a>
         <a href="https://linkedin.com/in/rony-cozzi-677111251" target="_blank" rel="noopener noreferrer" data-magnetic>LinkedIn ↗</a>
+        <a href="https://wa.me/5493515073210" target="_blank" rel="noopener noreferrer" data-magnetic>WhatsApp ↗</a>
       </div>
       <div class="footer__col">
-        <span class="footer__label">Nav</span>
+        <span class="footer__label" data-i18n="footer.nav">Navegación</span>
+        <a href="index.html" data-link><span data-i18n="nav.home">Inicio</span></a>
         <a href="work.html" data-link><span data-i18n="nav.work">Trabajos</span></a>
-        <a href="about.html" data-link>Sobre mí</a>
-        <a href="contact.html" data-link>Contacto</a>
+        <a href="about.html" data-link><span data-i18n="nav.about">Sobre mí</span></a>
+        <a href="contact.html" data-link><span data-i18n="nav.contact">Contacto</span></a>
+        <a href="faq.html" data-link>FAQ</a>
       </div>
       <div class="footer__col">
-        <span class="footer__label">Assets</span>
-        <a href="assets/Rony_Cozzi_CV.pdf" download="Rony_Cozzi_CV.pdf" data-magnetic>CV (PDF) ↓</a>
+        <span class="footer__label" data-i18n="footer.services">Servicios</span>
+        <span data-i18n="footer.s1">Sitios full stack</span>
+        <span data-i18n="footer.s2">Landing pages</span>
+        <span data-i18n="footer.s3">Integraciones web</span>
+        <a href="assets/Rony_Cozzi_CV.pdf" download="Rony_Cozzi_CV.pdf" type="application/pdf" data-magnetic data-i18n="footer.cv">CV (PDF) ↓</a>
       </div>
     </div>
     <div class="footer__meta">
       <span>© <span class="year"></span> — Rony Cozzi</span>
       <span data-clock>--:--:-- GMT-3</span>
-      <a href="#top" data-magnetic>↑ Subir</a>
-      <a href="privacy.html" style="font-size:11px;color:var(--fg-muted)">Privacidad</a>
-      <a href="terms.html" style="font-size:11px;color:var(--fg-muted)">Términos</a>
+      <a href="#top" data-magnetic>↑ <span data-i18n="footer.topLabel">Subir</span></a>
+      <a href="privacy.html" class="footer__legal" data-link><span data-i18n="footer.privacy">Privacidad</span></a>
+      <a href="terms.html" class="footer__legal" data-link><span data-i18n="footer.terms">Términos</span></a>
     </div>
   </footer>
 
-  <script src="js/main.js?v=17" defer></script>
+  <script src="js/main.js?v=18" defer></script>
 </body>
 </html>
