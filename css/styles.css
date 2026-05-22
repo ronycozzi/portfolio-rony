@@ -42,6 +42,7 @@ input, textarea, select { font: inherit; color: inherit; }
   --font-body: 'Inter', system-ui, sans-serif;
   --max: 1480px;
   --pad-x: clamp(20px, 4vw, 56px);
+  --wsp-fab-gap: 28px;
   --safe-top: env(safe-area-inset-top, 0px);
   --safe-right: env(safe-area-inset-right, 0px);
   --safe-bottom: env(safe-area-inset-bottom, 0px);
@@ -194,9 +195,8 @@ body {
 /* ---------- WhatsApp FAB ---------- */
 .wsp-fab {
   position: fixed !important;
-  right: max(18px, calc(var(--safe-right) + 18px));
-  bottom: max(18px, calc(var(--safe-bottom) + 18px));
-  inset: auto auto max(18px, calc(var(--safe-bottom) + 18px)) auto;
+  right: max(var(--wsp-fab-gap), calc(var(--safe-right) + var(--wsp-fab-gap)));
+  bottom: max(var(--wsp-fab-gap), calc(var(--safe-bottom) + var(--wsp-fab-gap)));
   z-index: 9997;
   width: 52px;
   height: 52px;
@@ -225,9 +225,8 @@ body {
   contain: layout paint;
 }
 .wsp-fab[data-wsp-position="left"] {
-  left: max(18px, calc(var(--safe-left) + 18px));
+  left: max(var(--wsp-fab-gap), calc(var(--safe-left) + var(--wsp-fab-gap)));
   right: auto;
-  inset: auto auto max(18px, calc(var(--safe-bottom) + 18px)) max(18px, calc(var(--safe-left) + 18px));
 }
 .wsp-fab:hover {
   transform: translateY(-2px);
