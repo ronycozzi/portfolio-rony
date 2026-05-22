@@ -42,7 +42,7 @@ input, textarea, select { font: inherit; color: inherit; }
   --font-body: 'Inter', system-ui, sans-serif;
   --max: 1480px;
   --pad-x: clamp(20px, 4vw, 56px);
-  --wsp-fab-gap: 28px;
+  --wsp-fab-gap: 44px;
   --safe-top: env(safe-area-inset-top, 0px);
   --safe-right: env(safe-area-inset-right, 0px);
   --safe-bottom: env(safe-area-inset-bottom, 0px);
