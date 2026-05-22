@@ -193,17 +193,28 @@ body {
 
 /* ---------- WhatsApp FAB ---------- */
 .wsp-fab {
-  position: fixed;
+  position: fixed !important;
   right: max(18px, calc(var(--safe-right) + 18px));
   bottom: max(18px, calc(var(--safe-bottom) + 18px));
+  inset: auto auto max(18px, calc(var(--safe-bottom) + 18px)) auto;
   z-index: 9997;
   width: 52px;
   height: 52px;
+  min-width: 52px;
+  min-height: 52px;
+  max-width: 52px;
+  max-height: 52px;
   border-radius: 999px;
-  display: grid;
+  display: inline-grid;
   place-items: center;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
   background: color-mix(in srgb, var(--bg-elev) 78%, var(--bg));
   color: var(--color-live);
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
   box-shadow:
     0 18px 50px rgba(0, 0, 0, 0.28),
     0 6px 18px rgba(0, 0, 0, 0.22);
@@ -211,10 +222,12 @@ body {
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   transition: transform var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease), box-shadow var(--t-fast) var(--ease);
+  contain: layout paint;
 }
 .wsp-fab[data-wsp-position="left"] {
   left: max(18px, calc(var(--safe-left) + 18px));
   right: auto;
+  inset: auto auto max(18px, calc(var(--safe-bottom) + 18px)) max(18px, calc(var(--safe-left) + 18px));
 }
 .wsp-fab:hover {
   transform: translateY(-2px);
