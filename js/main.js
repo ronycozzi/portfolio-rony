@@ -46,8 +46,17 @@
       'hero.facts.quick': 'Datos rápidos',
       'featured.copy': 'Una selección de proyectos en producción. Sitios pensados desde la performance, el contenido y la marca.',
       'featured.cta': 'Explorar trabajos',
-      'featured.heading1': 'Selected',
-      'featured.heading2': 'work.',
+      'featured.heading1': 'Trabajos',
+      'featured.heading2': 'seleccionados.',
+      'featured.eyebrow': '[ Destacado · 2026 ]',
+      'ticker.fullstack': 'Desarrollo full stack',
+      'ticker.performance': 'Performance web',
+      'ticker.accessibility': 'Accesibilidad',
+      'ticker.ui': 'Ingeniería UI',
+      'ticker.seo': 'SEO técnico',
+      'ticker.pwa': 'Apps web progresivas',
+      'card.visit': 'Visitar ↗',
+      'case.live': 'Ver sitio en vivo',
       'services.title': 'Servicios',
       'services.copy': 'Desarrollo sitios completos, landings e integraciones web listas para producción: rápidas, accesibles, medibles y mantenibles.',
       'services.s1.title': 'Sitio web full stack',
@@ -58,12 +67,12 @@
       'services.s1.i3': 'SEO técnico + Schema.org',
       'services.s1.i4': 'Deploy, dominio y performance',
       'services.s2.title': 'Landing page',
-      'services.s2.tag': 'Single page',
+      'services.s2.tag': 'Página única',
       'services.s2.desc': 'Página única orientada a conversión. Para lanzamientos, campañas o productos específicos. Foco en velocidad de carga, copy claro y CTA visible.',
       'services.s2.i1': 'Diseño + desarrollo',
       'services.s2.i2': 'Formulario / integración',
-      'services.s2.i3': 'Analytics + tracking',
-      'services.s2.i4': 'A/B test ready',
+      'services.s2.i3': 'Analítica + tracking',
+      'services.s2.i4': 'Lista para tests A/B',
       'services.s3.title': 'Integraciones y backend ligero',
       'services.s3.tag': 'Full stack',
       'services.s3.desc': 'Conecto tu web con formularios, APIs, bases de datos simples, dashboards internos o automatizaciones. Ideal cuando necesitás algo más que una página estática, sin construir una plataforma gigante.',
@@ -87,7 +96,7 @@
       'footer.s3': 'Integraciones web',
       'footer.topLabel': 'Subir',
       'footer.contact': 'Contacto',
-      'footer.social': 'Social',
+      'footer.social': 'Redes',
       'footer.nav': 'Navegación',
       'footer.assets': 'Recursos',
       'footer.cv': 'CV (PDF) ↓',
@@ -99,7 +108,7 @@
       'work.status': 'Estado',
       'work.status_val': '4 proyectos · live',
       'work.hint': 'Scroll',
-      'work.visit': 'Ver case study',
+      'work.visit': 'Ver caso de estudio',
       'work.eyebrow': '[ Índice · 02 proyectos ]',
       'case.back': 'Volver a trabajos',
       'work.cucu.desc': 'Sitio para estudio creativo. Tipografía editorial, animaciones por scroll y micro-interacciones.',
@@ -107,15 +116,15 @@
       'work.sellink.desc': 'Sitio corporativo. Estructura modular, presentación de servicios y formularios accesibles.',
       'work.cognition.desc': 'Plataforma de IA para empresas. 11 páginas, calculadora ROI, chat con intents y PWA.',
       'cap.title': 'Capacidades',
-      'cap.fe.title': 'Frontend engineering',
+      'cap.fe.title': 'Ingeniería frontend',
       'cap.fe': 'HTML semántico, CSS moderno, JavaScript, TypeScript, React y UI responsive. Interfaces rápidas, accesibles y fáciles de mantener.',
       'cap.backend.title': 'Backend ligero & APIs',
       'cap.backend': 'Node.js, TypeScript cuando aporta valor, serverless functions, APIs REST, auth simple y conexión con servicios externos.',
       'cap.data.title': 'Datos e integraciones',
       'cap.data': 'Formularios conectados, SQL básico, Supabase/Firebase, Airtable, email transaccional, analytics, webhooks y scripts de automatización.',
-      'cap.perf.title': 'Performance',
+      'cap.perf.title': 'Rendimiento',
       'cap.perf': 'Optimización de assets, lazy loading, Core Web Vitals. Score Lighthouse 90+.',
-      'cap.pwa.title': 'Progressive Web Apps',
+      'cap.pwa.title': 'Apps web progresivas',
       'cap.pwa': 'Service Workers, manifest, instalables. Caching estratégico y offline-first.',
       'cap.seo.title': 'SEO técnico',
       'cap.seo': 'Schema.org, Open Graph, sitemap, semántica correcta. Indexable y compartible.',
@@ -133,7 +142,7 @@
       'about.stack.title': 'Stack',
       'stack.languages': 'Lenguajes',
       'stack.frameworks': 'Frontend',
-      'stack.backend': 'Backend & APIs',
+      'stack.backend': 'Backend y APIs',
       'stack.data': 'Datos & servicios',
       'stack.tools': 'Herramientas',
       'stack.practices': 'Prácticas',
@@ -158,11 +167,18 @@
       'contact.form.opt_collab': 'Colaboración',
       'contact.form.opt_other': 'Otro',
       'contact.form.hint': 'Te respondo en menos de 24 horas.',
+      'contact.form.aria_label': 'Formulario de contacto',
+      'contact.form.name_ph': 'Tu nombre',
+      'contact.form.email_ph': 'tu@email.com',
+      'contact.form.message_ph': 'Contame en qué estás trabajando…',
       'contact.availability': 'Disponibilidad',
       'contact.availability_val': 'Aceptando proyectos · 2026',
       'contact.timezone': 'Zona horaria',
       'contact.response': 'Tiempo de respuesta',
       'contact.response_val': 'Menos de 24h',
+      'wsp.fab.aria_label': 'Abrir WhatsApp para enviar un mensaje',
+      'wsp.fab.title': 'WhatsApp (mensaje prearmado)',
+      'wsp.prefill': 'Hola Rony, vi tu portfolio y me gustaría consultarte por un proyecto. ¿Tenés disponibilidad?\n\nPágina: {url}',
       'a11y.nav': 'Navegación principal',
       'a11y.langToggle': 'Cambiar idioma',
       'a11y.themeToggle': 'Cambiar tema',
@@ -208,6 +224,15 @@
       'featured.cta': 'Explore work',
       'featured.heading1': 'Selected',
       'featured.heading2': 'work.',
+      'featured.eyebrow': '[ Featured · 2026 ]',
+      'ticker.fullstack': 'Full Stack Development',
+      'ticker.performance': 'Web Performance',
+      'ticker.accessibility': 'Accessibility',
+      'ticker.ui': 'UI Engineering',
+      'ticker.seo': 'Technical SEO',
+      'ticker.pwa': 'Progressive Web Apps',
+      'card.visit': 'Visit ↗',
+      'case.live': 'Visit live site',
       'services.title': 'Services',
       'services.copy': 'I build complete websites, landing pages and production-ready web integrations: fast, accessible, measurable and maintainable.',
       'services.s1.title': 'Full stack website',
@@ -318,11 +343,18 @@
       'contact.form.opt_collab': 'Collaboration',
       'contact.form.opt_other': 'Other',
       'contact.form.hint': "I'll get back to you within 24 hours.",
+      'contact.form.aria_label': 'Contact form',
+      'contact.form.name_ph': 'Your name',
+      'contact.form.email_ph': 'you@email.com',
+      'contact.form.message_ph': "Tell me what you're working on…",
       'contact.availability': 'Availability',
       'contact.availability_val': 'Accepting projects · 2026',
       'contact.timezone': 'Timezone',
       'contact.response': 'Response time',
       'contact.response_val': 'Less than 24h',
+      'wsp.fab.aria_label': 'Open WhatsApp to send a message',
+      'wsp.fab.title': 'WhatsApp (prefilled message)',
+      'wsp.prefill': 'Hi Rony, I saw your portfolio and I’d like to ask about a project. Are you available?\n\nPage: {url}',
       'a11y.nav': 'Main navigation',
       'a11y.langToggle': 'Switch language',
       'a11y.themeToggle': 'Switch theme',
@@ -373,6 +405,26 @@
     return (i18n[getLang()] && i18n[getLang()][key]) || (i18n.es && i18n.es[key]) || '';
   }
 
+  /* ---------- WhatsApp FAB (prefill) ---------- */
+  function updateWhatsAppFabLink(lang) {
+    const fab = document.querySelector('[data-wsp-fab]');
+    if (!fab) return;
+    const number = String(fab.dataset.wspNumber || '').trim();
+    if (!number) return;
+
+    const canonical = document.querySelector('link[rel="canonical"]');
+    const pageUrl = (canonical && canonical.href) ? canonical.href : window.location.href.split('#')[0];
+
+    const template =
+      (i18n[lang] && i18n[lang]['wsp.prefill']) ||
+      (i18n.es && i18n.es['wsp.prefill']) ||
+      '';
+    if (!template) return;
+
+    const text = template.replace('{url}', pageUrl);
+    fab.href = `https://wa.me/${number}?text=${encodeURIComponent(text)}`;
+  }
+
   /* ---------- i18n apply ---------- */
   function applyLang(lang) {
     document.documentElement.lang = lang;
@@ -410,6 +462,8 @@
     document.querySelectorAll('nav.nav').forEach((nav) => {
       nav.setAttribute('aria-label', t('a11y.nav'));
     });
+
+    updateWhatsAppFabLink(lang);
   }
 
   function setupLang() {
@@ -470,17 +524,17 @@
     const lang = getLang();
     const matches = [
       { keys: ['index.html', '/'], num: '01', es: 'Inicio', en: 'Home' },
-      { keys: ['work.html'], num: '02', es: 'Trabajos', en: 'Work' },
-      { keys: ['about.html'], num: '03', es: 'Sobre mí', en: 'About' },
-      { keys: ['contact.html'], num: '04', es: 'Contacto', en: 'Contact' },
-      { keys: ['process.html'], num: '05', es: 'Proceso', en: 'Process' },
-      { keys: ['faq.html'], num: '06', es: 'FAQ', en: 'FAQ' },
-      { keys: ['case/cucu'], num: '02·1', es: 'Cucú Studio', en: 'Cucú Studio' },
-      { keys: ['case/luco'], num: '02·2', es: 'Luco Gourmet', en: 'Luco Gourmet' },
-      { keys: ['case/sellink'], num: '02·3', es: 'Sellink Group', en: 'Sellink Group' },
-      { keys: ['case/cognition'], num: '02·4', es: 'Cognition', en: 'Cognition' },
-      { keys: ['privacy.html'], num: '—', es: 'Privacidad', en: 'Privacy' },
-      { keys: ['terms.html'], num: '—', es: 'Términos', en: 'Terms' },
+      { keys: ['/work', 'work', 'work.html'], num: '02', es: 'Trabajos', en: 'Work' },
+      { keys: ['/about', 'about', 'about.html'], num: '03', es: 'Sobre mí', en: 'About' },
+      { keys: ['/contact', 'contact', 'contact.html'], num: '04', es: 'Contacto', en: 'Contact' },
+      { keys: ['/process', 'process', 'process.html'], num: '05', es: 'Proceso', en: 'Process' },
+      { keys: ['/faq', 'faq', 'faq.html'], num: '06', es: 'FAQ', en: 'FAQ' },
+      { keys: ['/case/cucu', 'case/cucu', 'cucu', 'cucu.html'], num: '02·1', es: 'Cucú Studio', en: 'Cucú Studio' },
+      { keys: ['/case/luco', 'case/luco', 'luco', 'luco.html'], num: '02·2', es: 'Luco Gourmet', en: 'Luco Gourmet' },
+      { keys: ['/case/sellink', 'case/sellink', 'sellink', 'sellink.html'], num: '02·3', es: 'Sellink Group', en: 'Sellink Group' },
+      { keys: ['/case/cognition', 'case/cognition', 'cognition', 'cognition.html'], num: '02·4', es: 'Cognition', en: 'Cognition' },
+      { keys: ['/privacy', 'privacy', 'privacy.html'], num: '—', es: 'Privacidad', en: 'Privacy' },
+      { keys: ['/terms', 'terms', 'terms.html'], num: '—', es: 'Términos', en: 'Terms' },
     ];
     for (const m of matches) {
       if (m.keys.some((k) => href.includes(k))) {
@@ -1022,6 +1076,7 @@
     const path = (window.location.pathname.replace(/\/$/, '') || '/').toLowerCase();
     const segments = path.split('/').filter(Boolean);
     const currentFile = segments.length ? segments[segments.length - 1].toLowerCase() : 'index.html';
+    const currentFileHtml = currentFile.endsWith('.html') ? currentFile : `${currentFile}.html`;
     const currentDir = segments.length > 1 ? segments[segments.length - 2].toLowerCase() : '';
     const isCase = currentDir === 'case';
 
@@ -1029,8 +1084,8 @@
       const href = (a.getAttribute('href') || '').toLowerCase();
       if (!href) return;
       const linkFile = href.split('/').pop().split('?')[0].split('#')[0];
-      const linkLooksWork = linkFile === 'work.html' || /work\.html$/.test(href);
-      const isActive = linkFile === currentFile || (isCase && linkLooksWork) || (path === '/' && (linkFile === 'index.html' || linkFile === ''));
+      const linkLooksWork = linkFile === 'work' || linkFile === 'work.html' || /work(?:\.html)?$/.test(href);
+      const isActive = linkFile === currentFile || linkFile === currentFileHtml || (isCase && linkLooksWork) || (path === '/' && (linkFile === 'index.html' || linkFile === ''));
       if (isActive) {
         a.setAttribute('aria-current', 'page');
         a.classList.add('is-current');

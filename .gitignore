@@ -27,3 +27,5 @@ build/
 
 # Codex automation artifacts
 codex-changes-*.patch
+.codex_tmp/
+.codex_git_temp/

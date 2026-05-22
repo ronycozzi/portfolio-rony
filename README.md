@@ -41,10 +41,10 @@ portfolio-rony/
 │   ├── icons/              PWA icons 180/192/512
 │   └── work/               Screenshots WebP de proyectos
 └── case/
-    ├── cucu.html           Case study — Cucú Studio
-    ├── luco.html           Case study — Luco Gourmet
-    ├── sellink.html        Case study — Sellink Group
-    └── cognition.html      Case study — Cognition
+    ├── cucu.html           Caso de estudio — Cucú Studio
+    ├── luco.html           Caso de estudio — Luco Gourmet
+    ├── sellink.html        Caso de estudio — Sellink Group
+    └── cognition.html      Caso de estudio — Cognition
 ```
 
 ## Correr local
@@ -76,16 +76,16 @@ git push origin main
 2. Setear `--card-bg`, `--card-fg`, `--card-accent` en el atributo `style`
 3. Agregar la paleta correspondiente en `styles.css` (buscar `.card--cucu` como referencia)
 4. En `work.html`, copiar un bloque `.work-item` en el track horizontal
-5. Crear `case/nombre.html` copiando una página de case study existente
-6. Actualizar `sitemap.xml` con la nueva URL
+5. Crear `case/nombre.html` copiando una página de caso de estudio existente
+6. Actualizar `sitemap.xml` con la nueva URL (sin `.html`; por ejemplo: `https://portfolios-ronycozzi.vercel.app/case/nombre`)
 
-## Agregar un case study
+## Agregar un caso de estudio
 
 1. Copiar `case/cucu.html` → `case/nuevo.html`
 2. Cambiar: title, meta description, canonical, og:image, h1, tags, stats, textos, stack
 3. Agregar screenshot a `assets/work/nuevo.webp`
 4. Linkear desde `index.html` y `work.html`
-5. Actualizar `sitemap.xml`
+5. Actualizar `sitemap.xml` (URLs públicas sin `.html`)
 
 ## Cambiar la paleta
 
@@ -104,7 +104,7 @@ Los tokens están en `css/styles.css` bajo `/* ---------- Tokens ---------- */`:
 
 - `overflow-x: clip` en html/body (no `hidden`) — preserva `position: sticky` en descendientes
 - IntersectionObserver en `.line` para reveals — el threshold funciona correctamente
-- Versionado de assets vía hash de Service Worker (cache name) en lugar de query strings
+- Versionado de assets (CSS/JS) vía `?v=` + rotación de caches del Service Worker por `VERSION` (evita stale con `immutable`)
 - Formulario sin backend: prepara un `mailto:` con los datos ingresados y mantiene canales directos de email/WhatsApp
 - Tema respeta `prefers-color-scheme` por defecto, override por toggle persiste en `localStorage`
 - i18n ES/EN con `data-i18n`, ARIA labels y skip-link traducidos dinámicamente

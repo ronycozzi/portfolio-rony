@@ -50,7 +50,7 @@
       "name": "Proyectos",
       "short_name": "Proyectos",
       "description": "Ver proyectos",
-      "url": "/work.html",
+      "url": "/work",
       "icons": [
         { "src": "/assets/icons/icon-192.png", "sizes": "192x192" }
       ]
@@ -59,7 +59,7 @@
       "name": "Contacto",
       "short_name": "Contacto",
       "description": "Contactar",
-      "url": "/contact.html",
+      "url": "/contact",
       "icons": [
         { "src": "/assets/icons/icon-192.png", "sizes": "192x192" }
       ]
