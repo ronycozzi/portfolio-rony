@@ -1766,9 +1766,18 @@
     }, 300);
   });
 
+  // Skip SW on local/dev origins to avoid stale caches and cross-port audit noise.
+  const isLocalOrigin = location.protocol === 'file:' || ['localhost', '127.0.0.1', '::1', '[::1]'].includes(location.hostname);
+
   // Service Worker registration
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
+      if (isLocalOrigin) {
+        navigator.serviceWorker.getRegistrations()
+          .then((registrations) => Promise.all(registrations.map((registration) => registration.unregister())))
+          .catch(() => {});
+        return;
+      }
       let refreshing = false;
       const hadController = Boolean(navigator.serviceWorker.controller);
       navigator.serviceWorker.addEventListener('controllerchange', () => {
