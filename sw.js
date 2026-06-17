@@ -1,5 +1,5 @@
-/* Service Worker — Rony Cozzi Portfolio */
-const VERSION = 'v39';
+/* Service Worker - Rony Cozzi Portfolio */
+const VERSION = 'v64';
 const PRECACHE = `rony-portfolio-precache-${VERSION}`;
 const RUNTIME = `rony-portfolio-runtime-${VERSION}`;
 const MAX_RUNTIME_ENTRIES = 60;
@@ -18,6 +18,7 @@ const SHELL = [
   '/process.html',
   '/faq',
   '/faq.html',
+  '/404',
   '/404.html',
   '/privacy',
   '/privacy.html',
@@ -32,11 +33,11 @@ const SHELL = [
   '/case/cognition',
   '/case/cognition.html',
   '/css/styles.css',
-  '/css/styles.css?v=30',
+  '/css/styles.css?v=34',
   '/css/case.css',
   '/css/case.css?v=3',
   '/js/main.js',
-  '/js/main.js?v=20',
+  '/js/main.js?v=41',
   '/manifest.json',
   '/favicon.svg',
   '/og-image.png',
@@ -88,12 +89,32 @@ self.addEventListener('fetch', (e) => {
   // Network-first for HTML documents (always show fresh content)
   if (e.request.mode === 'navigate' || e.request.destination === 'document') {
     e.respondWith(
-      fetch(e.request).then((res) => {
-        if (!res || res.status !== 200 || res.type !== 'basic') return res;
-        const clone = res.clone();
-        caches.open(RUNTIME).then((cache) => {
-          cache.put(e.request, clone).then(() => trimCache(RUNTIME, MAX_RUNTIME_ENTRIES));
-        });
+      fetch(e.request).then(async (res) => {
+        if (res && res.status === 200 && res.type === 'basic') {
+          const clone = res.clone();
+          caches.open(RUNTIME).then((cache) => {
+            cache.put(e.request, clone).then(() => trimCache(RUNTIME, MAX_RUNTIME_ENTRIES));
+          });
+          return res;
+        }
+
+        // When running without server-side cleanUrls (e.g. local static servers),
+        // navigations like `/work` may 404. Try serving the corresponding `.html`
+        // from cache instead of returning the raw 404 response.
+        if (res && res.status === 404) {
+          const cached = await caches.match(e.request);
+          if (cached) return cached;
+          let path = url.pathname;
+          if (path && !path.endsWith('.html')) {
+            if (path.endsWith('/')) path = path.slice(0, -1);
+            if (path) {
+              const htmlCached = await caches.match(`${path}.html`);
+              if (htmlCached) return htmlCached;
+            }
+          }
+          return caches.match('/404.html');
+        }
+
         return res;
       }).catch(() =>
         caches.match(e.request).then(async (cached) => {

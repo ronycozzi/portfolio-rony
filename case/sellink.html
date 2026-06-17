@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Sellink Group — Caso de estudio · Rony Cozzi</title>
-  <meta name="description" content="Caso de estudio — Sellink Group. Sitio corporativo para agencia creativa. Diseño dark, modular, accesible y rápido." />
+  <meta name="description" content="Caso de estudio — Sellink Group. Sitio corporativo para agencia creativa. Diseño oscuro, modular, accesible y rápido." />
 
   <meta name="theme-color" content="#0A0A0A" />
   <meta name="color-scheme" content="dark light" />
@@ -18,7 +18,6 @@
   <meta name="msapplication-TileColor" content="#0A0A0A" />
 
   <link rel="canonical" href="https://portfolios-ronycozzi.vercel.app/case/sellink" />
-  <link rel="alternate" hreflang="es" href="https://portfolios-ronycozzi.vercel.app/case/sellink" />
   <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
   <link rel="icon" type="image/png" sizes="192x192" href="../assets/icons/icon-192.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/icon-180.png" />
@@ -29,7 +28,7 @@
   <meta property="og:locale" content="es_AR" />
   <meta property="og:url" content="https://portfolios-ronycozzi.vercel.app/case/sellink" />
   <meta property="og:title" content="Sellink Group — Caso de estudio · Rony Cozzi" />
-  <meta property="og:description" content="Sitio corporativo para agencia creativa. Diseño dark, modular, accesible y rápido." />
+  <meta property="og:description" content="Caso de estudio — Sellink Group. Sitio corporativo para agencia creativa. Diseño oscuro, modular, accesible y rápido." />
   <meta property="og:image" content="https://portfolios-ronycozzi.vercel.app/assets/work/sellink.webp" />
   <meta property="og:image:width" content="1440" />
   <meta property="og:image:height" content="900" />
@@ -38,7 +37,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" content="@ronycozzi" />
   <meta name="twitter:title" content="Sellink Group — Caso de estudio · Rony Cozzi" />
-  <meta name="twitter:description" content="Sitio corporativo para agencia creativa. Diseño dark, modular, accesible y rápido." />
+  <meta name="twitter:description" content="Caso de estudio — Sellink Group. Sitio corporativo para agencia creativa. Diseño oscuro, modular, accesible y rápido." />
   <meta name="twitter:image" content="https://portfolios-ronycozzi.vercel.app/assets/work/sellink.webp" />
   <meta name="twitter:image:alt" content="Sitio de Sellink Group — caso de estudio" />
 
@@ -46,7 +45,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" as="style" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/styles.css?v=30" />
+  <link rel="stylesheet" href="../css/styles.css?v=34" />
   <link rel="stylesheet" href="../css/case.css?v=3" />
 
   <script type="application/ld+json">
@@ -57,13 +56,13 @@
         "@type": "CreativeWork",
         "@id": "https://portfolios-ronycozzi.vercel.app/case/sellink#case",
         "name": "Sellink Group",
-        "description": "Sitio corporativo para agencia creativa. Diseño dark, modular, accesible y rápido.",
+        "description": "Sitio corporativo para agencia creativa. Diseño oscuro, modular, accesible y rápido.",
         "url": "https://sellink-group-demo.vercel.app/",
         "image": "https://portfolios-ronycozzi.vercel.app/assets/work/sellink.webp",
         "author": { "@id": "https://portfolios-ronycozzi.vercel.app/#person" },
         "dateCreated": "2026-01-01",
-        "genre": "Web Design",
-        "keywords": "agency, corporate, brutalist, dark design"
+        "genre": "Diseño web",
+        "keywords": "agencia, corporativo, brutalista, diseño oscuro"
       },
       {
         "@type": "BreadcrumbList",
@@ -110,7 +109,7 @@
       </span>
       <span class="header__logo-text">Rony Cozzi</span>
     </a>
-    <nav class="nav" aria-label="Navegación principal">
+    <nav class="nav" aria-label="Navegación principal" data-i18n-attr="aria-label:a11y.nav">
       <a href="/" data-magnetic data-link><span data-i18n="nav.home">Inicio</span></a>
       <a href="../work" class="is-current" aria-current="page" data-magnetic data-link><span data-i18n="nav.work">Trabajos</span></a>
       <a href="../about" data-magnetic data-link><span data-i18n="nav.about">Sobre mí</span></a>
@@ -131,12 +130,12 @@
     </div>
   </header>
 
-  <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Menú móvil" data-i18n-attr="aria-label:a11y.mobileNav" data-mobile-menu>
     <a href="/" data-link><span data-i18n="nav.home">Inicio</span></a>
     <a href="../work" data-link><span data-i18n="nav.work">Trabajos</span></a>
     <a href="../about" data-link><span data-i18n="nav.about">Sobre mí</span></a>
     <a href="../contact" data-link><span data-i18n="nav.contact">Contacto</span></a>
-  </div>
+  </nav>
 
   <main class="page page--case page--case-sellink" id="main">
     <section class="case-hero" style="--case-accent:#FF3300;--case-bg:#070707;--case-fg:#EDEDED;">
@@ -149,8 +148,8 @@
         <span class="line"><span class="reveal"><em>Group</em></span></span>
       </h1>
       <div class="case-hero__tags">
-        <span class="case-tag">Agency</span>
-        <span class="case-tag">Corporate</span>
+        <span class="case-tag" data-i18n="case.sellink.tag1">Agencia</span>
+        <span class="case-tag" data-i18n="case.sellink.tag2">Corporativo</span>
         <span class="case-tag">2026</span>
       </div>
       <a href="https://sellink-group-demo.vercel.app/" target="_blank" rel="noopener noreferrer" class="case-hero__live" data-magnetic>
@@ -166,7 +165,7 @@
           <span class="case-cover__dot"></span>
           <span class="case-cover__url">sellink-group-demo.vercel.app</span>
         </div>
-        <img src="../assets/work/sellink.webp" alt="Homepage de Sellink Group — fondo oscuro, acento rojo y layout de servicios" loading="eager" fetchpriority="high" decoding="async" width="1440" height="900" />
+        <img src="../assets/work/sellink.webp" alt="Portada de Sellink Group — fondo oscuro, acento rojo y layout de servicios" data-i18n-attr="alt:case.sellink.cover_alt" loading="eager" fetchpriority="high" decoding="async" width="1440" height="900" />
       </div>
     </section>
 
@@ -176,7 +175,7 @@
           <div class="case-overview__stats">
             <div class="case-stat" data-reveal>
               <span class="case-stat__val">2026</span>
-              <span class="case-stat__label">Año</span>
+              <span class="case-stat__label" data-i18n="case.year">Año</span>
             </div>
             <div class="case-stat" data-reveal>
               <span class="case-stat__val">96</span>
@@ -187,14 +186,14 @@
               <span class="case-stat__label">LCP</span>
             </div>
             <div class="case-stat" data-reveal>
-              <span class="case-stat__val">A11y</span>
+              <span class="case-stat__val">AA</span>
               <span class="case-stat__label">WCAG AA</span>
             </div>
           </div>
           <div class="case-overview__text" data-reveal>
-            <h2 id="sellink-overview">El proyecto</h2>
-            <p>Sellink Group es una agencia creativa que necesitaba reposicionarse hacia clientes corporativos de mayor volumen. Su sitio anterior era un template genérico de agencia — sin personalidad, sin diferenciación y mal en mobile.</p>
-            <p>El brief fue claro: dark, audaz, que se sienta custom sin ser difícil de mantener. Que transmita agencia de nivel senior desde el primer scroll.</p>
+            <h2 id="sellink-overview" data-i18n="case.project">El proyecto</h2>
+            <p data-i18n="case.sellink.p1">Sellink Group es una agencia creativa que necesitaba reposicionarse hacia clientes corporativos de mayor volumen. Su sitio anterior era una plantilla genérica de agencia — sin personalidad, sin diferenciación y con una experiencia móvil deficiente.</p>
+            <p data-i18n="case.sellink.p2">El encargo fue claro: oscuro, audaz, con sensación de diseño a medida sin volverse difícil de mantener. Que transmita una agencia de nivel senior desde el primer recorrido.</p>
           </div>
         </div>
       </div>
@@ -202,17 +201,17 @@
 
     <section class="case-section case-section--alt" aria-labelledby="sellink-pas">
       <div class="case-section__inner">
-        <h2 id="sellink-pas" class="case-section__title" data-reveal>Reto y respuesta</h2>
+        <h2 id="sellink-pas" class="case-section__title" data-reveal data-i18n="case.challenge">Reto y respuesta</h2>
         <div class="case-two-col">
           <div class="case-block" data-reveal>
             <span class="case-block__num">01</span>
-            <h3>El problema</h3>
-            <p>Template de Wix que tardaba 5+ segundos en cargar. Sin adaptación mobile real, sin dark mode nativo, sin identidad visual coherente. Los clientes potenciales no terminaban de confiar en la agencia porque el sitio no reflejaba la calidad del trabajo.</p>
+            <h3 data-i18n="case.problem">El problema</h3>
+            <p data-i18n="case.sellink.problem_desc">Plantilla de Wix que tardaba 5+ segundos en cargar. Sin adaptación móvil real, sin modo oscuro nativo, sin identidad visual coherente. Los clientes potenciales no terminaban de confiar en la agencia porque el sitio no reflejaba la calidad del trabajo.</p>
           </div>
           <div class="case-block" data-reveal>
             <span class="case-block__num">02</span>
-            <h3>La solución</h3>
-            <p>Sitio modular con sistema de secciones componetizadas en CSS custom properties. Dark mode nativo como default. Tipografía display uppercase con tracking amplio. Formulario de contacto accesible con validación semántica. Deploy en Vercel con headers de seguridad.</p>
+            <h3 data-i18n="case.solution">La solución</h3>
+            <p data-i18n="case.sellink.solution_desc">Sitio modular con sistema de secciones componentizadas en variables CSS. Modo oscuro nativo por defecto. Tipografía display en mayúsculas con interletrado amplio. Formulario de contacto accesible con validación semántica. Despliegue en Vercel con encabezados de seguridad.</p>
           </div>
         </div>
       </div>
@@ -220,37 +219,37 @@
 
     <section class="case-section" aria-labelledby="sellink-tech">
       <div class="case-section__inner">
-        <h2 id="sellink-tech" class="case-section__title" data-reveal>Decisiones técnicas</h2>
+        <h2 id="sellink-tech" class="case-section__title" data-reveal data-i18n="case.tech">Decisiones técnicas</h2>
         <div class="case-tech-grid">
           <div class="case-tech-item" data-reveal>
             <span class="case-tech-item__icon" aria-hidden="true">⬡</span>
-            <h3>Design tokens CSS</h3>
-            <p>Sistema de custom properties por capa: color semántico, tipografía, espaciado, radios. Swap dark/light sin JS — solo <code>data-theme</code> attribute en <code>html</code>. Fácil de mantener y extender.</p>
+            <h3 data-i18n="case.sellink.tech1.title">Tokens de diseño en CSS</h3>
+            <p data-i18n-html="case.sellink.tech1.desc">Sistema de variables CSS por capa: color semántico, tipografía, espaciado y radios. Cambio entre modo oscuro y claro sin JS, usando solo el atributo <code>data-theme</code> en <code>html</code>. Fácil de mantener y extender.</p>
           </div>
           <div class="case-tech-item" data-reveal>
             <span class="case-tech-item__icon" aria-hidden="true">⬡</span>
-            <h3>Layout modular</h3>
-            <p>Cada sección es independiente: <code>.services</code>, <code>.cases</code>, <code>.team</code>, <code>.contact</code>. Sin dependencias entre módulos. Nuevo servicio = copiar un <code>&lt;article&gt;</code>. Sin tocar CSS global.</p>
+            <h3 data-i18n="case.sellink.tech2.title">Layout modular</h3>
+            <p data-i18n-html="case.sellink.tech2.desc">Cada sección es independiente: <code>.services</code>, <code>.cases</code>, <code>.team</code>, <code>.contact</code>. Sin dependencias entre módulos. Nuevo servicio = copiar un <code>&lt;article&gt;</code>. Sin tocar CSS global.</p>
           </div>
           <div class="case-tech-item" data-reveal>
             <span class="case-tech-item__icon" aria-hidden="true">⬡</span>
-            <h3>Formulario semántico</h3>
-            <p><code>aria-required</code>, <code>aria-invalid</code>, <code>aria-describedby</code> en cada campo. Mensajes de error con <code>role="alert"</code>. <code>inputmode</code> correcto por tipo de campo. Funciona con teclado, screen reader y autocomplete del browser.</p>
+            <h3 data-i18n="case.sellink.tech3.title">Formulario semántico</h3>
+            <p data-i18n-html="case.sellink.tech3.desc"><code>aria-required</code>, <code>aria-invalid</code>, <code>aria-describedby</code> en cada campo. Mensajes de error con <code>role="alert"</code>. <code>inputmode</code> correcto por tipo de campo. Funciona con teclado, lector de pantalla y autocompletado del navegador.</p>
           </div>
           <div class="case-tech-item" data-reveal>
             <span class="case-tech-item__icon" aria-hidden="true">⬡</span>
-            <h3>Typography scale</h3>
-            <p>Type scale fluida con <code>clamp()</code> entre 4 breakpoints. Display en Space Grotesk 700, body en Inter 400/500. Tracking en uppercase calculado por tamaño (más grande = más tracking). Sin jarring jumps en resize.</p>
+            <h3 data-i18n="case.sellink.tech4.title">Typography scale</h3>
+            <p data-i18n-html="case.sellink.tech4.desc">Escala tipográfica fluida con <code>clamp()</code> entre 4 breakpoints. Display en Space Grotesk 700 y cuerpo en Inter 400/500. Interletrado en mayúsculas calculado por tamaño (más grande = más interletrado). Sin saltos bruscos al redimensionar.</p>
           </div>
           <div class="case-tech-item" data-reveal>
             <span class="case-tech-item__icon" aria-hidden="true">⬡</span>
-            <h3>Print stylesheet</h3>
-            <p>Hoja de estilos <code>@media print</code> que oculta nav, cursor, animaciones y background. Imprime en blanco con tipografía legible. Útil cuando clientes imprimen propuestas con el sitio como referencia.</p>
+            <h3 data-i18n="case.sellink.tech5.title">Print stylesheet</h3>
+            <p data-i18n-html="case.sellink.tech5.desc">Hoja de estilos <code>@media print</code> que oculta nav, cursor, animaciones y background. Imprime en blanco con tipografía legible. Útil cuando clientes imprimen propuestas con el sitio como referencia.</p>
           </div>
           <div class="case-tech-item" data-reveal>
             <span class="case-tech-item__icon" aria-hidden="true">⬡</span>
-            <h3>Contraste WCAG AA</h3>
-            <p>Rojo <code>#FF3300</code> sobre negro <code>#070707</code> con ratio 5.4:1 — pasa <strong>AA</strong> para texto normal. Texto en blanco <code>#EDEDED</code> sobre el fondo principal alcanza ratio &gt;15:1. Verificado con Colour Contrast Analyser.</p>
+            <h3 data-i18n="case.sellink.tech6.title">Contraste WCAG AA</h3>
+            <p data-i18n-html="case.sellink.tech6.desc">Rojo <code>#FF3300</code> sobre negro <code>#070707</code> con ratio 5.4:1 — pasa <strong>AA</strong> para texto normal. Texto en blanco <code>#EDEDED</code> sobre el fondo principal alcanza ratio &gt;15:1. Verificado con Colour Contrast Analyser.</p>
           </div>
         </div>
       </div>
@@ -272,7 +271,7 @@
 
     <section class="case-next">
       <a href="cognition" class="case-next__link" data-link>
-        <span class="case-next__label">Siguiente proyecto</span>
+        <span class="case-next__label" data-i18n="case.next">Siguiente proyecto</span>
         <span class="case-next__name">Cognition <span aria-hidden="true">→</span></span>
       </a>
     </section>
@@ -316,7 +315,7 @@
     </div>
   </footer>
 
-  <script src="../js/main.js?v=20" defer></script>
+  <script src="../js/main.js?v=41" defer></script>
   <a
     class="wsp-fab"
     data-wsp-fab

@@ -28,7 +28,7 @@
   <meta property="og:locale" content="es_AR" />
   <meta property="og:url" content="https://portfolios-ronycozzi.vercel.app/privacy" />
   <meta property="og:title" content="Privacidad — Rony Cozzi" />
-  <meta property="og:description" content="Política de privacidad de Rony Cozzi. Qué datos se recopilan y cómo se usan." />
+  <meta property="og:description" content="Política de privacidad — Rony Cozzi. Qué datos se recopilan, cómo se usan y tus derechos como visitante. Cumple Ley 25.326 y principios GDPR." />
   <meta property="og:image" content="https://portfolios-ronycozzi.vercel.app/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -37,7 +37,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" content="@ronycozzi" />
   <meta name="twitter:title" content="Privacidad — Rony Cozzi" />
-  <meta name="twitter:description" content="Política de privacidad de Rony Cozzi. Qué datos se recopilan y cómo se usan." />
+  <meta name="twitter:description" content="Política de privacidad — Rony Cozzi. Qué datos se recopilan, cómo se usan y tus derechos como visitante. Cumple Ley 25.326 y principios GDPR." />
   <meta name="twitter:image" content="https://portfolios-ronycozzi.vercel.app/og-image.png" />
   <meta name="twitter:image:alt" content="Privacidad — Rony Cozzi" />
 
@@ -45,7 +45,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" as="style" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=30" />
+  <link rel="stylesheet" href="css/styles.css?v=34" />
 
   <script type="application/ld+json">
   {
@@ -96,7 +96,7 @@
       </span>
       <span class="header__logo-text">Rony Cozzi</span>
     </a>
-    <nav class="nav" aria-label="Navegación principal">
+    <nav class="nav" aria-label="Navegación principal" data-i18n-attr="aria-label:a11y.nav">
       <a href="/" data-magnetic data-link><span data-i18n="nav.home">Inicio</span></a>
       <a href="work" data-magnetic data-link><span data-i18n="nav.work">Trabajos</span></a>
       <a href="about" data-magnetic data-link><span data-i18n="nav.about">Sobre mí</span></a>
@@ -117,12 +117,12 @@
     </div>
   </header>
 
-  <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Menú móvil" data-i18n-attr="aria-label:a11y.mobileNav" data-mobile-menu>
     <a href="/" data-link><span data-i18n="nav.home">Inicio</span></a>
     <a href="work" data-link><span data-i18n="nav.work">Trabajos</span></a>
     <a href="about" data-link><span data-i18n="nav.about">Sobre mí</span></a>
     <a href="contact" data-link><span data-i18n="nav.contact">Contacto</span></a>
-  </div>
+  </nav>
 
   <main class="page page--privacy" id="main">
     <div class="legal-hero">
@@ -163,7 +163,7 @@
       <p>Para ejercer cualquiera de estos derechos, escribí a <a href="mailto:ronycozzi5@gmail.com">ronycozzi5@gmail.com</a>. Respondo en menos de 72 horas hábiles.</p>
 
       <h2>5. Seguridad</h2>
-      <p>El sitio está alojado en Vercel con HTTPS, headers de seguridad (CSP, X-Frame-Options, HSTS) y sin bases de datos propias accesibles externamente. No puedo garantizar seguridad absoluta —ningún sistema en internet puede—, pero aplico las prácticas estándar de la industria.</p>
+      <p>El sitio está alojado en Vercel con HTTPS, encabezados de seguridad (CSP, X-Frame-Options, HSTS) y sin bases de datos propias accesibles externamente. No puedo garantizar seguridad absoluta —ningún sistema en internet puede—, pero aplico las prácticas estándar de la industria.</p>
 
       <h2>6. Cambios a esta política</h2>
       <p>Si esta política cambia de forma significativa, se actualizará la fecha en el encabezado. Para cambios menores no se enviarán notificaciones.</p>
@@ -181,7 +181,7 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=20" defer></script>
+  <script src="js/main.js?v=41" defer></script>
   <a
     class="wsp-fab"
     data-wsp-fab

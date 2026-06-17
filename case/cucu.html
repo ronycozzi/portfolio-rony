@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Cucú Studio — Caso de estudio · Rony Cozzi</title>
-  <meta name="description" content="Caso de estudio — Cucú Studio. Sitio para estudio de tattoo y diseño creativo. Tipografía editorial, animaciones por scroll, mobile-first." />
+  <meta name="description" content="Caso de estudio — Cucú Studio. Sitio para estudio de tatuaje y diseño creativo. Tipografía editorial, animaciones por scroll y prioridad móvil." />
 
   <meta name="theme-color" content="#0A0A0A" />
   <meta name="color-scheme" content="dark light" />
@@ -18,7 +18,6 @@
   <meta name="msapplication-TileColor" content="#0A0A0A" />
 
   <link rel="canonical" href="https://portfolios-ronycozzi.vercel.app/case/cucu" />
-  <link rel="alternate" hreflang="es" href="https://portfolios-ronycozzi.vercel.app/case/cucu" />
   <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
   <link rel="icon" type="image/png" sizes="192x192" href="../assets/icons/icon-192.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/icon-180.png" />
@@ -29,7 +28,7 @@
   <meta property="og:locale" content="es_AR" />
   <meta property="og:url" content="https://portfolios-ronycozzi.vercel.app/case/cucu" />
   <meta property="og:title" content="Cucú Studio — Caso de estudio · Rony Cozzi" />
-  <meta property="og:description" content="Caso de estudio: Cucú Studio — sitio para estudio creativo de tattoo y diseño, con estética editorial, mobile-first y micro-interacciones." />
+  <meta property="og:description" content="Caso de estudio — Cucú Studio. Sitio para estudio de tatuaje y diseño creativo. Tipografía editorial, animaciones por scroll y prioridad móvil." />
   <meta property="og:image" content="https://portfolios-ronycozzi.vercel.app/assets/work/cucu.webp" />
   <meta property="og:image:width" content="1440" />
   <meta property="og:image:height" content="900" />
@@ -38,7 +37,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" content="@ronycozzi" />
   <meta name="twitter:title" content="Cucú Studio — Caso de estudio · Rony Cozzi" />
-  <meta name="twitter:description" content="Caso de estudio: Cucú Studio — sitio para estudio creativo de tattoo y diseño, con estética editorial y mobile-first." />
+  <meta name="twitter:description" content="Caso de estudio — Cucú Studio. Sitio para estudio de tatuaje y diseño creativo. Tipografía editorial, animaciones por scroll y prioridad móvil." />
   <meta name="twitter:image" content="https://portfolios-ronycozzi.vercel.app/assets/work/cucu.webp" />
   <meta name="twitter:image:alt" content="Sitio de Cucú Studio — caso de estudio" />
 
@@ -46,7 +45,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" as="style" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/styles.css?v=30" />
+  <link rel="stylesheet" href="../css/styles.css?v=34" />
   <link rel="stylesheet" href="../css/case.css?v=3" />
 
   <script type="application/ld+json">
@@ -57,13 +56,13 @@
         "@type": "CreativeWork",
         "@id": "https://portfolios-ronycozzi.vercel.app/case/cucu#case",
         "name": "Cucú Studio",
-        "description": "Sitio web para estudio creativo de tattoo y diseño. Tipografía editorial, animaciones por scroll y micro-interacciones.",
+        "description": "Sitio web para estudio creativo de tatuaje y diseño. Tipografía editorial, animaciones por scroll y microinteracciones.",
         "url": "https://cucu-studio-demo.vercel.app/",
         "image": "https://portfolios-ronycozzi.vercel.app/assets/work/cucu.webp",
         "author": { "@id": "https://portfolios-ronycozzi.vercel.app/#person" },
         "dateCreated": "2025-01-01",
-        "genre": "Web Design",
-        "keywords": "tattoo studio, creative studio, editorial design, web development"
+        "genre": "Diseño web",
+        "keywords": "estudio de tatuaje, estudio creativo, diseño editorial, desarrollo web"
       },
       {
         "@type": "BreadcrumbList",
@@ -110,7 +109,7 @@
       </span>
       <span class="header__logo-text">Rony Cozzi</span>
     </a>
-    <nav class="nav" aria-label="Navegación principal">
+    <nav class="nav" aria-label="Navegación principal" data-i18n-attr="aria-label:a11y.nav">
       <a href="/" data-magnetic data-link><span data-i18n="nav.home">Inicio</span></a>
       <a href="../work" class="is-current" aria-current="page" data-magnetic data-link><span data-i18n="nav.work">Trabajos</span></a>
       <a href="../about" data-magnetic data-link><span data-i18n="nav.about">Sobre mí</span></a>
@@ -131,12 +130,12 @@
     </div>
   </header>
 
-  <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Menú móvil" data-i18n-attr="aria-label:a11y.mobileNav" data-mobile-menu>
     <a href="/" data-link><span data-i18n="nav.home">Inicio</span></a>
     <a href="../work" data-link><span data-i18n="nav.work">Trabajos</span></a>
     <a href="../about" data-link><span data-i18n="nav.about">Sobre mí</span></a>
     <a href="../contact" data-link><span data-i18n="nav.contact">Contacto</span></a>
-  </div>
+  </nav>
 
   <main class="page page--case page--case-cucu" id="main">
     <section class="case-hero" style="--case-accent:#C9956E;--case-bg:#FAFAF7;--case-fg:#1A1A1A;">
@@ -149,8 +148,8 @@
         <span class="line"><span class="reveal">Studio</span></span>
       </h1>
       <div class="case-hero__tags">
-        <span class="case-tag">Creative Studio</span>
-        <span class="case-tag">Tattoo &amp; Design</span>
+        <span class="case-tag" data-i18n="case.cucu.tag1">Estudio creativo</span>
+        <span class="case-tag" data-i18n="case.cucu.tag2">Tatuaje y diseño</span>
         <span class="case-tag">2025</span>
       </div>
       <a href="https://cucu-studio-demo.vercel.app/" target="_blank" rel="noopener noreferrer" class="case-hero__live" data-magnetic>
@@ -166,7 +165,7 @@
           <span class="case-cover__dot"></span>
           <span class="case-cover__url">cucu-studio-demo.vercel.app</span>
         </div>
-        <img src="../assets/work/cucu.webp" alt="Homepage de Cucú Studio — layout editorial con fondo oscuro y acento cobre" loading="eager" fetchpriority="high" decoding="async" width="1440" height="900" />
+        <img src="../assets/work/cucu.webp" alt="Portada de Cucú Studio — layout editorial con fondo oscuro y acento cobre" data-i18n-attr="alt:case.cucu.cover_alt" loading="eager" fetchpriority="high" decoding="async" width="1440" height="900" />
       </div>
     </section>
 
@@ -176,7 +175,7 @@
           <div class="case-overview__stats">
             <div class="case-stat" data-reveal>
               <span class="case-stat__val">2025</span>
-              <span class="case-stat__label">Año</span>
+              <span class="case-stat__label" data-i18n="case.year">Año</span>
             </div>
             <div class="case-stat" data-reveal>
               <span class="case-stat__val">98</span>
@@ -192,9 +191,9 @@
             </div>
           </div>
           <div class="case-overview__text" data-reveal>
-            <h2 id="cucu-overview">El proyecto</h2>
-            <p>Cucú Studio es un estudio creativo de Córdoba especializado en tattoo y diseño gráfico. Operaban sin presencia web — toda su captación pasaba por Instagram, lo que limitaba el alcance y la profesionalidad percibida.</p>
-            <p>El encargo fue construir un sitio que igualara el nivel visual de su trabajo: editorial, audaz y rápido. Sin WordPress, sin templates. Todo desde cero.</p>
+            <h2 id="cucu-overview" data-i18n="case.project">El proyecto</h2>
+            <p data-i18n="case.cucu.p1">Cucú Studio es un estudio creativo de Córdoba especializado en tatuaje y diseño gráfico. Operaban sin presencia web — toda su captación pasaba por Instagram, lo que limitaba el alcance y la profesionalidad percibida.</p>
+            <p data-i18n="case.cucu.p2">El encargo fue construir un sitio que igualara el nivel visual de su trabajo: editorial, audaz y rápido. Sin WordPress, sin templates. Todo desde cero.</p>
           </div>
         </div>
       </div>
@@ -202,17 +201,17 @@
 
     <section class="case-section case-section--alt" aria-labelledby="cucu-pas">
       <div class="case-section__inner">
-        <h2 id="cucu-pas" class="case-section__title" data-reveal>Reto y respuesta</h2>
+        <h2 id="cucu-pas" class="case-section__title" data-reveal data-i18n="case.challenge">Reto y respuesta</h2>
         <div class="case-two-col">
           <div class="case-block" data-reveal>
             <span class="case-block__num">01</span>
-            <h3>El problema</h3>
-            <p>Instagram como único canal de contacto generaba fricción para los clientes: no había precios claros, proceso de reserva definido ni forma de ver el portafolio completo de los artistas. El estudio perdía clientes potenciales que preferían estudios con sitio web.</p>
+            <h3 data-i18n="case.problem">El problema</h3>
+            <p data-i18n="case.cucu.problem_desc">Instagram como único canal de contacto generaba fricción para los clientes: no había precios claros, proceso de reserva definido ni forma de ver el portafolio completo de los artistas. El estudio perdía clientes potenciales que preferían estudios con sitio web.</p>
           </div>
           <div class="case-block" data-reveal>
             <span class="case-block__num">02</span>
-            <h3>La solución</h3>
-            <p>Un sitio editorial de una sola página con navegación suave, tipografía grande y espacio blanco intencional. Portfolio de trabajos con galería lazy-loaded, sección de artistas, proceso de reserva y contacto directo. Deploy en Vercel con dominio de demo.</p>
+            <h3 data-i18n="case.solution">La solución</h3>
+            <p data-i18n="case.cucu.solution_desc">Un sitio editorial de una sola página con navegación suave, tipografía grande y espacio blanco intencional. Portfolio de trabajos con galería lazy-loaded, sección de artistas, proceso de reserva y contacto directo. Deploy en Vercel con dominio de demo.</p>
           </div>
         </div>
       </div>
@@ -220,37 +219,37 @@
 
     <section class="case-section" aria-labelledby="cucu-tech">
       <div class="case-section__inner">
-        <h2 id="cucu-tech" class="case-section__title" data-reveal>Decisiones técnicas</h2>
+        <h2 id="cucu-tech" class="case-section__title" data-reveal data-i18n="case.tech">Decisiones técnicas</h2>
         <div class="case-tech-grid">
           <div class="case-tech-item" data-reveal>
             <span class="case-tech-item__icon" aria-hidden="true">⬡</span>
-            <h3>HTML semántico</h3>
-            <p>Estructura con <code>&lt;article&gt;</code>, <code>&lt;figure&gt;</code> y <code>&lt;section&gt;</code> correctas. Schema.org para CreativeWork y artistas. Heading hierarchy estricta.</p>
+            <h3 data-i18n="case.cucu.tech1.title">HTML semántico</h3>
+            <p data-i18n-html="case.cucu.tech1.desc">Estructura con <code>&lt;article&gt;</code>, <code>&lt;figure&gt;</code> y <code>&lt;section&gt;</code> correctas. Schema.org para <code>CreativeWork</code> y artistas. Jerarquía de encabezados estricta.</p>
           </div>
           <div class="case-tech-item" data-reveal>
             <span class="case-tech-item__icon" aria-hidden="true">⬡</span>
-            <h3>CSS Grid editorial</h3>
-            <p>Layout con <code>grid-template-areas</code> asimétrico. Tipografía con <code>clamp()</code> para escala fluida entre 320px y 1920px. Variables custom properties para el sistema de color del estudio.</p>
+            <h3 data-i18n="case.cucu.tech2.title">CSS Grid editorial</h3>
+            <p data-i18n-html="case.cucu.tech2.desc">Layout con <code>grid-template-areas</code> asimétrico. Tipografía con <code>clamp()</code> para escala fluida entre 320px y 1920px. Variables custom properties para el sistema de color del estudio.</p>
           </div>
           <div class="case-tech-item" data-reveal>
             <span class="case-tech-item__icon" aria-hidden="true">⬡</span>
-            <h3>Scroll animations</h3>
-            <p><code>IntersectionObserver</code> con threshold escalonado para reveals por línea. Sin librerías externas. <code>prefers-reduced-motion</code> respetado en todas las animaciones.</p>
+            <h3 data-i18n="case.cucu.tech3.title">Animaciones por scroll</h3>
+            <p data-i18n-html="case.cucu.tech3.desc"><code>IntersectionObserver</code> con umbral escalonado para reveals por línea. Sin librerías externas. <code>prefers-reduced-motion</code> respetado en todas las animaciones.</p>
           </div>
           <div class="case-tech-item" data-reveal>
             <span class="case-tech-item__icon" aria-hidden="true">⬡</span>
-            <h3>Imágenes optimizadas</h3>
-            <p>Imágenes en WebP con <code>width</code>/<code>height</code> explícitos en cada <code>&lt;img&gt;</code> para CLS = 0. <code>loading="lazy"</code> en portfolio, <code>loading="eager"</code> en hero.</p>
+            <h3 data-i18n="case.cucu.tech4.title">Imágenes optimizadas</h3>
+            <p data-i18n-html="case.cucu.tech4.desc">Imágenes en WebP con <code>width</code>/<code>height</code> explícitos en cada <code>&lt;img&gt;</code> para CLS = 0. <code>loading="lazy"</code> en portfolio, <code>loading="eager"</code> en hero.</p>
           </div>
           <div class="case-tech-item" data-reveal>
             <span class="case-tech-item__icon" aria-hidden="true">⬡</span>
-            <h3>Deploy &amp; CI</h3>
-            <p>Auto-deploy desde rama <code>main</code> en Vercel. Headers de seguridad configurados para producción: CSP, X-Frame-Options y Referrer-Policy. Compresión Brotli automática desde CDN.</p>
+            <h3 data-i18n="case.cucu.tech5.title">Deploy &amp; CI</h3>
+            <p data-i18n-html="case.cucu.tech5.desc">Auto-deploy desde rama <code>main</code> en Vercel. Encabezados de seguridad configurados para producción: CSP, X-Frame-Options y Referrer-Policy. Compresión Brotli automática desde CDN.</p>
           </div>
           <div class="case-tech-item" data-reveal>
             <span class="case-tech-item__icon" aria-hidden="true">⬡</span>
-            <h3>Accesibilidad</h3>
-            <p>Contraste WCAG AA en todos los elementos. Navegación 100% por teclado. <code>aria-label</code> en botones icon-only. <code>alt</code> descriptivo en imágenes del portfolio.</p>
+            <h3 data-i18n="case.cucu.tech6.title">Accesibilidad</h3>
+            <p data-i18n-html="case.cucu.tech6.desc">Contraste WCAG AA en todos los elementos. Navegación 100% por teclado. <code>aria-label</code> en botones icon-only. <code>alt</code> descriptivo en imágenes del portfolio.</p>
           </div>
         </div>
       </div>
@@ -273,7 +272,7 @@
 
     <section class="case-next">
       <a href="luco" class="case-next__link" data-link>
-        <span class="case-next__label">Siguiente proyecto</span>
+        <span class="case-next__label" data-i18n="case.next">Siguiente proyecto</span>
         <span class="case-next__name">Luco Gourmet <span aria-hidden="true">→</span></span>
       </a>
     </section>
@@ -317,7 +316,7 @@
     </div>
   </footer>
 
-  <script src="../js/main.js?v=20" defer></script>
+  <script src="../js/main.js?v=41" defer></script>
   <a
     class="wsp-fab"
     data-wsp-fab

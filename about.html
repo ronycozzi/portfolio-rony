@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Sobre mí — Rony Cozzi</title>
-  <meta name="description" content="Conocé a Rony Cozzi — Full Stack Developer en Argentina. Sitios rápidos, APIs ligeras, integraciones web y experiencias digitales listas para producción." />
+  <meta name="description" content="Conocé a Rony Cozzi, desarrollador full stack en Argentina. Sitios rápidos, APIs ligeras, integraciones web y experiencias digitales listas para producción." />
 
   <meta name="theme-color" content="#0A0A0A" />
   <meta name="color-scheme" content="dark light" />
@@ -18,7 +18,6 @@
   <meta name="msapplication-TileColor" content="#0A0A0A" />
 
   <link rel="canonical" href="https://portfolios-ronycozzi.vercel.app/about" />
-  <link rel="alternate" hreflang="es" href="https://portfolios-ronycozzi.vercel.app/about" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/icon-180.png" />
@@ -27,9 +26,10 @@
   <meta property="og:type" content="profile" />
   <meta property="og:site_name" content="Rony Cozzi" />
   <meta property="og:locale" content="es_AR" />
+  <meta property="og:locale:alternate" content="en_US" />
   <meta property="og:url" content="https://portfolios-ronycozzi.vercel.app/about" />
   <meta property="og:title" content="Sobre mí — Rony Cozzi" />
-  <meta property="og:description" content="Full Stack Developer enfocado en performance, accesibilidad y código mantenible." />
+  <meta property="og:description" content="Conocé a Rony Cozzi, desarrollador full stack en Argentina. Sitios rápidos, APIs ligeras, integraciones web y experiencias digitales listas para producción." />
   <meta property="og:image" content="https://portfolios-ronycozzi.vercel.app/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -38,7 +38,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" content="@ronycozzi" />
   <meta name="twitter:title" content="Sobre mí — Rony Cozzi" />
-  <meta name="twitter:description" content="Full Stack Developer enfocado en performance, accesibilidad y código mantenible." />
+  <meta name="twitter:description" content="Conocé a Rony Cozzi, desarrollador full stack en Argentina. Sitios rápidos, APIs ligeras, integraciones web y experiencias digitales listas para producción." />
   <meta name="twitter:image" content="https://portfolios-ronycozzi.vercel.app/og-image.png" />
   <meta name="twitter:image:alt" content="Sobre mí — Rony Cozzi" />
 
@@ -46,7 +46,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" as="style" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=30" />
+  <link rel="stylesheet" href="css/styles.css?v=34" />
 
   <script type="application/ld+json">
   {
@@ -94,7 +94,7 @@
       </span>
       <span class="header__logo-text">Rony Cozzi</span>
     </a>
-    <nav class="nav" aria-label="Navegación principal">
+    <nav class="nav" aria-label="Navegación principal" data-i18n-attr="aria-label:a11y.nav">
       <a href="/" data-magnetic data-link><span data-i18n="nav.home">Inicio</span></a>
       <a href="work" data-magnetic data-link><span data-i18n="nav.work">Trabajos</span></a>
       <a href="about" class="is-current" aria-current="page" data-magnetic data-link><span data-i18n="nav.about">Sobre mí</span></a>
@@ -115,19 +115,19 @@
     </div>
   </header>
 
-  <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Menú móvil" data-i18n-attr="aria-label:a11y.mobileNav" data-mobile-menu>
     <a href="/" data-link><span data-i18n="nav.home">Inicio</span></a>
     <a href="work" data-link><span data-i18n="nav.work">Trabajos</span></a>
     <a href="about" data-link><span data-i18n="nav.about">Sobre mí</span></a>
     <a href="contact" data-link><span data-i18n="nav.contact">Contacto</span></a>
-  </div>
+  </nav>
 
   <main class="page page--about" id="main">
     <section class="about-hero" aria-labelledby="about-title">
-      <span class="about-hero__eyebrow" data-i18n="about.eyebrow">[ Índice · 03 about ]</span>
+      <span class="about-hero__eyebrow" data-i18n="about.eyebrow">[ Índice · 03 sobre mí ]</span>
       <h1 class="about-hero__title" id="about-title">
-        <span class="line"><span class="reveal">Full Stack</span></span>
-        <span class="line"><span class="reveal"><em>Developer.</em></span></span>
+        <span class="line"><span class="reveal" data-i18n="about.hero.title1">Desarrollador</span></span>
+        <span class="line"><span class="reveal"><em data-i18n="about.hero.title2">full stack.</em></span></span>
       </h1>
       <p class="about-hero__lead" data-reveal data-i18n="about.lead">
         Desarrollo productos web completos con foco en performance, accesibilidad, SEO técnico e integraciones útiles. Trabajo con marcas, estudios y startups que necesitan una presencia digital que funcione.
@@ -144,17 +144,17 @@
         <span class="bio__num">[ 01 ]</span>
         <h2 class="bio__heading" id="bio-title" data-i18n="about.bio.heading">Bio</h2>
         <p data-reveal data-i18n="about.bio.p1">
-          Full Stack Developer con foco fuerte en frontend, performance e integraciones web. Construyo sitios accesibles, rápidos y mantenibles con HTML, CSS, JavaScript, TypeScript, React, Node.js y SQL básico cuando el proyecto lo necesita.
+          Desarrollador full stack con foco fuerte en frontend, performance e integraciones web. Construyo sitios accesibles, rápidos y mantenibles con HTML, CSS, JavaScript, TypeScript, React, Node.js y SQL básico cuando el proyecto lo necesita.
         </p>
         <p data-reveal data-i18n="about.bio.p2">
-          Trabajo de forma independiente con marcas y estudios que valoran código limpio, tiempos cortos y comunicación directa. Puedo resolver desde una landing hasta formularios conectados, APIs ligeras, dashboards simples y automatizaciones de contacto.
+          Trabajo de forma independiente con marcas y estudios que valoran código limpio, tiempos cortos y comunicación directa. Puedo resolver desde una landing hasta formularios conectados, APIs ligeras, paneles simples y automatizaciones de contacto.
         </p>
         <p data-reveal data-i18n="about.bio.p3">
-          Disponible para colaboraciones remotas, proyectos puntuales y posiciones in-house.
+          Disponible para colaboraciones remotas, proyectos puntuales y posiciones internas.
         </p>
 
         <ul class="bio__facts">
-          <li><span data-i18n="about.facts.role">Rol</span><strong>Full Stack Developer</strong></li>
+          <li><span data-i18n="about.facts.role">Rol</span><strong data-i18n="about.facts.role_val">Desarrollador full stack</strong></li>
           <li><span data-i18n="about.facts.modality">Modalidad</span><strong>Remoto · GMT-3</strong></li>
           <li><span data-i18n="about.facts.langs">Idiomas</span><strong>ES · EN</strong></li>
           <li><span data-i18n="about.facts.status">Estado</span><strong data-i18n="about.facts.status_val">Aceptando proyectos</strong></li>
@@ -201,7 +201,7 @@
         <div class="stack-col" data-reveal>
           <span class="stack-col__label" data-i18n="stack.practices">Prácticas</span>
           <ul>
-            <li>Performance</li><li>SEO técnico</li><li>Seguridad headers</li><li>PWA / QA mobile</li>
+            <li>Performance</li><li>SEO técnico</li><li>Encabezados de seguridad</li><li>PWA / QA móvil</li>
           </ul>
         </div>
       </div>
@@ -220,7 +220,7 @@
         </li>
         <li data-reveal>
           <span class="principles__item-num">02</span>
-          <h3 data-i18n="principles.2.title">Accesibilidad por default</h3>
+          <h3 data-i18n="principles.2.title">Accesibilidad por defecto</h3>
           <p data-i18n="principles.2.desc">WCAG 2.1, contraste, navegación por teclado. Sin compromisos.</p>
         </li>
         <li data-reveal>
@@ -231,7 +231,7 @@
         <li data-reveal>
           <span class="principles__item-num">04</span>
           <h3 data-i18n="principles.4.title">Comunicación clara</h3>
-          <p data-i18n="principles.4.desc">Updates frecuentes, deadlines reales y entregas sin sorpresas.</p>
+          <p data-i18n="principles.4.desc">Actualizaciones frecuentes, plazos reales y entregas sin sorpresas.</p>
         </li>
       </ol>
     </section>
@@ -303,7 +303,7 @@
       <div class="footer__col">
         <span class="footer__label" data-i18n="footer.services">Servicios</span>
         <span data-i18n="footer.s1">Sitios full stack</span>
-        <span data-i18n="footer.s2">Landing pages</span>
+        <span data-i18n="footer.s2">Landings</span>
         <span data-i18n="footer.s3">Integraciones web</span>
         <a href="assets/Rony_Cozzi_CV.pdf" download="Rony_Cozzi_CV.pdf" type="application/pdf" data-magnetic data-i18n="footer.cv">CV (PDF) ↓</a>
       </div>
@@ -317,7 +317,7 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=20" defer></script>
+  <script src="js/main.js?v=41" defer></script>
   <a
     class="wsp-fab"
     data-wsp-fab

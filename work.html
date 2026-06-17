@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Trabajos — Rony Cozzi</title>
-  <meta name="description" content="Proyectos full stack de Rony Cozzi: sitios web rápidos, landing pages, PWAs, integraciones, SEO técnico y experiencias digitales listas para producción." />
+  <meta name="description" content="Proyectos full stack de Rony Cozzi: sitios web rápidos, landings, PWAs, integraciones, SEO técnico y experiencias digitales listas para producción." />
 
   <meta name="theme-color" content="#0A0A0A" />
   <meta name="color-scheme" content="dark light" />
@@ -18,7 +18,6 @@
   <meta name="msapplication-TileColor" content="#0A0A0A" />
 
   <link rel="canonical" href="https://portfolios-ronycozzi.vercel.app/work" />
-  <link rel="alternate" hreflang="es" href="https://portfolios-ronycozzi.vercel.app/work" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/icon-180.png" />
@@ -27,9 +26,10 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Rony Cozzi" />
   <meta property="og:locale" content="es_AR" />
+  <meta property="og:locale:alternate" content="en_US" />
   <meta property="og:url" content="https://portfolios-ronycozzi.vercel.app/work" />
   <meta property="og:title" content="Trabajos — Rony Cozzi" />
-  <meta property="og:description" content="Selección de trabajos — sitios full stack, PWAs e integraciones pensadas para performance, accesibilidad y conversión." />
+  <meta property="og:description" content="Proyectos full stack de Rony Cozzi: sitios web rápidos, landings, PWAs, integraciones, SEO técnico y experiencias digitales listas para producción." />
   <meta property="og:image" content="https://portfolios-ronycozzi.vercel.app/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -38,7 +38,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" content="@ronycozzi" />
   <meta name="twitter:title" content="Trabajos — Rony Cozzi" />
-  <meta name="twitter:description" content="Selección de trabajos — sitios full stack, PWAs e integraciones pensadas para performance, accesibilidad y conversión." />
+  <meta name="twitter:description" content="Proyectos full stack de Rony Cozzi: sitios web rápidos, landings, PWAs, integraciones, SEO técnico y experiencias digitales listas para producción." />
   <meta name="twitter:image" content="https://portfolios-ronycozzi.vercel.app/og-image.png" />
   <meta name="twitter:image:alt" content="Trabajos — Rony Cozzi" />
 
@@ -46,7 +46,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" as="style" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=30" />
+  <link rel="stylesheet" href="css/styles.css?v=34" />
 
   <script type="application/ld+json">
   {
@@ -90,7 +90,7 @@
         "@type": "CreativeWork",
         "name": "Cognition",
         "url": "https://cognition-demo-cyan.vercel.app/",
-        "description": "Plataforma de IA para empresas. 11 páginas, calculadora ROI, chat con intents y PWA.",
+        "description": "Plataforma de IA para empresas. 11 páginas, calculadora ROI, chat basado en intención y PWA.",
         "image": "https://portfolios-ronycozzi.vercel.app/assets/work/cognition-v2.webp",
         "dateCreated": "2026-01-01",
         "author": { "@id": "https://portfolios-ronycozzi.vercel.app/#person" }
@@ -132,7 +132,7 @@
       </span>
       <span class="header__logo-text">Rony Cozzi</span>
     </a>
-    <nav class="nav" aria-label="Navegación principal">
+    <nav class="nav" aria-label="Navegación principal" data-i18n-attr="aria-label:a11y.nav">
       <a href="/" data-magnetic data-link><span data-i18n="nav.home">Inicio</span></a>
       <a href="work" class="is-current" aria-current="page" data-magnetic data-link><span data-i18n="nav.work">Trabajos</span></a>
       <a href="about" data-magnetic data-link><span data-i18n="nav.about">Sobre mí</span></a>
@@ -153,28 +153,28 @@
     </div>
   </header>
 
-  <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Menú móvil" data-i18n-attr="aria-label:a11y.mobileNav" data-mobile-menu>
     <a href="/" data-link><span data-i18n="nav.home">Inicio</span></a>
     <a href="work" data-link><span data-i18n="nav.work">Trabajos</span></a>
     <a href="about" data-link><span data-i18n="nav.about">Sobre mí</span></a>
     <a href="contact" data-link><span data-i18n="nav.contact">Contacto</span></a>
-  </div>
+  </nav>
 
   <main class="page page--work" id="main">
     <section class="work-hero">
-      <span class="work-hero__eyebrow" data-i18n="work.eyebrow">[ Índice · 02 proyectos ]</span>
+      <span class="work-hero__eyebrow" data-i18n="work.eyebrow">[ Índice · 02 trabajos ]</span>
       <h1 class="work-hero__title">
         <span class="line"><span class="reveal" data-i18n="featured.heading1">Trabajos</span></span>
         <span class="line"><span class="reveal"><em data-i18n="featured.heading2">seleccionados.</em></span></span>
       </h1>
       <div class="work-hero__meta">
         <div><span class="work-hero__label" data-i18n="work.years">Años</span><strong>2025 — 2026</strong></div>
-        <div><span class="work-hero__label" data-i18n="work.role">Rol</span><strong>Full Stack Dev</strong></div>
-        <div><span class="work-hero__label" data-i18n="work.status">Estado</span><strong data-i18n="work.status_val">4 proyectos · live</strong></div>
+        <div><span class="work-hero__label" data-i18n="work.role">Rol</span><strong data-i18n="work.role.value">Desarrollo full stack</strong></div>
+        <div><span class="work-hero__label" data-i18n="work.status">Estado</span><strong data-i18n="work.status_val">4 proyectos · en producción</strong></div>
       </div>
     </section>
 
-    <section class="works" data-pin-horizontal aria-label="Proyectos">
+    <section class="works" data-pin-horizontal aria-label="Proyectos" data-i18n-attr="aria-label:a11y.projects">
       <div class="works__sticky">
         <div class="works__viewport">
           <div class="works__track" data-horizontal-track>
@@ -185,11 +185,11 @@
             <div class="work-item__device">
               <div class="work-item__device-bar" aria-hidden="true"><span></span><span></span><span></span><b>cucu-studio-demo.vercel.app</b></div>
               <div class="work-item__device-screen">
-                <img class="work-item__shot" src="assets/work/cucu.webp" alt="Sitio de Cucú Studio en escritorio" loading="eager" fetchpriority="high" decoding="async" width="1440" height="900" />
+                <img class="work-item__shot" src="assets/work/cucu.webp" alt="Sitio de Cucú Studio en escritorio" data-i18n-attr="alt:alt.work.cucu" loading="eager" fetchpriority="high" decoding="async" width="1440" height="900" />
                 <div class="thumb thumb--cucu" aria-hidden="true">
-                  <span class="thumb__eyebrow">— Estudio creativo</span>
+                  <span class="thumb__eyebrow" data-i18n="work.cucu.eyebrow">— Estudio creativo</span>
                   <span class="thumb__brand"><em>Cucú</em> <span class="thumb__line"></span> Studio<span class="thumb__dot">.</span></span>
-                  <span class="thumb__tag">Tattoo &amp; Design · Córdoba</span>
+                  <span class="thumb__tag" data-i18n="work.cucu.thumb">Tatuaje y diseño · Córdoba</span>
                 </div>
               </div>
             </div>
@@ -213,9 +213,9 @@
             <div class="work-item__device">
               <div class="work-item__device-bar" aria-hidden="true"><span></span><span></span><span></span><b>luco-gourmet-demo.vercel.app</b></div>
               <div class="work-item__device-screen">
-                <img class="work-item__shot" src="assets/work/luco.webp" alt="Sitio de Luco Gourmet en escritorio" loading="lazy" decoding="async" width="1440" height="900" />
+                <img class="work-item__shot" src="assets/work/luco.webp" alt="Sitio de Luco Gourmet en escritorio" data-i18n-attr="alt:alt.work.luco" loading="lazy" decoding="async" width="1440" height="900" />
                 <div class="thumb thumb--luco" aria-hidden="true">
-                  <span class="thumb__eyebrow">— Comedor &amp; Mercado</span>
+                  <span class="thumb__eyebrow" data-i18n="work.luco.eyebrow">— Comedor &amp; mercado</span>
                   <span class="thumb__brand">Luco<br/><em>Gourmet</em></span>
                   <span class="thumb__tag">Pasta · Pizza · Vermut</span>
                 </div>
@@ -226,7 +226,7 @@
             <h2 class="work-item__name">Luco Gourmet</h2>
             <p class="work-item__desc" data-i18n="work.luco.desc">Sitio para marca gastronómica. PWA con menú offline, Schema.org y carga sub-segundo.</p>
             <ul class="work-item__tags">
-              <li>PWA</li><li>Schema</li><li>WCAG</li><li>Mobile-first</li>
+              <li>PWA</li><li>Schema</li><li>WCAG</li><li data-i18n="work.luco.tag4">Prioridad móvil</li>
             </ul>
             <a class="work-item__link" href="case/luco" data-link data-magnetic>
               <span data-i18n="work.visit">Ver caso de estudio</span>
@@ -241,11 +241,11 @@
             <div class="work-item__device">
               <div class="work-item__device-bar" aria-hidden="true"><span></span><span></span><span></span><b>sellink-group-demo.vercel.app</b></div>
               <div class="work-item__device-screen">
-                <img class="work-item__shot" src="assets/work/sellink.webp" alt="Sitio de Sellink Group en escritorio" loading="lazy" decoding="async" width="1440" height="900" />
+                <img class="work-item__shot" src="assets/work/sellink.webp" alt="Sitio de Sellink Group en escritorio" data-i18n-attr="alt:alt.work.sellink" loading="lazy" decoding="async" width="1440" height="900" />
                 <div class="thumb thumb--sellink" aria-hidden="true">
-                  <span class="thumb__eyebrow">★ Agencia creativa</span>
+                  <span class="thumb__eyebrow" data-i18n="work.sellink.eyebrow">★ Agencia creativa</span>
                   <span class="thumb__brand thumb__brand--upper">SELLINK<br/>GROUP</span>
-                  <span class="thumb__tag">Brand · Web · Digital</span>
+                  <span class="thumb__tag" data-i18n="work.sellink.thumb">Marca · Web · Digital</span>
                 </div>
               </div>
             </div>
@@ -254,7 +254,7 @@
             <h2 class="work-item__name">Sellink Group</h2>
             <p class="work-item__desc" data-i18n="work.sellink.desc">Sitio corporativo. Estructura modular, presentación de servicios y formularios accesibles.</p>
             <ul class="work-item__tags">
-              <li>Modular</li><li>Forms</li><li>A11y</li><li>Dark</li>
+              <li>Modular</li><li>Formularios</li><li data-i18n="work.sellink.tag3">Accesibilidad</li><li data-i18n="work.sellink.tag4">Oscuro</li>
             </ul>
             <a class="work-item__link" href="case/sellink" data-link data-magnetic>
               <span data-i18n="work.visit">Ver caso de estudio</span>
@@ -269,20 +269,20 @@
             <div class="work-item__device">
               <div class="work-item__device-bar" aria-hidden="true"><span></span><span></span><span></span><b>cognition-demo-cyan.vercel.app</b></div>
               <div class="work-item__device-screen">
-                <img class="work-item__shot" src="assets/work/cognition-v2.webp" alt="Sitio de Cognition en escritorio" loading="lazy" decoding="async" width="1440" height="900" />
+                <img class="work-item__shot" src="assets/work/cognition-v2.webp" alt="Sitio de Cognition en escritorio" data-i18n-attr="alt:alt.work.cognition" loading="lazy" decoding="async" width="1440" height="900" />
                 <div class="thumb thumb--cognition" aria-hidden="true">
-                  <span class="thumb__eyebrow">— Plataforma IA</span>
+                  <span class="thumb__eyebrow" data-i18n="work.cognition.eyebrow">— Plataforma IA</span>
                   <span class="thumb__brand">Cognition<sup>●</sup></span>
-                  <span class="thumb__tag">Transformación digital · IA</span>
+                  <span class="thumb__tag" data-i18n="work.cognition.thumb">Transformación digital · IA</span>
                 </div>
               </div>
             </div>
           </div>
           <div class="work-item__info">
             <h2 class="work-item__name">Cognition</h2>
-            <p class="work-item__desc" data-i18n="work.cognition.desc">Plataforma de IA para empresas. 11 páginas, calculadora ROI, chat con intents y PWA.</p>
+            <p class="work-item__desc" data-i18n="work.cognition.desc">Plataforma de IA para empresas. 11 páginas, calculadora ROI, chat basado en intención y PWA.</p>
             <ul class="work-item__tags">
-              <li>11 pages</li><li>Canvas</li><li>SW</li><li>PWA</li>
+              <li>11 páginas</li><li>ROI</li><li>SW</li><li>PWA</li>
             </ul>
             <a class="work-item__link" href="case/cognition" data-link data-magnetic>
               <span data-i18n="work.visit">Ver caso de estudio</span>
@@ -303,7 +303,7 @@
             <div class="works__progress-bar" data-horizontal-progress></div>
           </div>
           <div class="works__hint">
-            <span data-i18n="work.hint">Scroll</span>
+            <span data-i18n="work.hint">Deslizá</span>
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="1.5"/></svg>
           </div>
         </div>
@@ -416,7 +416,7 @@
       <div class="footer__col">
         <span class="footer__label" data-i18n="footer.services">Servicios</span>
         <span data-i18n="footer.s1">Sitios full stack</span>
-        <span data-i18n="footer.s2">Landing pages</span>
+        <span data-i18n="footer.s2">Landings</span>
         <span data-i18n="footer.s3">Integraciones web</span>
         <a href="assets/Rony_Cozzi_CV.pdf" download="Rony_Cozzi_CV.pdf" type="application/pdf" data-magnetic data-i18n="footer.cv">CV (PDF) ↓</a>
       </div>
@@ -430,7 +430,7 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=20" defer></script>
+  <script src="js/main.js?v=41" defer></script>
   <a
     class="wsp-fab"
     data-wsp-fab

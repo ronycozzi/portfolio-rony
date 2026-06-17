@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Luco Gourmet — Caso de estudio · Rony Cozzi</title>
-  <meta name="description" content="Caso de estudio — Luco Gourmet. PWA para marca gastronómica con menú offline, Schema.org Restaurant y carga sub-segundo." />
+  <meta name="description" content="Caso de estudio — Luco Gourmet. PWA para marca gastronómica con menú offline, datos estructurados para restaurantes y carga sub-segundo." />
 
   <meta name="theme-color" content="#0A0A0A" />
   <meta name="color-scheme" content="dark light" />
@@ -18,7 +18,6 @@
   <meta name="msapplication-TileColor" content="#0A0A0A" />
 
   <link rel="canonical" href="https://portfolios-ronycozzi.vercel.app/case/luco" />
-  <link rel="alternate" hreflang="es" href="https://portfolios-ronycozzi.vercel.app/case/luco" />
   <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
   <link rel="icon" type="image/png" sizes="192x192" href="../assets/icons/icon-192.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/icon-180.png" />
@@ -29,7 +28,7 @@
   <meta property="og:locale" content="es_AR" />
   <meta property="og:url" content="https://portfolios-ronycozzi.vercel.app/case/luco" />
   <meta property="og:title" content="Luco Gourmet — Caso de estudio · Rony Cozzi" />
-  <meta property="og:description" content="PWA para marca gastronómica con menú offline, Schema.org Restaurant y carga sub-segundo." />
+  <meta property="og:description" content="Caso de estudio — Luco Gourmet. PWA para marca gastronómica con menú offline, datos estructurados para restaurantes y carga sub-segundo." />
   <meta property="og:image" content="https://portfolios-ronycozzi.vercel.app/assets/work/luco.webp" />
   <meta property="og:image:width" content="1440" />
   <meta property="og:image:height" content="900" />
@@ -38,7 +37,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" content="@ronycozzi" />
   <meta name="twitter:title" content="Luco Gourmet — Caso de estudio · Rony Cozzi" />
-  <meta name="twitter:description" content="PWA para marca gastronómica con menú offline, Schema.org Restaurant y carga sub-segundo." />
+  <meta name="twitter:description" content="Caso de estudio — Luco Gourmet. PWA para marca gastronómica con menú offline, datos estructurados para restaurantes y carga sub-segundo." />
   <meta name="twitter:image" content="https://portfolios-ronycozzi.vercel.app/assets/work/luco.webp" />
   <meta name="twitter:image:alt" content="Sitio de Luco Gourmet — caso de estudio" />
 
@@ -46,7 +45,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" as="style" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/styles.css?v=30" />
+  <link rel="stylesheet" href="../css/styles.css?v=34" />
   <link rel="stylesheet" href="../css/case.css?v=3" />
 
   <script type="application/ld+json">
@@ -57,13 +56,13 @@
         "@type": "CreativeWork",
         "@id": "https://portfolios-ronycozzi.vercel.app/case/luco#case",
         "name": "Luco Gourmet",
-        "description": "PWA para marca gastronómica con menú offline, Schema.org Restaurant y carga sub-segundo.",
+        "description": "PWA para marca gastronómica con menú offline, datos estructurados para restaurantes y carga sub-segundo.",
         "url": "https://luco-gourmet-demo.vercel.app/",
         "image": "https://portfolios-ronycozzi.vercel.app/assets/work/luco.webp",
         "author": { "@id": "https://portfolios-ronycozzi.vercel.app/#person" },
         "dateCreated": "2025-01-01",
-        "genre": "Web Design",
-        "keywords": "gastronomy, PWA, restaurant, progressive web app"
+        "genre": "Diseño web",
+        "keywords": "gastronomía, PWA, restaurante, aplicación web progresiva"
       },
       {
         "@type": "BreadcrumbList",
@@ -110,7 +109,7 @@
       </span>
       <span class="header__logo-text">Rony Cozzi</span>
     </a>
-    <nav class="nav" aria-label="Navegación principal">
+    <nav class="nav" aria-label="Navegación principal" data-i18n-attr="aria-label:a11y.nav">
       <a href="/" data-magnetic data-link><span data-i18n="nav.home">Inicio</span></a>
       <a href="../work" class="is-current" aria-current="page" data-magnetic data-link><span data-i18n="nav.work">Trabajos</span></a>
       <a href="../about" data-magnetic data-link><span data-i18n="nav.about">Sobre mí</span></a>
@@ -131,12 +130,12 @@
     </div>
   </header>
 
-  <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Menú móvil" data-i18n-attr="aria-label:a11y.mobileNav" data-mobile-menu>
     <a href="/" data-link><span data-i18n="nav.home">Inicio</span></a>
     <a href="../work" data-link><span data-i18n="nav.work">Trabajos</span></a>
     <a href="../about" data-link><span data-i18n="nav.about">Sobre mí</span></a>
     <a href="../contact" data-link><span data-i18n="nav.contact">Contacto</span></a>
-  </div>
+  </nav>
 
   <main class="page page--case page--case-luco" id="main">
     <section class="case-hero" style="--case-accent:#4A5D3A;--case-bg:#F5F1ED;--case-fg:#2C2420;">
@@ -149,7 +148,7 @@
         <span class="line"><span class="reveal"><em>Gourmet</em></span></span>
       </h1>
       <div class="case-hero__tags">
-        <span class="case-tag">Restaurant</span>
+        <span class="case-tag" data-i18n="case.luco.tag1">Restaurante</span>
         <span class="case-tag">PWA</span>
         <span class="case-tag">2025</span>
       </div>
@@ -166,7 +165,7 @@
           <span class="case-cover__dot"></span>
           <span class="case-cover__url">luco-gourmet-demo.vercel.app</span>
         </div>
-        <img src="../assets/work/luco.webp" alt="Homepage de Luco Gourmet — tonos cálidos, tarjetas de menú y fotografía gastronómica" loading="eager" fetchpriority="high" decoding="async" width="1440" height="900" />
+        <img src="../assets/work/luco.webp" alt="Portada de Luco Gourmet — tonos cálidos, tarjetas de menú y fotografía gastronómica" data-i18n-attr="alt:case.luco.cover_alt" loading="eager" fetchpriority="high" decoding="async" width="1440" height="900" />
       </div>
     </section>
 
@@ -176,7 +175,7 @@
           <div class="case-overview__stats">
             <div class="case-stat" data-reveal>
               <span class="case-stat__val">2025</span>
-              <span class="case-stat__label">Año</span>
+              <span class="case-stat__label" data-i18n="case.year">Año</span>
             </div>
             <div class="case-stat" data-reveal>
               <span class="case-stat__val">99</span>
@@ -188,13 +187,13 @@
             </div>
             <div class="case-stat" data-reveal>
               <span class="case-stat__val">PWA</span>
-              <span class="case-stat__label">Installable</span>
+              <span class="case-stat__label" data-i18n="case.installable">Instalable</span>
             </div>
           </div>
           <div class="case-overview__text" data-reveal>
-            <h2 id="luco-overview">El proyecto</h2>
-            <p>Luco Gourmet es un comedor y mercado en Nueva Córdoba con foco en pasta artesanal, pizza al molde y vermut de bodegón. Necesitaban un sitio que mostrara el menú, contara la propuesta gastronómica y funcionara incluso con conexiones inestables en hora pico.</p>
-            <p>La solución: una PWA instalable con menú offline, datos estructurados para Google y carga sub-segundo en 3G.</p>
+            <h2 id="luco-overview" data-i18n="case.project">El proyecto</h2>
+            <p data-i18n="case.luco.p1">Luco Gourmet es un comedor y mercado en Nueva Córdoba con foco en pasta artesanal, pizza al molde y vermut de bodegón. Necesitaban un sitio que mostrara el menú, contara la propuesta gastronómica y funcionara incluso con conexiones inestables en hora pico.</p>
+            <p data-i18n="case.luco.p2">La solución: una PWA instalable con menú offline, datos estructurados para Google y carga sub-segundo en 3G.</p>
           </div>
         </div>
       </div>
@@ -202,17 +201,17 @@
 
     <section class="case-section case-section--alt" aria-labelledby="luco-pas">
       <div class="case-section__inner">
-        <h2 id="luco-pas" class="case-section__title" data-reveal>Reto y respuesta</h2>
+        <h2 id="luco-pas" class="case-section__title" data-reveal data-i18n="case.challenge">Reto y respuesta</h2>
         <div class="case-two-col">
           <div class="case-block" data-reveal>
             <span class="case-block__num">01</span>
-            <h3>El problema</h3>
-            <p>El restaurant tenía un sitio antiguo que tardaba 6+ segundos en cargar en mobile. El menú vivía en una imagen JPG que se actualizaba cada quince días manualmente. Los clientes pedían el menú por WhatsApp porque el sitio era inviable.</p>
+            <h3 data-i18n="case.problem">El problema</h3>
+            <p data-i18n="case.luco.problem_desc">El restaurante tenía un sitio antiguo que tardaba más de 6 segundos en cargar en móvil. El menú vivía en una imagen JPG que se actualizaba cada quince días manualmente. Los clientes pedían el menú por WhatsApp porque el sitio era inviable.</p>
           </div>
           <div class="case-block" data-reveal>
             <span class="case-block__num">02</span>
-            <h3>La solución</h3>
-            <p>Reescritura completa con foco en performance y PWA. Menú dinámico desde un archivo JSON versionado, Schema.org Restaurant para rich results en Google, Service Worker con offline-first para el menú e instalación nativa en home screen.</p>
+            <h3 data-i18n="case.solution">La solución</h3>
+            <p data-i18n="case.luco.solution_desc">Reescritura completa con foco en rendimiento y PWA. Menú dinámico desde un archivo JSON versionado, datos estructurados Schema.org para restaurantes, Service Worker con estrategia offline-first para el menú e instalación nativa en la pantalla de inicio.</p>
           </div>
         </div>
       </div>
@@ -220,37 +219,37 @@
 
     <section class="case-section" aria-labelledby="luco-tech">
       <div class="case-section__inner">
-        <h2 id="luco-tech" class="case-section__title" data-reveal>Decisiones técnicas</h2>
+        <h2 id="luco-tech" class="case-section__title" data-reveal data-i18n="case.tech">Decisiones técnicas</h2>
         <div class="case-tech-grid">
           <div class="case-tech-item" data-reveal>
             <span class="case-tech-item__icon" aria-hidden="true">⬡</span>
-            <h3>PWA completa</h3>
-            <p>Service Worker con estrategia cache-first para CSS/JS e imágenes, y network-first con fallback offline para el menú JSON. <code>manifest.json</code> con iconos maskable. Install prompt custom.</p>
+            <h3 data-i18n="case.luco.tech1.title">PWA completa</h3>
+            <p data-i18n-html="case.luco.tech1.desc">Service Worker con estrategia cache-first para CSS/JS e imágenes, y network-first con fallback offline para el menú JSON. <code>manifest.json</code> con iconos maskable. Aviso de instalación personalizado.</p>
           </div>
           <div class="case-tech-item" data-reveal>
             <span class="case-tech-item__icon" aria-hidden="true">⬡</span>
-            <h3>Schema.org Restaurant</h3>
-            <p>JSON-LD con <code>Restaurant</code>, <code>OpeningHoursSpecification</code>, <code>Menu</code>, <code>GeoCoordinates</code> y <code>AggregateRating</code>. Rich results validados en Google Search Console.</p>
+            <h3 data-i18n="case.luco.tech2.title">Schema.org para restaurantes</h3>
+            <p data-i18n-html="case.luco.tech2.desc">JSON-LD con <code>Restaurant</code>, <code>OpeningHoursSpecification</code>, <code>Menu</code> y <code>GeoCoordinates</code>. Marcado validado con el Test de Resultados Enriquecidos de Google.</p>
           </div>
           <div class="case-tech-item" data-reveal>
             <span class="case-tech-item__icon" aria-hidden="true">⬡</span>
-            <h3>Performance extrema</h3>
-            <p>Critical CSS inlineado en <code>&lt;head&gt;</code>. Font preload para Inter 400/500. Imágenes en WebP con <code>width</code>/<code>height</code> explícitos. Total page weight &lt;200KB. LCP &lt;900ms en 3G lento.</p>
+            <h3 data-i18n="case.luco.tech3.title">Performance extrema</h3>
+            <p data-i18n-html="case.luco.tech3.desc">Critical CSS inlineado en <code>&lt;head&gt;</code>. Font preload para Inter 400/500. Imágenes en WebP con <code>width</code>/<code>height</code> explícitos. Total page weight &lt;200KB. LCP &lt;900ms en 3G lento.</p>
           </div>
           <div class="case-tech-item" data-reveal>
             <span class="case-tech-item__icon" aria-hidden="true">⬡</span>
-            <h3>Menú actualizable</h3>
-            <p>Menú almacenado en <code>menu.json</code> versionado. El dueño edita un archivo, hace push y Vercel redeploya en segundos. Sin CMS, sin suscripción mensual, sin interfaz que romper.</p>
+            <h3 data-i18n="case.luco.tech4.title">Menú actualizable</h3>
+            <p data-i18n-html="case.luco.tech4.desc">Menú almacenado en <code>menu.json</code> versionado. El dueño edita un archivo, hace push y Vercel redeploya en segundos. Sin CMS, sin suscripción mensual, sin interfaz que romper.</p>
           </div>
           <div class="case-tech-item" data-reveal>
             <span class="case-tech-item__icon" aria-hidden="true">⬡</span>
-            <h3>SEO local</h3>
-            <p>Titles y descriptions únicos por sección. Google Business Profile linkado. Sitemap con priority diferenciada. Core Web Vitals en verde según PageSpeed Insights (field data).</p>
+            <h3 data-i18n="case.luco.tech5.title">SEO local</h3>
+            <p data-i18n-html="case.luco.tech5.desc">Titles y descriptions únicos por sección. Sitemap con priority diferenciada. Core Web Vitals en verde medidos en Lighthouse (lab data).</p>
           </div>
           <div class="case-tech-item" data-reveal>
             <span class="case-tech-item__icon" aria-hidden="true">⬡</span>
-            <h3>Formulario de reservas</h3>
-            <p>Formulario de contacto estático con validación HTML5 + JS custom, pensado para derivar consultas por email o WhatsApp sin backend propio ni costo adicional.</p>
+            <h3 data-i18n="case.luco.tech6.title">Formulario de reservas</h3>
+            <p data-i18n-html="case.luco.tech6.desc">Formulario de contacto estático con validación HTML5 + JS custom, pensado para derivar consultas por email o WhatsApp sin backend propio ni costo adicional.</p>
           </div>
         </div>
       </div>
@@ -266,7 +265,7 @@
           <span class="case-stack__item" data-reveal>Service Worker</span>
           <span class="case-stack__item" data-reveal>PWA</span>
           <span class="case-stack__item" data-reveal>Schema.org</span>
-          <span class="case-stack__item" data-reveal>Formulario estático</span>
+          <span class="case-stack__item" data-reveal data-i18n="case.luco.stack8">Formulario estático</span>
           <span class="case-stack__item" data-reveal>WebP</span>
         </div>
       </div>
@@ -274,7 +273,7 @@
 
     <section class="case-next">
       <a href="sellink" class="case-next__link" data-link>
-        <span class="case-next__label">Siguiente proyecto</span>
+        <span class="case-next__label" data-i18n="case.next">Siguiente proyecto</span>
         <span class="case-next__name">Sellink Group <span aria-hidden="true">→</span></span>
       </a>
     </section>
@@ -318,7 +317,7 @@
     </div>
   </footer>
 
-  <script src="../js/main.js?v=20" defer></script>
+  <script src="../js/main.js?v=41" defer></script>
   <a
     class="wsp-fab"
     data-wsp-fab

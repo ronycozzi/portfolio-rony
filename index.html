@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Rony Cozzi — Full Stack Developer</title>
-  <meta name="description" content="Rony Cozzi — Full Stack Developer. Sitios web rápidos, landing pages, APIs ligeras e integraciones para marcas, estudios y startups." />
+  <title>Rony Cozzi — desarrollador full stack</title>
+  <meta name="description" content="Rony Cozzi — desarrollador full stack. Sitios web rápidos, landings, APIs ligeras e integraciones para marcas, estudios y startups." />
 
   <meta name="theme-color" content="#0A0A0A" />
   <meta name="color-scheme" content="dark light" />
@@ -19,7 +19,6 @@
   <meta name="msapplication-TileColor" content="#0A0A0A" />
 
   <link rel="canonical" href="https://portfolios-ronycozzi.vercel.app/" />
-  <link rel="alternate" hreflang="es" href="https://portfolios-ronycozzi.vercel.app/" />
 
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png" />
@@ -32,27 +31,27 @@
   <meta property="og:locale" content="es_AR" />
   <meta property="og:locale:alternate" content="en_US" />
   <meta property="og:url" content="https://portfolios-ronycozzi.vercel.app/" />
-  <meta property="og:title" content="Rony Cozzi — Full Stack Developer" />
-  <meta property="og:description" content="Sitios web rápidos, accesibles e integraciones full stack listas para producción." />
+  <meta property="og:title" content="Rony Cozzi — desarrollador full stack" />
+  <meta property="og:description" content="Rony Cozzi — desarrollador full stack. Sitios web rápidos, landings, APIs ligeras e integraciones para marcas, estudios y startups." />
   <meta property="og:image" content="https://portfolios-ronycozzi.vercel.app/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Rony Cozzi — Full Stack Developer" />
+  <meta property="og:image:alt" content="Rony Cozzi — desarrollador full stack" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" content="@ronycozzi" />
-  <meta name="twitter:title" content="Rony Cozzi — Full Stack Developer" />
-  <meta name="twitter:description" content="Sitios web rápidos, accesibles e integraciones full stack listas para producción." />
+  <meta name="twitter:title" content="Rony Cozzi — desarrollador full stack" />
+  <meta name="twitter:description" content="Rony Cozzi — desarrollador full stack. Sitios web rápidos, landings, APIs ligeras e integraciones para marcas, estudios y startups." />
   <meta name="twitter:image" content="https://portfolios-ronycozzi.vercel.app/og-image.png" />
-  <meta name="twitter:image:alt" content="Rony Cozzi — Full Stack Developer" />
+  <meta name="twitter:image:alt" content="Rony Cozzi — desarrollador full stack" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" as="style" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
   <link rel="preload" as="image" href="assets/work/cognition-v2.webp" fetchpriority="high" />
-  <link rel="stylesheet" href="css/styles.css?v=30" />
+  <link rel="stylesheet" href="css/styles.css?v=34" />
   <link rel="prefetch" href="work" />
   <link rel="prefetch" href="contact" />
 
@@ -136,7 +135,7 @@
       <span class="header__logo-text">Rony Cozzi</span>
     </a>
 
-    <nav class="nav" aria-label="Navegación principal">
+    <nav class="nav" aria-label="Navegación principal" data-i18n-attr="aria-label:a11y.nav">
       <a href="/" data-magnetic data-link><span data-i18n="nav.home">Inicio</span></a>
       <a href="work" data-magnetic data-link><span data-i18n="nav.work">Trabajos</span></a>
       <a href="about" data-magnetic data-link><span data-i18n="nav.about">Sobre mí</span></a>
@@ -158,12 +157,12 @@
     </div>
   </header>
 
-  <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Menú móvil" data-i18n-attr="aria-label:a11y.mobileNav" data-mobile-menu>
     <a href="/" data-link><span data-i18n="nav.home">Inicio</span></a>
     <a href="work" data-link><span data-i18n="nav.work">Trabajos</span></a>
     <a href="about" data-link><span data-i18n="nav.about">Sobre mí</span></a>
     <a href="contact" data-link><span data-i18n="nav.contact">Contacto</span></a>
-  </div>
+  </nav>
 
   <main class="page page--home" id="main">
     <!-- HERO -->
@@ -175,13 +174,12 @@
       </div>
       <div class="hero__top">
         <span class="tag"><span class="tag__dot"></span><span data-i18n="hero.tag">Disponible · 2026</span></span>
-        <span class="loc-pin"><span class="loc-pin__dot"></span><span>Argentina</span></span>
         <span class="tag tag--ghost" data-clock>--:--:-- GMT-3</span>
       </div>
 
       <div class="hero__main">
         <div class="hero__lede">
-          <span class="hero__role" data-i18n="hero.role">Rony Cozzi — Full Stack Developer</span>
+          <span class="hero__role" data-i18n="hero.role">Rony Cozzi — desarrollador full stack</span>
           <h1 class="hero__title">
             <span class="line"><span class="reveal" data-i18n="hero.title1">Función.</span></span>
             <span class="line"><span class="reveal"><em data-i18n="hero.title2">Forma.</em></span></span>
@@ -206,7 +204,7 @@
         <div class="hero__side">
           <div class="hero__media" aria-hidden="true">
             <div class="hero__browser hero__browser--main">
-              <span class="hero__browser-bar"><i></i><i></i><i></i><b>live-preview</b></span>
+              <span class="hero__browser-bar"><i></i><i></i><i></i><b data-i18n="hero.browser_bar">vista-en-vivo</b></span>
               <img src="assets/work/cognition-v2.webp" alt="" loading="eager" fetchpriority="high" decoding="async" width="1440" height="900" />
             </div>
             <div class="hero__browser hero__browser--float hero__browser--cucu">
@@ -216,16 +214,16 @@
               <img src="assets/work/luco-thumb.webp" alt="" loading="eager" decoding="async" width="600" height="375" />
             </div>
             <div class="hero__code">
-              <span>performance: 96</span>
-              <span>seo: indexed</span>
-              <span>motion: reduced-safe</span>
+              <span data-i18n="hero.metric.performance">performance: 96</span>
+              <span data-i18n="hero.metric.seo">seo: indexado</span>
+              <span data-i18n="hero.metric.motion">motion: seguro</span>
             </div>
           </div>
 
           <aside class="hero__facts" aria-label="Datos rápidos" data-i18n-attr="aria-label:hero.facts.quick">
             <div class="hero__fact">
               <span class="hero__fact-label" data-i18n="hero.fact.services">Servicios</span>
-              <strong data-i18n="hero.fact.services_val">Sitios · APIs · Landing pages</strong>
+              <strong data-i18n="hero.fact.services_val">Sitios · APIs · Landings</strong>
             </div>
             <div class="hero__fact">
               <span class="hero__fact-label" data-i18n="hero.fact.response">Respuesta</span>
@@ -289,70 +287,70 @@
       </div>
 
       <div class="featured__deck" data-parallax-deck>
-        <a class="card card--cucu" data-tilt data-magnetic href="https://cucu-studio-demo.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Abrir demo de Cucú Studio" data-i18n-attr="aria-label:a11y.demo" style="--card-bg:#FAFAF7;--card-fg:#1A1A1A;--card-accent:var(--color-cucu);">
+        <a class="card card--cucu" data-tilt data-magnetic href="https://cucu-studio-demo.vercel.app/" target="_blank" rel="noopener noreferrer" data-demo-name="Cucú Studio" aria-label="Abrir demo: Cucú Studio" style="--card-bg:#FAFAF7;--card-fg:#1A1A1A;--card-accent:var(--color-cucu);">
           <div class="card__head">
             <span class="card__index">001</span>
             <span class="card__year">2025</span>
           </div>
           <div class="card__preview">
-            <img class="card__shot" src="assets/work/cucu.webp" alt="Sitio de Cucú Studio — layout editorial sobre fondo claro con acento copper" loading="lazy" decoding="async" width="1440" height="900" />
+                <img class="card__shot" src="assets/work/cucu.webp" alt="Sitio de Cucú Studio — layout editorial sobre fondo claro con acento cobre" data-i18n-attr="alt:alt.home.cucu" loading="lazy" decoding="async" width="1440" height="900" />
             <span class="card__brand"><em>Cucú</em> Studio<span class="card__dot"></span></span>
-            <span class="card__sub">Creative studio · Tattoo &amp; Design</span>
+            <span class="card__sub" data-i18n="card.cucu.sub">Estudio creativo · Tatuaje y diseño</span>
           </div>
           <div class="card__foot">
-            <span class="card__type">Estudio creativo</span>
+            <span class="card__type" data-i18n="card.cucu.type">Estudio creativo</span>
             <span class="card__visit" aria-hidden="true" data-i18n="card.visit">Visitar ↗</span>
           </div>
         </a>
 
-        <a class="card card--luco" data-tilt data-magnetic href="https://luco-gourmet-demo.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Abrir demo de Luco Gourmet" data-i18n-attr="aria-label:a11y.demo" style="--card-bg:#F5F1ED;--card-fg:#2C2420;--card-accent:var(--color-luco);">
+        <a class="card card--luco" data-tilt data-magnetic href="https://luco-gourmet-demo.vercel.app/" target="_blank" rel="noopener noreferrer" data-demo-name="Luco Gourmet" aria-label="Abrir demo: Luco Gourmet" style="--card-bg:#F5F1ED;--card-fg:#2C2420;--card-accent:var(--color-luco);">
           <div class="card__head">
             <span class="card__index">002</span>
             <span class="card__year">2025</span>
           </div>
           <div class="card__preview">
-            <img class="card__shot" src="assets/work/luco.webp" alt="Sitio de Luco Gourmet — paleta cálida con tarjetas de menú" loading="lazy" decoding="async" width="1440" height="900" />
+                <img class="card__shot" src="assets/work/luco.webp" alt="Sitio de Luco Gourmet — paleta cálida con tarjetas de menú" data-i18n-attr="alt:alt.home.luco" loading="lazy" decoding="async" width="1440" height="900" />
             <span class="card__brand">Luco <em>Gourmet</em></span>
-            <span class="card__sub">Comedor &amp; Mercado · Nueva Córdoba</span>
+            <span class="card__sub" data-i18n="card.luco.sub">Comedor &amp; mercado · Nueva Córdoba</span>
             <span class="card__shape card__shape--leaf"></span>
           </div>
           <div class="card__foot">
-            <span class="card__type">Gastronomía</span>
+            <span class="card__type" data-i18n="card.luco.type">Gastronomía</span>
             <span class="card__visit" aria-hidden="true" data-i18n="card.visit">Visitar ↗</span>
           </div>
         </a>
 
-        <a class="card card--sellink" data-tilt data-magnetic href="https://sellink-group-demo.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Abrir demo de Sellink Group" data-i18n-attr="aria-label:a11y.demo" style="--card-bg:#070707;--card-fg:#EDEDED;--card-accent:var(--color-sellink);">
+        <a class="card card--sellink" data-tilt data-magnetic href="https://sellink-group-demo.vercel.app/" target="_blank" rel="noopener noreferrer" data-demo-name="Sellink Group" aria-label="Abrir demo: Sellink Group" style="--card-bg:#070707;--card-fg:#EDEDED;--card-accent:var(--color-sellink);">
           <div class="card__head">
             <span class="card__index">003</span>
             <span class="card__year">2026</span>
           </div>
           <div class="card__preview">
-            <img class="card__shot" src="assets/work/sellink.webp" alt="Sitio de Sellink Group — fondo oscuro con acento rojo audaz" loading="lazy" decoding="async" width="1440" height="900" />
+                <img class="card__shot" src="assets/work/sellink.webp" alt="Sitio de Sellink Group — fondo oscuro con acento rojo audaz" data-i18n-attr="alt:alt.home.sellink" loading="lazy" decoding="async" width="1440" height="900" />
             <span class="card__brand card__brand--upper">SELLINK<br/>GROUP</span>
-            <span class="card__sub">★ Agencia creativa ★</span>
+            <span class="card__sub" data-i18n="card.sellink.sub">★ Agencia creativa ★</span>
             <span class="card__shape card__shape--block"></span>
           </div>
           <div class="card__foot">
-            <span class="card__type">Agency · Corporate</span>
+            <span class="card__type" data-i18n="card.sellink.type">Agencia · Corporativo</span>
             <span class="card__visit" aria-hidden="true" data-i18n="card.visit">Visitar ↗</span>
           </div>
         </a>
 
-        <a class="card card--cognition" data-tilt data-magnetic href="https://cognition-demo-cyan.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Abrir demo de Cognition" data-i18n-attr="aria-label:a11y.demo" style="--card-bg:#0B0D10;--card-fg:#F2F1ED;--card-accent:var(--color-cognition);">
+        <a class="card card--cognition" data-tilt data-magnetic href="https://cognition-demo-cyan.vercel.app/" target="_blank" rel="noopener noreferrer" data-demo-name="Cognition" aria-label="Abrir demo: Cognition" style="--card-bg:#0B0D10;--card-fg:#F2F1ED;--card-accent:var(--color-cognition);">
           <div class="card__head">
             <span class="card__index">004</span>
             <span class="card__year">2026</span>
           </div>
           <div class="card__preview">
-            <img class="card__shot" src="assets/work/cognition-v2.webp" alt="Sitio de Cognition — hero con interfaz tipo terminal y acento cyan" loading="lazy" decoding="async" width="1440" height="900" />
+                <img class="card__shot" src="assets/work/cognition-v2.webp" alt="Sitio de Cognition — hero con interfaz tipo terminal y acento cian" data-i18n-attr="alt:alt.home.cognition" loading="lazy" decoding="async" width="1440" height="900" />
             <span class="card__brand">Cognition<sup>●</sup></span>
-            <span class="card__sub">Transformación digital · IA aplicada</span>
+            <span class="card__sub" data-i18n="card.cognition.sub">Transformación digital · IA aplicada</span>
             <span class="card__shape card__shape--node"></span>
             <span class="card__shape card__shape--node-2"></span>
           </div>
           <div class="card__foot">
-            <span class="card__type">AI · Platform</span>
+            <span class="card__type" data-i18n="card.cognition.type">IA · Plataforma</span>
             <span class="card__visit" aria-hidden="true" data-i18n="card.visit">Visitar ↗</span>
           </div>
         </a>
@@ -388,18 +386,18 @@
         </div>
       </div>
       <div class="signal__rail" aria-hidden="true">
-        <span>brief claro</span>
-        <span>prototipo rápido</span>
-        <span>copy útil</span>
-        <span>UI con carácter</span>
-        <span>performance medida</span>
-        <span>deploy limpio</span>
-        <span>brief claro</span>
-        <span>prototipo rápido</span>
-        <span>copy útil</span>
-        <span>UI con carácter</span>
-        <span>performance medida</span>
-        <span>deploy limpio</span>
+        <span data-i18n="signal.rail.1">brief claro</span>
+        <span data-i18n="signal.rail.2">prototipo rápido</span>
+        <span data-i18n="signal.rail.3">copy útil</span>
+        <span data-i18n="signal.rail.4">UI con carácter</span>
+        <span data-i18n="signal.rail.5">performance medida</span>
+        <span data-i18n="signal.rail.6">deploy limpio</span>
+        <span data-i18n="signal.rail.1">brief claro</span>
+        <span data-i18n="signal.rail.2">prototipo rápido</span>
+        <span data-i18n="signal.rail.3">copy útil</span>
+        <span data-i18n="signal.rail.4">UI con carácter</span>
+        <span data-i18n="signal.rail.5">performance medida</span>
+        <span data-i18n="signal.rail.6">deploy limpio</span>
       </div>
       <div class="signal__grid">
         <article class="signal-card signal-card--one" data-reveal>
@@ -451,7 +449,7 @@
         <article class="service" data-reveal>
           <div class="service__row">
             <span class="service__num">02</span>
-            <h3 class="service__name" data-i18n="services.s2.title">Landing page</h3>
+            <h3 class="service__name" data-i18n="services.s2.title">Landing</h3>
             <span class="service__tag" data-i18n="services.s2.tag">Página única</span>
           </div>
           <p class="service__desc" data-i18n="services.s2.desc">
@@ -472,7 +470,7 @@
             <span class="service__tag" data-i18n="services.s3.tag">Full stack</span>
           </div>
           <p class="service__desc" data-i18n="services.s3.desc">
-            Conecto tu web con formularios, APIs, bases de datos simples, dashboards internos o automatizaciones. Ideal cuando necesitás algo más que una página estática, sin construir una plataforma gigante.
+            Conecto tu web con formularios, APIs, bases de datos simples, paneles internos o automatizaciones. Ideal cuando necesitás algo más que una página estática, sin construir una plataforma gigante.
           </p>
           <ul class="service__includes">
             <li data-i18n="services.s3.i1">Node.js, APIs REST y serverless functions</li>
@@ -554,7 +552,7 @@
       <div class="footer__col">
         <span class="footer__label" data-i18n="footer.services">Servicios</span>
         <span data-i18n="footer.s1">Sitios full stack</span>
-        <span data-i18n="footer.s2">Landing pages</span>
+        <span data-i18n="footer.s2">Landings</span>
         <span data-i18n="footer.s3">Integraciones web</span>
         <a href="assets/Rony_Cozzi_CV.pdf" download="Rony_Cozzi_CV.pdf" type="application/pdf" data-magnetic data-i18n="footer.cv">CV (PDF) ↓</a>
       </div>
@@ -569,7 +567,7 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=20" defer></script>
+  <script src="js/main.js?v=41" defer></script>
   <a
     class="wsp-fab"
     data-wsp-fab

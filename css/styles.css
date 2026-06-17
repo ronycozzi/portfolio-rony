@@ -19,6 +19,21 @@ ul, ol { list-style: none; }
 input, textarea, select { font: inherit; color: inherit; }
 ::selection { background: var(--accent); color: var(--bg); }
 
+/* ---------- Scrollbar ---------- */
+html { scrollbar-width: thin; scrollbar-color: var(--line-strong) transparent; }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--line-strong); border-radius: 8px; border: 2px solid var(--bg); }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+/* ---------- Smooth theme switch (one-shot, only while toggling) ---------- */
+html.theme-anim, html.theme-anim * {
+  transition: background-color 200ms var(--ease), color 200ms var(--ease), border-color 200ms var(--ease) !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  html.theme-anim, html.theme-anim * { transition: none !important; }
+}
+
 /* ---------- Tokens ---------- */
 :root {
   /* Dark by default */
@@ -333,6 +348,14 @@ body {
 .lang-toggle span { opacity: 0.4; transition: opacity var(--t-fast) var(--ease); }
 .lang-toggle .is-active { opacity: 1; }
 .lang-sep { opacity: 0.4; }
+
+/* Pages that remain Spanish-only keep the language control hidden
+   to avoid a visible flash before JS removes it. */
+body[data-page="privacy"] .lang-toggle,
+body[data-page="terms"] .lang-toggle,
+body[data-page="404"] .lang-toggle {
+  display: none;
+}
 
 .theme-toggle {
   width: 38px; height: 22px;

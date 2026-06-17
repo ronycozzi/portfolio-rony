@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Proceso — Rony Cozzi</title>
-  <meta name="description" content="Cómo trabajo — proceso full stack de Rony Cozzi: briefing, arquitectura, diseño, frontend, integraciones, QA y deploy." />
+  <meta name="description" content="Cómo trabajo — proceso full stack de Rony Cozzi: descubrimiento, arquitectura, diseño, frontend, integraciones, QA y puesta en producción." />
 
   <meta name="theme-color" content="#0A0A0A" />
   <meta name="color-scheme" content="dark light" />
@@ -18,7 +18,6 @@
   <meta name="msapplication-TileColor" content="#0A0A0A" />
 
   <link rel="canonical" href="https://portfolios-ronycozzi.vercel.app/process" />
-  <link rel="alternate" hreflang="es" href="https://portfolios-ronycozzi.vercel.app/process" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/icon-180.png" />
@@ -29,7 +28,7 @@
   <meta property="og:locale" content="es_AR" />
   <meta property="og:url" content="https://portfolios-ronycozzi.vercel.app/process" />
   <meta property="og:title" content="Proceso — Rony Cozzi" />
-  <meta property="og:description" content="Mi proceso de trabajo: discovery, arquitectura, diseño, desarrollo full stack y entrega. Transparencia total en cada proyecto." />
+  <meta property="og:description" content="Cómo trabajo — proceso full stack de Rony Cozzi: descubrimiento, arquitectura, diseño, frontend, integraciones, QA y puesta en producción." />
   <meta property="og:image" content="https://portfolios-ronycozzi.vercel.app/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -38,7 +37,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" content="@ronycozzi" />
   <meta name="twitter:title" content="Proceso — Rony Cozzi" />
-  <meta name="twitter:description" content="Mi proceso de trabajo: discovery, arquitectura, diseño, desarrollo full stack y entrega. Transparencia total en cada proyecto." />
+  <meta name="twitter:description" content="Cómo trabajo — proceso full stack de Rony Cozzi: descubrimiento, arquitectura, diseño, frontend, integraciones, QA y puesta en producción." />
   <meta name="twitter:image" content="https://portfolios-ronycozzi.vercel.app/og-image.png" />
   <meta name="twitter:image:alt" content="Proceso — Rony Cozzi" />
 
@@ -46,7 +45,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" as="style" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=30" />
+  <link rel="stylesheet" href="css/styles.css?v=34" />
 
   <script type="application/ld+json">
   {
@@ -55,7 +54,7 @@
     "@id": "https://portfolios-ronycozzi.vercel.app/process",
     "name": "Proceso — Rony Cozzi",
     "url": "https://portfolios-ronycozzi.vercel.app/process",
-    "description": "Proceso full stack de Rony Cozzi — briefing, arquitectura, diseño, desarrollo, integraciones y entrega.",
+    "description": "Proceso full stack de Rony Cozzi — descubrimiento, arquitectura, diseño, desarrollo, integraciones y entrega.",
     "inLanguage": "es-AR",
     "isPartOf": { "@id": "https://portfolios-ronycozzi.vercel.app/#website" },
     "author": { "@id": "https://portfolios-ronycozzi.vercel.app/#person" }
@@ -95,7 +94,7 @@
       </span>
       <span class="header__logo-text">Rony Cozzi</span>
     </a>
-    <nav class="nav" aria-label="Navegación principal">
+    <nav class="nav" aria-label="Navegación principal" data-i18n-attr="aria-label:a11y.nav">
       <a href="/" data-magnetic data-link><span data-i18n="nav.home">Inicio</span></a>
       <a href="work" data-magnetic data-link><span data-i18n="nav.work">Trabajos</span></a>
       <a href="about" data-magnetic data-link><span data-i18n="nav.about">Sobre mí</span></a>
@@ -116,22 +115,22 @@
     </div>
   </header>
 
-  <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Menú móvil" data-i18n-attr="aria-label:a11y.mobileNav" data-mobile-menu>
     <a href="/" data-link><span data-i18n="nav.home">Inicio</span></a>
     <a href="work" data-link><span data-i18n="nav.work">Trabajos</span></a>
     <a href="about" data-link><span data-i18n="nav.about">Sobre mí</span></a>
     <a href="contact" data-link><span data-i18n="nav.contact">Contacto</span></a>
-  </div>
+  </nav>
 
   <main class="page page--process" id="main">
     <section class="proc-hero">
-      <span class="proc-hero__eyebrow">[ Proceso de trabajo ]</span>
+      <span class="proc-hero__eyebrow" data-i18n="process.eyebrow">[ Proceso de trabajo ]</span>
       <h1 class="proc-hero__title">
-        <span class="line"><span class="reveal">Cómo</span></span>
-        <span class="line"><span class="reveal"><em>trabajo.</em></span></span>
+        <span class="line"><span class="reveal" data-i18n="process.title1">Cómo</span></span>
+        <span class="line"><span class="reveal"><em data-i18n="process.title2">trabajo.</em></span></span>
       </h1>
-      <p class="proc-hero__lead" data-reveal>
-        De la primera llamada al deploy en producción. Sin sorpresas, sin scope creep, sin "terminó pero no funciona".
+      <p class="proc-hero__lead" data-reveal data-i18n="process.lead">
+        De la primera llamada a la puesta en producción. Sin sorpresas, sin deriva de alcance, sin "terminó pero no funciona".
       </p>
     </section>
 
@@ -140,16 +139,16 @@
         <span class="proc-step__num">01</span>
         <div class="proc-step__content">
           <div class="proc-step__header">
-            <h2 class="proc-step__title">Briefing &amp; scope</h2>
-            <span class="proc-step__duration">1–2 días</span>
+            <h2 class="proc-step__title" data-i18n="process.step1.title">Briefing y alcance</h2>
+            <span class="proc-step__duration" data-i18n="process.step1.duration">1–2 días</span>
           </div>
-          <p class="proc-step__desc">
-            Una llamada de 30–60 minutos para entender qué necesitás, quién es tu audiencia y qué querés lograr con el sitio. Tomo notas, hago preguntas incómodas y al final del proceso tenés un documento con el scope definido: qué incluye el proyecto, qué no incluye y cuánto cuesta.
+          <p class="proc-step__desc" data-i18n="process.step1.desc">
+            Una llamada de 30–60 minutos para entender qué necesitás, quién es tu audiencia y qué querés lograr con el sitio. Tomo notas, hago preguntas incómodas y al final del proceso tenés un documento con el alcance definido: qué incluye el proyecto, qué no incluye y cuánto cuesta.
           </p>
           <div class="proc-step__deliverables">
-            <span class="proc-step__del">Documento de scope</span>
-            <span class="proc-step__del">Presupuesto cerrado</span>
-            <span class="proc-step__del">Timeline acordado</span>
+            <span class="proc-step__del" data-i18n="process.step1.del1">Documento de alcance</span>
+            <span class="proc-step__del" data-i18n="process.step1.del2">Presupuesto cerrado</span>
+            <span class="proc-step__del" data-i18n="process.step1.del3">Cronograma acordado</span>
           </div>
         </div>
       </div>
@@ -158,16 +157,16 @@
         <span class="proc-step__num">02</span>
         <div class="proc-step__content">
           <div class="proc-step__header">
-            <h2 class="proc-step__title">Wireframe &amp; arquitectura</h2>
-            <span class="proc-step__duration">2–4 días</span>
+            <h2 class="proc-step__title" data-i18n="process.step2.title">Arquitectura y wireframes</h2>
+            <span class="proc-step__duration" data-i18n="process.step2.duration">2–4 días</span>
           </div>
-          <p class="proc-step__desc">
+          <p class="proc-step__desc" data-i18n="process.step2.desc">
             Defino la arquitectura de información, el flujo de páginas y los wireframes de baja fidelidad. Te muestro la estructura antes de tocar diseño visual para validar que tenemos la información correcta en el lugar correcto.
           </p>
           <div class="proc-step__deliverables">
-            <span class="proc-step__del">Sitemap</span>
-            <span class="proc-step__del">Wireframes low-fi</span>
-            <span class="proc-step__del">User flows</span>
+            <span class="proc-step__del" data-i18n="process.step2.del1">Sitemap</span>
+            <span class="proc-step__del" data-i18n="process.step2.del2">Wireframes de baja fidelidad</span>
+            <span class="proc-step__del" data-i18n="process.step2.del3">Flujos de usuario</span>
           </div>
         </div>
       </div>
@@ -176,16 +175,16 @@
         <span class="proc-step__num">03</span>
         <div class="proc-step__content">
           <div class="proc-step__header">
-            <h2 class="proc-step__title">Diseño</h2>
-            <span class="proc-step__duration">3–7 días</span>
+            <h2 class="proc-step__title" data-i18n="process.step3.title">Diseño</h2>
+            <span class="proc-step__duration" data-i18n="process.step3.duration">3–7 días</span>
           </div>
-          <p class="proc-step__desc">
+          <p class="proc-step__desc" data-i18n="process.step3.desc">
             Diseño visual de las pantallas principales en Figma. Sistema de tokens, tipografía, espaciado, color. Iteración hasta que el look refleje la marca y resuelva el contenido.
           </p>
           <div class="proc-step__deliverables">
-            <span class="proc-step__del">Diseño final en Figma</span>
-            <span class="proc-step__del">Design tokens</span>
-            <span class="proc-step__del">1 ronda de revisión</span>
+            <span class="proc-step__del" data-i18n="process.step3.del1">Diseño final en Figma</span>
+            <span class="proc-step__del" data-i18n="process.step3.del2">Tokens de diseño</span>
+            <span class="proc-step__del" data-i18n="process.step3.del3">1 ronda de revisión</span>
           </div>
         </div>
       </div>
@@ -194,16 +193,16 @@
         <span class="proc-step__num">04</span>
         <div class="proc-step__content">
           <div class="proc-step__header">
-            <h2 class="proc-step__title">Desarrollo</h2>
-            <span class="proc-step__duration">5–14 días</span>
+            <h2 class="proc-step__title" data-i18n="process.step4.title">Desarrollo</h2>
+            <span class="proc-step__duration" data-i18n="process.step4.duration">5–14 días</span>
           </div>
-          <p class="proc-step__desc">
-            Construcción del sitio con HTML, CSS y JavaScript modernos. Foco en performance, accesibilidad y SEO técnico desde el primer commit. Branch previews en Vercel para que veas el progreso.
+          <p class="proc-step__desc" data-i18n="process.step4.desc">
+            Construcción del sitio con HTML, CSS y JavaScript modernos. Foco en performance, accesibilidad y SEO técnico desde el primer commit. Vistas previas por rama en Vercel para que veas el progreso.
           </p>
           <div class="proc-step__deliverables">
-            <span class="proc-step__del">Repo en GitHub</span>
-            <span class="proc-step__del">Preview en Vercel</span>
-            <span class="proc-step__del">APIs / integraciones si hacen falta</span>
+            <span class="proc-step__del" data-i18n="process.step4.del1">Repo en GitHub</span>
+            <span class="proc-step__del" data-i18n="process.step4.del2">Preview en Vercel</span>
+            <span class="proc-step__del" data-i18n="process.step4.del3">APIs / integraciones si hacen falta</span>
           </div>
         </div>
       </div>
@@ -212,16 +211,16 @@
         <span class="proc-step__num">05</span>
         <div class="proc-step__content">
           <div class="proc-step__header">
-            <h2 class="proc-step__title">QA &amp; revisión</h2>
-            <span class="proc-step__duration">1–2 días</span>
+            <h2 class="proc-step__title" data-i18n="process.step5.title">QA y revisión</h2>
+            <span class="proc-step__duration" data-i18n="process.step5.duration">1–2 días</span>
           </div>
-          <p class="proc-step__desc">
-            Antes de llamarlo "listo" pasa por un checklist de más de 60 puntos: Lighthouse, navegación por teclado, mobile real (iOS Safari + Android Chrome), formularios, links rotos, integraciones, estados de error y print stylesheet. Comparto el reporte con los scores reales.
+          <p class="proc-step__desc" data-i18n="process.step5.desc">
+            Antes de llamarlo "listo" pasa por una lista de control de más de 60 puntos: Lighthouse, navegación por teclado, móviles reales (iOS Safari + Android Chrome), formularios, links rotos, integraciones, estados de error y hoja de estilos de impresión. Comparto el reporte con los puntajes reales.
           </p>
           <div class="proc-step__deliverables">
-            <span class="proc-step__del">Reporte QA</span>
-            <span class="proc-step__del">Lighthouse audit</span>
-            <span class="proc-step__del">Ajustes finales</span>
+            <span class="proc-step__del" data-i18n="process.step5.del1">Reporte QA</span>
+            <span class="proc-step__del" data-i18n="process.step5.del2">Auditoría Lighthouse</span>
+            <span class="proc-step__del" data-i18n="process.step5.del3">Ajustes finales</span>
           </div>
         </div>
       </div>
@@ -230,28 +229,28 @@
         <span class="proc-step__num">06</span>
         <div class="proc-step__content">
           <div class="proc-step__header">
-            <h2 class="proc-step__title">Deploy &amp; handover</h2>
-            <span class="proc-step__duration">1 día</span>
+            <h2 class="proc-step__title" data-i18n="process.step6.title">Deploy y entrega</h2>
+            <span class="proc-step__duration" data-i18n="process.step6.duration">1 día</span>
           </div>
-          <p class="proc-step__desc">
-            Deploy en producción con tu dominio, DNS configurado y HTTPS activo. Te entrego: acceso al repo en GitHub, acceso al proyecto de deploy, el PDF de documentación técnica y una grabación de Loom explicando cómo actualizar contenido básico por tu cuenta. Soporte de 30 días incluido.
+          <p class="proc-step__desc" data-i18n="process.step6.desc">
+            Puesta en producción con tu dominio, DNS configurado y HTTPS activo. Te entrego: acceso al repo en GitHub, acceso al proyecto desplegado, el PDF de documentación técnica y una grabación de Loom explicando cómo actualizar contenido básico por tu cuenta. Soporte de 30 días incluido.
           </p>
           <div class="proc-step__deliverables">
-            <span class="proc-step__del">Dominio configurado + SSL</span>
-            <span class="proc-step__del">Accesos a todos los servicios</span>
-            <span class="proc-step__del">Documentación técnica</span>
-            <span class="proc-step__del">30 días de soporte</span>
+            <span class="proc-step__del" data-i18n="process.step6.del1">Dominio configurado + SSL</span>
+            <span class="proc-step__del" data-i18n="process.step6.del2">Accesos a todos los servicios</span>
+            <span class="proc-step__del" data-i18n="process.step6.del3">Documentación técnica</span>
+            <span class="proc-step__del" data-i18n="process.step6.del4">30 días de soporte</span>
           </div>
         </div>
       </div>
 
       <div class="proc-cta" data-reveal>
         <div class="proc-cta__text">
-          <p class="proc-cta__title">¿Empezamos?</p>
-          <p class="proc-cta__copy">Contame en qué estás trabajando. Sin compromiso — el briefing es gratis.</p>
+          <p class="proc-cta__title" data-i18n="process.cta.title">¿Empezamos?</p>
+          <p class="proc-cta__copy" data-i18n="process.cta.copy">Contame en qué estás trabajando. Sin compromiso — la primera llamada es gratis.</p>
         </div>
         <a href="contact" class="proc-cta__btn" data-magnetic data-link>
-          Escribime <span aria-hidden="true">→</span>
+          <span data-i18n="process.cta.link">Escribime</span> <span aria-hidden="true">→</span>
         </a>
       </div>
     </div>
@@ -286,7 +285,7 @@
       <div class="footer__col">
         <span class="footer__label" data-i18n="footer.services">Servicios</span>
         <span data-i18n="footer.s1">Sitios full stack</span>
-        <span data-i18n="footer.s2">Landing pages</span>
+        <span data-i18n="footer.s2">Landings</span>
         <span data-i18n="footer.s3">Integraciones web</span>
         <a href="assets/Rony_Cozzi_CV.pdf" download="Rony_Cozzi_CV.pdf" type="application/pdf" data-magnetic data-i18n="footer.cv">CV (PDF) ↓</a>
       </div>
@@ -300,7 +299,7 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=20" defer></script>
+  <script src="js/main.js?v=41" defer></script>
   <a
     class="wsp-fab"
     data-wsp-fab

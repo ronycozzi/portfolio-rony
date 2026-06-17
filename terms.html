@@ -45,7 +45,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" as="style" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=30" />
+  <link rel="stylesheet" href="css/styles.css?v=34" />
 
   <script type="application/ld+json">
   {
@@ -96,7 +96,7 @@
       </span>
       <span class="header__logo-text">Rony Cozzi</span>
     </a>
-    <nav class="nav" aria-label="Navegación principal">
+    <nav class="nav" aria-label="Navegación principal" data-i18n-attr="aria-label:a11y.nav">
       <a href="/" data-magnetic data-link><span data-i18n="nav.home">Inicio</span></a>
       <a href="work" data-magnetic data-link><span data-i18n="nav.work">Trabajos</span></a>
       <a href="about" data-magnetic data-link><span data-i18n="nav.about">Sobre mí</span></a>
@@ -117,12 +117,12 @@
     </div>
   </header>
 
-  <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Menú móvil" data-i18n-attr="aria-label:a11y.mobileNav" data-mobile-menu>
     <a href="/" data-link><span data-i18n="nav.home">Inicio</span></a>
     <a href="work" data-link><span data-i18n="nav.work">Trabajos</span></a>
     <a href="about" data-link><span data-i18n="nav.about">Sobre mí</span></a>
     <a href="contact" data-link><span data-i18n="nav.contact">Contacto</span></a>
-  </div>
+  </nav>
 
   <main class="page page--terms" id="main">
     <div class="legal-hero">
@@ -138,7 +138,7 @@
       <p>Este sitio es el portfolio personal y profesional de Rony Cozzi, desarrollador web freelance. Tiene como objetivo presentar trabajos, servicios y facilitar el contacto con potenciales clientes y empleadores.</p>
 
       <h2>2. Proyectos mostrados</h2>
-      <p>Los proyectos presentados en este sitio (Cucú Studio, Luco Gourmet, Sellink Group, Cognition) son proyectos de desarrollo web construidos por Rony Cozzi. Algunos de estos proyectos son demos o proyectos personales — no implican necesariamente una relación comercial contractual vigente con las marcas mencionadas. Los sitios live están en producción y son funcionales.</p>
+      <p>Los proyectos presentados en este sitio (Cucú Studio, Luco Gourmet, Sellink Group, Cognition) son proyectos de desarrollo web construidos por Rony Cozzi. Algunos de estos proyectos son demos o proyectos personales — no implican necesariamente una relación comercial contractual vigente con las marcas mencionadas. Los sitios están en producción y son funcionales.</p>
 
       <h2>3. Propiedad intelectual</h2>
       <p>El código fuente de este portfolio está disponible públicamente en <a href="https://github.com/ronycozzi/portfolio-rony" target="_blank" rel="noopener noreferrer">GitHub</a> bajo licencia MIT. Podés ver el código, usarlo como referencia e inspirarte en él, pero no replicarlo en su totalidad como portfolio propio.</p>
@@ -148,7 +148,7 @@
       <p>El sitio se ofrece "tal cual". No me hago responsable por daños indirectos o pérdidas derivadas del uso del sitio o de los enlaces externos.</p>
 
       <h2>5. Servicios freelance</h2>
-      <p>Los servicios descritos en este sitio (desarrollo web, landing pages) se prestan bajo contratos individuales acordados con cada cliente. Las condiciones específicas, precios y plazos se definen en cada propuesta. Este sitio no constituye una oferta contractual vinculante.</p>
+      <p>Los servicios descritos en este sitio (desarrollo web, landings) se prestan bajo contratos individuales acordados con cada cliente. Las condiciones específicas, precios y plazos se definen en cada propuesta. Este sitio no constituye una oferta contractual vinculante.</p>
 
       <h2>6. Ley aplicable</h2>
       <p>Estos términos se rigen por las leyes de la República Argentina. Cualquier disputa se someterá a los tribunales ordinarios de la ciudad de Córdoba, Argentina.</p>
@@ -166,7 +166,7 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=20" defer></script>
+  <script src="js/main.js?v=41" defer></script>
   <a
     class="wsp-fab"
     data-wsp-fab
