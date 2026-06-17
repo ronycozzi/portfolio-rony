@@ -1,5 +1,5 @@
 /* Service Worker - Rony Cozzi Portfolio */
-const VERSION = 'v65';
+const VERSION = 'v66';
 const PRECACHE = `rony-portfolio-precache-${VERSION}`;
 const RUNTIME = `rony-portfolio-runtime-${VERSION}`;
 const MAX_RUNTIME_ENTRIES = 60;
