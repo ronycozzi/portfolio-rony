@@ -1717,7 +1717,7 @@
     const currentDir = segments.length > 1 ? segments[segments.length - 2].toLowerCase() : '';
     const isCase = currentDir === 'case';
 
-    document.querySelectorAll('nav.nav a').forEach((a) => {
+    document.querySelectorAll('.nav a, [data-mobile-menu] a').forEach((a) => {
       const href = (a.getAttribute('href') || '').toLowerCase();
       if (!href) return;
       const linkFile = href.split('/').pop().split('?')[0].split('#')[0];
