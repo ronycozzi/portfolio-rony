@@ -857,6 +857,20 @@
     'case-sellink',
     'case-cognition',
   ]);
+  const localRouteFallbacks = {
+    '/work': '/work.html',
+    '/about': '/about.html',
+    '/contact': '/contact.html',
+    '/process': '/process.html',
+    '/faq': '/faq.html',
+    '/privacy': '/privacy.html',
+    '/terms': '/terms.html',
+    '/404': '/404.html',
+    '/case/cucu': '/case/cucu.html',
+    '/case/luco': '/case/luco.html',
+    '/case/sellink': '/case/sellink.html',
+    '/case/cognition': '/case/cognition.html',
+  };
 
   function storageGet(key, fallback) {
     try { return localStorage.getItem(key) || fallback; }
@@ -889,6 +903,49 @@
 
   function resolveLang(lang) {
     return pageSupportsLangToggle() ? lang : 'es';
+  }
+
+  function normalizePathname(pathname) {
+    if (!pathname) return '/';
+    let normalized = String(pathname).toLowerCase().replace(/\/+/g, '/');
+    if (!normalized.startsWith('/')) normalized = `/${normalized}`;
+    if (normalized.length > 1) normalized = normalized.replace(/\/$/, '');
+    return normalized || '/';
+  }
+
+  function normalizeRoutePath(pathname) {
+    const normalized = normalizePathname(pathname);
+    if (normalized === '/index.html') return '/';
+    if (normalized.endsWith('.html')) {
+      const withoutHtml = normalized.slice(0, -5);
+      return withoutHtml || '/';
+    }
+    return normalized;
+  }
+
+  function resolveLocalHrefFallback(rawHref) {
+    if (!rawHref || /^(#|mailto:|tel:|data:|javascript:)/i.test(rawHref)) return null;
+    let url;
+    try {
+      url = new URL(rawHref, window.location.href);
+    } catch (err) {
+      return null;
+    }
+    if (url.origin !== window.location.origin) return null;
+    const fallbackPath = localRouteFallbacks[normalizePathname(url.pathname)];
+    if (!fallbackPath) return null;
+    return `${fallbackPath}${url.search}${url.hash}`;
+  }
+
+  function setupLocalRouteFallback() {
+    if (!isLocalOrigin) return;
+    document.querySelectorAll('a[href], link[rel="prefetch"][href]').forEach((el) => {
+      const rawHref = el.getAttribute('href');
+      const fallbackHref = resolveLocalHrefFallback(rawHref);
+      if (fallbackHref && fallbackHref !== rawHref) {
+        el.setAttribute('href', fallbackHref);
+      }
+    });
   }
 
   function t(key) {
@@ -1724,19 +1781,19 @@
 
   /* ---------- Active nav ---------- */
   function setupActiveNav() {
-    const path = (window.location.pathname.replace(/\/$/, '') || '/').toLowerCase();
-    const segments = path.split('/').filter(Boolean);
-    const currentFile = segments.length ? segments[segments.length - 1].toLowerCase() : 'index.html';
-    const currentFileHtml = currentFile.endsWith('.html') ? currentFile : `${currentFile}.html`;
-    const currentDir = segments.length > 1 ? segments[segments.length - 2].toLowerCase() : '';
-    const isCase = currentDir === 'case';
+    const currentPath = normalizeRoutePath(window.location.pathname);
+    const isCase = currentPath.startsWith('/case/');
 
     document.querySelectorAll('.nav a, [data-mobile-menu] a').forEach((a) => {
-      const href = (a.getAttribute('href') || '').toLowerCase();
-      if (!href) return;
-      const linkFile = href.split('/').pop().split('?')[0].split('#')[0];
-      const linkLooksWork = linkFile === 'work' || linkFile === 'work.html' || /work(?:\.html)?$/.test(href);
-      const isActive = linkFile === currentFile || linkFile === currentFileHtml || (isCase && linkLooksWork) || (path === '/' && (linkFile === 'index.html' || linkFile === ''));
+      const href = a.getAttribute('href') || '';
+      if (!href || /^(#|mailto:|tel:)/i.test(href)) return;
+      let targetPath = '';
+      try {
+        targetPath = normalizeRoutePath(new URL(href, window.location.href).pathname);
+      } catch (err) {
+        targetPath = normalizeRoutePath(href);
+      }
+      const isActive = targetPath === currentPath || (isCase && targetPath === '/work');
       if (isActive) {
         a.setAttribute('aria-current', 'page');
         a.classList.add('is-current');
@@ -1752,6 +1809,7 @@
   }
 
   function init() {
+    setupLocalRouteFallback();
     setupActiveNav();
     setupTheme();
     setupLang();
