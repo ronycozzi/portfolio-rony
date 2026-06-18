@@ -228,6 +228,10 @@
       'a11y.skip': 'Saltar al contenido',
       'a11y.demo': 'Abrir demo',
       'a11y.projects': 'Proyectos',
+      'alt.case.cucu.meta': 'Sitio de Cucú Studio — caso de estudio',
+      'alt.case.luco.meta': 'Sitio de Luco Gourmet — caso de estudio',
+      'alt.case.sellink.meta': 'Sitio de Sellink Group — caso de estudio',
+      'alt.case.cognition.meta': 'Sitio de Cognition — caso de estudio',
       'alt.home.cucu': 'Sitio de Cucú Studio — layout editorial sobre fondo claro con acento cobre',
       'alt.home.luco': 'Sitio de Luco Gourmet — paleta cálida con tarjetas de menú',
       'alt.home.sellink': 'Sitio de Sellink Group — fondo oscuro con acento rojo audaz',
@@ -637,6 +641,10 @@
       'a11y.skip': 'Skip to content',
       'a11y.demo': 'Open demo',
       'a11y.projects': 'Projects',
+      'alt.case.cucu.meta': 'Website for Cucú Studio — case study',
+      'alt.case.luco.meta': 'Website for Luco Gourmet — case study',
+      'alt.case.sellink.meta': 'Website for Sellink Group — case study',
+      'alt.case.cognition.meta': 'Website for Cognition — case study',
       'alt.home.cucu': 'Website for Cucú Studio — editorial layout on a light background with a copper accent',
       'alt.home.luco': 'Website for Luco Gourmet — warm palette with menu cards',
       'alt.home.sellink': 'Website for Sellink Group — dark background with a bold red accent',
@@ -1053,42 +1061,52 @@
       home: {
         title: 'meta.home.title',
         description: 'meta.home.description',
+        imageAlt: 'meta.home.title',
       },
       work: {
         title: 'meta.work.title',
         description: 'meta.work.description',
+        imageAlt: 'meta.work.title',
       },
       about: {
         title: 'meta.about.title',
         description: 'meta.about.description',
+        imageAlt: 'meta.about.title',
       },
       contact: {
         title: 'meta.contact.title',
         description: 'meta.contact.description',
+        imageAlt: 'meta.contact.title',
       },
       process: {
         title: 'meta.process.title',
         description: 'meta.process.description',
+        imageAlt: 'meta.process.title',
       },
       faq: {
         title: 'meta.faq.title',
         description: 'meta.faq.description',
+        imageAlt: 'meta.faq.title',
       },
       'case-cucu': {
         title: 'meta.case.cucu.title',
         description: 'meta.case.cucu.description',
+        imageAlt: 'alt.case.cucu.meta',
       },
       'case-luco': {
         title: 'meta.case.luco.title',
         description: 'meta.case.luco.description',
+        imageAlt: 'alt.case.luco.meta',
       },
       'case-sellink': {
         title: 'meta.case.sellink.title',
         description: 'meta.case.sellink.description',
+        imageAlt: 'alt.case.sellink.meta',
       },
       'case-cognition': {
         title: 'meta.case.cognition.title',
         description: 'meta.case.cognition.description',
+        imageAlt: 'alt.case.cognition.meta',
       },
     }[pageId];
 
@@ -1097,6 +1115,7 @@
     const strings = i18n[lang] || i18n.es;
     const title = strings && strings[pageMeta.title];
     const description = strings && strings[pageMeta.description];
+    const imageAlt = strings && strings[pageMeta.imageAlt];
 
     if (title) document.title = title;
 
@@ -1116,13 +1135,21 @@
     const titleSelectors = [
       'meta[property="og:title"]',
       'meta[name="twitter:title"]',
-      'meta[property="og:image:alt"]',
-      'meta[name="twitter:image:alt"]',
     ];
 
     titleSelectors.forEach((selector) => {
       const meta = document.querySelector(selector);
       if (meta && title) meta.setAttribute('content', title);
+    });
+
+    const imageAltSelectors = [
+      'meta[property="og:image:alt"]',
+      'meta[name="twitter:image:alt"]',
+    ];
+
+    imageAltSelectors.forEach((selector) => {
+      const meta = document.querySelector(selector);
+      if (meta && imageAlt) meta.setAttribute('content', imageAlt);
     });
   }
 
