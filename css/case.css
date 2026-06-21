@@ -40,7 +40,7 @@
   padding: 8px 0;
   transition: color var(--t-fast) var(--ease), gap var(--t-fast) var(--ease);
 }
-.case-hero__back:hover { color: var(--accent); gap: 12px; }
+.case-hero__back:hover { color: var(--case-accent, var(--accent)); gap: 12px; }
 
 .case-hero__title {
   font-family: var(--font-display);
@@ -190,7 +190,7 @@
   font-weight: 700;
   line-height: 1;
   letter-spacing: -0.03em;
-  color: var(--accent);
+  color: var(--case-accent, var(--accent));
 }
 
 .case-stat__label {
@@ -236,7 +236,7 @@
   font-family: var(--font-display);
   font-size: 11px;
   letter-spacing: 0.08em;
-  color: var(--accent);
+  color: var(--case-accent, var(--accent));
 }
 
 .case-block h3 {
@@ -271,13 +271,13 @@
 }
 
 .case-tech-item:hover {
-  border-color: var(--accent);
+  border-color: var(--case-accent, var(--accent));
   background: var(--bg-elev);
 }
 
 .case-tech-item__icon {
   font-size: 20px;
-  color: var(--accent);
+  color: var(--case-accent, var(--accent));
   line-height: 1;
 }
 
@@ -299,7 +299,7 @@
   background: var(--line);
   padding: 1px 5px;
   border-radius: 3px;
-  color: var(--accent);
+  color: var(--case-accent, var(--accent));
 }
 
 /* Stack pills */
@@ -323,8 +323,8 @@
   transition: border-color var(--t-fast) var(--ease), color var(--t-fast) var(--ease);
 }
 .case-stack__item:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: var(--case-accent, var(--accent));
+  color: var(--case-accent, var(--accent));
 }
 
 /* Next project */
@@ -346,9 +346,9 @@
 }
 
 .case-next__link:hover {
-  border-color: var(--accent);
+  border-color: var(--case-accent, var(--accent));
   background: transparent; /* fallback: color-mix */
-  background: color-mix(in srgb, var(--accent) 4%, var(--bg-elev));
+  background: color-mix(in srgb, var(--case-accent, var(--accent)) 4%, var(--bg-elev));
 }
 
 .case-next__label {
@@ -367,7 +367,7 @@
   color: var(--fg);
   transition: color var(--t-fast) var(--ease);
 }
-.case-next__link:hover .case-next__name { color: var(--accent); }
+.case-next__link:hover .case-next__name { color: var(--case-accent, var(--accent)); }
 
 /* ---- Responsive ---- */
 @media (max-width: 900px) {

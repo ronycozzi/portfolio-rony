@@ -528,7 +528,7 @@ body[data-page="404"] .lang-toggle {
   transform: translate3d(var(--hero-x), var(--hero-y), 0);
   animation: heroFloat 12s var(--ease-in) infinite alternate;
 }
-.hero__beam--one { top: 14%; right: 4%; background: #00D4FF; }
+.hero__beam--one { top: 14%; right: 4%; background: var(--color-cognition); }
 .hero__beam--two { bottom: 6%; right: 26%; background: var(--accent); animation-duration: 16s; animation-delay: -5s; }
 @keyframes heroFloat {
   from { translate: -2% 1%; scale: 0.98; }
@@ -2961,6 +2961,7 @@ body[data-page="404"] .lang-toggle {
   padding: calc(var(--header-h, 72px) + 60px) var(--pad-x) 60px;
   border-bottom: 1px solid var(--line);
   max-width: calc(var(--max) + var(--pad-x) * 2);
+  margin: 0 auto;
 }
 .faq-hero__eyebrow {
   display: block;
@@ -2986,6 +2987,7 @@ body[data-page="404"] .lang-toggle {
 .faq-body {
   padding: 60px var(--pad-x) 100px;
   max-width: calc(860px + var(--pad-x) * 2);
+  margin: 0 auto;
 }
 .faq-item { border-bottom: 1px solid var(--line); }
 .faq-item summary {
@@ -3090,6 +3092,7 @@ body[data-page="404"] .lang-toggle {
 .proc-steps {
   padding: 80px var(--pad-x) 100px;
   max-width: calc(var(--max) + var(--pad-x) * 2);
+  margin: 0 auto;
 }
 .proc-step {
   display: grid;
@@ -3226,6 +3229,7 @@ body[data-page="404"] .lang-toggle {
 .legal-body {
   padding: 60px var(--pad-x) 100px;
   max-width: calc(720px + var(--pad-x) * 2);
+  margin: 0 auto;
 }
 .legal-body h2 {
   font-family: var(--font-display);
