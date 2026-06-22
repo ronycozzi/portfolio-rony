@@ -2716,6 +2716,14 @@ body[data-page="404"] .lang-toggle {
   .contact-split { grid-template-columns: 1fr; gap: 60px; padding: 60px var(--pad-x) 80px; }
 }
 
+@media (max-width: 560px) {
+  .contact-hero__title {
+    font-size: clamp(50px, 13.5vw, 58px);
+    letter-spacing: -0.045em;
+    line-height: 0.94;
+  }
+}
+
 .contact-meta {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

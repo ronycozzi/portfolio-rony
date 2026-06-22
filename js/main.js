@@ -345,7 +345,7 @@
       'case.cognition.tag1': 'Plataforma IA',
       'case.cognition.tag2': 'Empresas',
       'case.cognition.stat1': 'Páginas',
-      'case.cognition.cover_alt': 'Portada de Cognition — hero con interfaz tipo terminal y acentos cyan',
+      'case.cognition.cover_alt': 'Portada de Cognition — hero con interfaz tipo terminal y acentos cian',
       'case.cognition.p1': 'Cognition es una plataforma de IA aplicada para empresas medianas en Argentina. El producto real existe — el desafío fue construir un sitio que explique una tecnología compleja a una audiencia no técnica, genere confianza corporativa y convierta demos.',
       'case.cognition.p2': 'El proyecto más complejo del portfolio: 11 páginas interrelacionadas, calculadora de ROI en JS puro, un chat basado en intención para calificar leads, animaciones de datos en tiempo real y PWA instalable.',
       'case.cognition.problem_desc': 'Una demo existente del producto en React con bundle de 4MB que tardaba 8s en cargar en móvil. Sin SEO, sin Schema.org, sin conversión medida. El equipo de ventas perdía leads porque el sitio no transmitía seriedad corporativa antes de la primera reunión.',
