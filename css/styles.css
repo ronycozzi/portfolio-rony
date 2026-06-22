@@ -2722,6 +2722,10 @@ body[data-page="404"] .lang-toggle {
     letter-spacing: -0.045em;
     line-height: 0.94;
   }
+
+  body[data-page="contact"] .wsp-fab {
+    display: none;
+  }
 }
 
 .contact-meta {

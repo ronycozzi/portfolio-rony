@@ -1,0 +1,25 @@
+# Editor / OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local tooling and automation artifacts
+.claude/
+.codex_tmp/
+.codex_git_temp/
+codex-changes-*.patch
+
+# Logs / temp
+*.log
+*.tmp
+
+# Local dependencies / build artifacts
+node_modules/
+dist/
+build/
+.cache/
+
+# Local env / secrets
+.env
+.env.local
