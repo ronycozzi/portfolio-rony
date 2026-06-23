@@ -2585,9 +2585,9 @@ body[data-page="404"] .lang-toggle {
 }
 .contact-hero__title {
   font-family: var(--font-display);
-  font-size: clamp(80px, 16vw, 240px);
+  font-size: clamp(80px, 15vw, 216px);
   font-weight: 500;
-  letter-spacing: -0.055em;
+  letter-spacing: -0.052em;
   line-height: 0.88;
   margin: 18px 0 0;
 }
