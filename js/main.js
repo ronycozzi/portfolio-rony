@@ -1798,6 +1798,7 @@
       setTimeout(() => {
         if (btn) { btn.disabled = false; btn.removeAttribute('aria-busy'); }
         if (btnText) btnText.textContent = t('contact.form.send') || originalText || (getLang() === 'en' ? 'Send message' : 'Enviar mensaje');
+        if (note) note.dataset.noteState = 'hint';
         syncNote();
       }, 900);
     });
