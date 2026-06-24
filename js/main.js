@@ -426,7 +426,7 @@
       'faq.q8': '¿Aceptás cripto?',
       'faq.a8': 'Sí. Acepto <strong>USDT y USDC</strong> en redes Polygon, Arbitrum o Base. También acepto Bitcoin (BTC) para montos mayores. Si querés pagar en cripto, avisame al inicio del proyecto.',
       'faq.q9': '¿En qué se diferencia tu trabajo del de una agencia?',
-      'faq.a9': 'En una agencia, tu proyecto pasa por 4–6 personas (account, diseñador, desarrollador, PM, QA). Conmigo, <strong>yo hago todo</strong> y respondés directo al que lo construye. Eso significa comunicación más rápida, menos teléfono roto y más control sobre las decisiones técnicas. La contra: no escalo a 10 proyectos en paralelo.',
+      'faq.a9': 'En una agencia, tu proyecto pasa por 4–6 personas (account, diseñador, desarrollador, PM, QA). Conmigo, <strong>yo hago todo</strong> y hablás directo con quien lo construye. Eso significa comunicación más rápida, menos teléfono roto y más control sobre las decisiones técnicas. La contra: no escalo a 10 proyectos en paralelo.',
       'faq.q10': '¿Cuándo no soy la mejor opción para tu proyecto?',
       'faq.a10': 'Soy honesto con esto. Probablemente no sea la mejor opción si necesitás:<br/><br/>— Un portal con autenticación compleja de usuarios y muchos roles<br/>— Una app móvil nativa (iOS/Android)<br/>— Un backend corporativo con lógica de negocio pesada, permisos avanzados o alta concurrencia<br/>— Un equipo interno dedicado 40h/semana en exclusiva<br/><br/>Para esos casos, te lo digo al principio y si puedo te recomiendo a alguien.',
       'faq.q11': '¿Necesito saber de tecnología para trabajar con vos?',
