@@ -2308,10 +2308,13 @@ body[data-page="404"] .lang-toggle {
     transform: none !important;
     padding: 0 var(--pad-x);
     gap: 24px;
+    width: 100%;
+    box-sizing: border-box;
   }
   .work-item {
     flex: 0 0 auto;
     width: 100%;
+    max-width: 100%;
     height: auto;
     min-height: 480px;
   }
