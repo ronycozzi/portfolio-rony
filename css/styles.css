@@ -2726,7 +2726,8 @@ body[data-page="404"] .lang-toggle {
     line-height: 0.94;
   }
 
-  body[data-page="contact"] .wsp-fab {
+  body[data-page="contact"] .wsp-fab,
+  body[data-page="work"] .wsp-fab {
     display: none;
   }
 }
