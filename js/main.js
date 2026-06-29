@@ -318,7 +318,7 @@
       'case.luco.tech4.title': 'Menú actualizable',
       'case.luco.tech4.desc': 'Menú almacenado en <code>menu.json</code> versionado. El dueño edita un archivo, hace push y Vercel redeploya en segundos. Sin CMS, sin suscripción mensual, sin interfaz que romper.',
       'case.luco.tech5.title': 'SEO local',
-      'case.luco.tech5.desc': 'Titles y descriptions únicos por sección. Sitemap con prioridad diferenciada. Métricas de Lighthouse en verde (lab data).',
+      'case.luco.tech5.desc': 'Títulos y descripciones únicos por sección. Sitemap con prioridad diferenciada. Métricas de Lighthouse en verde (lab data).',
       'case.luco.tech6.title': 'Formulario de reservas',
       'case.luco.tech6.desc': 'Formulario de contacto estático con validación HTML5 + JS custom, pensado para derivar consultas por email o WhatsApp sin backend propio ni costo adicional.',
       'case.luco.stack8': 'Formulario estático',
