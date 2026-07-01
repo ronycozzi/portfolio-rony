@@ -1,5 +1,5 @@
 /* Service Worker - Rony Cozzi Portfolio */
-const VERSION = 'v88';
+const VERSION = 'v89';
 const PRECACHE = `rony-portfolio-precache-${VERSION}`;
 const RUNTIME = `rony-portfolio-runtime-${VERSION}`;
 const MAX_RUNTIME_ENTRIES = 60;
@@ -33,7 +33,7 @@ const SHELL = [
   '/case/cognition',
   '/case/cognition.html',
   '/css/styles.css',
-  '/css/styles.css?v=40',
+  '/css/styles.css?v=41',
   '/css/case.css',
   '/css/case.css?v=4',
   '/js/main.js',

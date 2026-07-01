@@ -2726,6 +2726,15 @@ body[data-page="404"] .lang-toggle {
     line-height: 0.94;
   }
 
+  .contact-big {
+    font-size: clamp(36px, 10vw, 44px);
+    line-height: 1.04;
+  }
+
+  .contact-big__line2 {
+    margin-top: 4px;
+  }
+
   body[data-page="contact"] .wsp-fab,
   body[data-page="work"] .wsp-fab {
     display: none;
