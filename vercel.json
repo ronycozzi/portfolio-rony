@@ -47,12 +47,6 @@
       ]
     },
     {
-      "source": "/services",
-      "headers": [
-        { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }
-      ]
-    },
-    {
       "source": "/process",
       "headers": [
         { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }
@@ -128,4 +122,14 @@
     {
       "source": "/assets/(icons|img|work)/(.*)",
       "headers": [
-        { "
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/assets/Rony_Cozzi_CV.pdf",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }
+      ]
+    }
+  ]
+}
