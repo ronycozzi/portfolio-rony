@@ -51,7 +51,7 @@
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" as="style" />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet" />
   <link rel="preload" as="image" href="assets/work/cognition-v2.webp" fetchpriority="high" />
-  <link rel="stylesheet" href="css/styles.css?v=42" />
+  <link rel="stylesheet" href="css/styles.css?v=43" />
   <link rel="prefetch" href="work.html" />
   <link rel="prefetch" href="contact.html" />
 
@@ -176,13 +176,14 @@
       <div class="hero__main">
         <div class="hero__lede">
           <span class="tag"><span class="tag__dot"></span><span data-i18n="hero.tag">Disponible · 2026</span></span>
+          <span class="hero__eyebrow" data-i18n="hero.eyebrow">Desarrollo full stack · UI · Performance</span>
           <h1 class="hero__title">
-            <span class="line"><span class="reveal" data-i18n="hero.title1">Función.</span></span>
-            <span class="line"><span class="reveal"><em data-i18n="hero.title2">Forma.</em></span></span>
-            <span class="line"><span class="reveal" data-i18n="hero.title3">Resultado.</span></span>
+            <span class="line"><span class="reveal" data-i18n="hero.title1">Diseño que</span></span>
+            <span class="line"><span class="reveal"><em data-i18n="hero.title2">comunica.</em></span></span>
+            <span class="line"><span class="reveal" data-i18n="hero.title3">Código que sostiene.</span></span>
           </h1>
           <p class="hero__intro" data-reveal data-i18n="hero.intro">
-            Combino diseño, código y estrategia para construir sitios claros, rápidos y mantenibles. Experiencias digitales con identidad, estructura y criterio técnico.
+            Construyo sitios, landings e integraciones web rápidas, accesibles y mantenibles para marcas que necesitan presencia digital con identidad y criterio técnico.
           </p>
           <div class="hero__actions">
             <a href="work" class="hero__cta" data-magnetic data-link>
@@ -192,8 +193,14 @@
               </span>
             </a>
             <a href="contact" class="hero__cta hero__cta--ghost" data-magnetic data-link>
-              <span data-i18n="hero.cta2">Contacto</span>
+              <span data-i18n="hero.cta2">Empezar proyecto</span>
             </a>
+          </div>
+          <div class="hero__trust" data-reveal>
+            <span data-i18n="hero.trust1">Respuesta &lt; 24h</span>
+            <span data-i18n="hero.trust2">SEO técnico incluido</span>
+            <span data-i18n="hero.trust3">Deploy limpio</span>
+            <span data-i18n="hero.trust4">Remoto · GMT-3</span>
           </div>
           <a class="hero__hiring" href="assets/Rony_Cozzi_CV.pdf" download="Rony_Cozzi_CV.pdf" type="application/pdf" data-magnetic>
             <span data-i18n="hero.hiring">¿Estás contratando? Busco roles full-time remotos</span>
@@ -246,6 +253,19 @@
       </div>
     </section>
 
+
+    <!-- SEÑALES -->
+    <section class="signals" aria-label="Señales rápidas" data-i18n-attr="aria-label:signals.aria">
+      <div class="signals__grid" data-reveal>
+        <div class="signals__item"><strong data-i18n="signals.s1">&lt; 24h</strong><span data-i18n="signals.l1">Respuesta</span></div>
+        <div class="signals__item"><strong>Vercel</strong><span data-i18n="signals.l2">Deploy</span></div>
+        <div class="signals__item"><strong data-i18n="signals.s3">SEO técnico</strong><span data-i18n="signals.l3">Incluido</span></div>
+        <div class="signals__item"><strong>Mobile-first</strong><span data-i18n="signals.l4">Responsive real</span></div>
+        <div class="signals__item"><strong data-i18n="signals.s5">4 demos en vivo</strong><span>2025 — 2026</span></div>
+        <div class="signals__item"><strong data-i18n="signals.s6">Soporte</strong><span data-i18n="signals.l6">Post-entrega</span></div>
+      </div>
+    </section>
+
     <!-- HORIZONTAL TICKER -->
     <section class="ticker" aria-hidden="true">
       <div class="ticker__track">
@@ -264,6 +284,24 @@
       </div>
     </section>
 
+
+    <!-- PROBLEMA -->
+    <section class="problem" aria-labelledby="problem-title">
+      <div class="problem__head">
+        <span class="problem__eyebrow" data-i18n="problem.eyebrow">[ El problema ]</span>
+        <h2 class="problem__title" id="problem-title"><span data-i18n="problem.title1">Una web no alcanza</span> <em data-i18n="problem.title2">con verse bien.</em></h2>
+        <p class="problem__copy" data-reveal data-i18n="problem.copy">También tiene que cargar rápido, guiar al usuario, adaptarse al contenido, funcionar en mobile, ser indexable y mantenerse sin volverse un problema.</p>
+      </div>
+      <div class="problem__grid">
+        <article class="problem__card" data-reveal><span>01</span><h3 data-i18n="problem.c1.title">Diseño sin objetivo</h3><p data-i18n="problem.c1.desc">Se ve correcto, pero no guía al usuario hacia una acción clara.</p></article>
+        <article class="problem__card" data-reveal><span>02</span><h3 data-i18n="problem.c2.title">Sitios lentos</h3><p data-i18n="problem.c2.desc">Imágenes pesadas, scripts innecesarios y mala estructura afectan conversión y SEO.</p></article>
+        <article class="problem__card" data-reveal><span>03</span><h3 data-i18n="problem.c3.title">Código difícil de mantener</h3><p data-i18n="problem.c3.desc">Cada cambio se vuelve costoso porque no hay componentes, estructura ni criterio técnico.</p></article>
+        <article class="problem__card" data-reveal><span>04</span><h3 data-i18n="problem.c4.title">Formularios débiles</h3><p data-i18n="problem.c4.desc">El usuario consulta, pero el negocio no recibe ni procesa bien esa información.</p></article>
+        <article class="problem__card" data-reveal><span>05</span><h3 data-i18n="problem.c5.title">SEO técnico incompleto</h3><p data-i18n="problem.c5.desc">Sin metadata, schema, sitemap, semántica y performance, el sitio pierde visibilidad.</p></article>
+      </div>
+      <p class="problem__close" data-reveal data-i18n="problem.close">Mi trabajo es unir diseño, código y estrategia para que la web funcione como una herramienta real, no solo como presencia online.</p>
+    </section>
+
     <!-- FEATURED PROJECT (sticky parallax preview) -->
     <section class="featured" aria-labelledby="featured-title">
       <div class="featured__sticky">
@@ -273,7 +311,7 @@
           <span class="line"><span class="reveal"><em data-i18n="featured.heading2">seleccionados.</em></span></span>
         </h2>
         <p class="featured__copy" data-reveal data-i18n="featured.copy">
-          Una selección de proyectos en vivo. Sitios pensados desde la performance, el contenido y la marca.
+          Proyectos publicados con foco en identidad, velocidad, estructura y conversión.
         </p>
         <a href="work" class="featured__link" data-magnetic data-link>
           <span data-i18n="featured.cta">Explorar trabajos</span>
@@ -350,6 +388,13 @@
           </div>
         </a>
       </div>
+
+      <nav class="featured__index" aria-label="Casos de estudio" data-i18n-attr="aria-label:featured.index_aria">
+        <a href="case/cucu" data-link>001 Cucú Studio →</a>
+        <a href="case/luco" data-link>002 Luco Gourmet →</a>
+        <a href="case/sellink" data-link>003 Sellink Group →</a>
+        <a href="case/cognition" data-link>004 Cognition →</a>
+      </nav>
     </section>
 
     <!-- WORKFLOW SIGNAL -->
@@ -413,13 +458,13 @@
       </div>
     </section>
 
-    <!-- SERVICES -->
-    <section class="services" aria-labelledby="services-title">
+    <!-- SERVICES (paquetes) -->
+    <section class="services" id="servicios" aria-labelledby="services-title">
       <div class="services__head">
         <span class="services__num">[ 02 — <span data-i18n="services.title">Servicios</span> ]</span>
         <h2 class="services__title" id="services-title" data-reveal data-i18n="services.title">Servicios</h2>
         <p class="services__copy" data-reveal data-i18n="services.copy">
-          Desarrollo sitios completos, landings e integraciones web listas para producción: rápidas, accesibles, medibles y mantenibles.
+          Cuatro formas de trabajar según el alcance: una landing rápida, un sitio completo, integraciones full stack o mejora de lo que ya tenés online.
         </p>
       </div>
 
@@ -427,54 +472,217 @@
         <article class="service" data-reveal>
           <div class="service__row">
             <span class="service__num">01</span>
-            <h3 class="service__name" data-i18n="services.s1.title">Sitio web full stack</h3>
-            <span class="service__tag" data-i18n="services.s1.tag">Proyecto completo</span>
+            <h3 class="service__name" data-i18n="services.s1.title">Landing de conversión</h3>
+            <span class="service__tag" data-i18n="services.s1.tag">Página única</span>
           </div>
-          <p class="service__desc" data-i18n="services.s1.desc">
-            Diseño y desarrollo completo para sitios institucionales, portfolios, páginas comerciales o plataformas simples. Frontend sólido, lógica en JavaScript, estructura semántica, SEO técnico y deploy en Vercel.
-          </p>
+          <p class="service__desc" data-i18n="services.s1.desc">Para lanzamientos, campañas, servicios puntuales o captación de leads. Una página enfocada en una sola acción, rápida y medible.</p>
           <ul class="service__includes">
-            <li data-i18n="services.s1.i1">Arquitectura + UI responsive</li>
-            <li data-i18n="services.s1.i2">HTML, CSS, JavaScript / TypeScript / React</li>
-            <li data-i18n="services.s1.i3">SEO técnico + Schema.org</li>
-            <li data-i18n="services.s1.i4">Deploy, dominio y performance</li>
+            <li data-i18n="services.s1.i1">Diseño y desarrollo</li>
+            <li data-i18n="services.s1.i2">Copy base orientado a conversión</li>
+            <li data-i18n="services.s1.i3">Formulario o WhatsApp conectado</li>
+            <li data-i18n="services.s1.i4">SEO técnico básico + performance mobile</li>
           </ul>
+          <span class="service__ideal" data-i18n="services.s1.ideal">Ideal si necesitás publicar rápido una página enfocada en una acción.</span>
+          <a class="service__cta" href="contact" data-link data-magnetic><span data-i18n="services.s1.cta">Consultar landing</span> <span aria-hidden="true">→</span></a>
         </article>
 
         <article class="service" data-reveal>
           <div class="service__row">
             <span class="service__num">02</span>
-            <h3 class="service__name" data-i18n="services.s2.title">Landing</h3>
-            <span class="service__tag" data-i18n="services.s2.tag">Página única</span>
+            <h3 class="service__name" data-i18n="services.s2.title">Sitio web completo</h3>
+            <span class="service__tag" data-i18n="services.s2.tag">Proyecto completo</span>
           </div>
-          <p class="service__desc" data-i18n="services.s2.desc">
-            Página única orientada a conversión. Para lanzamientos, campañas o productos específicos. Foco en velocidad de carga, copy claro y CTA visible.
-          </p>
+          <p class="service__desc" data-i18n="services.s2.desc">Para marcas, estudios, profesionales y negocios que necesitan presencia completa: arquitectura, diseño, desarrollo y deploy con SEO y accesibilidad de base.</p>
           <ul class="service__includes">
-            <li data-i18n="services.s2.i1">Diseño + desarrollo</li>
-            <li data-i18n="services.s2.i2">Formulario / integración</li>
-            <li data-i18n="services.s2.i3">Analítica + tracking</li>
-            <li data-i18n="services.s2.i4">Lista para tests A/B</li>
+            <li data-i18n="services.s2.i1">Arquitectura de información + diseño responsive</li>
+            <li data-i18n="services.s2.i2">Desarrollo frontend y páginas principales</li>
+            <li data-i18n="services.s2.i3">SEO técnico, metadata y Open Graph</li>
+            <li data-i18n="services.s2.i4">Deploy en Vercel + documentación</li>
           </ul>
+          <span class="service__ideal" data-i18n="services.s2.ideal">Ideal si necesitás un sitio profesional que puedas mostrar, posicionar y mantener.</span>
+          <a class="service__cta" href="contact" data-link data-magnetic><span data-i18n="services.s2.cta">Consultar sitio web</span> <span aria-hidden="true">→</span></a>
         </article>
 
         <article class="service" data-reveal>
           <div class="service__row">
             <span class="service__num">03</span>
-            <h3 class="service__name" data-i18n="services.s3.title">Integraciones y backend ligero</h3>
-            <span class="service__tag" data-i18n="services.s3.tag">Full stack</span>
+            <h3 class="service__name" data-i18n="services.s3.title">Full stack ligero</h3>
+            <span class="service__tag" data-i18n="services.s3.tag">Integraciones</span>
           </div>
-          <p class="service__desc" data-i18n="services.s3.desc">
-            Conecto tu web con formularios, APIs, bases de datos simples, paneles internos o automatizaciones. Ideal cuando necesitás algo más que una página estática, sin construir una plataforma gigante.
-          </p>
+          <p class="service__desc" data-i18n="services.s3.desc">Para proyectos que necesitan que la web haga más que verse bien: formularios, APIs, datos, paneles simples o automatizaciones.</p>
           <ul class="service__includes">
-            <li data-i18n="services.s3.i1">Node.js, APIs REST y serverless functions</li>
-            <li data-i18n="services.s3.i2">SQL, Supabase, Firebase y Airtable</li>
-            <li data-i18n="services.s3.i3">Email, analytics y webhooks</li>
-            <li data-i18n="services.s3.i4">Autenticación simple y paneles internos</li>
+            <li data-i18n="services.s3.i1">APIs y serverless functions</li>
+            <li data-i18n="services.s3.i2">Formularios conectados + email transaccional</li>
+            <li data-i18n="services.s3.i3">Supabase, Firebase o Airtable</li>
+            <li data-i18n="services.s3.i4">Webhooks, auth simple y paneles básicos</li>
+          </ul>
+          <span class="service__ideal" data-i18n="services.s3.ideal">Ideal si necesitás que tu web procese información, guarde datos o se conecte con otras herramientas.</span>
+          <a class="service__cta" href="contact" data-link data-magnetic><span data-i18n="services.s3.cta">Consultar integración</span> <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="service" data-reveal>
+          <div class="service__row">
+            <span class="service__num">04</span>
+            <h3 class="service__name" data-i18n="services.s4.title">Optimización y mantenimiento</h3>
+            <span class="service__tag" data-i18n="services.s4.tag">Mejora continua</span>
+          </div>
+          <p class="service__desc" data-i18n="services.s4.desc">Para webs ya publicadas que necesitan mejorar velocidad, SEO, accesibilidad o corregir errores sin rehacer todo.</p>
+          <ul class="service__includes">
+            <li data-i18n="services.s4.i1">Auditoría técnica con reporte real</li>
+            <li data-i18n="services.s4.i2">Performance y accesibilidad</li>
+            <li data-i18n="services.s4.i3">SEO técnico y fixes</li>
+            <li data-i18n="services.s4.i4">Monitoreo y soporte mensual</li>
+          </ul>
+          <span class="service__ideal" data-i18n="services.s4.ideal">Ideal si tu web ya existe pero no rinde como debería.</span>
+          <a class="service__cta" href="contact" data-link data-magnetic><span data-i18n="services.s4.cta">Mejorar mi web</span> <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+
+      <aside class="services__note" data-reveal>
+        <h3 data-i18n="services.note.title">Cuándo no soy la mejor opción.</h3>
+        <p data-i18n="services.note.p1">Prefiero decirlo al principio: no soy la mejor opción si necesitás una app nativa, un backend corporativo complejo, un equipo dedicado 40 horas por semana o una plataforma con muchas reglas de negocio avanzadas.</p>
+        <p data-i18n="services.note.p2">Si el proyecto supera mi alcance, puedo ayudarte a dimensionarlo o recomendar otro camino.</p>
+      </aside>
+      <a class="service__cta services__more" href="#servicios" data-magnetic><span data-i18n="services.more">Ver servicios en detalle</span> <span aria-hidden="true">→</span></a>
+    </section>
+
+
+    <!-- PROCESO RESUMIDO -->
+    <section class="proc-mini" aria-labelledby="proc-mini-title">
+      <div class="proc-mini__head">
+        <span class="proc-mini__eyebrow" data-i18n="proc.eyebrow">[ Proceso ]</span>
+        <h2 class="proc-mini__title" id="proc-mini-title"><span data-i18n="proc.title1">De la primera llamada</span> <em data-i18n="proc.title2">al sitio publicado.</em></h2>
+        <p class="proc-mini__copy" data-reveal data-i18n="proc.copy">Un proceso claro para definir alcance, validar estructura, diseñar, desarrollar, revisar y entregar sin sorpresas.</p>
+      </div>
+      <div class="proc-mini__grid">
+        <article class="proc-mini__step" data-reveal>
+          <span>01</span>
+          <h3 data-i18n="process.step1.title">Briefing y alcance</h3>
+          <ul class="proc-step__meta">
+            <li><span data-i18n="process.meta.dur">Duración</span><strong data-i18n="process.step1.dur">—</strong></li>
+            <li><span data-i18n="process.meta.del">Entregable</span><strong data-i18n="process.step1.del">—</strong></li>
+            <li><span data-i18n="process.meta.avoid">Evita</span><strong data-i18n="process.step1.avoid">—</strong></li>
+          </ul>
+        </article>
+        <article class="proc-mini__step" data-reveal>
+          <span>02</span>
+          <h3 data-i18n="process.step2.title">Arquitectura y wireframes</h3>
+          <ul class="proc-step__meta">
+            <li><span data-i18n="process.meta.dur">Duración</span><strong data-i18n="process.step2.dur">—</strong></li>
+            <li><span data-i18n="process.meta.del">Entregable</span><strong data-i18n="process.step2.del">—</strong></li>
+            <li><span data-i18n="process.meta.avoid">Evita</span><strong data-i18n="process.step2.avoid">—</strong></li>
+          </ul>
+        </article>
+        <article class="proc-mini__step" data-reveal>
+          <span>03</span>
+          <h3 data-i18n="process.step3.title">Diseño</h3>
+          <ul class="proc-step__meta">
+            <li><span data-i18n="process.meta.dur">Duración</span><strong data-i18n="process.step3.dur">—</strong></li>
+            <li><span data-i18n="process.meta.del">Entregable</span><strong data-i18n="process.step3.del">—</strong></li>
+            <li><span data-i18n="process.meta.avoid">Evita</span><strong data-i18n="process.step3.avoid">—</strong></li>
+          </ul>
+        </article>
+        <article class="proc-mini__step" data-reveal>
+          <span>04</span>
+          <h3 data-i18n="process.step4.title">Desarrollo</h3>
+          <ul class="proc-step__meta">
+            <li><span data-i18n="process.meta.dur">Duración</span><strong data-i18n="process.step4.dur">—</strong></li>
+            <li><span data-i18n="process.meta.del">Entregable</span><strong data-i18n="process.step4.del">—</strong></li>
+            <li><span data-i18n="process.meta.avoid">Evita</span><strong data-i18n="process.step4.avoid">—</strong></li>
+          </ul>
+        </article>
+        <article class="proc-mini__step" data-reveal>
+          <span>05</span>
+          <h3 data-i18n="process.step5.title">QA y revisión</h3>
+          <ul class="proc-step__meta">
+            <li><span data-i18n="process.meta.dur">Duración</span><strong data-i18n="process.step5.dur">—</strong></li>
+            <li><span data-i18n="process.meta.del">Entregable</span><strong data-i18n="process.step5.del">—</strong></li>
+            <li><span data-i18n="process.meta.avoid">Evita</span><strong data-i18n="process.step5.avoid">—</strong></li>
+          </ul>
+        </article>
+        <article class="proc-mini__step" data-reveal>
+          <span>06</span>
+          <h3 data-i18n="process.step6.title">Deploy y entrega</h3>
+          <ul class="proc-step__meta">
+            <li><span data-i18n="process.meta.dur">Duración</span><strong data-i18n="process.step6.dur">—</strong></li>
+            <li><span data-i18n="process.meta.del">Entregable</span><strong data-i18n="process.step6.del">—</strong></li>
+            <li><span data-i18n="process.meta.avoid">Evita</span><strong data-i18n="process.step6.avoid">—</strong></li>
           </ul>
         </article>
       </div>
+      <a class="service__cta proc-mini__cta" href="process" data-link data-magnetic><span data-i18n="proc.more">Ver el proceso completo</span> <span aria-hidden="true">→</span></a>
+    </section>
+
+    <!-- PARA QUIÉN -->
+    <section class="fit" aria-labelledby="home-fit-title">
+      <div class="fit__head">
+        <span class="fit__eyebrow" data-i18n="home.fit.eyebrow">[ Para quién ]</span>
+        <h2 class="fit__title" id="home-fit-title" data-i18n="home.fit.title">Para quién trabajo.</h2>
+      </div>
+      <div class="fit__cols">
+        <div class="fit__col fit__col--yes" data-reveal>
+          <h3 data-i18n="home.fit.who">Trabajo con</h3>
+          <ul>
+            <li data-i18n="home.fit.w1">Marcas y estudios que necesitan presencia con identidad.</li>
+            <li data-i18n="home.fit.w2">Emprendedores y profesionales que lanzan un producto o servicio.</li>
+            <li data-i18n="home.fit.w3">Negocios que quieren convertir visitas en consultas.</li>
+            <li data-i18n="home.fit.w4">Equipos de producto que buscan un perfil full stack remoto.</li>
+          </ul>
+        </div>
+        <div class="fit__col" data-reveal>
+          <h3 data-i18n="home.fit.stack">Capacidades</h3>
+          <ul class="fit__stack">
+            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>TypeScript</li><li>React</li><li>Node.js</li>
+            <li>Supabase</li><li>Firebase</li><li>Vercel</li><li data-i18n="ticker.seo">SEO técnico</li>
+            <li data-i18n="ticker.accessibility">Accesibilidad</li><li>Performance</li><li>PWA</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHECKLIST DE CALIDAD -->
+    <section class="quality" aria-labelledby="quality-title">
+      <div class="quality__head">
+        <span class="quality__eyebrow" data-i18n="quality.eyebrow">[ Calidad ]</span>
+        <h2 class="quality__title" id="quality-title"><span data-i18n="quality.title1">Todo proyecto</span> <em data-i18n="quality.title2">incluye.</em></h2>
+      </div>
+      <ul class="quality__list">
+        <li data-reveal data-i18n="quality.q1">SEO técnico: metadata, Open Graph, schema y sitemap</li>
+        <li data-reveal data-i18n="quality.q2">Accesibilidad base WCAG: semántica, foco visible y contraste</li>
+        <li data-reveal data-i18n="quality.q3">Mobile-first y responsive real en todos los quiebres</li>
+        <li data-reveal data-i18n="quality.q4">Performance: imágenes optimizadas, carga diferida y CLS estable</li>
+        <li data-reveal data-i18n="quality.q5">Formulario o WhatsApp conectado para recibir consultas</li>
+        <li data-reveal data-i18n="quality.q6">Deploy en Vercel con dominio configurado</li>
+        <li data-reveal data-i18n="quality.q7">Documentación breve para mantener el sitio</li>
+        <li data-reveal data-i18n="quality.q8">Soporte post-entrega para ajustes</li>
+      </ul>
+    </section>
+
+    <!-- FAQ CORTA -->
+    <section class="faq-mini" aria-labelledby="faq-mini-title">
+      <div class="faq-mini__head">
+        <span class="faq-mini__eyebrow">[ FAQ ]</span>
+        <h2 class="faq-mini__title" id="faq-mini-title" data-i18n="faqmini.title">Preguntas frecuentes.</h2>
+      </div>
+      <div class="faq-mini__list">
+        <details class="faq-item">
+          <summary data-i18n="faq.q1">¿Cuánto tarda un proyecto web?</summary>
+          <div class="faq-item__body" data-i18n-html="faq.a1"><p>—</p></div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q12">¿Qué necesito para empezar?</summary>
+          <div class="faq-item__body" data-i18n-html="faq.a12"><p>—</p></div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q13">¿Cómo cobrás?</summary>
+          <div class="faq-item__body" data-i18n-html="faq.a13"><p>—</p></div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q10">¿Cuándo no sos la mejor opción?</summary>
+          <div class="faq-item__body" data-i18n-html="faq.a10"><p>—</p></div>
+        </details>
+      </div>
+      <a class="service__cta faq-mini__more" href="faq" data-link data-magnetic><span data-i18n="faqmini.more">Ver todas las preguntas</span> <span aria-hidden="true">→</span></a>
     </section>
 
     <!-- CONTACT CARD -->
@@ -482,7 +690,9 @@
       <div class="contact-card__inner">
         <div class="contact-card__left">
           <span class="contact-card__eyebrow" data-i18n="contactCard.eyebrow">[ Contacto directo ]</span>
-          <h2 class="contact-card__title" id="contact-card-title" data-i18n="contactCard.title">Escribime por mail<br/>o WhatsApp.</h2>
+          <h2 class="contact-card__title" id="contact-card-title" data-i18n="contactCard.title">¿Tenés una web para lanzar,<br/>mejorar o reconstruir?</h2>
+          <p class="contact-card__copy" data-i18n="contactCard.copy">Contame qué necesitás lograr y te respondo con el camino más claro para avanzar.</p>
+          <a href="contact" class="contact-card__btn" data-link data-magnetic><span data-i18n="contactCard.btn">Empezar proyecto</span> <span aria-hidden="true">→</span></a>
           <div class="contact-card__channels">
             <a href="mailto:ronycozzi5@gmail.com" class="contact-card__channel" data-magnetic>
               <span class="contact-card__channel-label">Email</span>
@@ -562,7 +772,7 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=58" defer></script>
+  <script src="js/main.js?v=59" defer></script>
   <a
     class="wsp-fab"
     data-wsp-fab

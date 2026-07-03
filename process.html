@@ -46,7 +46,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" as="style" />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=42" />
+  <link rel="stylesheet" href="css/styles.css?v=43" />
 
   <script type="application/ld+json">
   {
@@ -127,12 +127,10 @@
     <section class="proc-hero">
       <span class="proc-hero__eyebrow" data-i18n="process.eyebrow">[ Proceso de trabajo ]</span>
       <h1 class="proc-hero__title">
-        <span class="line"><span class="reveal" data-i18n="process.title1">Cómo</span></span>
-        <span class="line"><span class="reveal"><em data-i18n="process.title2">trabajo.</em></span></span>
+        <span class="line"><span class="reveal" data-i18n="process.title1">De la primera llamada</span></span>
+        <span class="line"><span class="reveal"><em data-i18n="process.title2">al sitio publicado.</em></span></span>
       </h1>
-      <p class="proc-hero__lead" data-reveal data-i18n="process.lead">
-        De la primera llamada a la puesta en producción. Sin sorpresas, sin deriva de alcance, sin "terminó pero no funciona".
-      </p>
+      <p class="proc-hero__lead" data-reveal data-i18n="process.lead">Un proceso claro para definir alcance, validar estructura, diseñar, desarrollar, revisar y entregar sin sorpresas.</p>
     </section>
 
     <div class="proc-steps">
@@ -141,16 +139,15 @@
         <div class="proc-step__content">
           <div class="proc-step__header">
             <h2 class="proc-step__title" data-i18n="process.step1.title">Briefing y alcance</h2>
-            <span class="proc-step__duration" data-i18n="process.step1.duration">1–2 días</span>
           </div>
           <p class="proc-step__desc" data-i18n="process.step1.desc">
             Una llamada de 30–60 minutos para entender qué necesitás, quién es tu audiencia y qué querés lograr con el sitio. Tomo notas, hago preguntas incómodas y al final del proceso tenés un documento con el alcance definido: qué incluye el proyecto, qué no incluye y cuánto cuesta.
           </p>
-          <div class="proc-step__deliverables">
-            <span class="proc-step__del" data-i18n="process.step1.del1">Documento de alcance</span>
-            <span class="proc-step__del" data-i18n="process.step1.del2">Presupuesto cerrado</span>
-            <span class="proc-step__del" data-i18n="process.step1.del3">Cronograma acordado</span>
-          </div>
+          <ul class="proc-step__meta">
+            <li><span data-i18n="process.meta.dur">Duración</span><strong data-i18n="process.step1.dur">1–2 días</strong></li>
+            <li><span data-i18n="process.meta.del">Entregable</span><strong data-i18n="process.step1.del">Documento de alcance, presupuesto cerrado y cronograma</strong></li>
+            <li><span data-i18n="process.meta.avoid">Evita</span><strong data-i18n="process.step1.avoid">Arrancar sin dirección ni presupuesto cerrado</strong></li>
+          </ul>
         </div>
       </div>
 
@@ -159,16 +156,15 @@
         <div class="proc-step__content">
           <div class="proc-step__header">
             <h2 class="proc-step__title" data-i18n="process.step2.title">Arquitectura y wireframes</h2>
-            <span class="proc-step__duration" data-i18n="process.step2.duration">2–4 días</span>
           </div>
           <p class="proc-step__desc" data-i18n="process.step2.desc">
             Defino la arquitectura de información, el flujo de páginas y los wireframes de baja fidelidad. Te muestro la estructura antes de tocar diseño visual para validar que tenemos la información correcta en el lugar correcto.
           </p>
-          <div class="proc-step__deliverables">
-            <span class="proc-step__del" data-i18n="process.step2.del1">Sitemap</span>
-            <span class="proc-step__del" data-i18n="process.step2.del2">Wireframes de baja fidelidad</span>
-            <span class="proc-step__del" data-i18n="process.step2.del3">Flujos de usuario</span>
-          </div>
+          <ul class="proc-step__meta">
+            <li><span data-i18n="process.meta.dur">Duración</span><strong data-i18n="process.step2.dur">2–4 días</strong></li>
+            <li><span data-i18n="process.meta.del">Entregable</span><strong data-i18n="process.step2.del">Sitemap, wireframes y flujos de usuario</strong></li>
+            <li><span data-i18n="process.meta.avoid">Evita</span><strong data-i18n="process.step2.avoid">Rediseñar la estructura a mitad del proyecto</strong></li>
+          </ul>
         </div>
       </div>
 
@@ -177,16 +173,15 @@
         <div class="proc-step__content">
           <div class="proc-step__header">
             <h2 class="proc-step__title" data-i18n="process.step3.title">Diseño</h2>
-            <span class="proc-step__duration" data-i18n="process.step3.duration">3–7 días</span>
           </div>
           <p class="proc-step__desc" data-i18n="process.step3.desc">
             Diseño visual de las pantallas principales en Figma. Sistema de tokens, tipografía, espaciado y color. Iteración hasta que el look refleje la marca y resuelva el contenido.
           </p>
-          <div class="proc-step__deliverables">
-            <span class="proc-step__del" data-i18n="process.step3.del1">Diseño final en Figma</span>
-            <span class="proc-step__del" data-i18n="process.step3.del2">Tokens de diseño</span>
-            <span class="proc-step__del" data-i18n="process.step3.del3">1 ronda de revisión</span>
-          </div>
+          <ul class="proc-step__meta">
+            <li><span data-i18n="process.meta.dur">Duración</span><strong data-i18n="process.step3.dur">3–7 días</strong></li>
+            <li><span data-i18n="process.meta.del">Entregable</span><strong data-i18n="process.step3.del">Diseño final en Figma, tokens y una ronda de revisión</strong></li>
+            <li><span data-i18n="process.meta.avoid">Evita</span><strong data-i18n="process.step3.avoid">Programar sobre un diseño que nadie validó</strong></li>
+          </ul>
         </div>
       </div>
 
@@ -195,16 +190,15 @@
         <div class="proc-step__content">
           <div class="proc-step__header">
             <h2 class="proc-step__title" data-i18n="process.step4.title">Desarrollo</h2>
-            <span class="proc-step__duration" data-i18n="process.step4.duration">5–14 días</span>
           </div>
           <p class="proc-step__desc" data-i18n="process.step4.desc">
             Construcción del sitio con HTML, CSS y JavaScript modernos. Foco en performance, accesibilidad y SEO técnico desde el primer commit. Vistas previas por rama en Vercel para que veas el progreso.
           </p>
-          <div class="proc-step__deliverables">
-            <span class="proc-step__del" data-i18n="process.step4.del1">Repo en GitHub</span>
-            <span class="proc-step__del" data-i18n="process.step4.del2">Preview en Vercel</span>
-            <span class="proc-step__del" data-i18n="process.step4.del3">APIs / integraciones si hacen falta</span>
-          </div>
+          <ul class="proc-step__meta">
+            <li><span data-i18n="process.meta.dur">Duración</span><strong data-i18n="process.step4.dur">5–14 días según alcance</strong></li>
+            <li><span data-i18n="process.meta.del">Entregable</span><strong data-i18n="process.step4.del">Sitio funcionando en preview de Vercel + repo en GitHub</strong></li>
+            <li><span data-i18n="process.meta.avoid">Evita</span><strong data-i18n="process.step4.avoid">Avanzar a ciegas sin ver el progreso real</strong></li>
+          </ul>
         </div>
       </div>
 
@@ -213,16 +207,15 @@
         <div class="proc-step__content">
           <div class="proc-step__header">
             <h2 class="proc-step__title" data-i18n="process.step5.title">QA y revisión</h2>
-            <span class="proc-step__duration" data-i18n="process.step5.duration">1–2 días</span>
           </div>
           <p class="proc-step__desc" data-i18n="process.step5.desc">
             Antes de llamarlo "listo" pasa por una lista de control de más de 60 puntos: Lighthouse, navegación por teclado, móviles reales (iOS Safari + Android Chrome), formularios, links rotos, integraciones, estados de error y hoja de estilos de impresión. Comparto el reporte con los puntajes reales.
           </p>
-          <div class="proc-step__deliverables">
-            <span class="proc-step__del" data-i18n="process.step5.del1">Reporte QA</span>
-            <span class="proc-step__del" data-i18n="process.step5.del2">Auditoría Lighthouse</span>
-            <span class="proc-step__del" data-i18n="process.step5.del3">Ajustes finales</span>
-          </div>
+          <ul class="proc-step__meta">
+            <li><span data-i18n="process.meta.dur">Duración</span><strong data-i18n="process.step5.dur">1–2 días</strong></li>
+            <li><span data-i18n="process.meta.del">Entregable</span><strong data-i18n="process.step5.del">Reporte QA con los puntajes reales de Lighthouse</strong></li>
+            <li><span data-i18n="process.meta.avoid">Evita</span><strong data-i18n="process.step5.avoid">Publicar con errores que descubre tu cliente</strong></li>
+          </ul>
         </div>
       </div>
 
@@ -231,17 +224,15 @@
         <div class="proc-step__content">
           <div class="proc-step__header">
             <h2 class="proc-step__title" data-i18n="process.step6.title">Deploy y entrega</h2>
-            <span class="proc-step__duration" data-i18n="process.step6.duration">1 día</span>
           </div>
           <p class="proc-step__desc" data-i18n="process.step6.desc">
             Puesta en producción con tu dominio, DNS configurado y HTTPS activo. Te entrego: acceso al repo en GitHub, acceso al proyecto desplegado, el PDF de documentación técnica y una grabación de Loom explicando cómo actualizar contenido básico por tu cuenta. Soporte de 30 días incluido.
           </p>
-          <div class="proc-step__deliverables">
-            <span class="proc-step__del" data-i18n="process.step6.del1">Dominio configurado + SSL</span>
-            <span class="proc-step__del" data-i18n="process.step6.del2">Accesos a todos los servicios</span>
-            <span class="proc-step__del" data-i18n="process.step6.del3">Documentación técnica</span>
-            <span class="proc-step__del" data-i18n="process.step6.del4">30 días de soporte</span>
-          </div>
+          <ul class="proc-step__meta">
+            <li><span data-i18n="process.meta.dur">Duración</span><strong data-i18n="process.step6.dur">1 día</strong></li>
+            <li><span data-i18n="process.meta.del">Entregable</span><strong data-i18n="process.step6.del">Sitio en producción, accesos, documentación y 30 días de soporte</strong></li>
+            <li><span data-i18n="process.meta.avoid">Evita</span><strong data-i18n="process.step6.avoid">Quedar atado a tu desarrollador para cada cambio</strong></li>
+          </ul>
         </div>
       </div>
 
@@ -251,7 +242,7 @@
           <p class="proc-cta__copy" data-i18n="process.cta.copy">Contame en qué estás trabajando. Sin compromiso — la primera llamada es gratis.</p>
         </div>
         <a href="contact" class="proc-cta__btn" data-magnetic data-link>
-          <span data-i18n="process.cta.link">Escribime</span> <span aria-hidden="true">→</span>
+          <span data-i18n="process.cta.link">Empezar proyecto</span> <span aria-hidden="true">→</span>
         </a>
       </div>
     </div>
@@ -300,7 +291,7 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=58" defer></script>
+  <script src="js/main.js?v=59" defer></script>
   <a
     class="wsp-fab"
     data-wsp-fab
