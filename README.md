@@ -53,7 +53,7 @@ node .codex_tmp/serve-local.js   # http://localhost:4173
 
 ## Verificación
 
-Última auditoría ejecutada (Lighthouse en entorno local con gzip, simulación mobile de Lighthouse): Accesibilidad 100 · Best Practices 100 · SEO 100 · Performance 83 mobile-sim / 97-98 desktop. En producción (brotli + CDN de Vercel) los tiempos de red son menores que en la simulación local.
+Última auditoría local registrada: Accesibilidad 100 · Best Practices 100 · SEO 100. Performance se mide por entorno antes de publicar cambios relevantes; no se declara un score fijo porque Lighthouse local puede variar por CPU, red simulada y estado del navegador.
 
 ## Licencia
 
