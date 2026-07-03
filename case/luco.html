@@ -42,12 +42,10 @@
   <meta name="twitter:image" content="https://portfolios-ronycozzi.vercel.app/assets/work/luco.webp" />
   <meta name="twitter:image:alt" content="Sitio de Luco Gourmet — caso de estudio" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" as="style" />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/styles.css?v=44" />
-  <link rel="stylesheet" href="../css/case.css?v=7" />
+  <link rel="preload" href="/assets/fonts/fraunces-normal-500-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/assets/fonts/inter-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="../css/styles.css?v=45" />
+  <link rel="stylesheet" href="../css/case.css?v=8" />
 
   <script type="application/ld+json">
   {
@@ -278,6 +276,27 @@
       </div>
     </section>
 
+    <section class="case-section" aria-labelledby="luco-gallery">
+      <div class="case-section__inner">
+        <span class="case-section__num" data-i18n="case.gallery.num">[ Galería ]</span>
+        <h2 class="case-section__title" id="luco-gallery" data-i18n="case.gallery.title">El sitio en pantalla</h2>
+        <div class="case-gallery">
+          <figure class="case-gallery__item case-gallery__item--wide" data-reveal>
+            <img src="../assets/work/gallery/luco-d1.webp" alt="Vista desktop de Luco Gourmet: portada" data-i18n-attr="alt:case.luco.gal_d1" loading="lazy" decoding="async" width="1200" height="750" />
+            <figcaption><span data-i18n="case.gallery.desktop">Desktop</span> — <span data-i18n="case.gallery.cover">Portada</span></figcaption>
+          </figure>
+          <figure class="case-gallery__item case-gallery__item--tall" data-reveal>
+            <img src="../assets/work/gallery/luco-m1.webp" alt="Vista mobile de Luco Gourmet" data-i18n-attr="alt:case.luco.gal_m1" loading="lazy" decoding="async" width="480" height="1039" />
+            <figcaption><span data-i18n="case.gallery.mobile">Mobile</span></figcaption>
+          </figure>
+          <figure class="case-gallery__item case-gallery__item--wide" data-reveal>
+            <img src="../assets/work/gallery/luco-d2.webp" alt="Vista desktop de Luco Gourmet: sección interior" data-i18n-attr="alt:case.luco.gal_d2" loading="lazy" decoding="async" width="1200" height="750" />
+            <figcaption><span data-i18n="case.gallery.desktop">Desktop</span> — <span data-i18n="case.gallery.inner">Sección interior</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
     <section class="case-section" aria-labelledby="luco-close">
       <div class="case-section__inner">
         <span class="case-section__num" data-i18n="case.close.num">[ Cierre ]</span>
@@ -350,7 +369,7 @@
     </div>
   </footer>
 
-  <script src="../js/main.js?v=59" defer></script>
+  <script src="../js/main.js?v=60" defer></script>
   <a
     class="wsp-fab"
     data-wsp-fab

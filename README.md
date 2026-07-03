@@ -1,114 +1,60 @@
-# Rony Cozzi — Portfolio v2
+# Rony Cozzi — Portfolio
 
-Portfolio personal en producción: **[portfolios-ronycozzi.vercel.app](https://portfolios-ronycozzi.vercel.app)**
+Sitio comercial de desarrollo web full stack. Estático, sin build ni dependencias: HTML + CSS + JavaScript vanilla, deploy en Vercel.
 
-## Stack
+**En vivo:** https://portfolios-ronycozzi.vercel.app/
 
-- **HTML5 + CSS3 + JavaScript ES6+** — sin frameworks, sin build step, sin npm
-- **Vercel** — deploy, headers, CDN
-- **Google Fonts** — Space Grotesk (display) + Inter (body)
-- **PWA** — Service Worker, manifest instalable, offline-first
+## Qué vende
+
+Landing de conversión · Sitio web completo · Full stack ligero (integraciones) · Optimización y mantenimiento. Los 4 proyectos del portfolio son demos publicados, declarados como tales, con caso de estudio completo (problema → decisiones → resultado → aprendizaje → galería).
+
+## Arquitectura
+
+- **Cero build**: los archivos del repo son los que se sirven. Vercel con `cleanUrls`.
+- **Diseño**: sistema "Obsidian Editorial" — Fraunces (display) + Inter (cuerpo) + JetBrains Mono (metadata), paleta obsidiana cálida con acento vermellón, tema claro/oscuro vía `data-theme`.
+- **Fuentes self-hosted** en `assets/fonts/` (woff2, subset latin). Sin requests a Google Fonts.
+- **i18n ES/EN** por diccionario en `js/main.js` (`data-i18n`, `data-i18n-html`, `data-i18n-attr`), toggle persistido en localStorage.
+- **PWA**: service worker (`sw.js`) con precache versionado; bump de `VERSION` y de los query params `?v=` al cambiar assets.
+- **SEO**: metadata por página + JSON-LD (Person, ProfessionalService, WebSite, OfferCatalog, FAQPage, BreadcrumbList, CreativeWork). Los hashes CSP de los bloques JSON-LD se regeneran con `node .codex_tmp/csp-hashes.js` y se pegan en `vercel.json`.
+- **Accesibilidad**: WCAG 2.1 AA — 0 violaciones en axe (última auditoría). Skip link, foco visible, `prefers-reduced-motion`.
 
 ## Estructura
 
 ```
-portfolio-rony/
-├── index.html              Home — hero, featured deck, services, contact card
-├── work.html               Pin horizontal con 4 proyectos + capabilities
-├── about.html              Bio, stack, principios
-├── contact.html            Form mailto + email/WhatsApp
-├── faq.html                Preguntas frecuentes con FAQPage schema
-├── process.html            Proceso de trabajo paso a paso
-├── privacy.html            Política de privacidad (Ley 25.326 + GDPR)
-├── terms.html              Términos y condiciones
-├── 404.html                Página 404 custom con terminal easter egg
-├── manifest.json           PWA manifest
-├── vercel.json             Security headers + cache rules
-├── sitemap.xml             URLs indexadas
-├── robots.txt              Allow all
-├── sw.js                   Service worker (network-first docs, SWR assets)
-├── favicon.svg             Logo RC
-├── og-image.png            OG preview 1200×630
-├── LICENSE                 MIT
-├── css/
-│   ├── styles.css          Tokens, componentes, responsive
-│   └── case.css            Estilos para case studies
-├── js/
-│   └── main.js             i18n, theme, transitions, etc.
-├── assets/
-│   ├── Rony_Cozzi_CV.pdf   CV descargable
-│   ├── img/rony.jpg        Foto bio (B&N vía CSS)
-│   ├── icons/              PWA icons 180/192/512
-│   └── work/               Screenshots WebP de proyectos
-└── case/
-    ├── cucu.html           Caso de estudio — Cucú Studio
-    ├── luco.html           Caso de estudio — Luco Gourmet
-    ├── sellink.html        Caso de estudio — Sellink Group
-    └── cognition.html      Caso de estudio — Cognition
+index.html            Home comercial (hero, señales, problema, trabajos,
+                      paquetes, enfoque, proceso, para quién, calidad, FAQ, CTA)
+work.html             Trabajos como mini-casos
+services.html         Paquetes de servicios en detalle
+case/*.html           4 casos de estudio con galería y cierre
+process.html          Proceso en 6 etapas (duración / entregable / evita)
+faq.html              FAQ por categorías
+about.html            Bio, trayectoria, stack, cuándo sí / cuándo no
+contact.html          Formulario orientado a proyecto (mailto)
+css/styles.css        Sistema de diseño global (+ @font-face al tope)
+css/case.css          Estilos de casos
+js/main.js            i18n, tema, navegación, reveals, formulario, SW registro
+vercel.json           Headers de seguridad (CSP con hashes), cache, cleanUrls
 ```
 
-## Correr local
+## Desarrollo local
+
+Cualquier server estático con clean URLs. Incluido en el repo:
 
 ```bash
-# Opción 1: Python (cualquier OS)
-python -m http.server 3000
-
-# Opción 2: Node
-npx serve .
-
-# Opción 3: VS Code Live Server
-# Instalar extensión "Live Server" → click derecho en index.html → Open with Live Server
+node .codex_tmp/serve-local.js   # http://localhost:4173
 ```
 
-## Deploy
+## Checklist al editar
 
-Auto-deploy desde `main` en Vercel. Push a `main` = deploy automático.
+1. Cambiaste copy con `data-i18n` → actualizá **ambos** idiomas en el diccionario de `js/main.js`.
+2. Cambiaste CSS/JS → bump del `?v=` en todas las páginas **y** en `sw.js` (+ `VERSION`).
+3. Cambiaste un JSON-LD inline → regenerá hashes CSP (`node .codex_tmp/csp-hashes.js`) y actualizá `vercel.json`.
+4. Sumaste página → sitemap.xml, sw.js (precache), navegación y `pageMetaFromHref` en main.js.
 
-```bash
-git add .
-git commit -m "feat: descripción del cambio"
-git push origin main
-```
+## Verificación
 
-## Agregar un proyecto nuevo al carrusel
-
-1. En `index.html`, copiar un bloque `<a class="card card--XXX">` en la sección `.featured__deck`
-2. Setear `--card-bg`, `--card-fg`, `--card-accent` en el atributo `style`
-3. Agregar la paleta correspondiente en `styles.css` (buscar `.card--cucu` como referencia)
-4. En `work.html`, copiar un bloque `.work-item` en el track horizontal
-5. Crear `case/nombre.html` copiando una página de caso de estudio existente
-6. Actualizar `sitemap.xml` con la nueva URL (sin `.html`; por ejemplo: `https://portfolios-ronycozzi.vercel.app/case/nombre`)
-
-## Agregar un caso de estudio
-
-1. Copiar `case/cucu.html` → `case/nuevo.html`
-2. Cambiar: title, meta description, canonical, og:image, h1, tags, stats, textos, stack
-3. Agregar screenshot a `assets/work/nuevo.webp`
-4. Linkear desde `index.html` y `work.html`
-5. Actualizar `sitemap.xml` (URLs públicas sin `.html`)
-
-## Cambiar la paleta
-
-Los tokens están en `css/styles.css` bajo `/* ---------- Tokens ---------- */`:
-
-```css
-:root {
-  --accent: #C6FF3D; /* verde lima — dark mode */
-}
-[data-theme="light"] {
-  --accent: #2E5BFF; /* azul eléctrico — light mode */
-}
-```
-
-## Decisiones técnicas
-
-- `overflow-x: clip` en html/body (no `hidden`) — preserva `position: sticky` en descendientes
-- IntersectionObserver en `.line` para reveals — el threshold funciona correctamente
-- Versionado de assets (CSS/JS) vía `?v=` + rotación de caches del Service Worker por `VERSION` (evita stale con `immutable`)
-- Formulario sin backend: prepara un `mailto:` con los datos ingresados y mantiene canales directos de email/WhatsApp
-- Tema respeta `prefers-color-scheme` por defecto, override por toggle persiste en `localStorage`
-- i18n ES/EN con `data-i18n`, ARIA labels y skip-link traducidos dinámicamente
+Última auditoría ejecutada (Lighthouse en entorno local con gzip, simulación mobile de Lighthouse): Accesibilidad 100 · Best Practices 100 · SEO 100 · Performance 83 mobile-sim / 97-98 desktop. En producción (brotli + CDN de Vercel) los tiempos de red son menores que en la simulación local.
 
 ## Licencia
 
-MIT — ver [LICENSE](./LICENSE). Podés ver e inspirarte en el código, pero no replicarlo como portfolio propio.
+MIT — ver `LICENSE`.
