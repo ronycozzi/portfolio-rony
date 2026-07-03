@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Rony Cozzi — desarrollador full stack</title>
-  <meta name="description" content="Sitios web rápidos, landings, APIs ligeras e integraciones para marcas, estudios y startups que necesitan una experiencia digital clara y lista para producción." />
+  <title>Rony Cozzi | Desarrollador full stack, sitios web y landings</title>
+  <meta name="description" content="Diseño y desarrollo sitios web rápidos, claros y mantenibles: landings, sitios completos e integraciones full stack con foco en performance, SEO técnico y accesibilidad." />
 
   <meta name="theme-color" content="#0F0D09" />
   <meta name="color-scheme" content="dark light" />
@@ -31,8 +31,8 @@
   <meta property="og:locale" content="es_AR" />
   <meta property="og:locale:alternate" content="en_US" />
   <meta property="og:url" content="https://portfolios-ronycozzi.vercel.app/" />
-  <meta property="og:title" content="Rony Cozzi — desarrollador full stack" />
-  <meta property="og:description" content="Sitios web rápidos, landings, APIs ligeras e integraciones para marcas, estudios y startups que necesitan una experiencia digital clara y lista para producción." />
+  <meta property="og:title" content="Rony Cozzi | Desarrollador full stack, sitios web y landings" />
+  <meta property="og:description" content="Diseño y desarrollo sitios web rápidos, claros y mantenibles: landings, sitios completos e integraciones full stack con foco en performance, SEO técnico y accesibilidad." />
   <meta property="og:image" content="https://portfolios-ronycozzi.vercel.app/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -41,8 +41,8 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" content="@ronycozzi" />
-  <meta name="twitter:title" content="Rony Cozzi — desarrollador full stack" />
-  <meta name="twitter:description" content="Sitios web rápidos, landings, APIs ligeras e integraciones para marcas, estudios y startups que necesitan una experiencia digital clara y lista para producción." />
+  <meta name="twitter:title" content="Rony Cozzi | Desarrollador full stack, sitios web y landings" />
+  <meta name="twitter:description" content="Diseño y desarrollo sitios web rápidos, claros y mantenibles: landings, sitios completos e integraciones full stack con foco en performance, SEO técnico y accesibilidad." />
   <meta name="twitter:image" content="https://portfolios-ronycozzi.vercel.app/og-image.png" />
   <meta name="twitter:image:alt" content="Rony Cozzi — desarrollador full stack" />
 
@@ -51,7 +51,7 @@
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" as="style" />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet" />
   <link rel="preload" as="image" href="assets/work/cognition-v2.webp" fetchpriority="high" />
-  <link rel="stylesheet" href="css/styles.css?v=43" />
+  <link rel="stylesheet" href="css/styles.css?v=44" />
   <link rel="prefetch" href="work.html" />
   <link rel="prefetch" href="contact.html" />
 
@@ -66,6 +66,16 @@
         "name": "Rony Cozzi — Portfolio",
         "inLanguage": "es-AR",
         "publisher": { "@id": "https://portfolios-ronycozzi.vercel.app/#person" }
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://portfolios-ronycozzi.vercel.app/#service",
+        "name": "Rony Cozzi — Desarrollo web full stack",
+        "url": "https://portfolios-ronycozzi.vercel.app/",
+        "founder": { "@id": "https://portfolios-ronycozzi.vercel.app/#person" },
+        "areaServed": "Remoto",
+        "serviceType": ["Landing de conversión", "Sitio web completo", "Integraciones full stack", "Optimización y mantenimiento"],
+        "knowsLanguage": ["es", "en"]
       },
       {
         "@type": "Person",
@@ -138,11 +148,13 @@
     <nav class="nav" aria-label="Navegación principal" data-i18n-attr="aria-label:a11y.nav">
       <a href="/" data-magnetic data-link><span data-i18n="nav.home">Inicio</span></a>
       <a href="work" data-magnetic data-link><span data-i18n="nav.work">Trabajos</span></a>
-      <a href="about" data-magnetic data-link><span data-i18n="nav.about">Sobre mí</span></a>
+      <a href="services" data-magnetic data-link><span data-i18n="nav.services">Servicios</span></a>
+      <a href="process" data-magnetic data-link><span data-i18n="nav.process">Proceso</span></a>
       <a href="contact" data-magnetic data-link><span data-i18n="nav.contact">Contacto</span></a>
     </nav>
 
     <div class="header__actions">
+      <a href="contact" class="header__cta" data-link><span data-i18n="nav.talk">Hablemos</span></a>
       <button type="button" class="lang-toggle" data-lang-toggle aria-label="Cambiar idioma">
         <span data-lang="es" class="is-active">ES</span>
         <span class="lang-sep" aria-hidden="true">/</span>
@@ -160,7 +172,10 @@
   <nav class="mobile-menu" id="mobile-menu" aria-label="Menú móvil" data-i18n-attr="aria-label:a11y.mobileNav" data-mobile-menu>
     <a href="/" data-link><span data-i18n="nav.home">Inicio</span></a>
     <a href="work" data-link><span data-i18n="nav.work">Trabajos</span></a>
+    <a href="services" data-link><span data-i18n="nav.services">Servicios</span></a>
     <a href="about" data-link><span data-i18n="nav.about">Sobre mí</span></a>
+    <a href="process" data-link><span data-i18n="nav.process">Proceso</span></a>
+    <a href="faq" data-link>FAQ</a>
     <a href="contact" data-link><span data-i18n="nav.contact">Contacto</span></a>
   </nav>
 
@@ -170,7 +185,7 @@
       <div class="hero__masthead">
         <span class="hero__issue" data-i18n="hero.issue">Portfolio — Edición 2026</span>
         <span class="hero__mast-mid" data-i18n="hero.role">Rony Cozzi — desarrollador full stack</span>
-        <span class="tag tag--ghost" data-clock>--:--:-- GMT-3</span>
+        <span class="tag tag--ghost" data-clock>GMT-3</span>
       </div>
 
       <div class="hero__main">
@@ -245,7 +260,7 @@
       </figure>
 
       <div class="hero__foot">
-        <span class="hero__hud">© <span class="year"></span> — Rony Cozzi</span>
+        <span class="hero__hud">© <span class="year">2026</span> — Rony Cozzi</span>
         <span class="hero__hud">
           <span data-i18n="hero.scroll">Scroll</span>
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14m0 0-6-6m6 6 6-6" stroke="currentColor" stroke-width="1.5"/></svg>
@@ -559,54 +574,54 @@
           <span>01</span>
           <h3 data-i18n="process.step1.title">Briefing y alcance</h3>
           <ul class="proc-step__meta">
-            <li><span data-i18n="process.meta.dur">Duración</span><strong data-i18n="process.step1.dur">—</strong></li>
-            <li><span data-i18n="process.meta.del">Entregable</span><strong data-i18n="process.step1.del">—</strong></li>
-            <li><span data-i18n="process.meta.avoid">Evita</span><strong data-i18n="process.step1.avoid">—</strong></li>
+            <li><span data-i18n="process.meta.dur">Duración</span><strong data-i18n="process.step1.dur">1–2 días</strong></li>
+            <li><span data-i18n="process.meta.del">Entregable</span><strong data-i18n="process.step1.del">Documento de alcance, presupuesto cerrado y cronograma</strong></li>
+            <li><span data-i18n="process.meta.avoid">Evita</span><strong data-i18n="process.step1.avoid">Arrancar sin dirección ni presupuesto cerrado</strong></li>
           </ul>
         </article>
         <article class="proc-mini__step" data-reveal>
           <span>02</span>
           <h3 data-i18n="process.step2.title">Arquitectura y wireframes</h3>
           <ul class="proc-step__meta">
-            <li><span data-i18n="process.meta.dur">Duración</span><strong data-i18n="process.step2.dur">—</strong></li>
-            <li><span data-i18n="process.meta.del">Entregable</span><strong data-i18n="process.step2.del">—</strong></li>
-            <li><span data-i18n="process.meta.avoid">Evita</span><strong data-i18n="process.step2.avoid">—</strong></li>
+            <li><span data-i18n="process.meta.dur">Duración</span><strong data-i18n="process.step2.dur">2–4 días</strong></li>
+            <li><span data-i18n="process.meta.del">Entregable</span><strong data-i18n="process.step2.del">Sitemap, wireframes y flujos de usuario</strong></li>
+            <li><span data-i18n="process.meta.avoid">Evita</span><strong data-i18n="process.step2.avoid">Rediseñar la estructura a mitad del proyecto</strong></li>
           </ul>
         </article>
         <article class="proc-mini__step" data-reveal>
           <span>03</span>
           <h3 data-i18n="process.step3.title">Diseño</h3>
           <ul class="proc-step__meta">
-            <li><span data-i18n="process.meta.dur">Duración</span><strong data-i18n="process.step3.dur">—</strong></li>
-            <li><span data-i18n="process.meta.del">Entregable</span><strong data-i18n="process.step3.del">—</strong></li>
-            <li><span data-i18n="process.meta.avoid">Evita</span><strong data-i18n="process.step3.avoid">—</strong></li>
+            <li><span data-i18n="process.meta.dur">Duración</span><strong data-i18n="process.step3.dur">3–7 días</strong></li>
+            <li><span data-i18n="process.meta.del">Entregable</span><strong data-i18n="process.step3.del">Diseño final en Figma, tokens y una ronda de revisión</strong></li>
+            <li><span data-i18n="process.meta.avoid">Evita</span><strong data-i18n="process.step3.avoid">Programar sobre un diseño que nadie validó</strong></li>
           </ul>
         </article>
         <article class="proc-mini__step" data-reveal>
           <span>04</span>
           <h3 data-i18n="process.step4.title">Desarrollo</h3>
           <ul class="proc-step__meta">
-            <li><span data-i18n="process.meta.dur">Duración</span><strong data-i18n="process.step4.dur">—</strong></li>
-            <li><span data-i18n="process.meta.del">Entregable</span><strong data-i18n="process.step4.del">—</strong></li>
-            <li><span data-i18n="process.meta.avoid">Evita</span><strong data-i18n="process.step4.avoid">—</strong></li>
+            <li><span data-i18n="process.meta.dur">Duración</span><strong data-i18n="process.step4.dur">5–14 días según alcance</strong></li>
+            <li><span data-i18n="process.meta.del">Entregable</span><strong data-i18n="process.step4.del">Sitio funcionando en preview de Vercel + repo en GitHub</strong></li>
+            <li><span data-i18n="process.meta.avoid">Evita</span><strong data-i18n="process.step4.avoid">Avanzar a ciegas sin ver el progreso real</strong></li>
           </ul>
         </article>
         <article class="proc-mini__step" data-reveal>
           <span>05</span>
           <h3 data-i18n="process.step5.title">QA y revisión</h3>
           <ul class="proc-step__meta">
-            <li><span data-i18n="process.meta.dur">Duración</span><strong data-i18n="process.step5.dur">—</strong></li>
-            <li><span data-i18n="process.meta.del">Entregable</span><strong data-i18n="process.step5.del">—</strong></li>
-            <li><span data-i18n="process.meta.avoid">Evita</span><strong data-i18n="process.step5.avoid">—</strong></li>
+            <li><span data-i18n="process.meta.dur">Duración</span><strong data-i18n="process.step5.dur">1–2 días</strong></li>
+            <li><span data-i18n="process.meta.del">Entregable</span><strong data-i18n="process.step5.del">Reporte QA con los puntajes reales de Lighthouse</strong></li>
+            <li><span data-i18n="process.meta.avoid">Evita</span><strong data-i18n="process.step5.avoid">Publicar con errores que descubre tu cliente</strong></li>
           </ul>
         </article>
         <article class="proc-mini__step" data-reveal>
           <span>06</span>
           <h3 data-i18n="process.step6.title">Deploy y entrega</h3>
           <ul class="proc-step__meta">
-            <li><span data-i18n="process.meta.dur">Duración</span><strong data-i18n="process.step6.dur">—</strong></li>
-            <li><span data-i18n="process.meta.del">Entregable</span><strong data-i18n="process.step6.del">—</strong></li>
-            <li><span data-i18n="process.meta.avoid">Evita</span><strong data-i18n="process.step6.avoid">—</strong></li>
+            <li><span data-i18n="process.meta.dur">Duración</span><strong data-i18n="process.step6.dur">1 día</strong></li>
+            <li><span data-i18n="process.meta.del">Entregable</span><strong data-i18n="process.step6.del">Sitio en producción, accesos, documentación y 30 días de soporte</strong></li>
+            <li><span data-i18n="process.meta.avoid">Evita</span><strong data-i18n="process.step6.avoid">Quedar atado a tu desarrollador para cada cambio</strong></li>
           </ul>
         </article>
       </div>
@@ -667,19 +682,19 @@
       <div class="faq-mini__list">
         <details class="faq-item">
           <summary data-i18n="faq.q1">¿Cuánto tarda un proyecto web?</summary>
-          <div class="faq-item__body" data-i18n-html="faq.a1"><p>—</p></div>
+          <div class="faq-item__body" data-i18n-html="faq.a1"><p><strong>Una web completa: 2–4 semanas. Una landing: 5–7 días hábiles.</strong></p><p>El plazo depende de tres factores:</p><ul><li>Cantidad de páginas y secciones.</li><li>Integraciones: pagos, formularios, APIs.</li><li>Qué tan rápido llegue el material: textos, fotos y logo.</li></ul><p>En el briefing te doy un cronograma cerrado antes de empezar.</p></div>
         </details>
         <details class="faq-item">
           <summary data-i18n="faq.q12">¿Qué necesito para empezar?</summary>
-          <div class="faq-item__body" data-i18n-html="faq.a12"><p>—</p></div>
+          <div class="faq-item__body" data-i18n-html="faq.a12"><p><strong>Una idea clara de qué querés lograr y el material de tu marca. Del resto me encargo yo.</strong></p><p>Lo mínimo para arrancar:</p><ul><li>El objetivo del sitio: vender, captar consultas, mostrar tu trabajo.</li><li>Logo y textos si los tenés — si no, lo resolvemos en el briefing.</li><li>Referencias de sitios que te gustan (opcional, pero ayuda).</li></ul><p>Con eso hacemos la primera llamada y salís con alcance y presupuesto definidos.</p></div>
         </details>
         <details class="faq-item">
           <summary data-i18n="faq.q13">¿Cómo cobrás?</summary>
-          <div class="faq-item__body" data-i18n-html="faq.a13"><p>—</p></div>
+          <div class="faq-item__body" data-i18n-html="faq.a13"><p><strong>50% de anticipo al arrancar y 50% al entregar el sitio funcionando.</strong></p><ul><li>Presupuesto cerrado antes de empezar: sabés el total desde el día uno.</li><li>Sin costos sorpresa: si el alcance cambia, se cotiza aparte y lo aprobás vos.</li><li>Para proyectos internacionales, cotizo y cobro en USD.</li></ul></div>
         </details>
         <details class="faq-item">
-          <summary data-i18n="faq.q10">¿Cuándo no sos la mejor opción?</summary>
-          <div class="faq-item__body" data-i18n-html="faq.a10"><p>—</p></div>
+          <summary data-i18n="faq.q10">¿Cuándo no soy la mejor opción para tu proyecto?</summary>
+          <div class="faq-item__body" data-i18n-html="faq.a10"><p><strong>Cuando el proyecto necesita un equipo, no un desarrollador.</strong></p><p>Probablemente no sea la mejor opción si necesitás:</p><ul><li>Un portal con autenticación compleja y muchos roles de usuario.</li><li>Una app móvil nativa (iOS/Android).</li><li>Un backend corporativo con lógica de negocio pesada o alta concurrencia.</li><li>Un equipo dedicado de 40h/semana exclusivas.</li></ul><p>Para esos casos te lo digo al principio y, si puedo, te recomiendo a alguien.</p></div>
         </details>
       </div>
       <a class="service__cta faq-mini__more" href="faq" data-link data-magnetic><span data-i18n="faqmini.more">Ver todas las preguntas</span> <span aria-hidden="true">→</span></a>
@@ -751,6 +766,7 @@
         <a href="work" data-link><span data-i18n="nav.work">Trabajos</span></a>
         <a href="about" data-link><span data-i18n="nav.about">Sobre mí</span></a>
         <a href="contact" data-link><span data-i18n="nav.contact">Contacto</span></a>
+        <a href="services" data-link><span data-i18n="nav.services">Servicios</span></a>
         <a href="process" data-link><span data-i18n="footer.proceso">Proceso</span></a>
         <a href="faq" data-link>FAQ</a>
       </div>
@@ -764,8 +780,8 @@
     </div>
 
     <div class="footer__meta">
-      <span>© <span class="year"></span> — Rony Cozzi</span>
-      <span data-clock>--:--:-- GMT-3</span>
+      <span>© <span class="year">2026</span> — Rony Cozzi</span>
+      <span data-clock>GMT-3</span>
       <a href="#top" data-magnetic>↑ <span data-i18n="footer.topLabel">Subir</span></a>
       <a href="privacy" class="footer__legal" data-link><span data-i18n="footer.privacy">Privacidad</span></a>
       <a href="terms" class="footer__legal" data-link><span data-i18n="footer.terms">Términos</span></a>

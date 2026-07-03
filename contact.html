@@ -46,7 +46,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" as="style" />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=43" />
+  <link rel="stylesheet" href="css/styles.css?v=44" />
 
   <script type="application/ld+json">
   {
@@ -97,10 +97,12 @@
     <nav class="nav" aria-label="Navegación principal" data-i18n-attr="aria-label:a11y.nav">
       <a href="/" data-magnetic data-link><span data-i18n="nav.home">Inicio</span></a>
       <a href="work" data-magnetic data-link><span data-i18n="nav.work">Trabajos</span></a>
-      <a href="about" data-magnetic data-link><span data-i18n="nav.about">Sobre mí</span></a>
-      <a href="contact" class="is-current" aria-current="page" data-magnetic data-link><span data-i18n="nav.contact">Contacto</span></a>
+      <a href="services" data-magnetic data-link><span data-i18n="nav.services">Servicios</span></a>
+      <a href="process" data-magnetic data-link><span data-i18n="nav.process">Proceso</span></a>
+      <a href="contact" data-magnetic data-link><span data-i18n="nav.contact">Contacto</span></a>
     </nav>
     <div class="header__actions">
+      <a href="contact" class="header__cta" data-link><span data-i18n="nav.talk">Hablemos</span></a>
       <button type="button" class="lang-toggle" data-lang-toggle aria-label="Cambiar idioma">
         <span data-lang="es" class="is-active">ES</span>
         <span class="lang-sep" aria-hidden="true">/</span>
@@ -118,7 +120,10 @@
   <nav class="mobile-menu" id="mobile-menu" aria-label="Menú móvil" data-i18n-attr="aria-label:a11y.mobileNav" data-mobile-menu>
     <a href="/" data-link><span data-i18n="nav.home">Inicio</span></a>
     <a href="work" data-link><span data-i18n="nav.work">Trabajos</span></a>
+    <a href="services" data-link><span data-i18n="nav.services">Servicios</span></a>
     <a href="about" data-link><span data-i18n="nav.about">Sobre mí</span></a>
+    <a href="process" data-link><span data-i18n="nav.process">Proceso</span></a>
+    <a href="faq" data-link>FAQ</a>
     <a href="contact" data-link><span data-i18n="nav.contact">Contacto</span></a>
   </nav>
 
@@ -126,8 +131,11 @@
     <section class="contact-hero" aria-labelledby="contact-title">
       <span class="contact-hero__eyebrow" data-i18n="contact.eyebrow">[ Índice · 04 contacto ]</span>
       <h1 class="contact-hero__title" id="contact-title">
-        <span class="line"><span class="reveal" data-i18n="contact.heading1">Conversemos.</span></span>
+        <span class="line"><span class="reveal" data-i18n="contact.heading1">Contame qué</span></span>
+        <span class="line"><span class="reveal"><em data-i18n="contact.heading2">querés construir.</em></span></span>
       </h1>
+
+      <p class="work-hero__lead" data-reveal data-i18n="contact.lead">Con unas pocas respuestas puedo decirte qué alcance tiene el proyecto, qué camino conviene y si soy la persona indicada para hacerlo.</p>
 
       <div class="contact-paths" data-reveal>
         <a class="contact-path" href="#form" data-i18n-attr="aria-label:contact.path.project_aria">
@@ -214,6 +222,19 @@
           />
         </div>
         <div class="field">
+          <label for="whatsapp"><span data-i18n="contact.form.whatsapp">WhatsApp</span> <em data-i18n="contact.form.optional">(opcional)</em></label>
+          <input
+            type="tel"
+            id="whatsapp"
+            name="whatsapp"
+            maxlength="30"
+            autocomplete="tel"
+            inputmode="tel"
+            enterkeyhint="next"
+            placeholder="+54 9 ..."
+          />
+        </div>
+        <div class="field">
           <label for="subject" data-i18n="contact.form.subject">Asunto</label>
           <select id="subject" name="subject" required aria-required="true">
             <option value="" disabled selected hidden data-i18n="contact.form.opt_placeholder">Elegí un asunto…</option>
@@ -222,6 +243,52 @@
             <option value="collab" data-i18n="contact.form.opt_collab">Colaboración</option>
             <option value="other" data-i18n="contact.form.opt_other">Otro</option>
           </select>
+        </div>
+        <div class="field">
+          <label for="ptype" data-i18n="contact.form.ptype">Tipo de proyecto</label>
+          <select id="ptype" name="ptype" required aria-required="true">
+            <option value="" disabled selected hidden data-i18n="contact.form.opt_placeholder2">Elegí una opción…</option>
+            <option value="landing" data-i18n="contact.form.pt_landing">Landing</option>
+            <option value="site" data-i18n="contact.form.pt_site">Sitio completo</option>
+            <option value="integration" data-i18n="contact.form.pt_integration">Integración / backend</option>
+            <option value="optimization" data-i18n="contact.form.pt_optimization">Optimización</option>
+            <option value="unsure" data-i18n="contact.form.pt_unsure">No sé todavía</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="pstate"><span data-i18n="contact.form.pstate">Estado actual</span> <em data-i18n="contact.form.optional">(opcional)</em></label>
+          <select id="pstate" name="pstate">
+            <option value="" selected data-i18n="contact.form.opt_placeholder2">Elegí una opción…</option>
+            <option value="idea" data-i18n="contact.form.ps_idea">Es una idea</option>
+            <option value="content" data-i18n="contact.form.ps_content">Tengo contenido</option>
+            <option value="design" data-i18n="contact.form.ps_design">Tengo diseño</option>
+            <option value="live" data-i18n="contact.form.ps_live">Tengo web publicada</option>
+            <option value="rebuild" data-i18n="contact.form.ps_rebuild">Necesito rehacer todo</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="budget"><span data-i18n="contact.form.budget">Presupuesto aproximado</span> <em data-i18n="contact.form.optional">(opcional)</em></label>
+          <select id="budget" name="budget">
+            <option value="" selected data-i18n="contact.form.opt_placeholder2">Elegí una opción…</option>
+            <option value="tbd" data-i18n="contact.form.b_tbd">A definir</option>
+            <option value="low" data-i18n="contact.form.b_low">Bajo</option>
+            <option value="mid" data-i18n="contact.form.b_mid">Medio</option>
+            <option value="high" data-i18n="contact.form.b_high">Alto</option>
+            <option value="talk" data-i18n="contact.form.b_talk">Prefiero conversarlo</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="pdate"><span data-i18n="contact.form.pdate">Fecha ideal</span> <em data-i18n="contact.form.optional">(opcional)</em></label>
+          <input
+            type="text"
+            id="pdate"
+            name="pdate"
+            maxlength="60"
+            autocomplete="off"
+            enterkeyhint="next"
+            placeholder="ej. Marzo 2026"
+            data-i18n-attr="placeholder:contact.form.pdate_ph"
+          />
         </div>
         <div class="field">
           <label for="message" data-i18n="contact.form.message">Mensaje</label>
@@ -242,7 +309,7 @@
           ></textarea>
         </div>
         <button type="submit" class="btn-submit">
-          <span class="btn-submit__text" data-i18n="contact.form.send">Enviar mensaje</span>
+          <span class="btn-submit__text" data-i18n="contact.form.send">Enviar proyecto</span>
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" width="18" height="18"><path d="M5 12h14m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="1.5"/></svg>
         </button>
         <p class="contact-form__note" id="form-note" data-form-note aria-live="polite" role="status"></p>
@@ -256,7 +323,7 @@
       </div>
       <div class="contact-meta__col">
         <span class="contact-meta__label" data-i18n="contact.timezone">Zona horaria</span>
-        <strong><span data-clock>--:--:-- GMT-3</span></strong>
+        <strong><span data-clock>GMT-3</span></strong>
       </div>
       <div class="contact-meta__col">
         <span class="contact-meta__label" data-i18n="contact.response">Tiempo de respuesta</span>
@@ -288,6 +355,7 @@
         <a href="/" data-link><span data-i18n="nav.home">Inicio</span></a>
         <a href="work" data-link><span data-i18n="nav.work">Trabajos</span></a>
         <a href="about" data-link><span data-i18n="nav.about">Sobre mí</span></a>
+        <a href="services" data-link><span data-i18n="nav.services">Servicios</span></a>
         <a href="process" data-link><span data-i18n="footer.proceso">Proceso</span></a>
         <a href="faq" data-link>FAQ</a>
       </div>
@@ -300,8 +368,8 @@
       </div>
     </div>
     <div class="footer__meta">
-      <span>© <span class="year"></span> — Rony Cozzi</span>
-      <span data-clock>--:--:-- GMT-3</span>
+      <span>© <span class="year">2026</span> — Rony Cozzi</span>
+      <span data-clock>GMT-3</span>
       <a href="#top" data-magnetic>↑ <span data-i18n="footer.topLabel">Subir</span></a>
       <a href="privacy" class="footer__legal" data-link><span data-i18n="footer.privacy">Privacidad</span></a>
       <a href="terms" class="footer__legal" data-link><span data-i18n="footer.terms">Términos</span></a>
