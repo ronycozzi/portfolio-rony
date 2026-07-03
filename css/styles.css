@@ -346,9 +346,9 @@ body {
   gap: 12px;
 }
 .lang-toggle { display: inline-flex; align-items: center; gap: 4px; }
-.lang-toggle span { opacity: 0.4; transition: opacity var(--t-fast) var(--ease); }
-.lang-toggle .is-active { opacity: 1; }
-.lang-sep { opacity: 0.4; }
+.lang-toggle span { color: var(--fg-muted); transition: color var(--t-fast) var(--ease); }
+.lang-toggle .is-active { color: var(--fg); }
+.lang-sep { color: var(--fg-muted); }
 
 /* Pages that remain Spanish-only keep the language control hidden
    to avoid a visible flash before JS removes it. */

@@ -447,3 +447,5 @@
   padding-left: 14px;
 }
 @media (max-width: 760px) { .case-close { grid-template-columns: 1fr; } }
+
+.case-close__cta { margin-top: clamp(20px, 3vw, 32px); }

@@ -663,6 +663,7 @@
       'contact.form.opt_placeholder2': "Elegí una opción…",
       'meta.services.title': "Servicios web full stack | Rony Cozzi",
       'meta.services.description': "Landing de conversión, sitio web completo, integraciones full stack y optimización. Servicios de desarrollo web con SEO técnico, accesibilidad y performance.",
+      'case.cta.similar': "¿Querés algo parecido? Hablemos",
     },
     en: {
       'nav.home': 'Home',
@@ -1305,6 +1306,7 @@
       'contact.form.opt_placeholder2': "Choose an option…",
       'meta.services.title': "Full stack web services | Rony Cozzi",
       'meta.services.description': "Conversion landing, complete website, full stack integrations and optimization. Web development services with technical SEO, accessibility and performance.",
+      'case.cta.similar': "Want something similar? Let's talk",
     },
   };
 
