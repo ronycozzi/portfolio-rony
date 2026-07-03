@@ -6,7 +6,7 @@
   <title>Luco Gourmet — Caso de estudio · Rony Cozzi</title>
   <meta name="description" content="Caso de estudio — Luco Gourmet. PWA para marca gastronómica con menú offline, datos estructurados para restaurantes y carga sub-segundo." />
 
-  <meta name="theme-color" content="#0A0A0A" />
+  <meta name="theme-color" content="#0F0D09" />
   <meta name="color-scheme" content="dark light" />
   <meta name="robots" content="index, follow" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
@@ -15,7 +15,7 @@
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   <meta name="apple-mobile-web-app-title" content="Rony Cozzi" />
-  <meta name="msapplication-TileColor" content="#0A0A0A" />
+  <meta name="msapplication-TileColor" content="#0F0D09" />
 
   <link rel="canonical" href="https://portfolios-ronycozzi.vercel.app/case/luco" />
   <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
@@ -44,10 +44,10 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" as="style" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/styles.css?v=41" />
-  <link rel="stylesheet" href="../css/case.css?v=4" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" as="style" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css?v=42" />
+  <link rel="stylesheet" href="../css/case.css?v=5" />
 
   <script type="application/ld+json">
   {
@@ -149,6 +149,7 @@
         <span class="line"><span class="reveal"><em>Gourmet</em></span></span>
       </h1>
       <div class="case-hero__tags">
+        <span class="case-tag case-tag--demo" data-i18n="case.demo_badge">Proyecto de demostración</span>
         <span class="case-tag" data-i18n="case.luco.tag1">Restaurante</span>
         <span class="case-tag">PWA</span>
         <span class="case-tag">2025</span>
@@ -180,11 +181,11 @@
             </div>
             <div class="case-stat" data-reveal>
               <span class="case-stat__val">99</span>
-              <span class="case-stat__label">Lighthouse</span>
+              <span class="case-stat__label">Lighthouse (lab)</span>
             </div>
             <div class="case-stat" data-reveal>
               <span class="case-stat__val">&lt;900ms</span>
-              <span class="case-stat__label">LCP</span>
+              <span class="case-stat__label">LCP (lab)</span>
             </div>
             <div class="case-stat" data-reveal>
               <span class="case-stat__val">PWA</span>
@@ -193,8 +194,8 @@
           </div>
           <div class="case-overview__text" data-reveal>
             <h2 id="luco-overview" data-i18n="case.project">El proyecto</h2>
-            <p data-i18n="case.luco.p1">Luco Gourmet es un comedor y mercado en Nueva Córdoba con foco en pasta artesanal, pizza al molde y vermut de bodegón. Necesitaban un sitio que mostrara el menú, contara la propuesta gastronómica y funcionara incluso con conexiones inestables en hora pico.</p>
-            <p data-i18n="case.luco.p2">La solución: una PWA instalable con menú offline, datos estructurados para Google y carga sub-segundo en 3G.</p>
+            <p data-i18n="case.luco.p1">Proyecto de demostración: me propuse resolver el caso típico de un restaurante cuyo menú vive en una imagen o un PDF pesado — lento en móvil, imposible de indexar y frustrante con conexiones inestables en hora pico. Luco Gourmet es la marca ficticia que inventé para ese escenario: pasta artesanal, pizza al molde y vermut de bodegón.</p>
+            <p data-i18n="case.luco.p2">La respuesta: una PWA instalable con menú offline, datos estructurados para Google y carga sub-segundo en 3G simulado (lab data).</p>
           </div>
         </div>
       </div>
@@ -207,12 +208,12 @@
           <div class="case-block" data-reveal>
             <span class="case-block__num">01</span>
             <h3 data-i18n="case.problem">El problema</h3>
-            <p data-i18n="case.luco.problem_desc">El restaurante tenía un sitio antiguo que tardaba más de 6 segundos en cargar en móvil. El menú vivía en una imagen JPG que se actualizaba cada quince días manualmente. Los clientes pedían el menú por WhatsApp porque el sitio era inviable.</p>
+            <p data-i18n="case.luco.problem_desc">El escenario a resolver es conocido: sitios gastronómicos que tardan varios segundos en cargar en móvil, menús en JPG que se actualizan a mano y clientes que terminan pidiendo la carta por WhatsApp. El demo ataca cada uno de esos puntos con decisiones verificables en el sitio publicado.</p>
           </div>
           <div class="case-block" data-reveal>
             <span class="case-block__num">02</span>
             <h3 data-i18n="case.solution">La solución</h3>
-            <p data-i18n="case.luco.solution_desc">Reescritura completa con foco en rendimiento y PWA. Menú dinámico desde un archivo JSON versionado, datos estructurados Schema.org para restaurantes, Service Worker con estrategia offline-first para el menú e instalación nativa en la pantalla de inicio.</p>
+            <p data-i18n="case.luco.solution_desc">Construcción desde cero con foco en rendimiento y PWA. Menú dinámico desde un archivo JSON versionado, datos estructurados Schema.org para restaurantes, Service Worker con estrategia offline-first para el menú e instalación nativa en la pantalla de inicio.</p>
           </div>
         </div>
       </div>
@@ -235,12 +236,12 @@
           <div class="case-tech-item" data-reveal>
             <span class="case-tech-item__icon" aria-hidden="true">⬡</span>
             <h3 data-i18n="case.luco.tech3.title">Performance extrema</h3>
-            <p data-i18n-html="case.luco.tech3.desc">Critical CSS inlineado en <code>&lt;head&gt;</code>. Font preload para Inter 400/500. Imágenes en WebP con <code>width</code>/<code>height</code> explícitos. Total page weight &lt;200KB. LCP &lt;900ms en 3G lento.</p>
+            <p data-i18n-html="case.luco.tech3.desc">Critical CSS inlineado en <code>&lt;head&gt;</code>. Font preload para Inter 400/500. Imágenes en WebP con <code>width</code>/<code>height</code> explícitos. Total page weight &lt;200KB. LCP &lt;900ms en 3G lento simulado (Lighthouse, lab data).</p>
           </div>
           <div class="case-tech-item" data-reveal>
             <span class="case-tech-item__icon" aria-hidden="true">⬡</span>
             <h3 data-i18n="case.luco.tech4.title">Menú actualizable</h3>
-            <p data-i18n-html="case.luco.tech4.desc">Menú almacenado en <code>menu.json</code> versionado. El dueño edita un archivo, hace push y Vercel redeploya en segundos. Sin CMS, sin suscripción mensual, sin interfaz que romper.</p>
+            <p data-i18n-html="case.luco.tech4.desc">Menú almacenado en <code>menu.json</code> versionado. Quien administre el sitio edita un archivo, hace push y Vercel redeploya en segundos. Sin CMS, sin suscripción mensual, sin interfaz que romper.</p>
           </div>
           <div class="case-tech-item" data-reveal>
             <span class="case-tech-item__icon" aria-hidden="true">⬡</span>
@@ -268,6 +269,29 @@
           <span class="case-stack__item" data-reveal>Schema.org</span>
           <span class="case-stack__item" data-reveal data-i18n="case.luco.stack8">Formulario estático</span>
           <span class="case-stack__item" data-reveal>WebP</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section" aria-labelledby="luco-close">
+      <div class="case-section__inner">
+        <span class="case-section__num" data-i18n="case.close.num">[ Cierre ]</span>
+        <h2 class="case-section__title" id="luco-close" data-i18n="case.close.title">Resultado y aprendizaje</h2>
+        <div class="case-close">
+          <div class="case-close__col" data-reveal>
+            <h3 data-i18n="case.close.result">Resultado</h3>
+            <p data-i18n="case.luco.close_result">El resultado es una PWA publicada en luco-gourmet-demo.vercel.app: instalable, con el menú disponible sin conexión y un peso total de página por debajo de 200 KB. Nada de esto depende de mi palabra — se puede auditar con DevTools sobre el demo.</p>
+            <ul class="case-close__metrics">
+              <li data-i18n="case.luco.close_m1">Lighthouse 99 en móvil (lab data)</li>
+              <li data-i18n="case.luco.close_m2">Peso total de página por debajo de 200 KB</li>
+              <li data-i18n="case.luco.close_m3">Menú offline vía Service Worker, instalable como app</li>
+            </ul>
+          </div>
+          <div class="case-close__col" data-reveal>
+            <h3 data-i18n="case.close.learn">Qué aprendí</h3>
+            <p data-i18n="case.luco.close_learn">Este proyecto me obligó a entender de verdad el ciclo de vida del Service Worker: qué estrategia de caché conviene por tipo de recurso y, sobre todo, cómo invalidar caché sin dejar usuarios atrapados en una versión vieja.</p>
+            <p class="case-close__refactor" data-i18n="case.luco.close_refactor">Hoy automatizaría el versionado del Service Worker en un paso de build (o usaría Workbox) en lugar de mantenerlo a mano, y agregaría un chequeo automático que falle si el peso de página supera el presupuesto de 200 KB.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -318,7 +342,7 @@
     </div>
   </footer>
 
-  <script src="../js/main.js?v=56" defer></script>
+  <script src="../js/main.js?v=58" defer></script>
   <a
     class="wsp-fab"
     data-wsp-fab

@@ -6,7 +6,7 @@
   <title>Contacto — Rony Cozzi</title>
   <meta name="description" content="Hablemos de tu proyecto. Contactá a Rony Cozzi para sitios full stack, landings, APIs ligeras, integraciones web y desarrollo listo para producción." />
 
-  <meta name="theme-color" content="#0A0A0A" />
+  <meta name="theme-color" content="#0F0D09" />
   <meta name="color-scheme" content="dark light" />
   <meta name="robots" content="index, follow" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
@@ -15,7 +15,7 @@
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   <meta name="apple-mobile-web-app-title" content="Rony Cozzi" />
-  <meta name="msapplication-TileColor" content="#0A0A0A" />
+  <meta name="msapplication-TileColor" content="#0F0D09" />
 
   <link rel="canonical" href="https://portfolios-ronycozzi.vercel.app/contact" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
@@ -44,9 +44,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" as="style" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=41" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" as="style" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css?v=42" />
 
   <script type="application/ld+json">
   {
@@ -128,6 +128,17 @@
       <h1 class="contact-hero__title" id="contact-title">
         <span class="line"><span class="reveal" data-i18n="contact.heading1">Conversemos.</span></span>
       </h1>
+
+      <div class="contact-paths" data-reveal>
+        <a class="contact-path" href="#form" data-i18n-attr="aria-label:contact.path.project_aria">
+          <span class="contact-path__label" data-i18n="contact.path.project">¿Tenés un proyecto?</span>
+          <span class="contact-path__desc" data-i18n="contact.path.project_desc">Contame qué necesitás y te respondo en menos de 24 h con próximos pasos.</span>
+        </a>
+        <a class="contact-path" href="assets/Rony_Cozzi_CV.pdf" download>
+          <span class="contact-path__label" data-i18n="contact.path.hiring">¿Estás contratando?</span>
+          <span class="contact-path__desc" data-i18n="contact.path.hiring_desc">Busco roles full-time remotos. Descargá mi CV o escribime directo.</span>
+        </a>
+      </div>
     </section>
 
     <section class="contact-split">
@@ -159,6 +170,7 @@
 
       <form
         class="contact-form"
+        id="form"
         name="contact"
         data-contact-form
         data-email="ronycozzi5@gmail.com"
@@ -296,7 +308,7 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=56" defer></script>
+  <script src="js/main.js?v=58" defer></script>
   <a
     class="wsp-fab"
     data-wsp-fab

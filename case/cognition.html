@@ -6,7 +6,7 @@
   <title>Cognition — Caso de estudio · Rony Cozzi</title>
   <meta name="description" content="Caso de estudio — Cognition. Plataforma de IA para empresas. 11 páginas, calculadora ROI, chat basado en intención y PWA completa." />
 
-  <meta name="theme-color" content="#0A0A0A" />
+  <meta name="theme-color" content="#0F0D09" />
   <meta name="color-scheme" content="dark light" />
   <meta name="robots" content="index, follow" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
@@ -15,7 +15,7 @@
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   <meta name="apple-mobile-web-app-title" content="Rony Cozzi" />
-  <meta name="msapplication-TileColor" content="#0A0A0A" />
+  <meta name="msapplication-TileColor" content="#0F0D09" />
 
   <link rel="canonical" href="https://portfolios-ronycozzi.vercel.app/case/cognition" />
   <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
@@ -44,10 +44,10 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" as="style" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/styles.css?v=41" />
-  <link rel="stylesheet" href="../css/case.css?v=4" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" as="style" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css?v=42" />
+  <link rel="stylesheet" href="../css/case.css?v=5" />
 
   <script type="application/ld+json">
   {
@@ -149,6 +149,7 @@
         <span class="line"><span class="reveal"><em data-i18n="case.cognition.title2">Plataforma IA</em></span></span>
       </h1>
       <div class="case-hero__tags">
+        <span class="case-tag case-tag--demo" data-i18n="case.demo_badge">Proyecto de demostración</span>
         <span class="case-tag" data-i18n="case.cognition.tag1">Plataforma IA</span>
         <span class="case-tag" data-i18n="case.cognition.tag2">Empresas</span>
         <span class="case-tag">2026</span>
@@ -180,11 +181,11 @@
             </div>
             <div class="case-stat" data-reveal>
               <span class="case-stat__val">94</span>
-              <span class="case-stat__label">Lighthouse</span>
+              <span class="case-stat__label">Lighthouse (lab)</span>
             </div>
             <div class="case-stat" data-reveal>
               <span class="case-stat__val">&lt;2.1s</span>
-              <span class="case-stat__label">LCP</span>
+              <span class="case-stat__label">LCP (lab)</span>
             </div>
             <div class="case-stat" data-reveal>
               <span class="case-stat__val">PWA</span>
@@ -193,7 +194,7 @@
           </div>
           <div class="case-overview__text" data-reveal>
             <h2 id="cog-overview" data-i18n="case.project">El proyecto</h2>
-            <p data-i18n="case.cognition.p1">Cognition es una plataforma de IA aplicada para empresas medianas en Argentina. El producto real existe — el desafío fue construir un sitio que explique una tecnología compleja a una audiencia no técnica, genere confianza corporativa y convierta demos.</p>
+            <p data-i18n="case.cognition.p1">Proyecto de demostración: me propuse resolver el caso típico de una plataforma de IA para empresas cuyo sitio es una demo pesada construida en un framework — lenta en móvil y sin SEO. Cognition es el producto ficticio que diseñé para ese ejercicio: explicar una tecnología compleja a una audiencia no técnica y construir un embudo de conversión creíble.</p>
             <p data-i18n="case.cognition.p2">El proyecto más complejo del portfolio: 11 páginas interrelacionadas, calculadora de ROI en JS puro, un chat basado en intención para calificar leads, animaciones de datos en tiempo real y PWA instalable.</p>
           </div>
         </div>
@@ -207,12 +208,12 @@
           <div class="case-block" data-reveal>
             <span class="case-block__num">01</span>
             <h3 data-i18n="case.problem">El problema</h3>
-            <p data-i18n="case.cognition.problem_desc">Una demo existente del producto en React con bundle de 4MB que tardaba 8s en cargar en móvil. Sin SEO, sin Schema.org, sin conversión medida. El equipo de ventas perdía leads porque el sitio no transmitía seriedad corporativa antes de la primera reunión.</p>
+            <p data-i18n="case.cognition.problem_desc">El anti-patrón que quería demostrar cómo evitar: sitios de producto construidos como SPA con bundles de varios MB, sin SEO ni datos estructurados, donde la página pesa más que el argumento de venta. El demo muestra la alternativa: el embudo completo en vanilla JS liviano.</p>
           </div>
           <div class="case-block" data-reveal>
             <span class="case-block__num">02</span>
             <h3 data-i18n="case.solution">La solución</h3>
-            <p data-i18n="case.cognition.solution_desc">Reescritura completa en vanilla JS. Arquitectura multi-página con ruteo a medida. Calculadora de ROI que persiste en sessionStorage. Chat con 12 intenciones mapeadas para calificar leads antes del formulario. Service Worker con caché estratégico por tipo de recurso.</p>
+            <p data-i18n="case.cognition.solution_desc">Construcción íntegra en vanilla JS. Arquitectura multi-página con ruteo a medida. Calculadora de ROI que persiste en sessionStorage. Chat con 12 intenciones mapeadas para calificar consultas antes del formulario. Service Worker con caché estratégico por tipo de recurso.</p>
           </div>
         </div>
       </div>
@@ -273,6 +274,29 @@
       </div>
     </section>
 
+    <section class="case-section" aria-labelledby="cognition-close">
+      <div class="case-section__inner">
+        <span class="case-section__num" data-i18n="case.close.num">[ Cierre ]</span>
+        <h2 class="case-section__title" id="cognition-close" data-i18n="case.close.title">Resultado y aprendizaje</h2>
+        <div class="case-close">
+          <div class="case-close__col" data-reveal>
+            <h3 data-i18n="case.close.result">Resultado</h3>
+            <p data-i18n="case.cognition.close_result">Quedó publicado en cognition-demo-cyan.vercel.app el proyecto más ambicioso del portfolio: 11 páginas, calculadora de ROI, chat basado en intención y PWA instalable, sin frameworks ni dependencias externas. Cada feature se puede probar directamente en el demo.</p>
+            <ul class="case-close__metrics">
+              <li data-i18n="case.cognition.close_m1">Lighthouse 94 en móvil (lab data)</li>
+              <li data-i18n="case.cognition.close_m2">Bundle total: 38 KB de JS y 24 KB de CSS comprimidos</li>
+              <li data-i18n="case.cognition.close_m3">LCP 2.1 s en 3G lento simulado (Lighthouse)</li>
+            </ul>
+          </div>
+          <div class="case-close__col" data-reveal>
+            <h3 data-i18n="case.close.learn">Qué aprendí</h3>
+            <p data-i18n="case.cognition.close_learn">Aprendí dónde está el límite del vanilla JS: 11 páginas compartiendo header, footer y widgets implican duplicación real de HTML, y el estado entre páginas vía sessionStorage funciona pero hay que diseñarlo de forma explícita — no viene gratis como en una SPA.</p>
+            <p class="case-close__refactor" data-i18n="case.cognition.close_refactor">Hoy usaría un generador estático liviano (Eleventy o similar) para compartir plantillas manteniendo la salida en HTML puro, y movería las 12 intenciones del chat a un JSON declarativo separado de la lógica.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="case-next">
       <a href="../work" class="case-next__link" data-link>
         <span class="case-next__label" data-i18n="case.all">Ver todos los proyectos</span>
@@ -319,7 +343,7 @@
     </div>
   </footer>
 
-  <script src="../js/main.js?v=56" defer></script>
+  <script src="../js/main.js?v=58" defer></script>
   <a
     class="wsp-fab"
     data-wsp-fab
