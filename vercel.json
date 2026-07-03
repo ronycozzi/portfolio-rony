@@ -47,6 +47,12 @@
       ]
     },
     {
+      "source": "/services",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }
+      ]
+    },
+    {
       "source": "/process",
       "headers": [
         { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }
