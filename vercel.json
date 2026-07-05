@@ -126,7 +126,7 @@
       ]
     },
     {
-      "source": "/assets/(icons|img|work|fonts)/(.*)",
+      "source": "/assets/(icons|img|work|fonts|og)/(.*)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]

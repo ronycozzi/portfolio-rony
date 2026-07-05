@@ -444,13 +444,7 @@ body {
 .lang-toggle .is-active { color: var(--fg); }
 .lang-sep { color: var(--fg-muted); }
 
-/* Pages that remain Spanish-only keep the language control hidden
-   to avoid a visible flash before JS removes it. */
-body[data-page="privacy"] .lang-toggle,
-body[data-page="terms"] .lang-toggle,
-body[data-page="404"] .lang-toggle {
-  display: none;
-}
+/* Todas las páginas están localizadas ES/EN — el toggle se muestra siempre. */
 
 .theme-toggle {
   width: 38px; height: 22px;

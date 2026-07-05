@@ -127,13 +127,22 @@
   <main class="err-page" id="main">
     <div class="err-inner">
       <span class="err-num" aria-hidden="true">404</span>
-      <h1 class="err-title">Esta página no existe.</h1>
-      <p class="err-copy">
-        O nunca existió, o la moví, o el link estaba mal desde el principio.<br/>
-        No te preocupes — el inicio sigue ahí.
+      <h1 class="err-title" data-i18n="notfound.title">Esta página no existe.</h1>
+      <p class="err-copy" data-i18n="notfound.copy">
+        O nunca existió, o la moví, o el link llegó roto en el camino.
+        Lo importante sigue en pie: los trabajos, los servicios y una puerta directa para tu proyecto.
       </p>
-      <a href="/" class="err-cta" data-link data-magnetic>
-        Ir al inicio <span aria-hidden="true">→</span>
+      <nav class="err-copy" aria-label="Atajos útiles" data-i18n-attr="aria-label:notfound.linksLabel">
+        <a href="/" data-link data-magnetic><span data-i18n="nav.home">Inicio</span></a>
+        <span aria-hidden="true"> · </span>
+        <a href="work" data-link data-magnetic><span data-i18n="nav.work">Trabajos</span></a>
+        <span aria-hidden="true"> · </span>
+        <a href="services" data-link data-magnetic><span data-i18n="nav.services">Servicios</span></a>
+        <span aria-hidden="true"> · </span>
+        <a href="contact" data-link data-magnetic><span data-i18n="nav.contact">Contacto</span></a>
+      </nav>
+      <a href="contact" class="err-cta" data-link data-magnetic>
+        <span data-i18n="notfound.cta">Empezar proyecto</span> <span aria-hidden="true">→</span>
       </a>
 
       <div class="err-terminal" aria-hidden="true">
@@ -153,7 +162,7 @@
     </div>
   </footer>
 
-  <script src="/js/main.js?v=60" defer></script>
+  <script src="/js/main.js?v=61" defer></script>
   <a
     class="wsp-fab"
     data-wsp-fab
