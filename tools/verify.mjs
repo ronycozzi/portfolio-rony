@@ -22,10 +22,11 @@ const read = (rel) => readFileSync(path.join(ROOT, rel), 'utf8');
 
 // ---------------------------------------------------------------- HTML files
 const htmlFiles = (() => {
-  // Preferimos git: valida solo lo que se deploya (excluye restos ignorados).
+  // Valida lo que Git puede publicar: HEAD + staging. Así detecta páginas
+  // preparadas para deploy sin confundir restos locales no trackeados.
   try {
     const { execSync } = require('node:child_process');
-    const out = execSync('git ls-tree -r --name-only HEAD', { cwd: ROOT, encoding: 'utf8' }).trim();
+    const out = execSync('git ls-files --cached', { cwd: ROOT, encoding: 'utf8' }).trim();
     if (out) return out.split('\n').filter((f) => f.endsWith('.html'));
   } catch {}
   return [
@@ -182,6 +183,29 @@ section('5. JSON válido');
 for (const j of ['vercel.json', 'manifest.json']) {
   try { JSON.parse(read(j)); ok(`${j} parsea correctamente`); }
   catch (e) { bad(`${j} inválido: ${e.message}`); }
+}
+
+try {
+  const vercel = JSON.parse(read('vercel.json'));
+  const redirects = Array.isArray(vercel.redirects) ? vercel.redirects : [];
+  const shadowed = [];
+  for (const redirect of redirects) {
+    if (!redirect || typeof redirect.source !== 'string') continue;
+    const source = redirect.source.replace(/^\/+/, '');
+    if (!source.includes(':') && htmlFiles.includes(`${source}.html`)) {
+      shadowed.push(`${source}.html -> ${redirect.destination || '(sin destino)'}`);
+    }
+    if (source.endsWith('/:slug*')) {
+      const dir = source.slice(0, -'/:slug*'.length);
+      for (const f of htmlFiles) {
+        if (f.startsWith(`${dir}/`)) shadowed.push(`${f} -> ${redirect.destination || '(sin destino)'}`);
+      }
+    }
+  }
+  if (shadowed.length === 0) ok('redirects de Vercel no anulan HTML existente');
+  else for (const item of shadowed) bad('redirect de Vercel anula una página existente: ' + item);
+} catch (e) {
+  bad('no se pudo auditar redirects de Vercel: ' + e.message);
 }
 
 // 6. Sintaxis JS ------------------------------------------------------------
