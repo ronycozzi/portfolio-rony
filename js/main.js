@@ -539,6 +539,8 @@
       'signals.l5': "En construcción",
       'featured.heading1': "Trabajos",
       'featured.heading2': "seleccionados.",
+      'contact.form.sending': "Enviando tu consulta…",
+      'contact.form.sent': "Recibí tu consulta. Si el proyecto encaja, te respondo con próximos pasos en menos de 24 h.",
     },
     en: {
       'nav.home': 'Home',
@@ -1057,6 +1059,8 @@
       'signals.l5': "In progress",
       'featured.heading1': "Selected",
       'featured.heading2': "work.",
+      'contact.form.sending': "Sending your inquiry…",
+      'contact.form.sent': "Got your inquiry. If the project is a fit, I'll reply with next steps within 24 hours.",
     },
   };
 
@@ -1898,27 +1902,69 @@
       const body = encodeURIComponent(message + (detailLines ? '\n\n' + detailLines : '') + '\n\n--\n' + rawName + '\n' + email);
 
       const emailTarget = form.dataset.email || 'ronycozzi5@gmail.com';
-      if (btn) { btn.disabled = true; btn.setAttribute('aria-busy', 'true'); }
-      if (btnText) btnText.textContent = t('contact.form.opening_btn') || (getLang() === 'en' ? 'Opening email…' : 'Abriendo email…');
-      if (note) {
-        note.dataset.noteState = 'opening';
-        note.textContent = openingText(emailTarget);
-      }
+      const setBusy = (busy, labelKey) => {
+        if (btn) { btn.disabled = busy; if (busy) btn.setAttribute('aria-busy', 'true'); else btn.removeAttribute('aria-busy'); }
+        if (btnText) btnText.textContent = t(labelKey) || originalText;
+      };
 
-      const a = document.createElement('a');
-      a.href = `mailto:${emailTarget}?subject=${subject}&body=${body}`;
-      a.rel = 'noopener';
-      a.style.display = 'none';
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
+      const sendViaMailto = () => {
+        if (btnText) btnText.textContent = t('contact.form.opening_btn') || (getLang() === 'en' ? 'Opening email…' : 'Abriendo email…');
+        if (note) { note.dataset.noteState = 'opening'; note.textContent = openingText(emailTarget); }
+        const a = document.createElement('a');
+        a.href = `mailto:${emailTarget}?subject=${subject}&body=${body}`;
+        a.rel = 'noopener';
+        a.style.display = 'none';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        setTimeout(() => {
+          setBusy(false, 'contact.form.send');
+          if (note) { note.dataset.noteState = 'hint'; syncNote(); }
+        }, 900);
+      };
 
-      setTimeout(() => {
-        if (btn) { btn.disabled = false; btn.removeAttribute('aria-busy'); }
-        if (btnText) btnText.textContent = t('contact.form.send') || originalText || (getLang() === 'en' ? 'Send message' : 'Enviar mensaje');
-        if (note) note.dataset.noteState = 'hint';
-        syncNote();
-      }, 900);
+      setBusy(true, 'contact.form.sending');
+      if (note) { note.dataset.noteState = 'sending'; note.textContent = t('contact.form.sending') || ''; }
+
+      const payload = {
+        name: rawName,
+        email,
+        message,
+        subject: subjectType,
+        whatsapp: selText('whatsapp'),
+        ptype: selText('ptype'),
+        pstate: selText('pstate'),
+        budget: selText('budget'),
+        pdate: selText('pdate'),
+        website: String(data.get('website') || ''),
+      };
+
+      const ctrl = ('AbortController' in window) ? new AbortController() : null;
+      const timer = ctrl && setTimeout(() => ctrl.abort(), 8000);
+      fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+        signal: ctrl ? ctrl.signal : undefined,
+      })
+        .then((r) => {
+          if (timer) clearTimeout(timer);
+          if (r.ok) {
+            form.reset();
+            setBusy(false, 'contact.form.send');
+            if (note) {
+              note.dataset.noteState = 'sent';
+              note.textContent = t('contact.form.sent') || '';
+            }
+            return;
+          }
+          // No configurado, validación del server o error: no perdemos la consulta.
+          sendViaMailto();
+        })
+        .catch(() => {
+          if (timer) clearTimeout(timer);
+          sendViaMailto();
+        });
     });
   }
 
