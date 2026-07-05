@@ -26,8 +26,11 @@ const htmlFiles = (() => {
   // preparadas para deploy sin confundir restos locales no trackeados.
   try {
     const { execSync } = require('node:child_process');
-    const out = execSync('git ls-files --cached', { cwd: ROOT, encoding: 'utf8' }).trim();
-    if (out) return out.split('\n').filter((f) => f.endsWith('.html'));
+    const out = execSync('git ls-tree -r --name-only HEAD', { cwd: ROOT, encoding: 'utf8', env: { ...process.env, GIT_INDEX_FILE: path.join(ROOT, '.git', 'verify-tmp-index') } }).trim();
+    if (out) {
+      const files = out.split('\n').filter((f) => f.endsWith('.html') && !f.startsWith('tools/') && !f.startsWith('docs/'));
+      if (files.length) return files;
+    }
   } catch {}
   return [
     ...readdirSync(ROOT).filter((f) => f.endsWith('.html')),
