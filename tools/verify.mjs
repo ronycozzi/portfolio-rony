@@ -5,6 +5,8 @@
  * Sin dependencias externas. Exit code != 0 si falla algún check.
  */
 import { readFileSync, readdirSync, existsSync, statSync } from 'node:fs';
+import { createRequire } from 'node:module';
+const require = createRequire(import.meta.url);
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -19,12 +21,20 @@ const section = (title) => console.log('\n── ' + title + ' ' + '─'.repeat(
 const read = (rel) => readFileSync(path.join(ROOT, rel), 'utf8');
 
 // ---------------------------------------------------------------- HTML files
-const htmlFiles = [
-  ...readdirSync(ROOT).filter((f) => f.endsWith('.html')),
-  ...(existsSync(path.join(ROOT, 'case'))
-    ? readdirSync(path.join(ROOT, 'case')).filter((f) => f.endsWith('.html')).map((f) => 'case/' + f)
-    : []),
-].sort();
+const htmlFiles = (() => {
+  // Preferimos git: valida solo lo que se deploya (excluye restos ignorados).
+  try {
+    const { execSync } = require('node:child_process');
+    const out = execSync('git ls-files -- "*.html"', { cwd: ROOT, encoding: 'utf8' }).trim();
+    if (out) return out.split('\n');
+  } catch {}
+  return [
+    ...readdirSync(ROOT).filter((f) => f.endsWith('.html')),
+    ...(existsSync(path.join(ROOT, 'case'))
+      ? readdirSync(path.join(ROOT, 'case')).filter((f) => f.endsWith('.html')).map((f) => 'case/' + f)
+      : []),
+  ];
+})().sort();
 const htmlContent = new Map(htmlFiles.map((f) => [f, read(f)]));
 
 // 1. Integridad -------------------------------------------------------------

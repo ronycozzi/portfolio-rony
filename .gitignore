@@ -29,3 +29,11 @@ build/
 codex-changes-*.patch
 .codex_tmp/
 .codex_git_temp/
+
+# Restos de los demos retirados (el sandbox no pudo borrarlos del disco).
+# Al hacer git pull en tu máquina desaparecen del árbol; podés borrar estas
+# líneas cuando cargues los proyectos nuevos.
+/case/
+/css/case.css
+/assets/work/
+/assets/og/og-case-*.png
