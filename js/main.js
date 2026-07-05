@@ -483,12 +483,12 @@
       'legal.privacy.intro': "Este sitio web (<strong>portfolios-ronycozzi.vercel.app</strong>) es operado por Rony Cozzi, desarrollador web independiente con base en Córdoba, Argentina. Esta política describe qué datos recopilo, cómo los uso y cuáles son tus derechos, en cumplimiento con la <strong>Ley 25.326 de Protección de Datos Personales</strong> (Argentina) y principios del GDPR.",
       'legal.privacy.s1.h': "1. Datos que recopilo",
       'legal.privacy.s1.p1': "Este sitio web recopila datos en dos situaciones:",
-      'legal.privacy.s1.li1': "<strong>Formulario de contacto:</strong> cuando enviás un mensaje, se abre tu aplicación de email con el contenido preparado. El mensaje se envía recién cuando confirmás el envío desde tu cliente de correo.",
+      'legal.privacy.s1.li1': "<strong>Formulario de contacto:</strong> cuando enviás un mensaje, el sitio intenta procesarlo mediante una función segura del servidor. Si esa función no está disponible, se abre tu aplicación de email con el contenido preparado para que confirmes el envío.",
       'legal.privacy.s1.li2': "<strong>Datos técnicos mínimos:</strong> el hosting puede procesar logs técnicos básicos (por ejemplo, IP, fecha, URL solicitada y user agent) para seguridad, diagnóstico y disponibilidad del servicio.",
       'legal.privacy.s1.p2': "Este sitio <strong>no usa</strong> cookies de seguimiento, Google Analytics, Facebook Pixel ni herramientas de analítica de terceros instaladas en el frontend.",
       'legal.privacy.s2.h': "2. Cómo uso los datos",
       'legal.privacy.s2.li1': "Los datos del formulario de contacto se usan exclusivamente para responder a tu consulta.",
-      'legal.privacy.s2.li2': "No se comparten con terceros salvo proveedores necesarios para operar el sitio y recibir mensajes (por ejemplo, Vercel y Google/Gmail).",
+      'legal.privacy.s2.li2': "No se comparten con terceros salvo proveedores necesarios para operar el sitio y recibir mensajes (por ejemplo, Vercel, Resend y Google/Gmail).",
       'legal.privacy.s2.li3': "No se usan para marketing ni se venden bajo ninguna circunstancia.",
       'legal.privacy.s3.h': "3. Retención de datos",
       'legal.privacy.s3.p1': "Los mensajes del formulario se retienen mientras sean relevantes para la comunicación activa, y se eliminan a pedido. No existe base de datos propia del portfolio: los datos del formulario y los correos residen en la infraestructura de los proveedores usados para recibir y responder mensajes.",
@@ -1003,12 +1003,12 @@
       'legal.privacy.intro': "This website (<strong>portfolios-ronycozzi.vercel.app</strong>) is operated by Rony Cozzi, an independent web developer based in Córdoba, Argentina. This policy describes what data I collect, how I use it and what your rights are, in compliance with Argentina’s <strong>Personal Data Protection Act No. 25,326</strong> and GDPR principles.",
       'legal.privacy.s1.h': "1. Data I collect",
       'legal.privacy.s1.p1': "This website collects data in two situations:",
-      'legal.privacy.s1.li1': "<strong>Contact form:</strong> when you send a message, your email application opens with the content already prepared. The message is only sent once you confirm it from your own email client.",
+      'legal.privacy.s1.li1': "<strong>Contact form:</strong> when you send a message, the site tries to process it through a secure server function. If that function is unavailable, your email app opens with the content prepared so you can confirm the send.",
       'legal.privacy.s1.li2': "<strong>Minimal technical data:</strong> the hosting provider may process basic technical logs (e.g. IP address, date, requested URL and user agent) for security, diagnostics and service availability.",
       'legal.privacy.s1.p2': "This site does <strong>not use</strong> tracking cookies, Google Analytics, Facebook Pixel or any third-party analytics tools installed on the frontend.",
       'legal.privacy.s2.h': "2. How I use the data",
       'legal.privacy.s2.li1': "Contact form data is used exclusively to reply to your inquiry.",
-      'legal.privacy.s2.li2': "It is not shared with third parties, except for the providers required to operate the site and receive messages (e.g. Vercel and Google/Gmail).",
+      'legal.privacy.s2.li2': "It is not shared with third parties, except for the providers required to operate the site and receive messages (e.g. Vercel, Resend and Google/Gmail).",
       'legal.privacy.s2.li3': "It is never used for marketing and is never sold, under any circumstances.",
       'legal.privacy.s3.h': "3. Data retention",
       'legal.privacy.s3.p1': "Form messages are kept for as long as they remain relevant to an active conversation, and are deleted upon request. The portfolio has no database of its own: form data and emails reside in the infrastructure of the providers used to receive and reply to messages.",
@@ -1634,7 +1634,7 @@
     });
   }
 
-  
+
 
   /* ---------- Header scroll state ---------- */
   function setupHeaderAndProgress() {
@@ -1647,9 +1647,9 @@
     window.addEventListener('scroll', onScroll, { passive: true });
   }
 
-  
 
-  
+
+
 
   /* ---------- Hero scene motion ---------- */
   function setupHeroScene() {

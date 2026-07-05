@@ -148,6 +148,19 @@ for (const [f, html] of htmlContent) {
 }
 if (refBad === 0) ok(`${refCount} referencias locales verificadas, todas apuntan a archivos existentes`);
 
+const swShellMatch = read('sw.js').match(/const SHELL = \[([\s\S]*?)\];/);
+if (swShellMatch) {
+  const swRefs = [...swShellMatch[1].matchAll(/'([^']+)'/g)].map((m) => m[1]);
+  let swBad = 0;
+  for (const ref of swRefs) {
+    if (/^(https?:)?\/\//i.test(ref) || /^(#|mailto:|tel:|data:|javascript:)/i.test(ref)) continue;
+    if (!resolveLocalRef(ref, 'sw.js')) { swBad++; bad(`sw.js: SHELL precache apunta a archivo inexistente "${ref}"`); }
+  }
+  if (swBad === 0) ok(`${swRefs.length} entradas de SHELL en sw.js verificadas`);
+} else {
+  bad('sw.js: no se pudo encontrar const SHELL para auditar precache');
+}
+
 // 4. Versionado -------------------------------------------------------------
 section('4. Versionado de assets (?v=)');
 const ASSETS = ['styles.css', 'case.css', 'main.js'];

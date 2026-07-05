@@ -1,5 +1,5 @@
 /* Service Worker - Rony Cozzi Portfolio */
-const VERSION = 'v99';
+const VERSION = 'v101';
 const PRECACHE = `rony-portfolio-precache-${VERSION}`;
 const RUNTIME = `rony-portfolio-runtime-${VERSION}`;
 const MAX_RUNTIME_ENTRIES = 60;
@@ -35,19 +35,13 @@ const SHELL = [
   '/assets/fonts/inter-normal-500-latin.woff2',
   '/assets/fonts/jetbrainsmono-normal-400-latin.woff2',
   '/js/main.js',
-  '/js/main.js?v=64',
+  '/js/main.js?v=65',
   '/manifest.json',
   '/favicon.svg',
   '/og-image.png',
   '/assets/icons/icon-180.png',
   '/assets/icons/icon-192.png',
   '/assets/icons/icon-512.png',
-  '/assets/work/cucu.webp',
-  '/assets/work/luco.webp',
-  '/assets/work/sellink.webp',
-  '/assets/work/cognition-v2.webp',
-  '/assets/work/cucu-thumb.webp',
-  '/assets/work/luco-thumb.webp',
 ];
 
 self.addEventListener('install', (e) => {

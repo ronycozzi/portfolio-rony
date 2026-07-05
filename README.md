@@ -28,7 +28,7 @@ services.html         Paquetes de servicios en detalle
 process.html          Proceso en 6 etapas (duración / entregable / evita)
 faq.html              FAQ por categorías
 about.html            Bio, trayectoria, stack, cuándo sí / cuándo no
-contact.html          Formulario orientado a proyecto (mailto)
+contact.html          Formulario orientado a proyecto (serverless + fallback mailto)
 css/styles.css        Sistema de diseño global (+ @font-face al tope)
 tools/templates/      Plantilla de caso de estudio (HTML + CSS)
 docs/NUEVO_CASO.md    Checklist para publicar un caso nuevo
