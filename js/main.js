@@ -1588,7 +1588,7 @@
       }
     }
 
-    const hoverables = document.querySelectorAll('[data-magnetic], [data-tilt]');
+    const hoverables = document.querySelectorAll('[data-magnetic]');
     hoverables.forEach((el) => {
       const cursorText = el.dataset.cursor;
       el.addEventListener('mouseenter', () => {
@@ -1605,7 +1605,7 @@
   /* ---------- Magnetic ---------- */
   function setupMagnetic() {
     if (isTouch || reducedMotion) return;
-    const els = document.querySelectorAll('[data-magnetic]:not([data-tilt])');
+    const els = document.querySelectorAll('[data-magnetic]');
     const strength = 0.22;
     els.forEach((el) => {
       let raf = null;
@@ -1630,35 +1630,7 @@
     });
   }
 
-  /* ---------- Tilt 3D ---------- */
-  function setupTilt() {
-    if (isTouch || reducedMotion) return;
-    const cards = document.querySelectorAll('[data-tilt]');
-    cards.forEach((card) => {
-      let raf = null;
-      let tx = 0, ty = 0, cx = 0, cy = 0;
-
-      function update() {
-        cx += (tx - cx) * 0.12;
-        cy += (ty - cy) * 0.12;
-        card.style.transform = `perspective(900px) rotateX(${cy}deg) rotateY(${cx}deg) translateZ(0)`;
-        if (Math.abs(tx - cx) > 0.05 || Math.abs(ty - cy) > 0.05) raf = requestAnimationFrame(update);
-        else raf = null;
-      }
-      card.addEventListener('mousemove', (e) => {
-        const r = card.getBoundingClientRect();
-        const px = (e.clientX - r.left) / r.width;
-        const py = (e.clientY - r.top) / r.height;
-        tx = (px - 0.5) * 14;
-        ty = -(py - 0.5) * 10;
-        if (!raf) raf = requestAnimationFrame(update);
-      });
-      card.addEventListener('mouseleave', () => {
-        tx = 0; ty = 0;
-        if (!raf) raf = requestAnimationFrame(update);
-      });
-    });
-  }
+  
 
   /* ---------- Header scroll state ---------- */
   function setupHeaderAndProgress() {
@@ -1671,79 +1643,9 @@
     window.addEventListener('scroll', onScroll, { passive: true });
   }
 
-  /* ---------- Horizontal pinning ---------- */
-  function setupHorizontal() {
-    const section = document.querySelector('[data-pin-horizontal]');
-    if (!section) return;
-    const track = section.querySelector('[data-horizontal-track]');
-    const bar = section.querySelector('[data-horizontal-progress]');
-    const current = section.querySelector('[data-horizontal-current]');
-    if (!track) return;
+  
 
-    let horizontalDist = 0;
-    let tailDwell = 0;
-    const itemCount = track.children.length;
-    const total = section.querySelector('[data-horizontal-total]');
-    if (total) total.textContent = String(itemCount || 0).padStart(2, '0');
-    if (!itemCount) return;
-
-    function setup() {
-      if (mobileBreakpointMQ.matches) {
-        section.style.height = '';
-        track.style.transform = '';
-        if (bar) bar.style.width = '100%';
-        return;
-      }
-      const trackWidth = track.scrollWidth;
-      const viewportWidth = window.innerWidth;
-      horizontalDist = Math.max(0, trackWidth - viewportWidth);
-      tailDwell = Math.round(window.innerHeight * 0.7);
-      section.style.height = (horizontalDist + window.innerHeight + tailDwell) + 'px';
-    }
-
-    const onScroll = rafThrottle(() => {
-      if (mobileBreakpointMQ.matches) return;
-      const rect = section.getBoundingClientRect();
-      const scrolled = Math.max(0, -rect.top);
-      const xProgress = horizontalDist > 0 ? Math.min(1, scrolled / horizontalDist) : 1;
-      const x = xProgress * horizontalDist;
-      track.style.transform = `translate3d(${-x}px, 0, 0)`;
-      if (bar) bar.style.width = `${Math.max(8, xProgress * 100)}%`;
-      if (current) {
-        const idx = Math.min(itemCount, Math.floor(xProgress * itemCount) + 1);
-        current.textContent = String(idx).padStart(2, '0');
-      }
-    });
-
-    setup();
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', debounce(() => { setup(); onScroll(); }, 150), { passive: true });
-    onMQChange(mobileBreakpointMQ, () => { setup(); onScroll(); });
-    setTimeout(() => { setup(); onScroll(); }, 400);
-    if (document.fonts && document.fonts.ready) {
-      document.fonts.ready.then(() => { setup(); onScroll(); });
-    }
-  }
-
-  /* ---------- Parallax cards ---------- */
-  function setupParallaxDeck() {
-    if (reducedMotion) return;
-    const deck = document.querySelector('[data-parallax-deck]');
-    if (!deck) return;
-    const cards = Array.from(deck.querySelectorAll('.card'));
-    const onScroll = rafThrottle(() => {
-      cards.forEach((c, i) => {
-        const r = c.getBoundingClientRect();
-        const vh = window.innerHeight;
-        const t = (vh - r.top) / (vh + r.height);
-        const offset = (t - 0.5) * 30 * (i % 2 === 0 ? -1 : 1);
-        c.style.translate = `0 ${offset}px`;
-      });
-    });
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
-  }
+  
 
   /* ---------- Hero scene motion ---------- */
   function setupHeroScene() {
@@ -2062,10 +1964,7 @@
     setupReveals();
     setupCursor();
     setupMagnetic();
-    setupTilt();
     setupHeaderAndProgress();
-    setupHorizontal();
-    setupParallaxDeck();
     setupHeroScene();
     setupSpotlights();
     setupParallaxImg();

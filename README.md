@@ -6,7 +6,7 @@ Sitio comercial de desarrollo web full stack. Estático, sin build ni dependenci
 
 ## Qué vende
 
-Landing de conversión · Sitio web completo · Full stack ligero (integraciones) · Optimización y mantenimiento. Los 4 proyectos del portfolio son demos publicados, declarados como tales, con caso de estudio completo (problema → decisiones → resultado → aprendizaje → galería).
+Landing de conversión · Sitio web completo · Full stack ligero (integraciones) · Optimización y mantenimiento. Los primeros demos fueron retirados: hay una nueva serie de casos de estudio en construcción. Para sumar un caso nuevo: `docs/NUEVO_CASO.md` + `tools/templates/`.
 
 ## Arquitectura
 
@@ -23,15 +23,16 @@ Landing de conversión · Sitio web completo · Full stack ligero (integraciones
 ```
 index.html            Home comercial (hero, señales, problema, trabajos,
                       paquetes, enfoque, proceso, para quién, calidad, FAQ, CTA)
-work.html             Trabajos como mini-casos
+work.html             Trabajos (nueva serie en camino) + capacidades
 services.html         Paquetes de servicios en detalle
-case/*.html           4 casos de estudio con galería y cierre
 process.html          Proceso en 6 etapas (duración / entregable / evita)
 faq.html              FAQ por categorías
 about.html            Bio, trayectoria, stack, cuándo sí / cuándo no
 contact.html          Formulario orientado a proyecto (mailto)
 css/styles.css        Sistema de diseño global (+ @font-face al tope)
-css/case.css          Estilos de casos
+tools/templates/      Plantilla de caso de estudio (HTML + CSS)
+docs/NUEVO_CASO.md    Checklist para publicar un caso nuevo
+tools/verify.mjs      QA: node tools/verify.mjs
 js/main.js            i18n, tema, navegación, reveals, formulario, SW registro
 vercel.json           Headers de seguridad (CSP con hashes), cache, cleanUrls
 ```
