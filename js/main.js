@@ -537,6 +537,8 @@
       'soon.cta1': "Ver servicios",
       'soon.cta2': "Empezar el tuyo",
       'signals.l5': "En construcción",
+      'featured.heading1': "Trabajos",
+      'featured.heading2': "seleccionados.",
     },
     en: {
       'nav.home': 'Home',
@@ -1053,6 +1055,8 @@
       'soon.cta1': "See services",
       'soon.cta2': "Start yours",
       'signals.l5': "In progress",
+      'featured.heading1': "Selected",
+      'featured.heading2': "work.",
     },
   };
 

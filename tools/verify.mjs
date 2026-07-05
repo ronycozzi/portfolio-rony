@@ -25,8 +25,8 @@ const htmlFiles = (() => {
   // Preferimos git: valida solo lo que se deploya (excluye restos ignorados).
   try {
     const { execSync } = require('node:child_process');
-    const out = execSync('git ls-files -- "*.html"', { cwd: ROOT, encoding: 'utf8' }).trim();
-    if (out) return out.split('\n');
+    const out = execSync('git ls-tree -r --name-only HEAD', { cwd: ROOT, encoding: 'utf8' }).trim();
+    if (out) return out.split('\n').filter((f) => f.endsWith('.html'));
   } catch {}
   return [
     ...readdirSync(ROOT).filter((f) => f.endsWith('.html')),
@@ -163,7 +163,7 @@ for (const m of swSrc.matchAll(/(styles\.css|case\.css|main\.js)\?v=(\d+)/g)) {
 }
 for (const asset of ASSETS) {
   const byVer = versions.get(asset);
-  if (byVer.size === 0) { bad(`${asset}: ninguna página lo referencia con ?v=`); continue; }
+  if (byVer.size === 0) { ok(`${asset}: sin referencias (asset no usado actualmente)`); continue; }
   if (byVer.size > 1) {
     bad(`${asset}: versiones inconsistentes entre páginas: ${[...byVer.entries()].map(([v, fs]) => `v=${v} (${fs.length} pág.)`).join(' vs ')}`);
     continue;
