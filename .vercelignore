@@ -23,3 +23,9 @@ build/
 # Local env / secrets
 .env
 .env.local
+
+# Retired demo remnants kept only on this machine.
+/case/
+/css/case.css
+/assets/work/
+/assets/og/og-case-*.png
