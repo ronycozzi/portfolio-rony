@@ -541,6 +541,12 @@
       'featured.heading2': "seleccionados.",
       'contact.form.sending': "Enviando tu consulta…",
       'contact.form.sent': "Recibí tu consulta. Si el proyecto encaja, te respondo con próximos pasos en menos de 24 h.",
+      'console.aria': "Estado del estudio",
+      'console.live': "disponible",
+      'console.c1': "SEO técnico",
+      'console.c2': "Accesibilidad AA",
+      'console.status_key': "estado",
+      'console.status_val': "nueva serie de casos: en construcción",
     },
     en: {
       'nav.home': 'Home',
@@ -1061,6 +1067,12 @@
       'featured.heading2': "work.",
       'contact.form.sending': "Sending your inquiry…",
       'contact.form.sent': "Got your inquiry. If the project is a fit, I'll reply with next steps within 24 hours.",
+      'console.aria': "Studio status",
+      'console.live': "available",
+      'console.c1': "Technical SEO",
+      'console.c2': "AA accessibility",
+      'console.status_key': "status",
+      'console.status_val': "new case series: in progress",
     },
   };
 

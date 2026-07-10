@@ -1,5 +1,5 @@
 /* Service Worker - Rony Cozzi Portfolio */
-const VERSION = 'v101';
+const VERSION = 'v102';
 const PRECACHE = `rony-portfolio-precache-${VERSION}`;
 const RUNTIME = `rony-portfolio-runtime-${VERSION}`;
 const MAX_RUNTIME_ENTRIES = 60;
@@ -28,7 +28,7 @@ const SHELL = [
   '/terms',
   '/terms.html',
   '/css/styles.css',
-  '/css/styles.css?v=50',
+  '/css/styles.css?v=51',
   '/assets/fonts/fraunces-normal-500-latin.woff2',
   '/assets/fonts/fraunces-italic-400-latin.woff2',
   '/assets/fonts/fraunces-normal-400-latin.woff2',
@@ -36,7 +36,7 @@ const SHELL = [
   '/assets/fonts/inter-normal-500-latin.woff2',
   '/assets/fonts/jetbrainsmono-normal-400-latin.woff2',
   '/js/main.js',
-  '/js/main.js?v=67',
+  '/js/main.js?v=65',
   '/manifest.json',
   '/favicon.svg',
   '/og-image.png',
