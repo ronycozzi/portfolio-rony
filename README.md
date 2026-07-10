@@ -32,7 +32,10 @@ contact.html          Formulario orientado a proyecto (serverless + fallback mai
 css/styles.css        Sistema de diseño global (+ @font-face al tope)
 tools/templates/      Plantilla de caso de estudio (HTML + CSS)
 docs/NUEVO_CASO.md    Checklist para publicar un caso nuevo
-tools/verify.mjs      QA: node tools/verify.mjs
+tools/verify.mjs      QA estático: node tools/verify.mjs
+tools/e2e.mjs         QA de flujos: node tools/e2e.mjs (requiere playwright)
+tools/test-contact.mjs Tests del endpoint del formulario
+api/contact.js        Función serverless del formulario (docs/FORMULARIO.md)
 js/main.js            i18n, tema, navegación, reveals, formulario, SW registro
 vercel.json           Headers de seguridad (CSP con hashes), cache, cleanUrls
 ```

@@ -3328,3 +3328,18 @@ body {
 
 /* Honeypot anti-spam: fuera de la vista y del tab order */
 .hp-field { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+
+/* ---------- Micro-interacciones (motion de precisión) ---------- */
+.signals__item { transition: background var(--t-fast) var(--ease); }
+.signals__item:hover { background: color-mix(in srgb, var(--accent) 5%, transparent); }
+.problem__card { transition: border-color var(--t-fast) var(--ease), transform var(--t-fast) var(--ease); }
+.problem__card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.quality__list li { transition: color var(--t-fast) var(--ease), padding-left var(--t-fast) var(--ease); }
+.quality__list li:hover { color: var(--accent); padding-left: 4px; }
+.proc-mini__step { transition: border-color var(--t-fast) var(--ease); }
+.proc-mini__step:hover { border-color: var(--line-strong); }
+@media (prefers-reduced-motion: reduce) {
+  .signals__item, .problem__card, .quality__list li, .proc-mini__step { transition: none; }
+  .problem__card:hover { transform: none; }
+  .quality__list li:hover { padding-left: 0; }
+}
