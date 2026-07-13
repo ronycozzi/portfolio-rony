@@ -120,6 +120,21 @@ if (dict) {
   }
   if (unresolved.length === 0) ok(`las ${usedKeys.size} claves usadas en los HTML existen en ambos idiomas`);
   else for (const u of unresolved) bad('clave usada sin definición completa: ' + u);
+  const mainSrcForMetadata = read('js/main.js');
+  const localizedBlock = mainSrcForMetadata.match(/const fullyLocalizedPages = new Set\(\[([\s\S]*?)\]\);/);
+  const metadataBlock = mainSrcForMetadata.match(/const pageMeta = \{([\s\S]*?)\n\s*\}\[pageId\];/);
+  if (!localizedBlock || !metadataBlock) {
+    bad('no se pudo verificar la cobertura de metadata para paginas localizadas');
+  } else {
+    const localizedPages = [...localizedBlock[1].matchAll(/['"]([^'"]+)['"]/g)].map((m) => m[1]);
+    const metadataPages = new Set(
+      [...metadataBlock[1].matchAll(/^\s{6}(?:'([^']+)'|([a-zA-Z0-9-]+)):\s*\{/gm)]
+        .map((m) => m[1] || m[2])
+    );
+    const missingMetadata = localizedPages.filter((page) => !metadataPages.has(page));
+    if (missingMetadata.length === 0) ok(`metadata i18n cubre las ${localizedPages.length} paginas localizadas`);
+    else bad(`paginas localizadas sin metadata i18n: ${missingMetadata.join(', ')}`);
+  }
 }
 
 // 3. Referencias locales ----------------------------------------------------
