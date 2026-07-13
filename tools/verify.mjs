@@ -209,6 +209,23 @@ for (const asset of ASSETS) {
   else bad(`${asset}: páginas usan v=${pageVer} pero sw.js usa v=${swVer}`);
 }
 
+const caseTemplatePath = 'tools/templates/case.html';
+if (existsSync(path.join(ROOT, caseTemplatePath))) {
+  const templateSrc = read(caseTemplatePath);
+  for (const asset of ['styles.css', 'main.js']) {
+    const templateVersion = templateSrc.match(new RegExp(`${asset.replace('.', '\\.')}\\?v=(\\d+)`));
+    const activeVersions = versions.get(asset);
+    if (!templateVersion) {
+      bad(`${caseTemplatePath}: no referencia ${asset} con versión`);
+      continue;
+    }
+    if (activeVersions.size !== 1) continue;
+    const [activeVersion] = activeVersions.keys();
+    if (templateVersion[1] === activeVersion) ok(`${caseTemplatePath}: ${asset}?v=${activeVersion} coincide con las páginas activas`);
+    else bad(`${caseTemplatePath}: ${asset}?v=${templateVersion[1]} no coincide con v=${activeVersion} activo`);
+  }
+}
+
 // 5. JSON válido ------------------------------------------------------------
 section('5. JSON válido');
 for (const j of ['vercel.json', 'manifest.json']) {
