@@ -279,6 +279,34 @@ if (htmlSinks.every((pattern) => !pattern.test(mainJs))) {
   bad('main.js contiene un sink de inyección HTML o evaluación dinámica');
 }
 
+const safeTagsBlock = mainJs.match(/const SAFE_TRANSLATED_TAGS = new Set\(\[([\s\S]*?)\]\);/);
+const safeTags = new Set(safeTagsBlock ? [...safeTagsBlock[1].matchAll(/['"]([a-z0-9-]+)['"]/g)].map((m) => m[1]) : []);
+const translatedMarkupTags = new Set();
+if (dict) {
+  for (const html of htmlContent.values()) {
+    for (const match of html.matchAll(/data-i18n-html="([^"]+)"/g)) {
+      const key = match[1].trim();
+      for (const lang of ['es', 'en']) {
+        const value = String((dict[lang] && dict[lang][key]) || '');
+        for (const tag of value.matchAll(/<\/?([a-z][a-z0-9-]*)\b/gi)) translatedMarkupTags.add(tag[1].toLowerCase());
+      }
+    }
+  }
+}
+const unsupportedTranslatedTags = [...translatedMarkupTags].filter((tag) => !safeTags.has(tag));
+if (safeTags.size > 0 && unsupportedTranslatedTags.length === 0) {
+  ok(`renderer i18n seguro cubre ${translatedMarkupTags.size} etiquetas HTML usadas`);
+} else {
+  bad(`renderer i18n seguro no cubre: ${unsupportedTranslatedTags.join(', ') || 'allowlist ausente'}`);
+}
+
+const translatedHtmlApply = mainJs.match(/querySelectorAll\('\[data-i18n-html\]'\)[\s\S]*?\n\s*\}\);/);
+if (translatedHtmlApply && /setSafeTranslatedMarkup\(el, val\)/.test(translatedHtmlApply[0])) {
+  ok('data-i18n-html usa el renderer seguro estructural');
+} else {
+  bad('data-i18n-html no usa el renderer seguro estructural');
+}
+
 // Resumen ---------------------------------------------------------------
 section('Resumen');
 const total = passed + failures;

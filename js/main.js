@@ -1230,25 +1230,66 @@
     });
   }
 
-  function decodeInlineCodeEntities(value) {
+  const SAFE_TRANSLATED_TAGS = new Set(['a', 'br', 'code', 'em', 'li', 'p', 'strong', 'time', 'ul']);
+
+  function decodeSafeMarkupEntities(value) {
     const entities = { '&lt;': '<', '&gt;': '>', '&amp;': '&', '&quot;': '"', '&#39;': "'" };
     return String(value).replace(/&(lt|gt|amp|quot|#39);/g, (entity) => entities[entity]);
   }
 
-  function setTextWithInlineCode(el, val) {
+  function getSafeTranslatedAttribute(source, name) {
+    const match = String(source).match(new RegExp(`\\s${name}\\s*=\\s*(["'])(.*?)\\1`, 'i'));
+    return match ? decodeSafeMarkupEntities(match[2]) : '';
+  }
+
+  function isSafeTranslatedHref(value) {
+    return /^(?:https:\/\/[^\s]+|mailto:[^\s]+)$/i.test(value);
+  }
+
+  function setSafeTranslatedMarkup(el, val) {
     const source = String(val);
-    const codePattern = /<code>([\s\S]*?)<\/code>/gi;
+    const tagPattern = /<\/?([a-z][a-z0-9]*)(?:\s+[^<>]*?)?\s*\/?>/gi;
+    const stack = [el];
     let cursor = 0;
     let match;
     el.textContent = '';
-    while ((match = codePattern.exec(source)) !== null) {
-      el.appendChild(document.createTextNode(source.slice(cursor, match.index)));
-      const code = document.createElement('code');
-      code.textContent = decodeInlineCodeEntities(match[1]);
-      el.appendChild(code);
-      cursor = match.index + match[0].length;
+
+    const appendText = (value) => {
+      if (value) stack[stack.length - 1].appendChild(document.createTextNode(decodeSafeMarkupEntities(value)));
+    };
+
+    while ((match = tagPattern.exec(source)) !== null) {
+      appendText(source.slice(cursor, match.index));
+      const rawTag = match[0];
+      const tag = match[1].toLowerCase();
+      const isClosing = /^<\//.test(rawTag);
+
+      if (!SAFE_TRANSLATED_TAGS.has(tag)) {
+        appendText(rawTag);
+      } else if (isClosing) {
+        const current = stack[stack.length - 1];
+        if (stack.length > 1 && current.tagName.toLowerCase() === tag) stack.pop();
+        else appendText(rawTag);
+      } else {
+        const node = document.createElement(tag);
+        if (tag === 'time') {
+          const datetime = getSafeTranslatedAttribute(rawTag, 'datetime');
+          if (/^\d{4}-\d{2}(?:-\d{2})?$/.test(datetime)) node.setAttribute('datetime', datetime);
+        }
+        if (tag === 'a') {
+          const href = getSafeTranslatedAttribute(rawTag, 'href');
+          if (isSafeTranslatedHref(href)) node.setAttribute('href', href);
+          if (/^https:\/\//i.test(href) && getSafeTranslatedAttribute(rawTag, 'target') === '_blank') {
+            node.setAttribute('target', '_blank');
+            node.setAttribute('rel', 'noopener noreferrer');
+          }
+        }
+        stack[stack.length - 1].appendChild(node);
+        if (tag !== 'br') stack.push(node);
+      }
+      cursor = match.index + rawTag.length;
     }
-    el.appendChild(document.createTextNode(source.slice(cursor)));
+    appendText(source.slice(cursor));
   }
 
   function applyLang(lang) {
@@ -1271,7 +1312,7 @@
     document.querySelectorAll('[data-i18n-html]').forEach((el) => {
       const key = el.dataset.i18nHtml;
       const val = i18n[activeLang] && i18n[activeLang][key];
-      if (val != null) setTextWithInlineCode(el, val);
+      if (val != null) setSafeTranslatedMarkup(el, val);
     });
     document.querySelectorAll('.lang-toggle').forEach((btn) => {
       btn.querySelectorAll('[data-lang]').forEach((s) => {
