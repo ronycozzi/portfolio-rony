@@ -1230,6 +1230,27 @@
     });
   }
 
+  function decodeInlineCodeEntities(value) {
+    const entities = { '&lt;': '<', '&gt;': '>', '&amp;': '&', '&quot;': '"', '&#39;': "'" };
+    return String(value).replace(/&(lt|gt|amp|quot|#39);/g, (entity) => entities[entity]);
+  }
+
+  function setTextWithInlineCode(el, val) {
+    const source = String(val);
+    const codePattern = /<code>([\s\S]*?)<\/code>/gi;
+    let cursor = 0;
+    let match;
+    el.textContent = '';
+    while ((match = codePattern.exec(source)) !== null) {
+      el.appendChild(document.createTextNode(source.slice(cursor, match.index)));
+      const code = document.createElement('code');
+      code.textContent = decodeInlineCodeEntities(match[1]);
+      el.appendChild(code);
+      cursor = match.index + match[0].length;
+    }
+    el.appendChild(document.createTextNode(source.slice(cursor)));
+  }
+
   function applyLang(lang) {
     const activeLang = resolveLang(lang);
     document.documentElement.lang = activeLang;
@@ -1243,14 +1264,14 @@
       const pairs = el.dataset.i18nAttr.split(',');
       pairs.forEach((pair) => {
         const [attr, key] = pair.split(':').map((s) => s.trim());
-      const val = i18n[activeLang] && i18n[activeLang][key];
-      if (val != null) el.setAttribute(attr, val);
+        const val = i18n[activeLang] && i18n[activeLang][key];
+        if (val != null) el.setAttribute(attr, val);
       });
     });
     document.querySelectorAll('[data-i18n-html]').forEach((el) => {
       const key = el.dataset.i18nHtml;
       const val = i18n[activeLang] && i18n[activeLang][key];
-      if (val != null) el.innerHTML = val;
+      if (val != null) setTextWithInlineCode(el, val);
     });
     document.querySelectorAll('.lang-toggle').forEach((btn) => {
       btn.querySelectorAll('[data-lang]').forEach((s) => {

@@ -263,6 +263,22 @@ for (const s of ['js/main.js', 'sw.js']) {
   catch (e) { bad(`${s} no compila: ${e.message}`); }
 }
 
+// 7. Superficie XSS del frontend --------------------------------------------
+section('7. Superficie XSS del frontend');
+const mainJs = read('js/main.js');
+const htmlSinks = [
+  /\.innerHTML\s*=/,
+  /\.outerHTML\s*=/,
+  /insertAdjacentHTML\s*\(/,
+  /document\.write\s*\(/,
+  /\beval\s*\(/,
+];
+if (htmlSinks.every((pattern) => !pattern.test(mainJs))) {
+  ok('main.js no contiene sinks de inyección HTML o evaluación dinámica');
+} else {
+  bad('main.js contiene un sink de inyección HTML o evaluación dinámica');
+}
+
 // Resumen ---------------------------------------------------------------
 section('Resumen');
 const total = passed + failures;
