@@ -2752,7 +2752,7 @@ body {
   text-transform: uppercase;
   color: var(--accent);
   border-bottom: 1px solid var(--line-strong);
-  padding-bottom: 4px;
+  padding: 2px 0 4px;
   transition: border-color var(--t-fast) var(--ease), gap var(--t-fast) var(--ease);
 }
 .service__cta:hover { border-color: var(--accent); gap: 12px; }
@@ -3103,7 +3103,7 @@ body {
   text-transform: uppercase;
   color: var(--accent);
   border-bottom: 1px solid var(--line-strong);
-  padding-bottom: 4px;
+  padding: 2px 0 4px;
   transition: border-color var(--t-fast) var(--ease), gap var(--t-fast) var(--ease);
 }
 .service__cta:hover { border-color: var(--accent); gap: 12px; }
