@@ -33,7 +33,7 @@ css/styles.css        Sistema de diseño global (+ @font-face al tope)
 tools/templates/      Plantilla de caso de estudio (HTML + CSS)
 docs/NUEVO_CASO.md    Checklist para publicar un caso nuevo
 tools/verify.mjs      QA estático: node tools/verify.mjs
-tools/e2e.mjs         QA de flujos: node tools/e2e.mjs (requiere playwright)
+tools/e2e.mjs         QA de flujos: npm run test:e2e
 tools/test-contact.mjs Tests del endpoint del formulario
 api/contact.js        Función serverless del formulario (docs/FORMULARIO.md)
 js/main.js            i18n, tema, navegación, reveals, formulario, SW registro
@@ -46,6 +46,14 @@ Cualquier server estático con clean URLs. Incluido en el repo:
 
 ```bash
 node tools/serve.mjs   # http://127.0.0.1:4173, con clean URLs y 404 real
+```
+
+## QA local
+
+```bash
+npm install
+npx playwright install chromium
+npm test
 ```
 
 ## Checklist al editar

@@ -1,8 +1,8 @@
 /**
  * E2E del sitio con Playwright. Uso:
- *   npm i -D playwright && npx playwright install chromium
- *   node tools/e2e.mjs            (levanta un server estático propio en :4599)
- *   BASE=https://mi-preview node tools/e2e.mjs   (contra un deploy)
+ *   npm install && npx playwright install chromium
+ *   npm run test:e2e            (levanta un server estático propio en :4599)
+ *   BASE=https://mi-preview npm run test:e2e   (contra un deploy)
  */
 import { createServer } from 'node:http';
 import { readFileSync, existsSync, statSync } from 'node:fs';
@@ -30,14 +30,7 @@ if (!BASE) {
   BASE = 'http://localhost:4599';
 }
 
-let chromium;
-try {
-  ({ chromium } = await import('playwright'));
-} catch {
-  const { pathToFileURL } = await import('node:url');
-  const guess = process.env.PLAYWRIGHT_HOME || path.join(ROOT, 'node_modules', 'playwright');
-  ({ chromium } = await import(pathToFileURL(path.join(guess, 'index.mjs')).href));
-}
+const { chromium } = await import('playwright');
 const browser = await chromium.launch();
 let fail = 0;
 const check = (name, cond) => { console.log(cond ? '  ✓' : '  ✗', name); if (!cond) fail++; };
