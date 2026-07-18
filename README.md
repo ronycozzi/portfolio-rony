@@ -45,14 +45,14 @@ vercel.json           Headers de seguridad (CSP con hashes), cache, cleanUrls
 Cualquier server estático con clean URLs. Incluido en el repo:
 
 ```bash
-node .codex_tmp/serve-local.js   # http://localhost:4173
+node tools/serve.mjs   # http://127.0.0.1:4173, con clean URLs y 404 real
 ```
 
 ## Checklist al editar
 
 1. Cambiaste copy con `data-i18n` → actualizá **ambos** idiomas en el diccionario de `js/main.js`.
 2. Cambiaste CSS/JS → bump del `?v=` en todas las páginas **y** en `sw.js` (+ `VERSION`).
-3. Cambiaste un JSON-LD inline → regenerá hashes CSP (`node .codex_tmp/csp-hashes.js`) y actualizá `vercel.json`.
+3. Cambiaste un JSON-LD inline → regenerá sus hashes SHA-256 de CSP y actualizá `vercel.json` antes del deploy.
 4. Sumaste página → sitemap.xml, sw.js (precache), navegación y `pageMetaFromHref` en main.js.
 
 ## Verificación

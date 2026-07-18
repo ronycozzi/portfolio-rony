@@ -20,7 +20,10 @@ if (!BASE) {
     if (p.endsWith('/')) p += 'index.html';
     let abs = path.join(ROOT, p);
     if (!existsSync(abs) && existsSync(abs + '.html')) abs += '.html';
-    if (!existsSync(abs) || statSync(abs).isDirectory()) { res.writeHead(404); return res.end('404'); }
+    if (!existsSync(abs) || statSync(abs).isDirectory()) {
+      res.writeHead(404, { 'Content-Type': MIME['.html'] });
+      return res.end(readFileSync(path.join(ROOT, '404.html')));
+    }
     res.writeHead(200, { 'Content-Type': MIME[path.extname(abs)] || 'application/octet-stream' });
     res.end(readFileSync(abs));
   }).listen(4599);
@@ -93,7 +96,7 @@ await mp.close(); await m.close();
 
 // 7. 404
 const r404 = await page.goto(BASE + '/no-existe-xyz');
-check('404: responde y muestra CTA', (r404.status() === 404 || (await page.title()).includes('404') || await page.locator('.err-cta').isVisible()));
+check('404: responde con la página diseñada y muestra CTA', r404.status() === 404 && (await page.title()).includes('404') && await page.locator('.err-cta').isVisible());
 
 // 8. Cero errores JS en todo el recorrido
 check('cero errores JS en el recorrido', jsErrors.length === 0);
