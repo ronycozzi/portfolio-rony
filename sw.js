@@ -1,5 +1,5 @@
 /* Service Worker - Rony Cozzi Portfolio */
-const VERSION = 'v107';
+const VERSION = 'v108';
 const PRECACHE = `rony-portfolio-precache-${VERSION}`;
 const RUNTIME = `rony-portfolio-runtime-${VERSION}`;
 const MAX_RUNTIME_ENTRIES = 60;
@@ -105,7 +105,7 @@ self.addEventListener('fetch', (e) => {
               if (htmlCached) return htmlCached;
             }
           }
-          return caches.match('/404.html');
+          return (await caches.match('/404.html')) || res;
         }
 
         return res;
@@ -120,7 +120,7 @@ self.addEventListener('fetch', (e) => {
               if (htmlCached) return htmlCached;
             }
           }
-          return (await caches.match('/offline.html')) || caches.match('/404.html');
+          return (await caches.match('/offline.html')) || (await caches.match('/404.html')) || offlineResponse();
         })
       )
     );
