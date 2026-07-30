@@ -1,9 +1,20 @@
 /* Service Worker - Rony Cozzi Portfolio */
-const VERSION = 'v108';
+const VERSION = 'v109';
 const PRECACHE = `rony-portfolio-precache-${VERSION}`;
 const RUNTIME = `rony-portfolio-runtime-${VERSION}`;
 const MAX_RUNTIME_ENTRIES = 60;
 const offlineResponse = () => new Response('', { status: 504, statusText: 'Offline' });
+const normalized404 = async (response) => {
+  const headers = new Headers(response.headers);
+  headers.delete('content-encoding');
+  headers.delete('content-length');
+  headers.delete('transfer-encoding');
+  return new Response(await response.arrayBuffer(), {
+    status: 404,
+    statusText: 'Not Found',
+    headers,
+  });
+};
 
 const SHELL = [
   '/',
@@ -105,7 +116,7 @@ self.addEventListener('fetch', (e) => {
               if (htmlCached) return htmlCached;
             }
           }
-          return (await caches.match('/404.html')) || res;
+          return normalized404((await caches.match('/404.html')) || res);
         }
 
         return res;
