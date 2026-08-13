@@ -1617,6 +1617,16 @@ body {
 }
 .contact-channels a { transition: color var(--t-fast) var(--ease); }
 .contact-channels a:hover { color: var(--accent); }
+.contact-noscript {
+  margin-top: 18px;
+  color: var(--fg-muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+.contact-noscript a {
+  color: var(--fg);
+  border-bottom: 1px solid var(--accent);
+}
 .copy-btn {
   flex: 0 0 auto;
   min-height: 34px;
@@ -1652,7 +1662,7 @@ body {
   bottom: 18px;
 }
 
-.contact-form { display: flex; flex-direction: column; gap: 20px; }
+.contact-form { display: flex; flex-direction: column; gap: 20px; min-width: 0; }
 .field { display: flex; flex-direction: column; gap: 8px; }
 .field label {
   font-family: var(--font-display);
@@ -1705,8 +1715,14 @@ body {
 .contact-form__note[data-note-state="invalid"] { color: var(--color-danger); }
 .contact-form__note[data-note-state="sent"] { color: var(--color-live); }
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   .contact-split { grid-template-columns: 1fr; gap: 60px; padding: 60px var(--pad-x) 80px; }
+  .contact-big {
+    max-width: min(720px, 100%);
+  }
+  .contact-channels {
+    max-width: 720px;
+  }
 }
 
 @media (max-width: 560px) {
