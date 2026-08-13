@@ -1686,84 +1686,6 @@
     };
   }
 
-  /* ---------- Cursor ---------- */
-  function setupCursor() {
-    if (isTouch || reducedMotion) return;
-    const cursor = document.querySelector('.cursor');
-    const dot = document.querySelector('.cursor-dot');
-    const label = cursor && cursor.querySelector('.cursor__label');
-    if (!cursor || !dot) return;
-
-    let mx = window.innerWidth / 2, my = window.innerHeight / 2;
-    let cx = mx, cy = my, dx = mx, dy = my;
-    let moving = false;
-    let raf = null;
-
-    window.addEventListener('mousemove', (e) => {
-      mx = e.clientX; my = e.clientY;
-      moving = true;
-      if (!raf) raf = requestAnimationFrame(loop);
-    }, { passive: true });
-
-    function loop() {
-      cx += (mx - cx) * 0.16;
-      cy += (my - cy) * 0.16;
-      dx += (mx - dx) * 0.4;
-      dy += (my - dy) * 0.4;
-      cursor.style.transform = `translate(${cx}px, ${cy}px) translate(-50%, -50%)`;
-      dot.style.transform = `translate(${dx}px, ${dy}px) translate(-50%, -50%)`;
-      if (Math.abs(mx - cx) > 0.1 || Math.abs(my - cy) > 0.1 || moving) {
-        moving = false;
-        raf = requestAnimationFrame(loop);
-      } else {
-        raf = null;
-      }
-    }
-
-    const hoverables = document.querySelectorAll('[data-magnetic]');
-    hoverables.forEach((el) => {
-      const cursorText = el.dataset.cursor;
-      el.addEventListener('mouseenter', () => {
-        cursor.classList.add('is-hover');
-        if (cursorText && label) label.textContent = cursorText;
-      });
-      el.addEventListener('mouseleave', () => {
-        cursor.classList.remove('is-hover');
-        if (label && cursorText) label.textContent = '';
-      });
-    });
-  }
-
-  /* ---------- Magnetic ---------- */
-  function setupMagnetic() {
-    if (isTouch || reducedMotion) return;
-    const els = document.querySelectorAll('[data-magnetic]');
-    const strength = 0.22;
-    els.forEach((el) => {
-      let raf = null;
-      let tx = 0, ty = 0, cx = 0, cy = 0;
-      function update() {
-        cx += (tx - cx) * 0.18;
-        cy += (ty - cy) * 0.18;
-        el.style.transform = `translate(${cx}px, ${cy}px)`;
-        if (Math.abs(tx - cx) > 0.1 || Math.abs(ty - cy) > 0.1) raf = requestAnimationFrame(update);
-        else raf = null;
-      }
-      el.addEventListener('mousemove', (e) => {
-        const r = el.getBoundingClientRect();
-        tx = (e.clientX - (r.left + r.width / 2)) * strength;
-        ty = (e.clientY - (r.top + r.height / 2)) * strength;
-        if (!raf) raf = requestAnimationFrame(update);
-      });
-      el.addEventListener('mouseleave', () => {
-        tx = 0; ty = 0;
-        if (!raf) raf = requestAnimationFrame(update);
-      });
-    });
-  }
-
-
-
   /* ---------- Header scroll state ---------- */
   function setupHeaderAndProgress() {
     const header = document.querySelector('.header');
@@ -1778,87 +1700,6 @@
 
 
 
-
-  /* ---------- Hero scene motion ---------- */
-  function setupHeroScene() {
-    const hero = document.querySelector('[data-hero-scene]');
-    if (!hero) return;
-
-    const setScroll = rafThrottle(() => {
-      const rect = hero.getBoundingClientRect();
-      const progress = Math.max(0, Math.min(1, -rect.top / Math.max(1, rect.height)));
-      hero.style.setProperty('--hero-scroll', progress.toFixed(3));
-    });
-
-    setScroll();
-    window.addEventListener('scroll', setScroll, { passive: true });
-
-    if (isTouch || reducedMotion) return;
-
-    let raf = null;
-    let tx = 0, ty = 0, cx = 0, cy = 0;
-    function draw() {
-      cx += (tx - cx) * 0.12;
-      cy += (ty - cy) * 0.12;
-      hero.style.setProperty('--hero-x', `${cx.toFixed(2)}px`);
-      hero.style.setProperty('--hero-y', `${cy.toFixed(2)}px`);
-      if (Math.abs(tx - cx) > 0.08 || Math.abs(ty - cy) > 0.08) raf = requestAnimationFrame(draw);
-      else raf = null;
-    }
-
-    hero.addEventListener('mousemove', (e) => {
-      const r = hero.getBoundingClientRect();
-      tx = ((e.clientX - r.left) / r.width - 0.5) * 26;
-      ty = ((e.clientY - r.top) / r.height - 0.5) * 22;
-      if (!raf) raf = requestAnimationFrame(draw);
-    }, { passive: true });
-
-    hero.addEventListener('mouseleave', () => {
-      tx = 0; ty = 0;
-      if (!raf) raf = requestAnimationFrame(draw);
-    }, { passive: true });
-  }
-
-  /* ---------- Spotlights ---------- */
-  function setupSpotlights() {
-    if (isTouch || reducedMotion) return;
-    const targets = document.querySelectorAll('.service, .capabilities__list li, .principles__list li, .stack-col, .contact-card__inner');
-    targets.forEach((el) => {
-      el.classList.add('has-spotlight');
-      let raf = null;
-      let nx = 50, ny = 50;
-      el.addEventListener('mousemove', (e) => {
-        const r = el.getBoundingClientRect();
-        nx = ((e.clientX - r.left) / r.width) * 100;
-        ny = ((e.clientY - r.top) / r.height) * 100;
-        if (!raf) {
-          raf = requestAnimationFrame(() => {
-            el.style.setProperty('--mx', `${nx.toFixed(1)}%`);
-            el.style.setProperty('--my', `${ny.toFixed(1)}%`);
-            raf = null;
-          });
-        }
-      }, { passive: true });
-    });
-  }
-
-  /* ---------- Parallax image ---------- */
-  function setupParallaxImg() {
-    if (reducedMotion) return;
-    const wrap = document.querySelector('[data-parallax-img]');
-    if (!wrap) return;
-    const img = wrap.querySelector('img');
-    if (!img) return;
-    const onScroll = rafThrottle(() => {
-      const r = wrap.getBoundingClientRect();
-      const vh = window.innerHeight;
-      const tt = (vh - r.top) / (vh + r.height);
-      const offset = (tt - 0.5) * 50;
-      img.style.translate = `0 ${offset}px`;
-    });
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
-  }
 
   /* ---------- Mobile menu with focus trap ---------- */
   function setupMobileMenu() {
@@ -2220,12 +2061,7 @@
     setupPageTransitions();
     setupExternalProjectLinks();
     setupReveals();
-    setupCursor();
-    setupMagnetic();
     setupHeaderAndProgress();
-    setupHeroScene();
-    setupSpotlights();
-    setupParallaxImg();
     setupMobileMenu();
     setupClock();
     setupYear();
