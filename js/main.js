@@ -103,10 +103,10 @@
       'services.s3.title': "Full stack ligero",
       'services.s3.tag': "Integraciones",
       'services.s3.desc': "Para proyectos que necesitan que la web haga más que verse bien: formularios, APIs, datos, paneles simples o automatizaciones.",
-      'services.s3.i1': "APIs y serverless functions",
+      'services.s3.i1': "APIs REST y serverless functions",
       'services.s3.i2': "Formularios conectados + email transaccional",
-      'services.s3.i3': "Supabase, Firebase o Airtable",
-      'services.s3.i4': "Webhooks, auth simple y paneles básicos",
+      'services.s3.i3': "SQL, Supabase, Firebase o Airtable",
+      'services.s3.i4': "Webhooks, auth simple, automatizaciones y paneles básicos",
       'services.s3.ideal': "Ideal si necesitás que tu web procese información, guarde datos o se conecte con otras herramientas.",
       'services.s3.cta': "Consultar integración",
       'services.s4.title': "Optimización y mantenimiento",
@@ -228,12 +228,14 @@
       'stack.backend': 'Backend y APIs',
       'stack.backend.i2': 'APIs REST',
       'stack.backend.i4': 'Auth simple / Webhooks',
+      'stack.backend.i5': 'Automatizaciones',
       'stack.data': 'Datos & servicios',
       'stack.tools': 'Herramientas',
       'stack.practices': 'Prácticas',
       'stack.practices.i2': 'SEO técnico',
       'stack.practices.i3': 'Encabezados de seguridad',
       'stack.practices.i4': 'PWA / QA móvil',
+      'stack.practices.i5': 'Testing funcional',
       'principles.title': 'Principios',
       'principles.1.title': 'Performance primero',
       'principles.1.desc': 'Cada milisegundo cuenta. Sitios optimizados desde el primer commit.',
@@ -258,10 +260,19 @@
       'contact.form.hint': 'Te respondo en menos de 24 horas.',
       'contact.form.opening_btn': 'Abriendo email…',
       'contact.form.opening_note': 'Se está abriendo tu cliente de correo. Si no se abre, escribime a {email}.',
+      'contact.form.invalid': 'Revisá los campos marcados para poder enviar la consulta.',
       'contact.form.aria_label': 'Formulario de contacto',
       'contact.form.name_ph': 'Tu nombre',
       'contact.form.email_ph': 'tu@email.com',
       'contact.form.message_ph': 'Contame en qué estás trabajando…',
+      'contact.form.message_ph_job': 'Contame el rol, stack, modalidad y próximos pasos…',
+      'contact.copy': 'Copiar',
+      'contact.copied': 'Copiado',
+      'contact.copy_failed': 'No se pudo copiar. Podés seleccionar el texto manualmente.',
+      'contact.copy_email': 'Copiar email',
+      'contact.copy_whatsapp': 'Copiar WhatsApp',
+      'contact.copy_github': 'Copiar GitHub',
+      'contact.copy_linkedin': 'Copiar LinkedIn',
       'contact.availability': 'Disponibilidad',
       'contact.availability_val': 'Aceptando proyectos · 2026',
       'contact.timezone': 'Zona horaria',
@@ -635,10 +646,10 @@
       'services.s3.title': "Lightweight full stack",
       'services.s3.tag': "Integrations",
       'services.s3.desc': "For projects where the website has to do more than look good: forms, APIs, data, simple panels or automations.",
-      'services.s3.i1': "APIs and serverless functions",
+      'services.s3.i1': "REST APIs and serverless functions",
       'services.s3.i2': "Connected forms + transactional email",
-      'services.s3.i3': "Supabase, Firebase or Airtable",
-      'services.s3.i4': "Webhooks, simple auth and basic panels",
+      'services.s3.i3': "SQL, Supabase, Firebase or Airtable",
+      'services.s3.i4': "Webhooks, simple auth, automations and basic panels",
       'services.s3.ideal': "Ideal if your website needs to process information, store data or connect with other tools.",
       'services.s3.cta': "Ask about an integration",
       'services.s4.title': "Optimization & maintenance",
@@ -760,12 +771,14 @@
       'stack.backend': 'Backend & APIs',
       'stack.backend.i2': 'REST APIs',
       'stack.backend.i4': 'Simple auth / Webhooks',
+      'stack.backend.i5': 'Automations',
       'stack.data': 'Data & services',
       'stack.tools': 'Tools',
       'stack.practices': 'Practices',
       'stack.practices.i2': 'Technical SEO',
       'stack.practices.i3': 'Security headers',
       'stack.practices.i4': 'PWA / mobile QA',
+      'stack.practices.i5': 'Functional testing',
       'principles.title': 'Principles',
       'principles.1.title': 'Performance first',
       'principles.1.desc': 'Every millisecond counts. Sites optimized from the first commit.',
@@ -790,10 +803,19 @@
       'contact.form.hint': "I'll get back to you within 24 hours.",
       'contact.form.opening_btn': 'Opening email…',
       'contact.form.opening_note': 'Your email app is opening. If it does not, write to {email}.',
+      'contact.form.invalid': 'Check the marked fields before sending your inquiry.',
       'contact.form.aria_label': 'Contact form',
       'contact.form.name_ph': 'Your name',
       'contact.form.email_ph': 'you@email.com',
       'contact.form.message_ph': "Tell me what you're working on…",
+      'contact.form.message_ph_job': 'Tell me the role, stack, work model and next steps…',
+      'contact.copy': 'Copy',
+      'contact.copied': 'Copied',
+      'contact.copy_failed': 'Could not copy. You can select the text manually.',
+      'contact.copy_email': 'Copy email',
+      'contact.copy_whatsapp': 'Copy WhatsApp',
+      'contact.copy_github': 'Copy GitHub',
+      'contact.copy_linkedin': 'Copy LinkedIn',
       'contact.availability': 'Availability',
       'contact.availability_val': 'Accepting projects · 2026',
       'contact.timezone': 'Timezone',
@@ -1935,6 +1957,8 @@
     const note = form.querySelector('[data-form-note]');
     const btn = form.querySelector('[type="submit"]');
     const btnText = btn && btn.querySelector('.btn-submit__text');
+    const subjectSelect = form.querySelector('[name="subject"]');
+    const messageField = form.querySelector('[name="message"]');
     const originalText = btnText ? btnText.textContent : '';
     const hintText = () => t('contact.form.hint');
     const openingText = (emailTarget) => {
@@ -1943,6 +1967,16 @@
           ? 'Your email app is opening. If it does not, write to {email}.'
           : 'Se está abriendo tu cliente de correo. Si no se abre, escribime a {email}.');
       return template.replace('{email}', emailTarget);
+    };
+    const syncMessagePlaceholder = () => {
+      if (!messageField) return;
+      const key = subjectSelect && subjectSelect.value === 'job'
+        ? 'contact.form.message_ph_job'
+        : 'contact.form.message_ph';
+      const fallback = getLang() === 'en'
+        ? "Tell me what you're working on…"
+        : 'Contame en qué estás trabajando…';
+      messageField.setAttribute('placeholder', t(key) || fallback);
     };
     const syncNote = () => {
       if (!note) return;
@@ -1956,16 +1990,21 @@
 
     // Provide initial hint in the live region so SR users have context
     if (note && !note.textContent) syncNote();
+    syncMessagePlaceholder();
 
     // Clear aria-invalid on input
     form.querySelectorAll('input, textarea, select').forEach((field) => {
       field.addEventListener('input', () => field.removeAttribute('aria-invalid'));
       field.addEventListener('change', () => field.removeAttribute('aria-invalid'));
     });
+    if (subjectSelect) subjectSelect.addEventListener('change', syncMessagePlaceholder);
 
     document.querySelectorAll('[data-lang-toggle]').forEach((toggle) => {
       toggle.addEventListener('click', () => {
-        setTimeout(syncNote, 0);
+        setTimeout(() => {
+          syncNote();
+          syncMessagePlaceholder();
+        }, 0);
       });
     });
 
@@ -1976,6 +2015,12 @@
         form.querySelectorAll(':invalid').forEach((field) => {
           field.setAttribute('aria-invalid', 'true');
         });
+        const firstInvalid = form.querySelector(':invalid');
+        if (note) {
+          note.dataset.noteState = 'invalid';
+          note.textContent = t('contact.form.invalid') || '';
+        }
+        if (firstInvalid && typeof firstInvalid.focus === 'function') firstInvalid.focus();
         form.reportValidity();
         return;
       }
@@ -2074,6 +2119,67 @@
     });
   }
 
+  function setupCopyActions() {
+    const buttons = document.querySelectorAll('[data-copy-value]');
+    if (!buttons.length) return;
+
+    const writeText = (value) => {
+      if (navigator.clipboard && window.isSecureContext) {
+        return navigator.clipboard.writeText(value);
+      }
+      return new Promise((resolve, reject) => {
+        const textarea = document.createElement('textarea');
+        textarea.value = value;
+        textarea.setAttribute('readonly', '');
+        textarea.style.position = 'fixed';
+        textarea.style.top = '-1000px';
+        textarea.style.opacity = '0';
+        document.body.appendChild(textarea);
+        textarea.select();
+        try {
+          if (document.execCommand('copy')) resolve();
+          else reject(new Error('copy failed'));
+        } catch (err) {
+          reject(err);
+        } finally {
+          textarea.remove();
+        }
+      });
+    };
+
+    const resetButton = (button) => {
+      const label = button.querySelector('[data-i18n]');
+      if (label) label.textContent = t('contact.copy') || 'Copiar';
+      button.removeAttribute('aria-live');
+      button.dataset.copyState = '';
+    };
+
+    buttons.forEach((button) => {
+      button.hidden = false;
+      button.addEventListener('click', () => {
+        const value = button.dataset.copyValue || '';
+        if (!value) return;
+        writeText(value).then(() => {
+          const label = button.querySelector('[data-i18n]');
+          button.dataset.copyState = 'copied';
+          button.setAttribute('aria-live', 'polite');
+          if (label) label.textContent = t('contact.copied') || 'Copiado';
+          clearTimeout(button._copyTimer);
+          button._copyTimer = setTimeout(() => resetButton(button), 1400);
+        }).catch(() => {
+          button.dataset.copyState = 'failed';
+          button.title = t('contact.copy_failed') || '';
+        });
+      });
+    });
+
+    document.querySelectorAll('[data-lang-toggle]').forEach((toggle) => {
+      toggle.addEventListener('click', () => {
+        setTimeout(() => buttons.forEach(resetButton), 0);
+      });
+    });
+  }
+
   /* ---------- Skip link a11y (CSS-driven, no JS needed) ---------- */
   /* The skip link is fully styled via .skip-link:focus / :focus-visible. */
 
@@ -2124,6 +2230,7 @@
     setupClock();
     setupYear();
     setupContactForm();
+    setupCopyActions();
   }
 
   window.addEventListener('orientationchange', () => {

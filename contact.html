@@ -44,7 +44,7 @@
 
   <link rel="preload" href="/assets/fonts/fraunces-normal-500-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="/assets/fonts/inter-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="css/styles.css?v=52" />
+  <link rel="stylesheet" href="css/styles.css?v=53" />
 
   <script type="application/ld+json">
   {
@@ -152,24 +152,46 @@
         <span class="contact-split__num">[ 01 ]</span>
         <h2 class="contact-split__heading" data-i18n="contact.direct">Contacto directo</h2>
 
-        <a href="mailto:ronycozzi5@gmail.com" class="contact-big" data-magnetic>
-          <span class="contact-big__line1">ronycozzi5</span>
-          <span class="contact-big__line2">@gmail.com</span>
-          <span class="contact-big__arrow" aria-hidden="true">→</span>
-        </a>
+        <div class="contact-big-wrap">
+          <a href="mailto:ronycozzi5@gmail.com" class="contact-big" data-magnetic>
+            <span class="contact-big__line1">ronycozzi5</span>
+            <span class="contact-big__line2">@gmail.com</span>
+            <span class="contact-big__arrow" aria-hidden="true">→</span>
+          </a>
+          <button
+            type="button"
+            class="copy-btn copy-btn--email"
+            data-copy-value="ronycozzi5@gmail.com"
+            aria-label="Copiar email"
+            title="Copiar email"
+            data-i18n-attr="aria-label:contact.copy_email,title:contact.copy_email"
+            hidden
+          >
+            <span data-i18n="contact.copy">Copiar</span>
+          </button>
+        </div>
 
         <ul class="contact-channels">
           <li>
             <span class="contact-channels__label">WhatsApp</span>
-            <a href="https://wa.me/5493515073210" target="_blank" rel="noopener noreferrer" data-magnetic>+54 351 507 3210 ↗</a>
+            <span class="contact-channels__row">
+              <a href="https://wa.me/5493515073210" target="_blank" rel="noopener noreferrer" data-magnetic>+54 351 507 3210 ↗</a>
+              <button type="button" class="copy-btn" data-copy-value="+54 351 507 3210" aria-label="Copiar WhatsApp" title="Copiar WhatsApp" data-i18n-attr="aria-label:contact.copy_whatsapp,title:contact.copy_whatsapp" hidden><span data-i18n="contact.copy">Copiar</span></button>
+            </span>
           </li>
           <li>
             <span class="contact-channels__label">GitHub</span>
-            <a href="https://github.com/ronycozzi" target="_blank" rel="noopener noreferrer" data-magnetic>github.com/ronycozzi ↗</a>
+            <span class="contact-channels__row">
+              <a href="https://github.com/ronycozzi" target="_blank" rel="noopener noreferrer" data-magnetic>github.com/ronycozzi ↗</a>
+              <button type="button" class="copy-btn" data-copy-value="https://github.com/ronycozzi" aria-label="Copiar GitHub" title="Copiar GitHub" data-i18n-attr="aria-label:contact.copy_github,title:contact.copy_github" hidden><span data-i18n="contact.copy">Copiar</span></button>
+            </span>
           </li>
           <li>
             <span class="contact-channels__label">LinkedIn</span>
-            <a href="https://www.linkedin.com/in/rony-cozzi-677111251" target="_blank" rel="noopener noreferrer" data-magnetic>linkedin.com/in/rony-cozzi ↗</a>
+            <span class="contact-channels__row">
+              <a href="https://www.linkedin.com/in/rony-cozzi-677111251" target="_blank" rel="noopener noreferrer" data-magnetic>linkedin.com/in/rony-cozzi ↗</a>
+              <button type="button" class="copy-btn" data-copy-value="https://www.linkedin.com/in/rony-cozzi-677111251" aria-label="Copiar LinkedIn" title="Copiar LinkedIn" data-i18n-attr="aria-label:contact.copy_linkedin,title:contact.copy_linkedin" hidden><span data-i18n="contact.copy">Copiar</span></button>
+            </span>
           </li>
         </ul>
       </div>
@@ -178,6 +200,9 @@
         class="contact-form"
         id="form"
         name="contact"
+        action="mailto:ronycozzi5@gmail.com"
+        method="post"
+        enctype="text/plain"
         data-contact-form
         data-email="ronycozzi5@gmail.com"
         aria-describedby="form-note"
@@ -386,7 +411,7 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=68" defer></script>
+  <script src="js/main.js?v=69" defer></script>
   <a
     class="wsp-fab"
     data-wsp-fab

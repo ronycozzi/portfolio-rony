@@ -141,6 +141,7 @@ html.theme-anim, html.theme-anim * {
   --accent-ink: #16100A;
   /* Project / brand accent tokens (shared across themes) */
   --color-live: #2DD16A;
+  --color-danger: #FF6B5E;
   --color-stripe: #635BFF;
   --color-luco: #4A5D3A;
   --color-sellink: #FF3300;
@@ -1611,6 +1612,10 @@ body {
   margin: 12px 0 32px;
 }
 
+.contact-big-wrap {
+  position: relative;
+  margin-bottom: 40px;
+}
 .contact-big {
   display: block;
   font-family: var(--font-display);
@@ -1619,7 +1624,6 @@ body {
   letter-spacing: -0.04em;
   line-height: 0.95;
   position: relative;
-  margin-bottom: 40px;
   padding-bottom: 16px;
   border-bottom: 1px solid var(--line);
 }
@@ -1652,8 +1656,49 @@ body {
   color: var(--fg-muted);
   align-self: center;
 }
+.contact-channels__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  min-width: 0;
+}
 .contact-channels a { transition: color var(--t-fast) var(--ease); }
 .contact-channels a:hover { color: var(--accent); }
+.copy-btn {
+  flex: 0 0 auto;
+  min-height: 34px;
+  padding: 8px 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--bg-elev) 78%, transparent);
+  color: var(--fg-muted);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease), background-color var(--t-fast) var(--ease), transform var(--t-fast) var(--ease);
+}
+.copy-btn[hidden] { display: none; }
+.copy-btn:hover {
+  color: var(--fg);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+.copy-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+.copy-btn[data-copy-state="copied"] {
+  color: var(--accent-ink);
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.copy-btn--email {
+  position: absolute;
+  right: 0;
+  bottom: 18px;
+}
 
 .contact-form { display: flex; flex-direction: column; gap: 20px; }
 .field { display: flex; flex-direction: column; gap: 8px; }
@@ -1705,6 +1750,8 @@ body {
 .btn-submit:hover { gap: 20px; }
 .btn-submit svg { width: 18px; height: 18px; }
 .contact-form__note { font-family: var(--font-display); font-size: 13px; color: var(--accent); min-height: 1.4em; }
+.contact-form__note[data-note-state="invalid"] { color: var(--color-danger); }
+.contact-form__note[data-note-state="sent"] { color: var(--color-live); }
 
 @media (max-width: 900px) {
   .contact-split { grid-template-columns: 1fr; gap: 60px; padding: 60px var(--pad-x) 80px; }
@@ -1724,6 +1771,17 @@ body {
 
   .contact-big__line2 {
     margin-top: 4px;
+  }
+  .copy-btn--email {
+    position: static;
+    margin-top: 14px;
+  }
+  .contact-channels li {
+    grid-template-columns: 1fr;
+  }
+  .contact-channels__row {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   body[data-page="contact"] .wsp-fab,
