@@ -11,6 +11,12 @@ const DEST = 'ronycozzi5@gmail.com';
 
 // Rate limit best-effort por instancia (Vercel puede reciclarla; es solo fricción anti-abuso).
 const hits = new Map();
+function sendJson(res, statusCode, payload) {
+  res.statusCode = statusCode;
+  res.setHeader('Content-Type', 'application/json; charset=utf-8');
+  return res.end(JSON.stringify(payload));
+}
+
 function limited(ip) {
   const now = Date.now();
   const windowMs = 10 * 60 * 1000;
@@ -28,50 +34,50 @@ module.exports = async function handler(req, res) {
   res.setHeader('Cache-Control', 'no-store');
 
   if (req.method !== 'POST') {
-    res.statusCode = 405;
     res.setHeader('Allow', 'POST');
-    return res.end(JSON.stringify({ ok: false, reason: 'method' }));
+    return sendJson(res, 405, { ok: false, reason: 'method' });
   }
 
-  // Same-origin blando: si viene Origin y no coincide con el host, afuera.
+  // Same-origin: si viene Origin y no coincide exactamente con el host, afuera.
   const origin = req.headers.origin;
   const host = req.headers.host;
-  if (origin && host && !origin.endsWith('//' + host)) {
-    res.statusCode = 403;
-    return res.end(JSON.stringify({ ok: false, reason: 'origin' }));
+  if (origin && host) {
+    try {
+      const originUrl = new URL(origin);
+      if (originUrl.host !== host) {
+        return sendJson(res, 403, { ok: false, reason: 'origin' });
+      }
+    } catch {
+      return sendJson(res, 403, { ok: false, reason: 'origin' });
+    }
   }
 
   const ip = (req.headers['x-forwarded-for'] || '').split(',')[0].trim() || 'local';
   if (limited(ip)) {
-    res.statusCode = 429;
-    return res.end(JSON.stringify({ ok: false, reason: 'rate' }));
+    return sendJson(res, 429, { ok: false, reason: 'rate' });
   }
 
   let body = req.body;
   if (typeof body === 'string') { try { body = JSON.parse(body); } catch { body = null; } }
   if (!body || typeof body !== 'object') {
-    res.statusCode = 400;
-    return res.end(JSON.stringify({ ok: false, reason: 'body' }));
+    return sendJson(res, 400, { ok: false, reason: 'body' });
   }
 
   // Honeypot: si el campo oculto viene lleno, respondemos ok sin hacer nada.
   if (clean(body.website, 200)) {
-    res.statusCode = 200;
-    return res.end(JSON.stringify({ ok: true }));
+    return sendJson(res, 200, { ok: true });
   }
 
   const d = {};
   for (const k of Object.keys(MAX)) d[k] = clean(body[k], MAX[k]);
 
   if (d.name.length < 2 || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(d.email) || d.message.length < 10) {
-    res.statusCode = 400;
-    return res.end(JSON.stringify({ ok: false, reason: 'validation' }));
+    return sendJson(res, 400, { ok: false, reason: 'validation' });
   }
 
   const key = process.env.RESEND_API_KEY;
   if (!key) {
-    res.statusCode = 501;
-    return res.end(JSON.stringify({ ok: false, reason: 'not-configured' }));
+    return sendJson(res, 501, { ok: false, reason: 'not-configured' });
   }
 
   const lines = [
@@ -102,10 +108,8 @@ module.exports = async function handler(req, res) {
       }),
     });
     if (!r.ok) throw new Error('resend ' + r.status);
-    res.statusCode = 200;
-    return res.end(JSON.stringify({ ok: true }));
+    return sendJson(res, 200, { ok: true });
   } catch (e) {
-    res.statusCode = 502;
-    return res.end(JSON.stringify({ ok: false, reason: 'send' }));
+    return sendJson(res, 502, { ok: false, reason: 'send' });
   }
 };

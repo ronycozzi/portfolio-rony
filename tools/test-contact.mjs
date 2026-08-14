@@ -23,6 +23,7 @@ const check = (name, cond) => { console.log(cond ? '  ✓' : '  ✗', name); if 
 
 const get = await call('GET');
 check('GET → 405', get.statusCode === 405);
+check('GET → JSON content-type', /application\/json/.test(get.headers['Content-Type'] || get.headers['content-type'] || ''));
 
 const hp = await call('POST', { website: 'spam', name: 'Bot', email: 'a@b.co', message: 'x'.repeat(20) });
 check('honeypot → 200 silencioso', hp.statusCode === 200 && JSON.parse(hp.body).ok === true);
@@ -39,6 +40,9 @@ check('válido sin API key → 501 not-configured', ok.statusCode === 501 && JSO
 
 const origin = await call('POST', { name: 'Rony', email: 'test@test.com', message: 'Necesito una landing para marzo.' }, { origin: 'https://evil.com' });
 check('origin cruzado → 403', origin.statusCode === 403);
+
+const badOrigin = await call('POST', { name: 'Rony', email: 'test@test.com', message: 'Necesito una landing para marzo.' }, { origin: 'no-es-url' });
+check('origin malformado → 403', badOrigin.statusCode === 403);
 
 console.log(fail ? `${fail} tests fallaron` : 'TODOS los tests del handler pasaron');
 process.exit(fail ? 1 : 0);
