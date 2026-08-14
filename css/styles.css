@@ -3888,6 +3888,336 @@ body {
   }
 }
 
+/* ---------- Mobile refinement pass ---------- */
+@media (max-width: 760px) {
+  :root {
+    --pad-x: clamp(18px, 5vw, 24px);
+    --wsp-fab-gap: 18px;
+  }
+
+  body {
+    line-height: 1.56;
+    overflow-wrap: anywhere;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: calc(var(--header-h) + 12px);
+  }
+
+  .hero__main {
+    gap: 28px;
+    padding: 28px 0 32px;
+  }
+
+  .hero__lede {
+    gap: 18px;
+  }
+
+  .hero__title {
+    font-size: clamp(36px, 12vw, 48px);
+    line-height: 1.04;
+    max-width: 10ch;
+  }
+
+  .hero__intro {
+    font-size: 15px;
+    line-height: 1.58;
+  }
+
+  .hero__spec {
+    gap: 14px;
+    padding-top: 16px;
+  }
+
+  .hero__portrait {
+    width: min(180px, 58vw);
+  }
+
+  .hero__portrait img {
+    height: min(180px, 58vw);
+  }
+
+  .hero__fact {
+    padding: 9px 0;
+  }
+
+  .hero__foot {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 14px;
+  }
+
+  .ticker {
+    padding: 14px 0;
+    font-size: clamp(18px, 7vw, 28px);
+  }
+
+  .services,
+  .problem,
+  .proc-mini,
+  .fit,
+  .quality,
+  .faq-mini,
+  .timeline,
+  .contact-card {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .services__head,
+  .project-showcase__head,
+  .proc-mini__head,
+  .quality__head,
+  .faq-mini__head,
+  .fit__head {
+    margin-bottom: 26px;
+  }
+
+  .services__title,
+  .problem__title,
+  .proc-mini__title,
+  .quality__title,
+  .faq-mini__title,
+  .fit__title {
+    font-size: clamp(30px, 10vw, 42px);
+    line-height: 1.06;
+  }
+
+  .services__copy,
+  .problem__copy,
+  .project-showcase__copy,
+  .proc-mini__copy,
+  .works-soon__copy {
+    font-size: 15px;
+    line-height: 1.58;
+  }
+
+  .service {
+    padding: 24px 0;
+    gap: 12px;
+  }
+
+  .service__row {
+    grid-template-columns: 34px 1fr;
+    gap: 12px;
+  }
+
+  .service__name {
+    font-size: clamp(22px, 7vw, 30px);
+    line-height: 1.06;
+  }
+
+  .service__desc,
+  .service__includes {
+    padding-left: 46px;
+  }
+
+  .service__ideal {
+    margin-left: 46px;
+  }
+
+  .service__cta,
+  .contact-channels a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .project-showcase {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .project-showcase__title {
+    font-size: clamp(30px, 10vw, 42px);
+    line-height: 1.04;
+    max-width: 11ch;
+  }
+
+  .project-featured__media,
+  .project-card__media {
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+  }
+
+  .project-featured__media img,
+  .project-card__media img {
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+
+  .project-featured__content {
+    gap: 18px;
+    padding: 22px;
+  }
+
+  .project-featured__body {
+    gap: 16px;
+  }
+
+  .project-featured h3 {
+    font-size: clamp(32px, 10vw, 44px);
+    line-height: 1.02;
+  }
+
+  .project-card h3 {
+    font-size: clamp(23px, 7.2vw, 30px);
+    line-height: 1.05;
+  }
+
+  .project-card p {
+    font-size: 14.5px;
+    line-height: 1.58;
+  }
+
+  .project-card__link {
+    width: calc(100% - 40px);
+    margin-inline: 20px;
+  }
+
+  .work-hero,
+  .about-hero,
+  .contact-hero,
+  .proc-hero,
+  .faq-hero {
+    padding-top: calc(var(--header-h) + 36px);
+    padding-bottom: 42px;
+  }
+
+  .page--work,
+  .page--about,
+  .page--contact,
+  .page--services {
+    padding-top: 0;
+  }
+
+  .work-hero__title,
+  .about-hero__title,
+  .contact-hero__title,
+  .proc-hero__title,
+  .faq-hero__title {
+    font-size: clamp(36px, 11vw, 48px);
+    line-height: 1.04;
+  }
+
+  .work-hero__meta {
+    gap: 20px 28px;
+  }
+
+  .proc-steps {
+    padding: 42px var(--pad-x) 56px;
+  }
+
+  .proc-step {
+    padding: 28px 0;
+  }
+
+  .proc-step__title {
+    font-size: clamp(22px, 7vw, 28px);
+  }
+
+  .proc-step__meta li {
+    padding: 12px 0;
+  }
+
+  .contact-split {
+    padding: 42px var(--pad-x) 64px;
+    gap: 42px;
+  }
+
+  .contact-card__inner,
+  .contact-card__left,
+  .contact-card__right,
+  .contact-card__channels,
+  .contact-card__channel,
+  .contact-card__channel-val {
+    min-width: 0;
+  }
+
+  .contact-card__inner {
+    padding: 22px;
+    gap: 24px;
+    border-radius: 2px;
+    box-shadow: 0 18px 48px rgba(0, 0, 0, 0.14);
+  }
+
+  .contact-card__title {
+    font-size: clamp(26px, 8vw, 34px);
+    line-height: 1.08;
+  }
+
+  .contact-card__channel {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .contact-card__channel-val {
+    font-size: 15px;
+    overflow-wrap: anywhere;
+  }
+
+  .wsp-fab {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    right: max(14px, calc(var(--safe-right) + 14px));
+    bottom: max(14px, calc(var(--safe-bottom) + 14px));
+  }
+}
+
+@media (max-width: 500px) {
+  .service__desc,
+  .service__includes,
+  .service__ideal {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .hero__actions {
+    gap: 10px;
+  }
+
+  .project-tags li,
+  .service__includes li,
+  .fit__stack li {
+    font-size: 10px;
+    letter-spacing: 0.06em;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero__title,
+  .work-hero__title,
+  .about-hero__title,
+  .contact-hero__title,
+  .proc-hero__title,
+  .faq-hero__title {
+    font-size: clamp(33px, 10.5vw, 40px);
+  }
+
+  .contact-big {
+    font-size: clamp(30px, 9vw, 36px);
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .card,
+  .work-item,
+  .project-card__media img,
+  .project-featured__media img {
+    transition-duration: 120ms;
+    will-change: auto;
+  }
+
+  .ticker__track {
+    animation-duration: 72s;
+  }
+}
+
 /* Honeypot anti-spam: fuera de la vista y del tab order */
 .hp-field { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
 
