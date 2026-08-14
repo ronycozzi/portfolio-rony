@@ -1,5 +1,5 @@
 /* Service Worker - Rony Cozzi Portfolio */
-const VERSION = 'v119';
+const VERSION = 'v120';
 const PRECACHE = `rony-portfolio-precache-${VERSION}`;
 const RUNTIME = `rony-portfolio-runtime-${VERSION}`;
 const MAX_RUNTIME_ENTRIES = 60;
@@ -39,7 +39,7 @@ const SHELL = [
   '/terms',
   '/terms.html',
   '/css/styles.css',
-  '/css/styles.css?v=61',
+  '/css/styles.css?v=62',
   '/assets/fonts/fraunces-normal-500-latin.woff2',
   '/assets/fonts/fraunces-normal-400-latin.woff2',
   '/assets/fonts/inter-normal-400-latin.woff2',

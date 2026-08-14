@@ -4218,6 +4218,55 @@ body {
   }
 }
 
+/* ---------- Visual bug repair: clean lists and mobile service alignment ---------- */
+.fit__col li::before,
+.fit__col--yes li::before,
+.fit__col--no li::before,
+.quality__list li::before {
+  content: none !important;
+}
+
+.fit__col li,
+.quality__list li {
+  position: relative;
+  padding-left: 0;
+}
+
+.fit__col li {
+  border-top: 1px solid var(--line);
+}
+
+.fit__col li::after,
+.quality__list li::after {
+  content: none !important;
+}
+
+@media (max-width: 760px) {
+  .service__row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .service__num,
+  .service__name,
+  .service__tag {
+    grid-column: 1;
+    justify-self: start;
+  }
+
+  .service__tag {
+    margin-top: 0;
+  }
+
+  .service__desc,
+  .service__includes,
+  .service__ideal {
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
 /* Honeypot anti-spam: fuera de la vista y del tab order */
 .hp-field { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
 
