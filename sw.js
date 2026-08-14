@@ -1,5 +1,5 @@
 /* Service Worker - Rony Cozzi Portfolio */
-const VERSION = 'v116';
+const VERSION = 'v117';
 const PRECACHE = `rony-portfolio-precache-${VERSION}`;
 const RUNTIME = `rony-portfolio-runtime-${VERSION}`;
 const MAX_RUNTIME_ENTRIES = 60;
@@ -46,7 +46,7 @@ const SHELL = [
   '/assets/fonts/inter-normal-500-latin.woff2',
   '/assets/fonts/jetbrainsmono-normal-400-latin.woff2',
   '/js/main.js',
-  '/js/main.js?v=74',
+  '/js/main.js?v=75',
   '/manifest.json',
   '/favicon.svg',
   '/og-image.png',
