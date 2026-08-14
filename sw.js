@@ -1,5 +1,5 @@
 /* Service Worker - Rony Cozzi Portfolio */
-const VERSION = 'v115';
+const VERSION = 'v116';
 const PRECACHE = `rony-portfolio-precache-${VERSION}`;
 const RUNTIME = `rony-portfolio-runtime-${VERSION}`;
 const MAX_RUNTIME_ENTRIES = 60;
@@ -39,7 +39,7 @@ const SHELL = [
   '/terms',
   '/terms.html',
   '/css/styles.css',
-  '/css/styles.css?v=58',
+  '/css/styles.css?v=59',
   '/assets/fonts/fraunces-normal-500-latin.woff2',
   '/assets/fonts/fraunces-normal-400-latin.woff2',
   '/assets/fonts/inter-normal-400-latin.woff2',
@@ -50,6 +50,11 @@ const SHELL = [
   '/manifest.json',
   '/favicon.svg',
   '/og-image.png',
+  '/assets/projects/codesign-hero.jpg',
+  '/assets/projects/swan-hero.jpg',
+  '/assets/projects/sung-hero.jpg',
+  '/assets/projects/nova-hero.jpg',
+  '/assets/projects/moncre-hero.jpg',
   '/assets/icons/icon-180.png',
   '/assets/icons/icon-192.png',
   '/assets/icons/icon-512.png',
